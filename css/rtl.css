@@ -1,0 +1,237 @@
+/* Arabic: no Latin tracking, room for joining glyphs, same page gutter as the header. */
+html[dir="rtl"] {
+  --font: "IBM Plex Sans Arabic", "IBM Plex Sans", system-ui, sans-serif;
+  --display: "IBM Plex Sans Arabic", "IBM Plex Sans", system-ui, sans-serif;
+  --lh-tight: 1.45;
+  --lh-snug: 1.55;
+  --lh-body: 1.85;
+  --track: 0;
+  font-family: var(--font);
+  letter-spacing: 0;
+}
+
+html[dir="rtl"] body {
+  font-family: var(--font);
+  letter-spacing: 0;
+  line-height: var(--lh-body);
+  text-rendering: auto;
+  font-kerning: none;
+  -webkit-font-smoothing: auto;
+}
+
+html[dir="rtl"] p,
+html[dir="rtl"] li,
+html[dir="rtl"] dd,
+html[dir="rtl"] .hero-lead,
+html[dir="rtl"] .svc-body,
+html[dir="rtl"] .work-copy p,
+html[dir="rtl"] .about-block p {
+  line-height: var(--lh-body);
+  letter-spacing: 0;
+}
+
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] .hero-title,
+html[dir="rtl"] .svc-title,
+html[dir="rtl"] .nav-mobile-links a {
+  letter-spacing: 0;
+  line-height: var(--lh-tight);
+}
+
+html[dir="rtl"] .btn,
+html[dir="rtl"] .choice,
+html[dir="rtl"] .work-nav button,
+html[dir="rtl"] .industry {
+  letter-spacing: 0;
+  line-height: 1.45;
+}
+
+html[dir="rtl"] .kicker,
+html[dir="rtl"] .hero-triad li,
+html[dir="rtl"] .cat,
+html[dir="rtl"] .n,
+html[dir="rtl"] .svc-n,
+html[dir="rtl"] .process-step .n,
+html[dir="rtl"] .work-copy dt,
+html[dir="rtl"] .progress,
+html[dir="rtl"] .trust-figure span,
+html[dir="rtl"] .about-block h3,
+html[dir="rtl"] .engine-states {
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1.5;
+}
+
+html[dir="rtl"] .hero-copy {
+  align-items: flex-start;
+  text-align: start;
+  gap: 1.5rem;
+  overflow: visible;
+  padding-inline-start: var(--page-gutter);
+  padding-inline-end: var(--pad);
+}
+
+html[dir="rtl"] .brand-logo {
+  max-width: min(60vw, 220px);
+}
+
+html[dir="rtl"] .nav-mobile-label {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+html[dir="rtl"] .nav-mobile-links a::before {
+  letter-spacing: 0;
+}
+
+html[dir="rtl"] .nav-mobile-links a::after {
+  content: "←";
+}
+
+html[dir="rtl"] .nav-mobile-links a:active::after,
+html[dir="rtl"] .nav-mobile-links a:focus-visible::after {
+  transform: translateX(-3px);
+}
+
+html[dir="rtl"] .hero-meta {
+  max-width: none;
+  align-self: flex-start;
+  justify-content: flex-start;
+}
+
+html[dir="rtl"] .hero-h1 {
+  max-width: none;
+  letter-spacing: 0;
+  line-height: 1.5;
+}
+
+html[dir="rtl"] .hero-title {
+  align-items: flex-start;
+  width: 100%;
+  max-width: none;
+  gap: 0.38em;
+  letter-spacing: 0;
+  line-height: 1.42;
+  font-size: clamp(2.1rem, 5.4vw, 4.05rem);
+}
+
+html[dir="rtl"] .hero-title .line,
+html[dir="rtl"] .hero-title .line > span {
+  overflow: visible;
+  width: auto;
+  max-width: 100%;
+  margin-inline: 0;
+  text-align: start;
+}
+
+html[dir="rtl"] .hero-lead,
+html[dir="rtl"] .hero-actions,
+html[dir="rtl"] .hero-proof {
+  align-self: flex-start;
+  text-align: start;
+}
+
+html[dir="rtl"] .hero-triad--visual li {
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1.45;
+}
+
+html[dir="rtl"] .hero-title .line > span {
+  padding-block: 0.06em 0.14em;
+  padding-inline: 0.04em;
+}
+
+html[dir="rtl"] .hero-title .line-shift > span {
+  padding-inline-start: 0;
+}
+
+html[dir="rtl"] .hero-title .line-shift > span::before,
+html[dir="rtl"] .hero-title .line-shift > span::after {
+  content: none;
+}
+
+html[dir="rtl"] .hero-title .line-shift {
+  font-style: normal;
+  font-family: var(--display);
+}
+
+html[dir="rtl"] .hero-shot figcaption,
+html[dir="rtl"] .device-caption,
+html[dir="rtl"] .work-card-meta span,
+html[dir="rtl"] .footer-label,
+html[dir="rtl"] .contact-fields label {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+html[dir="rtl"] .marquee-track {
+  animation-name: marqueeRtl;
+}
+
+@keyframes marqueeRtl {
+  from { transform: translateX(0); }
+  to { transform: translateX(50%); }
+}
+
+html[dir="rtl"] .nav-desktop {
+  gap: 0.15rem;
+}
+
+html[dir="rtl"] .nav-desktop a {
+  letter-spacing: 0;
+}
+
+html[dir="rtl"] .section-head {
+  gap: 1.05rem;
+}
+
+html[dir="rtl"] .build-item,
+html[dir="rtl"] .why-item,
+html[dir="rtl"] .service-row,
+html[dir="rtl"] .industry,
+html[dir="rtl"] .process-step,
+html[dir="rtl"] .about-block,
+html[dir="rtl"] .faq-item {
+  gap: 0.65rem;
+}
+
+html[dir="rtl"] .trust-figure {
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+html[dir="rtl"] .engine-states {
+  inset-inline-start: auto;
+  inset-inline-end: 8%;
+}
+
+html[dir="rtl"] .engine-code {
+  inset-inline-end: auto;
+  inset-inline-start: 8%;
+}
+
+html[dir="rtl"] .final::after {
+  inset-inline-end: auto;
+  inset-inline-start: -4%;
+  clip-path: polygon(0 0, 72% 0, 100% 100%, 0 100%);
+}
+
+html[dir="rtl"] .process-step::before {
+  inset-inline-start: auto;
+  inset-inline-end: -4px;
+}
+
+@media (min-width: 900px) {
+  html[dir="rtl"] .process-step::before {
+    inset-inline-end: auto;
+    inset-inline-start: 0;
+  }
+}
+
+html[dir="rtl"] .service-row:hover,
+html[dir="rtl"] .service-row:focus-visible {
+  transform: translateX(-6px);
+}
