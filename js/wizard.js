@@ -402,7 +402,8 @@ export function renderWork() {
     dotsRoot?.querySelectorAll(".work-dot").forEach((dot, i) => {
       const selected = i === active;
       dot.classList.toggle("is-active", selected);
-      dot.setAttribute("aria-current", selected ? "true" : "false");
+      if (selected) dot.setAttribute("aria-current", "true");
+      else dot.removeAttribute("aria-current");
     });
     if (countRoot) {
       countRoot.textContent = `${String(active + 1).padStart(2, "0")} / ${String(PROJECTS.length).padStart(2, "0")}`;
@@ -430,9 +431,9 @@ export function renderWork() {
       const picture = workPictureHTML({
         image: p.image,
         alt: `${name} — ${copy.work.items[p.id].category}`,
-        eager: i < 2,
+        eager: i < 1,
       });
-      return `<a class="work-card reveal${selected ? " is-active" : ""}" href="${p.path}" data-i="${i}"${selected ? ' aria-current="true"' : ""}>
+      return `<a class="work-card reveal${selected ? " is-active" : ""}" href="${p.path}" role="listitem" data-i="${i}"${selected ? ' aria-current="true"' : ""}>
         <span class="work-chrome">
           <span class="device-dots" aria-hidden="true"></span>
           <span class="work-url">${escapeHtml(hostOf(p.url))}</span>
@@ -454,7 +455,8 @@ export function renderWork() {
     dotsRoot.setAttribute("aria-label", copy.work.navigation);
     dotsRoot.innerHTML = PROJECTS.map((project, i) => {
       const name = copy.work.items[project.id].name;
-      return `<button class="work-dot${i === active ? " is-active" : ""}" type="button" data-work-i="${i}" aria-label="${escapeHtml(name)}" aria-current="${i === active}"></button>`;
+      const current = i === active ? ' aria-current="true"' : "";
+      return `<button class="work-dot${i === active ? " is-active" : ""}" type="button" data-work-i="${i}" aria-label="${escapeHtml(name)}"${current}></button>`;
     }).join("");
     dotsRoot.querySelectorAll(".work-dot").forEach((dot) => {
       dot.addEventListener("click", () => goTo(Number(dot.dataset.workI)));

@@ -141,7 +141,7 @@ html[dir="rtl"][lang="ar"] .lang-thumb {
   transition: color 320ms var(--ease);
 }
 
-.lang-switch [data-lang][aria-pressed="true"] {
+.lang-switch [data-lang][aria-current="true"] {
   color: var(--white);
 }
 

@@ -15,6 +15,13 @@
     if (lang === "ar") {
       document.documentElement.lang = "ar";
       document.documentElement.dir = "rtl";
+      var link = document.createElement("link");
+      link.rel = "preload";
+      link.as = "font";
+      link.type = "font/woff2";
+      link.crossOrigin = "anonymous";
+      link.href = "/assets/fonts/ibm-plex-sans-arabic-500.woff2";
+      document.head.appendChild(link);
     }
   } catch (e) {}
 })();

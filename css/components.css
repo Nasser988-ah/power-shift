@@ -307,26 +307,28 @@
 }
 
 .work-dot {
+  box-sizing: content-box;
   width: 1.65rem;
   height: 4px;
-  padding: 0;
+  padding: 10px 4px;
   border: 0;
   border-radius: 999px;
   background: var(--line-strong);
+  background-clip: content-box;
   cursor: pointer;
   transition:
     width 420ms var(--ease),
-    background 420ms var(--ease);
+    background-color 420ms var(--ease);
 }
 
 .work-dot:hover,
 .work-dot:focus-visible {
-  background: var(--mint);
+  background-color: var(--mint);
 }
 
 .work-dot.is-active {
   width: 3.6rem;
-  background: var(--navy);
+  background-color: var(--navy);
 }
 
 .work-detail {

@@ -142,9 +142,7 @@ function commitLang(lang, persist) {
   syncHomeLinks(lang);
 
   document.querySelectorAll(".lang-switch [data-lang]").forEach((btn) => {
-    const on = btn.dataset.lang === lang;
-    btn.setAttribute("aria-pressed", on ? "true" : "false");
-    if (on) btn.setAttribute("aria-current", "true");
+    if (btn.dataset.lang === lang) btn.setAttribute("aria-current", "true");
     else btn.removeAttribute("aria-current");
   });
 

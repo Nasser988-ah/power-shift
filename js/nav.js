@@ -48,9 +48,17 @@ export function initNav() {
   });
 
   const header = document.querySelector(".site-header");
-  const onScroll = () => {
-    header?.classList.toggle("is-scrolled", window.scrollY > 8);
-  };
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
+  if (!header) return;
+
+  const sentinel = document.createElement("div");
+  sentinel.setAttribute("aria-hidden", "true");
+  sentinel.style.cssText = "position:absolute;top:0;left:0;width:1px;height:8px;pointer-events:none";
+  document.body.prepend(sentinel);
+  const headerWatch = new IntersectionObserver(
+    ([entry]) => {
+      header.classList.toggle("is-scrolled", !entry.isIntersecting);
+    },
+    { threshold: 1 }
+  );
+  headerWatch.observe(sentinel);
 }

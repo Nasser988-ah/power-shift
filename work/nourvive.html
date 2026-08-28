@@ -31,16 +31,12 @@
     <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="preload" href="/assets/fonts/ibm-plex-sans-arabic-500.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/ibm-plex-sans-400.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/assets/fonts/ibm-plex-sans-500.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/assets/fonts/instrument-serif-400-italic.woff2" as="font" type="font/woff2" crossorigin />
 
     
-    <link rel="stylesheet" href="/css/tokens.css" />
-    <link rel="stylesheet" href="/css/base.css" />
-    <link rel="stylesheet" href="/css/layout.css" />
-    <link rel="stylesheet" href="/css/components.css" />
-    <link rel="stylesheet" href="/css/rtl.css" />
+    <link rel="stylesheet" href="/css/app.css" />
     <link rel="stylesheet" href="/css/pages.css" />
 
     <script type="application/ld+json">
@@ -90,7 +86,7 @@
     <header class="site-header">
       <div class="header-inner">
         <a class="brand" href="/" aria-label="POWER SHIFT">
-          <img class="brand-logo" src="/logo/logo-header.png" alt="POWER SHIFT" width="397" height="196" decoding="async" />
+          <img class="brand-logo" src="/logo/logo-header.webp" alt="POWER SHIFT" width="360" height="178" decoding="async" />
         </a>
         <nav class="nav-desktop" aria-label="Primary" data-i18n-aria="a11y.primaryNav">
           <a href="/work" data-i18n="nav.work">Work</a>
@@ -103,8 +99,8 @@
           <div class="header-actions">
             <div class="lang-switch" role="group" aria-label="Language" data-i18n-aria="a11y.language">
               <span class="lang-thumb" aria-hidden="true"></span>
-              <a href="/" data-lang="en" hreflang="en" aria-pressed="true">EN</a>
-              <a href="/ar" data-lang="ar" hreflang="ar" aria-pressed="false">AR</a>
+              <a href="/" data-lang="en" hreflang="en" aria-current="true">EN</a>
+              <a href="/ar" data-lang="ar" hreflang="ar">AR</a>
             </div>
             <a class="btn btn-primary btn-header-cta" href="/contact" data-open-wizard data-ps-event="hero_cta" data-i18n="cta.startShort">Book a Call</a>
             <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu" data-i18n-aria="cta.menu">
@@ -218,7 +214,7 @@
     <footer class="footer">
       <div class="footer-grid wrap-wide">
         <div class="footer-brand">
-          <img class="footer-logo" src="/logo/logo-header.png" alt="POWER SHIFT" width="397" height="196" decoding="async" />
+          <img class="footer-logo" src="/logo/logo-header.webp" alt="POWER SHIFT" width="360" height="178" decoding="async" />
           <p data-i18n="footer.note">Software studio · Cairo · Egypt · GCC · International</p>
         </div>
         <div class="footer-col">

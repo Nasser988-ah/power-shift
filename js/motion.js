@@ -41,18 +41,29 @@ export function initMotion() {
   const bar = document.querySelector("[data-scroll-progress]");
   const stickyBar = document.querySelector("[data-sticky-bar]");
   const visual = document.querySelector(".hero-visual");
-  const onScroll = () => {
-    const max = Math.max(document.body.scrollHeight - innerHeight, 1);
-    const y = window.scrollY / max;
+  let scrollRange = 1;
+  let ticking = false;
+  const measureScrollRange = () => {
+    scrollRange = Math.max(document.documentElement.scrollHeight - innerHeight, 1);
+  };
+  const applyScroll = () => {
+    const y = window.scrollY / scrollRange;
     if (bar) bar.style.transform = `scaleX(${Math.min(1, Math.max(0, y))})`;
     if (stickyBar) stickyBar.classList.toggle("is-visible", y > CONFIG.stickyWhatsappAfter);
     if (visual && !reduce) {
-      const shift = Math.min(window.scrollY, 520) * 0.08;
-      visual.style.transform = `translate3d(0, ${shift}px, 0)`;
+      visual.style.transform = `translate3d(0, ${Math.min(window.scrollY, 520) * 0.08}px, 0)`;
     }
+    ticking = false;
   };
+  const onScroll = () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(applyScroll);
+  };
+  measureScrollRange();
+  window.addEventListener("resize", measureScrollRange, { passive: true });
   window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
+  applyScroll();
 
   if (reduce) return;
 
@@ -88,7 +99,8 @@ export function initMotion() {
         outgoing.classList.remove("is-on");
         front = next;
       };
-      if (incoming.getAttribute("src") === project.image) {
+      const nextSrc = `${workStem(project.image)}-800.webp`;
+      if (incoming.getAttribute("src") === nextSrc) {
         swap();
         return;
       }
@@ -96,7 +108,10 @@ export function initMotion() {
         incoming.onload = null;
         swap();
       };
-      incoming.src = `${workStem(project.image)}.webp`;
+      const stem = workStem(project.image);
+      incoming.srcset = `${stem}-480.webp 480w, ${stem}-800.webp 800w, ${stem}-1200.webp 1200w`;
+      incoming.sizes = "(max-width: 979px) 92vw, 42vw";
+      incoming.src = `${stem}-800.webp`;
     };
 
     document.addEventListener("ps:lang", () => metaFor(slides[i % slides.length]));

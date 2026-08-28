@@ -10,7 +10,7 @@ export function workPictureHTML({
   image,
   alt,
   eager = false,
-  sizes = "(max-width: 768px) 92vw, 820px",
+  sizes = "(max-width: 768px) 86vw, 820px",
   width = 1200,
   height = 750,
 } = {}) {
@@ -19,6 +19,6 @@ export function workPictureHTML({
   const priority = eager ? ' fetchpriority="high"' : "";
   return `<picture>
     <source type="image/webp" srcset="${workSrcset(stem)}" sizes="${sizes}">
-    <img src="${stem}.webp" alt="${alt}" width="${width}" height="${height}" loading="${loading}" decoding="async"${priority}>
+    <img src="${stem}-800.webp" alt="${alt}" width="${width}" height="${height}" loading="${loading}" decoding="async"${priority}>
   </picture>`;
 }

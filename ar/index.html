@@ -44,15 +44,19 @@
     <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="preload" href="/assets/fonts/ibm-plex-sans-arabic-500.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/ibm-plex-sans-400.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/assets/fonts/ibm-plex-sans-500.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/assets/fonts/instrument-serif-400-italic.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" as="image" href="/assets/work/via-holidays-1200.webp" type="image/webp" />
-    <link rel="stylesheet" href="/css/tokens.css" />
-    <link rel="stylesheet" href="/css/base.css" />
-    <link rel="stylesheet" href="/css/layout.css" />
-    <link rel="stylesheet" href="/css/components.css" />
-    <link rel="stylesheet" href="/css/rtl.css" />
+    <link
+      rel="preload"
+      as="image"
+      type="image/webp"
+      href="/assets/work/via-holidays-800.webp"
+      imagesrcset="/assets/work/via-holidays-480.webp 480w, /assets/work/via-holidays-800.webp 800w, /assets/work/via-holidays-1200.webp 1200w"
+      imagesizes="(max-width: 979px) 92vw, 42vw"
+      fetchpriority="high"
+    />
+    <link rel="stylesheet" href="/css/app.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -203,7 +207,7 @@
     <header class="site-header">
       <div class="header-inner">
         <a class="brand" href="/" aria-label="POWER SHIFT">
-          <img class="brand-logo" src="/logo/logo-header.png" alt="POWER SHIFT" width="397" height="196" decoding="async" />
+          <img class="brand-logo" src="/logo/logo-header.webp" alt="POWER SHIFT" width="360" height="178" decoding="async" />
         </a>
         <nav class="nav-desktop" aria-label="Primary" data-i18n-aria="a11y.primaryNav">
           <a href="/work" data-i18n="nav.work">Work</a>
@@ -216,13 +220,13 @@
           <div class="header-actions">
             <div class="lang-switch" role="group" aria-label="Language" data-i18n-aria="a11y.language">
               <span class="lang-thumb" aria-hidden="true"></span>
-              <a href="/" data-lang="en" hreflang="en" aria-pressed="true">EN</a>
-              <a href="/ar" data-lang="ar" hreflang="ar" aria-pressed="false">AR</a>
+              <a href="/" data-lang="en" hreflang="en" aria-current="true">EN</a>
+              <a href="/ar" data-lang="ar" hreflang="ar">AR</a>
             </div>
             <a class="btn btn-primary btn-header-cta" href="/contact" data-open-wizard data-ps-event="hero_cta" data-i18n="cta.startShort">
               Book a Call
             </a>
-            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-i18n-aria="cta.menu">
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu" data-i18n-aria="cta.menu">
               <span></span>
             </button>
           </div>
@@ -282,14 +286,16 @@
                 class="is-on"
                 data-hero-img
                 data-hero-slot="a"
-                src="/assets/work/via-holidays.webp"
+                src="/assets/work/via-holidays-800.webp"
+                srcset="/assets/work/via-holidays-480.webp 480w, /assets/work/via-holidays-800.webp 800w, /assets/work/via-holidays-1200.webp 1200w"
+                sizes="(max-width: 979px) 92vw, 42vw"
                 alt="VIA Holidays travel website for Egypt, Jordan, and Türkiye"
                 width="1200"
                 height="750"
                 fetchpriority="high"
                 decoding="async"
               />
-              <img data-hero-img data-hero-slot="b" alt="" width="1200" height="750" decoding="async" />
+              <img data-hero-img data-hero-slot="b" alt="" width="1200" height="750" decoding="async" loading="lazy" />
             </div>
             <div class="device-caption">
               <strong data-hero-name>VIA Holidays</strong>
@@ -330,15 +336,15 @@
           </div>
         </div>
         <div class="work-rail" data-work-grid role="list" aria-label="Projects">
-          <a class="work-card is-active" href="/work/via-holidays.html">VIA Holidays — Travel Booking Platform</a>
-          <a class="work-card" href="/work/nourvive.html">Nourvive — bilingual beauty store</a>
-          <a class="work-card" href="/work/corolla.html">Corolla — food e-commerce</a>
-          <a class="work-card" href="/work/uruz.html">URUZ — luxury beauty commerce</a>
-          <a class="work-card" href="/work/lodiamo.html">Lodiamo — UAE food trade website</a>
-          <a class="work-card" href="/work/availio.html">Availio — property operations software</a>
-          <a class="work-card" href="/work/haseb.html">7aseb — operations and finance system</a>
+          <a class="work-card is-active" href="/work/via-holidays.html" role="listitem">VIA Holidays — Travel Booking Platform</a>
+          <a class="work-card" href="/work/nourvive.html" role="listitem">Nourvive — bilingual beauty store</a>
+          <a class="work-card" href="/work/corolla.html" role="listitem">Corolla — food e-commerce</a>
+          <a class="work-card" href="/work/uruz.html" role="listitem">URUZ — luxury beauty commerce</a>
+          <a class="work-card" href="/work/lodiamo.html" role="listitem">Lodiamo — UAE food trade website</a>
+          <a class="work-card" href="/work/availio.html" role="listitem">Availio — property operations software</a>
+          <a class="work-card" href="/work/haseb.html" role="listitem">7aseb — operations and finance system</a>
         </div>
-        <div class="wrap-wide work-pagination" data-work-dots aria-label="Project navigation"></div>
+        <nav class="wrap-wide work-pagination" data-work-dots aria-label="Project navigation"></nav>
         <div class="wrap-wide work-detail">
           <div class="work-copy" data-work-copy>
             <p class="cat">Travel & hospitality · Website</p>
@@ -555,7 +561,7 @@
     <footer class="footer">
       <div class="footer-grid wrap-wide">
         <div class="footer-brand">
-          <img class="footer-logo" src="/logo/logo-header.png" alt="POWER SHIFT" width="397" height="196" decoding="async" />
+          <img class="footer-logo" src="/logo/logo-header.webp" alt="POWER SHIFT" width="360" height="178" decoding="async" />
           <p data-i18n="footer.note">Software studio · Cairo · Egypt · GCC · International</p>
         </div>
         <div class="footer-col">
