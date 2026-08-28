@@ -14,6 +14,7 @@ export function initNav() {
   const setOpen = (open) => {
     toggle.setAttribute("aria-expanded", String(open));
     panel.classList.toggle("is-open", open);
+    panel.toggleAttribute("inert", !open);
     panel.setAttribute("aria-hidden", String(!open));
     document.body.classList.toggle("is-nav-open", open);
     document.body.style.overflow = open ? "hidden" : "";
@@ -52,6 +53,7 @@ export function initNav() {
 
   const sentinel = document.createElement("div");
   sentinel.setAttribute("aria-hidden", "true");
+  sentinel.setAttribute("role", "presentation");
   sentinel.style.cssText = "position:absolute;top:0;left:0;width:1px;height:8px;pointer-events:none";
   document.body.prepend(sentinel);
   const headerWatch = new IntersectionObserver(
