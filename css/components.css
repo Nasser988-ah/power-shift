@@ -186,9 +186,14 @@
 
 .work-arrow span {
   display: block;
-  font-size: 1.1rem;
-  line-height: 1;
+  width: 0.42rem;
+  height: 0.42rem;
+  border-block-start: 1.6px solid currentColor;
+  border-inline-end: 1.6px solid currentColor;
 }
+
+.work-prev span { transform: rotate(-135deg); }
+.work-next span { transform: rotate(45deg); }
 
 .work-arrow:hover,
 .work-arrow:focus-visible {
@@ -335,9 +340,8 @@
   padding-top: 1.75rem;
 }
 
-html[dir="rtl"] .work-arrow span {
-  transform: rotate(180deg);
-}
+html[dir="rtl"] .work-prev span { transform: rotate(45deg); }
+html[dir="rtl"] .work-next span { transform: rotate(-135deg); }
 
 @media (max-width: 600px) {
   .work-controls {

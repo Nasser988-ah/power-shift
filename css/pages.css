@@ -20,8 +20,12 @@
 }
 
 .breadcrumb li:not(:last-child)::after {
-  content: "→";
-  color: var(--mint-deep);
+  content: "";
+  width: 0.32rem;
+  height: 0.32rem;
+  border-block-start: 1.4px solid var(--mint-deep);
+  border-inline-end: 1.4px solid var(--mint-deep);
+  transform: rotate(45deg);
 }
 
 .breadcrumb a:hover,
@@ -267,7 +271,8 @@
 }
 
 html[dir="rtl"] .breadcrumb li:not(:last-child)::after {
-  content: "←";
+  content: "";
+  transform: rotate(-135deg);
 }
 
 html[dir="rtl"] .page-hero h1,
