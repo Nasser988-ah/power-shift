@@ -1,13 +1,19 @@
 import { t, getLang } from "./i18n.js";
 import { PROJECTS } from "./content.js";
 import { CONFIG } from "./config.js";
-import { buildWhatsAppUrl, buildMailto } from "./whatsapp.js";
+import { buildWhatsAppUrl } from "./whatsapp.js";
 import { track } from "./analytics.js";
 import { workPictureHTML } from "./media.js";
 
-const STEPS = ["type", "goal", "timeline", "contact"];
-const EMAIL_OK = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const PHONE_OK = /^[+]?[\d\s()-]{8,20}$/;
+const STEPS = ["type", "goal", "timeline"];
+const TYPE_ALIAS = {
+  webapp: "system",
+  saas: "system",
+  mobile: "system",
+  bms: "system",
+  ai: "system",
+  custom: "system",
+};
 
 function optionButtons(container, items, selected, onPick) {
   container.innerHTML = "";
@@ -20,12 +26,6 @@ function optionButtons(container, items, selected, onPick) {
     btn.addEventListener("click", () => onPick(item.id));
     container.appendChild(btn);
   });
-}
-
-function validContact(state) {
-  const phone = state.phone.trim();
-  const phoneOk = !phone || PHONE_OK.test(phone);
-  return state.name.trim().length >= 2 && EMAIL_OK.test(state.email.trim()) && phoneOk;
 }
 
 function payloadFrom(state) {
@@ -55,15 +55,8 @@ async function persistLead(state) {
   }
 }
 
-function setFieldState(input, errorEl, message) {
-  if (!input) return;
-  const invalid = Boolean(message);
-  input.classList.toggle("is-invalid", invalid);
-  input.setAttribute("aria-invalid", invalid ? "true" : "false");
-  if (errorEl) {
-    errorEl.textContent = message || "";
-    errorEl.hidden = !invalid;
-  }
+function normalizeType(id) {
+  return TYPE_ALIAS[id] || id;
 }
 
 export function initWizard() {
@@ -86,82 +79,63 @@ export function initWizard() {
   };
 
   const closers = dialog.querySelectorAll("[data-close-wizard]");
+  const lastStep = () => state.step === STEPS.length - 1;
+  const currentKey = () => STEPS[state.step];
 
-  const readFields = (root) => {
-    const name = root.querySelector("[data-field-name]");
-    const email = root.querySelector("[data-field-email]");
-    const phone = root.querySelector("[data-field-phone]");
-    const company = root.querySelector("[data-field-company]");
-    const note = root.querySelector("[data-field-note]");
-    if (name) state.name = name.value;
-    if (email) state.email = email.value;
-    if (phone) state.phone = phone.value;
-    if (company) state.company = company.value;
-    if (note) state.note = note.value;
+  const syncAll = () => {
+    render(dialog.querySelector(".dialog-inner"));
+    if (inline) render(inline);
   };
 
-  const writeFields = (root) => {
-    const name = root.querySelector("[data-field-name]");
-    const email = root.querySelector("[data-field-email]");
-    const phone = root.querySelector("[data-field-phone]");
-    const company = root.querySelector("[data-field-company]");
-    const note = root.querySelector("[data-field-note]");
-    if (name) name.value = state.name;
-    if (email) email.value = state.email;
-    if (phone) phone.value = state.phone;
-    if (company) company.value = state.company;
-    if (note) note.value = state.note;
+  const sendWhatsApp = async () => {
+    if (!state.type || !state.goal || !state.timeline || state.submitting) return;
+    state.submitting = true;
+    state.notice = "";
+    syncAll();
+    track("wizard_complete", payloadFrom(state));
+    await persistLead(state);
+    const url = buildWhatsAppUrl(getLang(), payloadFrom(state));
+    const popup = window.open(url, "_blank", "noopener");
+    state.submitting = false;
+    if (!popup) window.location.assign(url);
+    else syncAll();
   };
 
-  const paintErrors = (root) => {
-    const copy = t();
-    const phone = state.phone.trim();
-    setFieldState(
-      root.querySelector("[data-field-name]"),
-      root.querySelector("[data-error-name]"),
-      state.name.trim().length >= 2 ? "" : copy.qualify.errors.name
-    );
-    setFieldState(
-      root.querySelector("[data-field-email]"),
-      root.querySelector("[data-error-email]"),
-      EMAIL_OK.test(state.email.trim()) ? "" : copy.qualify.errors.email
-    );
-    setFieldState(
-      root.querySelector("[data-field-phone]"),
-      root.querySelector("[data-error-phone]"),
-      !phone || PHONE_OK.test(phone) ? "" : copy.qualify.errors.phone
-    );
-  };
-
-  const clearErrors = (root) => {
-    ["name", "email", "phone"].forEach((key) => {
-      setFieldState(root.querySelector(`[data-field-${key}]`), root.querySelector(`[data-error-${key}]`), "");
-    });
+  const pick = (id) => {
+    const key = currentKey();
+    state[key] = id;
+    state.notice = "";
+    if (key === "type") track("service_select", { type: id });
+    if (lastStep()) {
+      syncAll();
+      sendWhatsApp();
+      return;
+    }
+    state.step += 1;
+    syncAll();
   };
 
   const openWizard = (from = "start", presetType = "") => {
     track("wizard_start", { from, type: presetType || undefined });
     state.notice = "";
     if (presetType) {
-      state.type = presetType;
+      state.type = normalizeType(presetType);
       state.step = state.step === 0 ? 1 : state.step;
     }
     if (typeof dialog.showModal === "function") dialog.showModal();
     else dialog.setAttribute("open", "");
-    const closeBtn = dialog.querySelector("[data-close-wizard]");
-    closeBtn?.focus();
     render(dialog.querySelector(".dialog-inner"));
+    dialog.querySelector(".choice")?.focus();
   };
 
   const render = (root) => {
     if (!root) return;
     const copy = t();
-    const key = STEPS[state.step];
+    const key = currentKey();
     const qMap = {
       type: copy.qualify.q1,
       goal: copy.qualify.q2,
       timeline: copy.qualify.q3,
-      contact: copy.qualify.q4,
     };
     const listMap = {
       type: copy.qualify.types,
@@ -170,45 +144,14 @@ export function initWizard() {
     };
 
     root.querySelector("[data-q]").textContent = qMap[key];
-    root.querySelector("[data-progress]").textContent = `${copy.qualify.stepOf} ${state.step + 1} ${copy.qualify.of} 4`;
+    root.querySelector("[data-progress]").textContent = `${copy.qualify.stepOf} ${state.step + 1} ${copy.qualify.of} ${STEPS.length}`;
 
     const choices = root.querySelector("[data-choices]");
     const fields = root.querySelector("[data-contact-fields]");
-    const isContact = key === "contact";
-    if (choices) choices.hidden = isContact;
-    if (fields) fields.hidden = !isContact;
+    if (choices) choices.hidden = false;
+    if (fields) fields.hidden = true;
 
-    if (!isContact) {
-      clearErrors(root);
-      optionButtons(choices, listMap[key], state[key], (id) => {
-        state[key] = id;
-        if (key === "type") track("service_select", { type: id });
-        render(dialog.querySelector(".dialog-inner"));
-        if (inline) render(inline);
-      });
-    } else {
-      writeFields(root);
-      const nameL = root.querySelector("[data-label-name]");
-      const emailL = root.querySelector("[data-label-email]");
-      const phoneL = root.querySelector("[data-label-phone]");
-      const companyL = root.querySelector("[data-label-company]");
-      const noteL = root.querySelector("[data-label-note]");
-      if (nameL) nameL.textContent = copy.qualify.name;
-      if (emailL) emailL.textContent = copy.qualify.email;
-      if (phoneL) phoneL.textContent = copy.qualify.phone;
-      if (companyL) companyL.textContent = copy.qualify.company;
-      if (noteL) noteL.textContent = copy.qualify.note;
-      const name = root.querySelector("[data-field-name]");
-      const email = root.querySelector("[data-field-email]");
-      const phone = root.querySelector("[data-field-phone]");
-      const company = root.querySelector("[data-field-company]");
-      const note = root.querySelector("[data-field-note]");
-      if (name) name.placeholder = copy.qualify.namePh;
-      if (email) email.placeholder = copy.qualify.emailPh;
-      if (phone) phone.placeholder = copy.qualify.phonePh;
-      if (company) company.placeholder = copy.qualify.companyPh;
-      if (note) note.placeholder = copy.qualify.notePh;
-    }
+    optionButtons(choices, listMap[key], state[key], pick);
 
     const back = root.querySelector("[data-back]");
     const next = root.querySelector("[data-next]");
@@ -216,18 +159,19 @@ export function initWizard() {
     const status = root.querySelector("[data-form-status]");
     back.hidden = state.step === 0;
     back.textContent = copy.qualify.back;
-    const complete = isContact && validContact(state);
-    next.textContent = state.submitting ? copy.qualify.opening : complete ? copy.cta.continueWa : copy.qualify.next;
-    next.disabled = state.submitting || (isContact ? !validContact(state) : !state[key]);
+    const readyToSend = lastStep() && Boolean(state[key]);
+    next.textContent = state.submitting
+      ? copy.qualify.opening
+      : readyToSend
+        ? copy.cta.continueWa
+        : copy.qualify.next;
+    next.disabled = state.submitting || !state[key];
     next.setAttribute("aria-busy", state.submitting ? "true" : "false");
     next.classList.toggle("is-loading", state.submitting);
-    next.classList.toggle("btn-mint", complete && !state.submitting);
-    next.classList.toggle("btn-primary", !complete || state.submitting);
+    next.classList.toggle("btn-mint", readyToSend && !state.submitting);
+    next.classList.toggle("btn-primary", !readyToSend || state.submitting);
 
-    if (emailBtn) {
-      emailBtn.hidden = !complete || !CONFIG.email || state.submitting;
-      emailBtn.textContent = copy.cta.continueEmail;
-    }
+    if (emailBtn) emailBtn.hidden = true;
 
     if (status) {
       status.textContent = state.notice;
@@ -236,44 +180,25 @@ export function initWizard() {
     }
 
     const note = root.querySelector("[data-price-note]");
-    if (note) note.textContent = isContact ? copy.qualify.priceNote : "";
+    if (note) note.textContent = lastStep() ? copy.qualify.priceNote : "";
     const ready = root.querySelector("[data-ready-note]");
-    if (ready) ready.textContent = isContact ? copy.qualify.ready : "";
+    if (ready) ready.textContent = lastStep() ? copy.qualify.ready : "";
     const privacy = root.querySelector("[data-privacy]");
-    if (privacy) privacy.textContent = isContact ? copy.qualify.privacy : "";
+    if (privacy) privacy.textContent = lastStep() ? copy.qualify.privacy : "";
   };
 
-  const syncAll = () => {
-    render(dialog.querySelector(".dialog-inner"));
-    if (inline) render(inline);
-  };
-
-  const goNext = async (root) => {
-    readFields(root);
-    const key = STEPS[state.step];
-    if (key === "contact") {
-      paintErrors(root);
-      if (!validContact(state) || state.submitting) return;
-      state.submitting = true;
-      state.notice = "";
-      syncAll();
-      track("wizard_complete", payloadFrom(state));
-      await persistLead(state);
-      const popup = window.open(buildWhatsAppUrl(getLang(), payloadFrom(state)), "_blank", "noopener");
-      state.submitting = false;
-      if (!popup) {
-        state.notice = t().qualify.blocked;
-      }
-      syncAll();
+  const goNext = () => {
+    const key = currentKey();
+    if (!state[key] || state.submitting) return;
+    if (lastStep()) {
+      sendWhatsApp();
       return;
     }
-    if (!state[key]) return;
     state.step += 1;
     syncAll();
   };
 
-  const goBack = (root) => {
-    readFields(root);
+  const goBack = () => {
     state.notice = "";
     if (state.step > 0) state.step -= 1;
     syncAll();
@@ -301,39 +226,8 @@ export function initWizard() {
 
   const bindRoot = (root) => {
     if (!root) return;
-    root.querySelector("[data-next]")?.addEventListener("click", () => goNext(root));
-    root.querySelector("[data-back]")?.addEventListener("click", () => goBack(root));
-    root.querySelector("[data-email-send]")?.addEventListener("click", () => {
-      readFields(root);
-      if (!validContact(state) || !CONFIG.email) return;
-      persistLead(state);
-      track("wizard_email", payloadFrom(state));
-      window.location.href = buildMailto(getLang(), payloadFrom(state));
-    });
-    ["data-field-name", "data-field-email", "data-field-phone", "data-field-company", "data-field-note"].forEach((attr) => {
-      root.querySelector(`[${attr}]`)?.addEventListener("input", () => {
-        readFields(root);
-        if (STEPS[state.step] !== "contact") return;
-        const copy = t();
-        const ok = validContact(state);
-        paintErrors(root);
-        [dialog.querySelector(".dialog-inner"), inline].forEach((el) => {
-          if (!el) return;
-          const next = el.querySelector("[data-next]");
-          const emailBtn = el.querySelector("[data-email-send]");
-          if (next) {
-            next.disabled = !ok || state.submitting;
-            next.textContent = state.submitting ? copy.qualify.opening : ok ? copy.cta.continueWa : copy.qualify.next;
-            next.classList.toggle("btn-mint", ok && !state.submitting);
-            next.classList.toggle("btn-primary", !ok || state.submitting);
-          }
-          if (emailBtn) {
-            emailBtn.hidden = !ok || !CONFIG.email || state.submitting;
-            emailBtn.textContent = copy.cta.continueEmail;
-          }
-        });
-      });
-    });
+    root.querySelector("[data-next]")?.addEventListener("click", goNext);
+    root.querySelector("[data-back]")?.addEventListener("click", goBack);
   };
 
   bindRoot(dialog.querySelector(".dialog-inner"));

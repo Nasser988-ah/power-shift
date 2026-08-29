@@ -20,9 +20,10 @@ function wireWhatsApp() {
       a.setAttribute("href", CONFIG.whatsappUrl);
       a.textContent = CONFIG.phoneDisplay;
     });
-    document.querySelectorAll("[data-tel]").forEach((a) => {
+    document.querySelectorAll("[data-tel], a[href^='tel:']").forEach((a) => {
+      a.setAttribute("dir", "ltr");
       a.setAttribute("href", `tel:${CONFIG.phoneE164}`);
-      if (!a.textContent.trim()) a.textContent = CONFIG.phoneDisplay;
+      if (!a.textContent.trim() || a.hasAttribute("data-tel")) a.textContent = CONFIG.phoneDisplay;
     });
     document.querySelectorAll("[data-email-link]").forEach((a) => {
       if (!CONFIG.email) {
@@ -119,7 +120,25 @@ function year() {
   if (el) el.textContent = String(new Date().getFullYear());
 }
 
+function decoratePhoneCtas() {
+  document.querySelectorAll(".btn-sticky-start, .btn-sticky-wa").forEach((btn) => {
+    if (btn.querySelector(".btn-ico")) return;
+    const key = btn.getAttribute("data-i18n");
+    const label = document.createElement("span");
+    if (key) {
+      label.setAttribute("data-i18n", key);
+      btn.removeAttribute("data-i18n");
+    }
+    label.textContent = btn.textContent.trim();
+    const ico = document.createElement("span");
+    ico.className = btn.classList.contains("btn-sticky-wa") ? "btn-ico btn-ico-wa" : "btn-ico btn-ico-chat";
+    ico.setAttribute("aria-hidden", "true");
+    btn.replaceChildren(ico, label);
+  });
+}
+
 initPageI18n();
+decoratePhoneCtas();
 initI18n();
 bindTrackedClicks();
 initNav();

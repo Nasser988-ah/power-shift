@@ -3,6 +3,7 @@ import { COPY } from "./content.js";
 import { track } from "./analytics.js";
 
 const KEY = CONFIG.langKey;
+const CHOSEN = "ps-lang-chosen";
 const SITE_URL = CONFIG.siteOrigin;
 let currentLang = "";
 
@@ -25,9 +26,32 @@ function storedLang() {
   return value === "ar" || value === "en" ? value : null;
 }
 
+function prefersArabic() {
+  try {
+    const list =
+      navigator.languages && navigator.languages.length
+        ? navigator.languages
+        : [navigator.language];
+    const langAr = Array.from(list).some((item) => String(item || "").toLowerCase().startsWith("ar"));
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+    const zoneAr =
+      /^(Africa\/(Cairo|Casablanca|Algiers|Tunis)|Asia\/(Riyadh|Dubai|Qatar|Kuwait|Bahrain|Muscat|Amman|Beirut|Baghdad))$/.test(
+        tz
+      );
+    return langAr || zoneAr;
+  } catch {
+    return false;
+  }
+}
+
+function userChoseLang() {
+  return localStorage.getItem(CHOSEN) === "1";
+}
+
 export function resolveLang() {
   if (isHomePath()) return langFromPath();
-  return storedLang() || "en";
+  if (userChoseLang() && storedLang()) return storedLang();
+  return prefersArabic() ? "ar" : "en";
 }
 
 export function getLang() {
@@ -86,7 +110,10 @@ function commitLang(lang, persist) {
   const root = document.documentElement;
   root.lang = copy.htmlLang;
   root.dir = copy.dir;
-  if (persist) localStorage.setItem(KEY, lang);
+  if (persist) {
+    localStorage.setItem(KEY, lang);
+    localStorage.setItem(CHOSEN, "1");
+  }
 
   if (isHomePath()) {
     document.title = copy.metaTitle;
@@ -171,7 +198,7 @@ export function applyLang(lang, { persist = true, animate = true } = {}) {
 }
 
 export function initI18n() {
-  applyLang(resolveLang(), { persist: true, animate: false });
+  applyLang(resolveLang(), { persist: false, animate: false });
   document.querySelectorAll(".lang-switch [data-lang]").forEach((btn) => {
     btn.addEventListener("click", (event) => {
       const next = btn.dataset.lang;
@@ -186,10 +213,6 @@ export function initI18n() {
     });
   });
   window.addEventListener("popstate", () => {
-    if (isHomePath()) {
-      applyLang(langFromPath(), { persist: true });
-      return;
-    }
-    applyLang(resolveLang(), { persist: false });
+    applyLang(isHomePath() ? langFromPath() : resolveLang(), { persist: false });
   });
 }

@@ -57,7 +57,7 @@
       imagesizes="(max-width: 979px) 92vw, 42vw"
       fetchpriority="high"
     />
-    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/app.css?v=20260829e" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -160,7 +160,7 @@
                 "name": "How do we start?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Four short questions, then WhatsApp with your brief already written. We use that as a 20-minute scope call — not a pitch deck."
+                  "text": "Three short questions, then WhatsApp with your brief already written. We use that as a 20-minute conversation — not a pitch deck."
                 }
               },
               {
@@ -221,8 +221,8 @@
           <div class="header-actions">
             <div class="lang-switch" role="group" aria-label="Language" data-i18n-aria="a11y.language">
               <span class="lang-thumb" aria-hidden="true"></span>
-              <a href="/" data-lang="en" hreflang="en" aria-current="true">EN</a>
-              <a href="/ar" data-lang="ar" hreflang="ar">AR</a>
+              <a href="/" data-lang="en" hreflang="en" aria-current="true"><span class="lang-flag lang-flag-en" aria-hidden="true"></span>EN</a>
+              <a href="/ar" data-lang="ar" hreflang="ar"><span class="lang-flag lang-flag-ar" aria-hidden="true"></span>عربي</a>
             </div>
             <a class="btn btn-primary btn-header-cta" href="/contact" data-open-wizard data-ps-event="hero_cta" data-i18n="cta.startShort">
               Book a Call
@@ -247,6 +247,7 @@
         <a href="/contact" data-i18n="nav.contact">Contact</a>
       </div>
       <div class="nav-mobile-foot">
+        <a class="btn btn-nav-wa" href="https://wa.me/201553766199" data-wa data-i18n="cta.whatsapp">WhatsApp</a>
         <a class="btn btn-primary btn-nav-mobile" href="/contact" data-open-wizard data-ps-event="hero_cta" data-i18n="cta.start">
           Book a Scope Call
         </a>
@@ -466,7 +467,7 @@
             <div class="faq-list" data-faq>
               <details class="faq-item">
                 <summary>How do we start?</summary>
-                <p>Four short questions, then WhatsApp with your brief already written. We use that as a 20-minute scope call — not a pitch deck.</p>
+                <p>Three short questions, then WhatsApp with your brief already written. We use that as a 20-minute conversation — not a pitch deck.</p>
               </details>
               <details class="faq-item">
                 <summary>Do you work in Arabic and English?</summary>
@@ -495,12 +496,12 @@
             <p class="kicker" data-i18n="qualify.kicker">Start</p>
             <h2 data-i18n="qualify.title">Tell us what you need. We will take it to WhatsApp.</h2>
             <p data-i18n="qualify.lead">
-              Four short steps. Your name and email stay with the brief so we can follow up if the chat does not open.
+              Three short questions. Then WhatsApp opens with your brief already written.
             </p>
           </div>
           <div class="qualify-panel" id="qualify-inline">
-            <div class="progress" data-progress>Step 1 of 4</div>
-            <h3 data-q>What are you looking to build?</h3>
+            <div class="progress" data-progress>Step 1 of 3</div>
+            <h3 data-q>What do you need?</h3>
             <div class="choice-grid" data-choices></div>
             <div class="contact-fields" data-contact-fields hidden>
               <label>
@@ -651,6 +652,6 @@
       </div>
     </dialog>
 
-    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/main.js?v=20260829e"></script>
   </body>
 </html>

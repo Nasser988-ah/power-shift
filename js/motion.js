@@ -49,7 +49,7 @@ export function initMotion() {
   const applyScroll = () => {
     const y = window.scrollY / scrollRange;
     if (bar) bar.style.transform = `scaleX(${Math.min(1, Math.max(0, y))})`;
-    if (stickyBar) stickyBar.classList.toggle("is-visible", y > CONFIG.stickyWhatsappAfter);
+    if (stickyBar) stickyBar.classList.add("is-visible");
     if (visual && !reduce) {
       visual.style.transform = `translate3d(0, ${Math.min(window.scrollY, 520) * 0.08}px, 0)`;
     }

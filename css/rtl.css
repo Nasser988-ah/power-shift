@@ -87,12 +87,7 @@ html[dir="rtl"] .nav-mobile-links a::before {
 }
 
 html[dir="rtl"] .nav-mobile-links a::after {
-  content: "←";
-}
-
-html[dir="rtl"] .nav-mobile-links a:active::after,
-html[dir="rtl"] .nav-mobile-links a:focus-visible::after {
-  transform: translateX(-3px);
+  content: "";
 }
 
 html[dir="rtl"] .hero-meta {
@@ -180,7 +175,8 @@ html[dir="rtl"] .nav-desktop {
   gap: 0.15rem;
 }
 
-html[dir="rtl"] .nav-desktop a {
+html[dir="rtl"] .nav-desktop a,
+html[dir="rtl"] .lang-switch [data-lang] {
   letter-spacing: 0;
 }
 
