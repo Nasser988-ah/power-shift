@@ -1,7 +1,7 @@
-import { CONFIG } from "./config.js";
-import { PROJECTS } from "./content.js";
-import { t } from "./i18n.js";
-import { workStem } from "./media.js";
+import { CONFIG } from "./config.js?v=20260829h";
+import { PROJECTS } from "./content.js?v=20260829h";
+import { t } from "./i18n.js?v=20260829h";
+import { workStem } from "./media.js?v=20260829h";
 
 function hostOf(url) {
   try {

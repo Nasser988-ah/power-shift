@@ -1,12 +1,12 @@
-import { bindTrackedClicks, track } from "./analytics.js";
-import { initI18n, getLang, t } from "./i18n.js";
-import { initPageI18n } from "./page-i18n.js";
-import { initNav } from "./nav.js";
-import { initWizard, renderWork } from "./wizard.js";
-import { initMotion } from "./motion.js";
-import { simpleWhatsAppUrl, similarWorkUrl } from "./whatsapp.js";
-import { CONFIG } from "./config.js";
-import { PROJECTS } from "./content.js";
+import { bindTrackedClicks, track } from "./analytics.js?v=20260829h";
+import { initI18n, getLang, t } from "./i18n.js?v=20260829h";
+import { initPageI18n } from "./page-i18n.js?v=20260829h";
+import { initNav } from "./nav.js?v=20260829h";
+import { initWizard, renderWork } from "./wizard.js?v=20260829h";
+import { initMotion } from "./motion.js?v=20260829h";
+import { simpleWhatsAppUrl, similarWorkUrl } from "./whatsapp.js?v=20260829h";
+import { CONFIG } from "./config.js?v=20260829h";
+import { PROJECTS } from "./content.js?v=20260829h";
 
 function wireWhatsApp() {
   const apply = () => {

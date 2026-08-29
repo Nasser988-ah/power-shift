@@ -1,6 +1,6 @@
-import { CONFIG } from "./config.js";
-import { COPY } from "./content.js";
-import { track } from "./analytics.js";
+import { CONFIG } from "./config.js?v=20260829h";
+import { COPY } from "./content.js?v=20260829h";
+import { track } from "./analytics.js?v=20260829h";
 
 const KEY = CONFIG.langKey;
 const CHOSEN = "ps-lang-chosen";

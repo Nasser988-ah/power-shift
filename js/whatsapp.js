@@ -1,5 +1,5 @@
-import { CONFIG, mailtoUrl } from "./config.js";
-import { COPY } from "./content.js";
+import { CONFIG, mailtoUrl } from "./config.js?v=20260829h";
+import { COPY } from "./content.js?v=20260829h";
 
 function idMap(items) {
   return Object.fromEntries((items || []).map((item) => [item.id, item.label]));

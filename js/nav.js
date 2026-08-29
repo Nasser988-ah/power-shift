@@ -1,4 +1,4 @@
-import { getLang, t } from "./i18n.js";
+import { getLang, t } from "./i18n.js?v=20260829h";
 
 export function initNav() {
   const toggle = document.querySelector(".menu-toggle");

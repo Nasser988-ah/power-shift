@@ -1,9 +1,9 @@
-import { t, getLang } from "./i18n.js";
-import { PROJECTS } from "./content.js";
-import { CONFIG } from "./config.js";
-import { buildWhatsAppUrl } from "./whatsapp.js";
-import { track } from "./analytics.js";
-import { workPictureHTML } from "./media.js";
+import { t, getLang } from "./i18n.js?v=20260829h";
+import { PROJECTS } from "./content.js?v=20260829h";
+import { CONFIG } from "./config.js?v=20260829h";
+import { buildWhatsAppUrl } from "./whatsapp.js?v=20260829h";
+import { track } from "./analytics.js?v=20260829h";
+import { workPictureHTML } from "./media.js?v=20260829h";
 
 const STEPS = ["type", "goal", "timeline"];
 const TYPE_ALIAS = {
