@@ -81,4 +81,240 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+<!-- blog:start -->
+  <url>
+    <loc>https://www.powershift.space/blog</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/ar/blog</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/blog/how-much-does-a-website-cost-in-egypt.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/how-much-does-a-website-cost-in-egypt.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/how-much-does-a-website-cost-in-egypt.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/how-much-does-a-website-cost-in-egypt.html" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/ar/blog/how-much-does-a-website-cost-in-egypt.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/how-much-does-a-website-cost-in-egypt.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/how-much-does-a-website-cost-in-egypt.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/how-much-does-a-website-cost-in-egypt.html" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/blog/facebook-or-website-for-business-egypt.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/facebook-or-website-for-business-egypt.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/facebook-or-website-for-business-egypt.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/facebook-or-website-for-business-egypt.html" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/ar/blog/facebook-or-website-for-business-egypt.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/facebook-or-website-for-business-egypt.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/facebook-or-website-for-business-egypt.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/facebook-or-website-for-business-egypt.html" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/blog/what-a-business-website-needs.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/what-a-business-website-needs.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/what-a-business-website-needs.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/what-a-business-website-needs.html" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/ar/blog/what-a-business-website-needs.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/what-a-business-website-needs.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/what-a-business-website-needs.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/what-a-business-website-needs.html" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/blog/website-vs-landing-page.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/website-vs-landing-page.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/website-vs-landing-page.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/website-vs-landing-page.html" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/ar/blog/website-vs-landing-page.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/website-vs-landing-page.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/website-vs-landing-page.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/website-vs-landing-page.html" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/blog/why-isnt-my-website-showing-on-google.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/why-isnt-my-website-showing-on-google.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/why-isnt-my-website-showing-on-google.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/why-isnt-my-website-showing-on-google.html" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/ar/blog/why-isnt-my-website-showing-on-google.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/why-isnt-my-website-showing-on-google.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/why-isnt-my-website-showing-on-google.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/why-isnt-my-website-showing-on-google.html" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/blog/why-website-speed-matters-for-business.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/why-website-speed-matters-for-business.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/why-website-speed-matters-for-business.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/why-website-speed-matters-for-business.html" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/ar/blog/why-website-speed-matters-for-business.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/why-website-speed-matters-for-business.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/why-website-speed-matters-for-business.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/why-website-speed-matters-for-business.html" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/blog/how-to-turn-website-visitors-into-leads.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/how-to-turn-website-visitors-into-leads.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/how-to-turn-website-visitors-into-leads.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/how-to-turn-website-visitors-into-leads.html" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/ar/blog/how-to-turn-website-visitors-into-leads.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/how-to-turn-website-visitors-into-leads.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/how-to-turn-website-visitors-into-leads.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/how-to-turn-website-visitors-into-leads.html" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/blog/when-to-redesign-your-business-website.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/when-to-redesign-your-business-website.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/when-to-redesign-your-business-website.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/when-to-redesign-your-business-website.html" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/ar/blog/when-to-redesign-your-business-website.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/when-to-redesign-your-business-website.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/when-to-redesign-your-business-website.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/when-to-redesign-your-business-website.html" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/blog/ecommerce-website-or-catalogue-egypt.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/ecommerce-website-or-catalogue-egypt.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/ecommerce-website-or-catalogue-egypt.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/ecommerce-website-or-catalogue-egypt.html" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/ar/blog/ecommerce-website-or-catalogue-egypt.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/ecommerce-website-or-catalogue-egypt.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/ecommerce-website-or-catalogue-egypt.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/ecommerce-website-or-catalogue-egypt.html" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/blog/bilingual-arabic-english-website-egypt-gcc.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/bilingual-arabic-english-website-egypt-gcc.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/bilingual-arabic-english-website-egypt-gcc.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/bilingual-arabic-english-website-egypt-gcc.html" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/ar/blog/bilingual-arabic-english-website-egypt-gcc.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/bilingual-arabic-english-website-egypt-gcc.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/bilingual-arabic-english-website-egypt-gcc.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/bilingual-arabic-english-website-egypt-gcc.html" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/blog/website-or-custom-software.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/website-or-custom-software.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/website-or-custom-software.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/website-or-custom-software.html" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/ar/blog/website-or-custom-software.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/website-or-custom-software.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/website-or-custom-software.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/website-or-custom-software.html" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/blog/how-to-choose-a-website-company-in-egypt.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/how-to-choose-a-website-company-in-egypt.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/how-to-choose-a-website-company-in-egypt.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/how-to-choose-a-website-company-in-egypt.html" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/ar/blog/how-to-choose-a-website-company-in-egypt.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/how-to-choose-a-website-company-in-egypt.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/how-to-choose-a-website-company-in-egypt.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/how-to-choose-a-website-company-in-egypt.html" />
+  </url>
+  <!-- blog:end -->
 </urlset>

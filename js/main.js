@@ -1,12 +1,13 @@
 import { bindTrackedClicks, track } from "./analytics.js?v=20260829h";
-import { initI18n, getLang, t } from "./i18n.js?v=20260829h";
-import { initPageI18n } from "./page-i18n.js?v=20260831b";
+import { initI18n, getLang, t } from "./i18n.js?v=20260831c";
+import { initPageI18n } from "./page-i18n.js?v=20260831c";
 import { initNav } from "./nav.js?v=20260829h";
 import { initWizard, renderWork } from "./wizard.js?v=20260829h";
 import { initMotion } from "./motion.js?v=20260829h";
 import { simpleWhatsAppUrl, similarWorkUrl } from "./whatsapp.js?v=20260829h";
 import { CONFIG } from "./config.js?v=20260831a";
-import { PROJECTS } from "./content.js?v=20260831b";
+import { PROJECTS } from "./content.js?v=20260831c";
+import { initBlog } from "./blog.js?v=20260831c";
 
 function wireWhatsApp() {
   const apply = () => {
@@ -142,6 +143,7 @@ function decoratePhoneCtas() {
 initPageI18n();
 decoratePhoneCtas();
 initI18n();
+initBlog();
 bindTrackedClicks();
 initNav();
 renderStaticLists();

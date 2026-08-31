@@ -308,15 +308,16 @@ export const PAGE_TEXT = {
     servicesSeeWork: "See live products",
     servicesWebsiteExtra:
       "Typical work includes bilingual Arabic/English sites, RTL interfaces, and a conversion path that leads to a call or WhatsApp — not a generic template.",
-    servicesWebsiteRelated: 'Related work: <a href="/work/via-holidays.html">VIA Holidays travel website</a> and <a href="/work/lodiamo.html">Lodiamo corporate site</a>.',
+    servicesWebsiteRelated: 'Related work: <a href="/work/via-holidays.html">VIA Holidays travel website</a> and <a href="/work/lodiamo.html">Lodiamo corporate site</a>. From the blog: <a href="/blog/what-a-business-website-needs.html">what a business website actually needs</a> and <a href="/blog/how-much-does-a-website-cost-in-egypt.html">what changes website cost in Egypt</a>.',
     servicesCommerceExtra: "Built for retail, wholesale, and brand stores that need more than a brochure.",
     servicesCommerceRelated:
-      'Related work: <a href="/work/nourvive.html">Nourvive beauty store</a>, <a href="/work/corolla.html">Corolla food shop</a>, and <a href="/work/uruz.html">URUZ luxury beauty commerce</a>.',
+      'Related work: <a href="/work/nourvive.html">Nourvive beauty store</a>, <a href="/work/corolla.html">Corolla food shop</a>, and <a href="/work/uruz.html">URUZ luxury beauty commerce</a>. From the blog: <a href="/blog/ecommerce-website-or-catalogue-egypt.html">when you need a shop versus a catalogue</a>.',
     servicesSaasExtra: "We will say when a SaaS product is the right shape, and when a simpler site or operations tool should come first.",
-    servicesSaasRelated: 'Related work: <a href="/work/availio.html">Availio property operations software</a>.',
+    servicesSaasRelated:
+      'Related work: <a href="/work/availio.html">Availio property operations software</a>. From the blog: <a href="/blog/website-or-custom-software.html">when a website is not enough and you need software</a>.',
     servicesOpsExtra: "These replace notebooks, spreadsheets, and scattered chats when the operation has outgrown them.",
     servicesOpsRelated:
-      'Related work: <a href="/work/haseb.html">7aseb operations and finance system</a> and <a href="/work/availio.html">Availio booking control</a>.',
+      'Related work: <a href="/work/haseb.html">7aseb operations and finance system</a> and <a href="/work/availio.html">Availio booking control</a>. From the blog: <a href="/blog/website-or-custom-software.html">website versus a custom operations system</a>.',
     servicesFinal:
       "If you are searching for a software development company in Cairo, or a studio that can ship bilingual products for the GCC, start with a 20-minute scope call.",
     servicesMetaTitle: "Power Shift | Web Development & Custom Software in Cairo",
@@ -334,6 +335,9 @@ export const PAGE_TEXT = {
     errorWork: "See our work",
     errorMetaTitle: "Page not found | POWER SHIFT",
     errorMetaDesc: "This Power Shift page is unavailable. Return to the homepage, portfolio, or book a scope call.",
+    blogMetaTitle: "Blog | Websites, Search & Software Notes from Power Shift",
+    blogMetaDesc:
+      "Practical notes from Power Shift in Cairo: website cost in Egypt, Facebook versus a site, Google visibility, speed, leads, shops, and when to build software.",
   },
   ar: {
     home: "الرئيسية",
@@ -365,15 +369,15 @@ export const PAGE_TEXT = {
     servicesSeeWork: "شاهد المنتجات العاملة",
     servicesWebsiteExtra: "يشمل العمل عادة مواقع عربي/إنجليزي، وواجهات RTL، ومسار تحويل يصل إلى مكالمة أو واتساب — لا قالبًا عامًا.",
     servicesWebsiteRelated:
-      'أعمال ذات صلة: <a href="/work/via-holidays.html">موقع VIA Holidays السياحي</a> و<a href="/work/lodiamo.html">موقع Lodiamo المؤسسي</a>.',
+      'أعمال ذات صلة: <a href="/work/via-holidays.html">موقع VIA Holidays السياحي</a> و<a href="/work/lodiamo.html">موقع Lodiamo المؤسسي</a>. من المدونة: <a href="/ar/blog/what-a-business-website-needs.html">ماذا يحتاج موقع الشركة فعلًا</a> و<a href="/ar/blog/how-much-does-a-website-cost-in-egypt.html">ما الذي يغيّر تكلفة الموقع في مصر</a>.',
     servicesCommerceExtra: "للتجزئة والجملة ومتاجر العلامات التي تحتاج أكثر من صفحة تعريف.",
     servicesCommerceRelated:
-      'أعمال ذات صلة: <a href="/work/nourvive.html">متجر Nourvive</a>، و<a href="/work/corolla.html">متجر Corolla</a>، و<a href="/work/uruz.html">تجارة URUZ الفاخرة</a>.',
+      'أعمال ذات صلة: <a href="/work/nourvive.html">متجر Nourvive</a>، و<a href="/work/corolla.html">متجر Corolla</a>، و<a href="/work/uruz.html">تجارة URUZ الفاخرة</a>. من المدونة: <a href="/ar/blog/ecommerce-website-or-catalogue-egypt.html">متى تحتاج متجرًا ومتى يكفي كتالوج</a>.',
     servicesSaasExtra: "نوضح متى يكون منتج SaaS الشكل الصحيح، ومتى يكفي موقع أو أداة تشغيل أبسط.",
-    servicesSaasRelated: 'أعمال ذات صلة: <a href="/work/availio.html">برمجيات Availio لتشغيل العقارات</a>.',
+    servicesSaasRelated: 'أعمال ذات صلة: <a href="/work/availio.html">برمجيات Availio لتشغيل العقارات</a>. من المدونة: <a href="/ar/blog/website-or-custom-software.html">متى لا يكفي الموقع وتحتاج برنامجًا</a>.',
     servicesOpsExtra: "تحل محل الدفاتر وملفات Excel والمحادثات المتفرقة عندما يتجاوز التشغيل ذلك.",
     servicesOpsRelated:
-      'أعمال ذات صلة: <a href="/work/haseb.html">نظام 7aseb للتشغيل والمالية</a> و<a href="/work/availio.html">ضبط حجوزات Availio</a>.',
+      'أعمال ذات صلة: <a href="/work/haseb.html">نظام 7aseb للتشغيل والمالية</a> و<a href="/work/availio.html">ضبط حجوزات Availio</a>. من المدونة: <a href="/ar/blog/website-or-custom-software.html">الموقع مقابل نظام التشغيل المخصص</a>.',
     servicesFinal: "إذا كنت تبحث عن شركة برمجيات في القاهرة، أو استوديو يبني منتجات بلغتين للخليج، ابدأ باستشارة عشرين دقيقة.",
     servicesMetaTitle: "خدمات تطوير المواقع والبرمجيات في القاهرة | Power Shift",
     servicesMetaDesc: "تبني Power Shift مواقع مخصصة ومتاجر إلكترونية ومنتجات SaaS وأنظمة تشغيل للشركات في مصر والخليج.",
@@ -389,5 +393,8 @@ export const PAGE_TEXT = {
     errorWork: "شاهد أعمالنا",
     errorMetaTitle: "الصفحة غير موجودة | POWER SHIFT",
     errorMetaDesc: "هذه الصفحة غير متاحة. عد إلى الرئيسية أو الأعمال أو تواصل معنا.",
+    blogMetaTitle: "المدونة | ملاحظات عن المواقع والبحث والبرمجيات من Power Shift",
+    blogMetaDesc:
+      "ملاحظات عملية من Power Shift في القاهرة: تكلفة الموقع في مصر، فيسبوك مقابل الموقع، الظهور على جوجل، السرعة، تحويل الزوار، المتاجر، ومتى تبني برنامجًا.",
   },
 };

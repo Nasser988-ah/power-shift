@@ -96,6 +96,7 @@ export const COPY = {
       approach: "Approach",
       about: "About",
       contact: "Contact",
+      blog: "Blog",
       menuLabel: "Menu",
     },
     cta: {
@@ -459,6 +460,7 @@ export const COPY = {
       approach: "طريقة العمل",
       about: "من نحن",
       contact: "تواصل معنا",
+      blog: "المدونة",
       menuLabel: "القائمة",
     },
     cta: {

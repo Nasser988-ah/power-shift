@@ -11,6 +11,8 @@ POWER SHIFT designs, builds, and supports bilingual Arabic/English products. Wor
 - [Work](https://www.powershift.space/work): Live product case studies
 - [Services](https://www.powershift.space/services): Websites, e-commerce, SaaS, and operations systems
 - [Contact](https://www.powershift.space/contact): Book a 20-minute scope call
+- [Blog](https://www.powershift.space/blog): Practical notes on websites, search, leads, shops, and software
+- [Blog (Arabic)](https://www.powershift.space/ar/blog): Arabic-language notes for the same topics
 
 ## Selected work
 

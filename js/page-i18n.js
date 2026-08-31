@@ -1,5 +1,5 @@
-import { getLang, t } from "./i18n.js?v=20260829h";
-import { PAGE_EXTRAS, PAGE_TEXT } from "./page-copy.js?v=20260831b";
+import { getLang, t } from "./i18n.js?v=20260831c";
+import { PAGE_EXTRAS, PAGE_TEXT } from "./page-copy.js?v=20260831c";
 
 function pageText(lang = getLang()) {
   return PAGE_TEXT[lang] || PAGE_TEXT.en;
@@ -139,6 +139,7 @@ function paintPageMeta() {
   if (page === "services") setMeta(copy.servicesMetaTitle, copy.servicesMetaDesc);
   if (page === "contact") setMeta(copy.contactMetaTitle, copy.contactMetaDesc);
   if (page === "error") setMeta(copy.errorMetaTitle, copy.errorMetaDesc);
+  if (page === "blog") setMeta(copy.blogMetaTitle, copy.blogMetaDesc);
 }
 
 function paint() {

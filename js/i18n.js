@@ -1,5 +1,5 @@
 import { CONFIG } from "./config.js?v=20260831a";
-import { COPY } from "./content.js?v=20260831b";
+import { COPY } from "./content.js?v=20260831c";
 import { track } from "./analytics.js?v=20260829h";
 
 const KEY = CONFIG.langKey;
@@ -17,8 +17,16 @@ export function isHomePath(pathname = window.location.pathname) {
   );
 }
 
-function langFromPath() {
-  return /^\/ar(?:\/|$)/.test(window.location.pathname) ? "ar" : "en";
+export function isUrlLockedLang(pathname = window.location.pathname) {
+  return (
+    isHomePath(pathname) ||
+    /^\/ar\//.test(pathname) ||
+    /^\/blog(?:\/|$)/.test(pathname)
+  );
+}
+
+function langFromPath(pathname = window.location.pathname) {
+  return /^\/ar(?:\/|$)/.test(pathname) ? "ar" : "en";
 }
 
 function storedLang() {
@@ -49,7 +57,7 @@ function userChoseLang() {
 }
 
 export function resolveLang() {
-  if (isHomePath()) return langFromPath();
+  if (isUrlLockedLang()) return langFromPath();
   if (userChoseLang() && storedLang()) return storedLang();
   return prefersArabic() ? "ar" : "en";
 }
@@ -202,8 +210,24 @@ export function initI18n() {
   document.querySelectorAll(".lang-switch [data-lang]").forEach((btn) => {
     btn.addEventListener("click", (event) => {
       const next = btn.dataset.lang;
+      if (!next) return;
+      const href = btn.getAttribute("href") || "";
+      const dest = href.split("?")[0];
+      const shouldNavigate =
+        isUrlLockedLang() &&
+        dest &&
+        dest !== "#" &&
+        dest !== window.location.pathname;
+
+      if (shouldNavigate) {
+        localStorage.setItem(KEY, next);
+        localStorage.setItem(CHOSEN, "1");
+        track("lang_switch", { lang: next });
+        return;
+      }
+
       event.preventDefault();
-      if (!next || next === getLang()) return;
+      if (next === getLang()) return;
       if (isHomePath()) {
         const nextPath = next === "ar" ? "/ar" : "/";
         window.history.pushState({ lang: next }, "", nextPath);
@@ -213,6 +237,6 @@ export function initI18n() {
     });
   });
   window.addEventListener("popstate", () => {
-    applyLang(isHomePath() ? langFromPath() : resolveLang(), { persist: false });
+    applyLang(isUrlLockedLang() ? langFromPath() : resolveLang(), { persist: false });
   });
 }

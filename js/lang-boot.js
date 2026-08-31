@@ -8,6 +8,8 @@
       path === "/ar/" ||
       path === "/ar/index.html";
     var pathAr = /^\/ar(?:\/|$)/.test(path);
+    var pathBlogEn = /^\/blog(?:\/|$)/.test(path);
+    var urlLocked = home || pathAr || pathBlogEn;
     var bot = /Googlebot|Google-InspectionTool|bingbot|BingPreview|DuckDuckBot|Slurp|Yandex(Bot|RenderResourcesBot)|Baiduspider|facebookexternalhit|Twitterbot|LinkedInBot|WhatsApp|TelegramBot|Applebot|Bytespider|GPTBot|ClaudeBot|CCBot|GoogleOther/i.test(
       navigator.userAgent || ""
     );
@@ -29,7 +31,7 @@
       location.replace("/ar");
       return;
     }
-    var lang = home
+    var lang = urlLocked
       ? pathAr
         ? "ar"
         : "en"
