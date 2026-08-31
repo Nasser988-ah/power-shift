@@ -8,6 +8,9 @@
       path === "/ar/" ||
       path === "/ar/index.html";
     var pathAr = /^\/ar(?:\/|$)/.test(path);
+    var bot = /Googlebot|Google-InspectionTool|bingbot|BingPreview|DuckDuckBot|Slurp|Yandex(Bot|RenderResourcesBot)|Baiduspider|facebookexternalhit|Twitterbot|LinkedInBot|WhatsApp|TelegramBot|Applebot|Bytespider|GPTBot|ClaudeBot|CCBot|GoogleOther/i.test(
+      navigator.userAgent || ""
+    );
     var stored = localStorage.getItem("ps-lang");
     var chosen = localStorage.getItem("ps-lang-chosen") === "1";
     var langs = navigator.languages && navigator.languages.length
@@ -22,7 +25,7 @@
     } catch (err) {}
     var zoneAr = /^(Africa\/(Cairo|Casablanca|Algiers|Tunis)|Asia\/(Riyadh|Dubai|Qatar|Kuwait|Bahrain|Muscat|Amman|Beirut|Baghdad))$/.test(tz);
     var prefersAr = langAr || zoneAr;
-    if (home && !pathAr && ((chosen && stored === "ar") || (!chosen && prefersAr))) {
+    if (!bot && home && !pathAr && ((chosen && stored === "ar") || (!chosen && prefersAr))) {
       location.replace("/ar");
       return;
     }
@@ -30,9 +33,9 @@
       ? pathAr
         ? "ar"
         : "en"
-      : chosen && (stored === "ar" || stored === "en")
+      : !bot && chosen && (stored === "ar" || stored === "en")
         ? stored
-        : prefersAr
+        : !bot && prefersAr
           ? "ar"
           : "en";
     if (lang === "ar") {

@@ -1,5 +1,5 @@
 import { getLang, t } from "./i18n.js?v=20260829h";
-import { PAGE_EXTRAS, PAGE_TEXT } from "./page-copy.js?v=20260829h";
+import { PAGE_EXTRAS, PAGE_TEXT } from "./page-copy.js?v=20260831b";
 
 function pageText(lang = getLang()) {
   return PAGE_TEXT[lang] || PAGE_TEXT.en;

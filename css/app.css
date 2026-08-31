@@ -1056,7 +1056,9 @@ body.is-nav-open::before {
 .footer-col a:hover { color: var(--navy); }
 
 a[href^="tel:"],
-[data-tel] {
+a[href^="mailto:"],
+[data-tel],
+[data-email-link] {
   direction: ltr;
   unicode-bidi: isolate;
 }

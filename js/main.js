@@ -1,12 +1,12 @@
 import { bindTrackedClicks, track } from "./analytics.js?v=20260829h";
 import { initI18n, getLang, t } from "./i18n.js?v=20260829h";
-import { initPageI18n } from "./page-i18n.js?v=20260829h";
+import { initPageI18n } from "./page-i18n.js?v=20260831b";
 import { initNav } from "./nav.js?v=20260829h";
 import { initWizard, renderWork } from "./wizard.js?v=20260829h";
 import { initMotion } from "./motion.js?v=20260829h";
 import { simpleWhatsAppUrl, similarWorkUrl } from "./whatsapp.js?v=20260829h";
-import { CONFIG } from "./config.js?v=20260829h";
-import { PROJECTS } from "./content.js?v=20260829h";
+import { CONFIG } from "./config.js?v=20260831a";
+import { PROJECTS } from "./content.js?v=20260831b";
 
 function wireWhatsApp() {
   const apply = () => {
@@ -31,7 +31,9 @@ function wireWhatsApp() {
         return;
       }
       a.hidden = false;
+      a.setAttribute("dir", "ltr");
       a.setAttribute("href", `mailto:${CONFIG.email}`);
+      a.setAttribute("aria-label", `Email ${CONFIG.brand} at ${CONFIG.email}`);
       a.textContent = CONFIG.email;
     });
     document.querySelectorAll("[data-similar]").forEach((a) => {

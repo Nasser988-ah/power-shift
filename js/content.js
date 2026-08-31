@@ -78,9 +78,9 @@ export const COPY = {
   en: {
     dir: "ltr",
     htmlLang: "en",
-    metaTitle: "Power Shift | Software & Web Development Agency in Cairo",
+    metaTitle: "Power Shift | Web & Software Development in Cairo",
     metaDesc:
-      "Power Shift is a software studio in Cairo building high-performance websites, e-commerce platforms, SaaS products, and custom business systems for companies across Egypt and the GCC.",
+      "Power Shift is a Cairo software studio. We build custom websites, e-commerce stores, SaaS products, and operations systems for companies in Egypt and the GCC.",
     skip: "Skip to content",
     a11y: {
       primaryNav: "Primary",
@@ -116,7 +116,7 @@ export const COPY = {
     lang: { en: "EN", ar: "عربي", switchTo: "العربية" },
     hero: {
       kicker: "Software studio · Cairo · GCC & international",
-      seoH1: "Software & Web Development Agency in Cairo",
+      seoH1: "Power Shift — Software & Web Development in Cairo",
       h1a: "We build the website.",
       h1b: "Then we build what runs behind it.",
       lead: "A serious site, a shop that takes orders, or the system your team uses every day — designed, built, and supported from Cairo.",
@@ -443,7 +443,7 @@ export const COPY = {
     htmlLang: "ar",
     metaTitle: "Power Shift | شركة تطوير برمجيات ومواقع في القاهرة",
     metaDesc:
-      "Power Shift استوديو برمجيات في القاهرة يبني مواقع عالية الأداء ومتاجر إلكترونية ومنتجات SaaS وأنظمة أعمال مخصصة للشركات في مصر والخليج.",
+      "Power Shift استوديو برمجيات في القاهرة. نبني مواقع مخصصة ومتاجر إلكترونية ومنتجات SaaS وأنظمة تشغيل للشركات في مصر والخليج.",
     skip: "انتقل إلى المحتوى",
     a11y: {
       primaryNav: "القائمة الرئيسية",
@@ -479,7 +479,7 @@ export const COPY = {
     lang: { en: "EN", ar: "عربي", switchTo: "English" },
     hero: {
       kicker: "مصر · الخليج · الأسواق الدولية",
-      seoH1: "شركة تطوير برمجيات ومواقع إلكترونية في القاهرة",
+      seoH1: "Power Shift — شركة تطوير برمجيات ومواقع في القاهرة",
       h1a: "موقع يقنع عميلك.",
       h1b: "ونظام يسهّل عمل فريقك.",
       lead: "نصمّم ونبرمج المواقع والمتاجر وأنظمة إدارة الأعمال — من التخطيط إلى الإطلاق والدعم.",

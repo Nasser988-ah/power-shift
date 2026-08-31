@@ -1,6 +1,6 @@
 import { t, getLang } from "./i18n.js?v=20260829h";
-import { PROJECTS } from "./content.js?v=20260829h";
-import { CONFIG } from "./config.js?v=20260829h";
+import { PROJECTS } from "./content.js?v=20260831b";
+import { CONFIG } from "./config.js?v=20260831a";
 import { buildWhatsAppUrl } from "./whatsapp.js?v=20260829h";
 import { track } from "./analytics.js?v=20260829h";
 import { workPictureHTML } from "./media.js?v=20260829h";

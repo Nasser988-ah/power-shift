@@ -1,12 +1,17 @@
 {
   "trailingSlash": false,
-  "rewrites": [
-    {
-      "source": "/ar",
-      "destination": "/index.html"
-    }
-  ],
   "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "power-shift-tech.vercel.app"
+        }
+      ],
+      "destination": "https://www.powershift.space/:path*",
+      "permanent": true
+    },
     {
       "source": "/index.html",
       "destination": "/",

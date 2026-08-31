@@ -1,6 +1,6 @@
 /**
  * POWER SHIFT — central site configuration.
- * Set email and leadEndpoint when you have them. WhatsApp works without either.
+ * WhatsApp is the primary lead path. Email is listed for professional contact.
  */
 export const CONFIG = {
   brand: "POWER SHIFT",
@@ -9,7 +9,7 @@ export const CONFIG = {
   whatsappUrl: "https://wa.me/201553766199",
   phoneDisplay: "+20 155 376 6199",
   phoneE164: "+201553766199",
-  email: "",
+  email: "info@powershift.space",
   city: "Cairo",
   country: "Egypt",
   siteOrigin: "https://www.powershift.space",
