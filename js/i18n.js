@@ -21,6 +21,7 @@ export function isUrlLockedLang(pathname = window.location.pathname) {
   return (
     isHomePath(pathname) ||
     /^\/ar\//.test(pathname) ||
+    /^\/about(?:\/|$)/.test(pathname) ||
     /^\/blog(?:\/|$)/.test(pathname)
   );
 }

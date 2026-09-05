@@ -251,6 +251,61 @@
   font-size: var(--fs-lg);
 }
 
+.about-page {
+  padding-top: 0;
+}
+
+.about-page-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.about-page-card {
+  display: grid;
+  align-content: start;
+  gap: 0.65rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+}
+
+.about-page-card h2,
+.official-details h2 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: var(--fs-lg);
+  line-height: 1.18;
+}
+
+.about-page-card p:not(.kicker) {
+  color: var(--ink-soft);
+}
+
+.official-details {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.official-links {
+  display: grid;
+  align-content: start;
+  gap: 0.65rem;
+}
+
+.official-links a {
+  width: fit-content;
+  color: var(--mint);
+  text-underline-offset: 0.2em;
+}
+
+@media (min-width: 760px) {
+  .about-page-grid,
+  .official-details {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .error-page {
   min-height: calc(100svh - var(--header-h) - 8rem);
   display: grid;
@@ -278,6 +333,8 @@ html[dir="rtl"] .breadcrumb li:not(:last-child)::after {
 html[dir="rtl"] .page-hero h1,
 html[dir="rtl"] .case-body h2,
 html[dir="rtl"] .service-page-item h2,
+html[dir="rtl"] .about-page-card h2,
+html[dir="rtl"] .official-details h2,
 html[dir="rtl"] .error-page h1 {
   max-width: none;
   letter-spacing: 0;
@@ -294,6 +351,8 @@ html[dir="rtl"] .page-hero .kicker {
 html[dir="rtl"] .work-index-copy,
 html[dir="rtl"] .case-body,
 html[dir="rtl"] .service-page-item,
+html[dir="rtl"] .about-page-card,
+html[dir="rtl"] .official-details,
 html[dir="rtl"] .error-page {
   text-align: start;
 }

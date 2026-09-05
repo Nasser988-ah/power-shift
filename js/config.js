@@ -16,7 +16,6 @@ export const CONFIG = {
   social: {
     instagram: "https://www.instagram.com/powershift.dev/",
     facebook: "https://www.facebook.com/people/Power-Shift/61573374143956/",
-    linkedin: "https://www.linkedin.com/in/nasser-ahmed-6384a824a",
   },
   founder: {
     name: "Nasser Ahmed",

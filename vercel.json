@@ -45,6 +45,16 @@
       "permanent": true
     },
     {
+      "source": "/about/index.html",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/ar/about/index.html",
+      "destination": "/ar/about",
+      "permanent": true
+    },
+    {
       "source": "/work/index.html",
       "destination": "/work",
       "permanent": true

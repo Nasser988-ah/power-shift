@@ -331,7 +331,7 @@ export const COPY = {
       title: "A studio in Cairo that builds software, not decks.",
       who: "Who you are talking to",
       whoBody:
-        "POWER SHIFT is a small software studio. When you message us, you reach the people who will design and build the work — not a sales queue.",
+        "POWER SHIFT is a Cairo software studio founded by Nasser Ahmed. When you message us, you reach the people who will design and build the work — not a sales queue.",
       what: "Where we sit",
       whatBody:
         "Based in Cairo. We deliver for Egypt, the GCC, and international clients. Arabic and English are part of the product, not an afterthought.",
@@ -443,7 +443,7 @@ export const COPY = {
   ar: {
     dir: "rtl",
     htmlLang: "ar",
-    metaTitle: "Power Shift | شركة تطوير برمجيات ومواقع في القاهرة",
+    metaTitle: "باور شيفت (Power Shift) | شركة برمجيات في القاهرة",
     metaDesc:
       "Power Shift استوديو برمجيات في القاهرة. نبني مواقع مخصصة ومتاجر إلكترونية ومنتجات SaaS وأنظمة تشغيل للشركات في مصر والخليج.",
     skip: "انتقل إلى المحتوى",
@@ -482,7 +482,7 @@ export const COPY = {
     lang: { en: "EN", ar: "عربي", switchTo: "English" },
     hero: {
       kicker: "مصر · الخليج · الأسواق الدولية",
-      seoH1: "Power Shift — شركة تطوير برمجيات ومواقع في القاهرة",
+      seoH1: "باور شيفت (Power Shift) — شركة تطوير برمجيات ومواقع في القاهرة",
       h1a: "موقع يقنع عميلك.",
       h1b: "ونظام يسهّل عمل فريقك.",
       lead: "نصمّم ونبرمج المواقع والمتاجر وأنظمة إدارة الأعمال — من التخطيط إلى الإطلاق والدعم.",
@@ -696,7 +696,7 @@ export const COPY = {
       title: "استوديو في القاهرة يبني برمجيات حقيقية، لا عروضًا تقديمية.",
       who: "مع من تتكلم",
       whoBody:
-        "POWER SHIFT استوديو برمجيات صغير. حين تراسلنا تصل مباشرة إلى من سيصمّم مشروعك ويبنيه، لا إلى قسم مبيعات.",
+        "أسس ناصر أحمد POWER SHIFT في القاهرة. حين تراسلنا تصل مباشرة إلى من سيصمّم مشروعك ويبنيه، لا إلى قسم مبيعات.",
       what: "أين نعمل",
       whatBody:
         "مقرّنا في القاهرة، ونعمل مع عملاء في مصر والخليج والأسواق الدولية. العربي والإنجليزي جزء من المنتج، لا خطوة لاحقة.",
