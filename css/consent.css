@@ -1,0 +1,119 @@
+.consent-banner {
+  position: fixed;
+  inset-inline: max(1rem, env(safe-area-inset-left)) max(1rem, env(safe-area-inset-right));
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  z-index: calc(var(--z-progress) + 10);
+  width: min(42rem, calc(100% - 2rem));
+  margin-inline: auto;
+  display: grid;
+  gap: 1rem;
+  padding: clamp(1rem, 3vw, 1.4rem);
+  color: var(--navy);
+  background: color-mix(in srgb, var(--white) 96%, transparent);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+  opacity: 0;
+  transform: translateY(1rem);
+  transition:
+    opacity var(--dur-fast),
+    transform var(--dur-fast) var(--ease);
+}
+
+.consent-banner[hidden] {
+  display: none;
+}
+
+.consent-banner.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.consent-copy {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.consent-copy h2 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(1.35rem, 1.15rem + 0.7vw, 1.75rem);
+  font-weight: 400;
+}
+
+.consent-copy p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: var(--fs-sm);
+  line-height: 1.55;
+}
+
+.consent-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.consent-actions .btn {
+  min-height: 44px;
+}
+
+.consent-settings {
+  position: fixed;
+  inset-inline-start: max(0.75rem, env(safe-area-inset-left));
+  bottom: calc(var(--dock-h) + max(0.75rem, env(safe-area-inset-bottom)));
+  z-index: calc(var(--z-sticky) + 1);
+  padding: 0.5rem 0.7rem;
+  color: var(--navy);
+  background: var(--white);
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(11, 23, 38, 0.12);
+  font: inherit;
+  font-size: var(--fs-xs);
+  cursor: pointer;
+}
+
+.consent-settings[hidden] {
+  display: none;
+}
+
+.consent-settings:hover,
+.consent-settings:focus-visible {
+  color: var(--white);
+  background: var(--navy);
+}
+
+html[dir="rtl"] .consent-banner,
+html[dir="rtl"] .consent-settings {
+  text-align: start;
+}
+
+@media (min-width: 760px) {
+  .consent-banner {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+  }
+
+  .consent-actions {
+    justify-content: flex-end;
+  }
+
+  .consent-settings {
+    bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+}
+
+@media (max-width: 520px) {
+  .consent-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .consent-banner {
+    transition: none;
+  }
+}

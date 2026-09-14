@@ -8,6 +8,7 @@ import { simpleWhatsAppUrl, similarWorkUrl } from "./whatsapp.js?v=20260829h";
 import { CONFIG } from "./config.js?v=20260831a";
 import { PROJECTS } from "./content.js?v=20260831c";
 import { initBlog } from "./blog.js?v=20260831c";
+import { initMarketingConsent } from "./marketing-consent.js?v=20260914a";
 
 function wireWhatsApp() {
   const apply = () => {
@@ -143,6 +144,7 @@ function decoratePhoneCtas() {
 initPageI18n();
 decoratePhoneCtas();
 initI18n();
+initMarketingConsent();
 initBlog();
 bindTrackedClicks();
 initNav();
