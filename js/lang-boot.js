@@ -1,5 +1,7 @@
 (function () {
   try {
+    var PIXEL_ID = "1639209490886117";
+    var PIXEL_SRC = "https://connect.facebook.net/en_US/fbevents.js";
     var path = location.pathname;
     var home =
       path === "/" ||
@@ -27,6 +29,33 @@
     } catch (err) {}
     var zoneAr = /^(Africa\/(Cairo|Casablanca|Algiers|Tunis)|Asia\/(Riyadh|Dubai|Qatar|Kuwait|Bahrain|Muscat|Amman|Beirut|Baghdad))$/.test(tz);
     var prefersAr = langAr || zoneAr;
+    if (!bot) {
+      var fbq = window.fbq;
+      if (!fbq) {
+        fbq = function () {
+          if (fbq.callMethod) fbq.callMethod.apply(fbq, arguments);
+          else fbq.queue.push(arguments);
+        };
+        window.fbq = fbq;
+        if (!window._fbq) window._fbq = fbq;
+        fbq.push = fbq;
+        fbq.loaded = true;
+        fbq.version = "2.0";
+        fbq.queue = [];
+      }
+      if (!document.querySelector('script[src="' + PIXEL_SRC + '"]')) {
+        var pixel = document.createElement("script");
+        pixel.async = true;
+        pixel.src = PIXEL_SRC;
+        pixel.setAttribute("data-meta-pixel", PIXEL_ID);
+        document.head.appendChild(pixel);
+      }
+      if (!window._psPixelBooted) {
+        window._psPixelBooted = true;
+        fbq("init", PIXEL_ID);
+        fbq("track", "PageView");
+      }
+    }
     if (!bot && home && !pathAr && ((chosen && stored === "ar") || (!chosen && prefersAr))) {
       location.replace("/ar");
       return;

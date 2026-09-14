@@ -61,12 +61,16 @@ function bindSiteEvents() {
 
 function loadMetaPixel() {
   if (pixelInitialized) return;
+  const alreadyBooted = Boolean(window.fbq && window._psPixelBooted);
   const fbq = createFbq();
-  fbq("init", PIXEL_ID);
-  fbq("track", "PageView", {
-    page_path: window.location.pathname,
-    language: language(),
-  });
+  if (!alreadyBooted) {
+    fbq("init", PIXEL_ID);
+    fbq("track", "PageView", {
+      page_path: window.location.pathname,
+      language: language(),
+    });
+    window._psPixelBooted = true;
+  }
   pixelInitialized = true;
   bindSiteEvents();
 
