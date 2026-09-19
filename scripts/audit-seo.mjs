@@ -1,4 +1,4 @@
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -36,6 +36,27 @@ const pages = [
       ar: "https://www.powershift.space/ar/about",
     },
   },
+  {
+    file: "services/index.html",
+    canonical: "https://www.powershift.space/services",
+    alternates: {
+      en: "https://www.powershift.space/services",
+      ar: "https://www.powershift.space/ar/services",
+    },
+  },
+  {
+    file: "ar/services/index.html",
+    canonical: "https://www.powershift.space/ar/services",
+    alternates: {
+      en: "https://www.powershift.space/services",
+      ar: "https://www.powershift.space/ar/services",
+    },
+  },
+  {
+    file: "ar/تصميم-مواقع-مصر/index.html",
+    canonical: "https://www.powershift.space/ar/تصميم-مواقع-مصر",
+    alternates: {},
+  },
 ];
 
 const failures = [];
@@ -48,10 +69,19 @@ function escapeRegExp(value) {
   return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
+function localTarget(href) {
+  const path = decodeURIComponent(href.split("#")[0].split("?")[0]);
+  if (!path || path === "/") return "index.html";
+  const relative = path.replace(/^\/+/, "");
+  if (relative.endsWith(".html")) return relative;
+  return join(relative, "index.html");
+}
+
 for (const page of pages) {
   const html = readFileSync(join(root, page.file), "utf8");
   const label = page.file;
   const h1Count = (html.match(/<h1(?:\s|>)/g) || []).length;
+  const internalHrefs = [...html.matchAll(/<a[^>]+href="(\/[^"]*)"/g)].map((match) => match[1]);
   const jsonLdBlocks = html
     .split('<script type="application/ld+json">')
     .slice(1)
@@ -62,6 +92,11 @@ for (const page of pages) {
   expect(new RegExp(`<link rel="canonical" href="${escapeRegExp(page.canonical)}"`).test(html), `${label}: incorrect canonical`);
   expect(h1Count === 1, `${label}: expected one H1, found ${h1Count}`);
   expect(jsonLdBlocks.length > 0, `${label}: missing JSON-LD`);
+
+  for (const href of internalHrefs) {
+    const target = localTarget(href);
+    expect(existsSync(join(root, target)), `${label}: broken internal link ${href}`);
+  }
 
   for (const [lang, url] of Object.entries(page.alternates)) {
     expect(

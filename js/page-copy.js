@@ -163,7 +163,7 @@ export const PAGE_EXTRAS = {
       results: "المنتج يعمل على viaholidays.eu. لا ننشر أرقام زيارات أو تحويلات لهذا المشروع.",
       liveLabel: "افتح موقع VIA Holidays",
       relatedHtml:
-        'يندرج هذا المشروع ضمن <a href="/services#website">تطوير المواقع المخصصة</a>. اطّلع على <a href="/services">خدمات تطوير البرمجيات والمواقع</a>.',
+        'يندرج هذا المشروع ضمن <a href="/ar/services#website">تطوير المواقع المخصصة</a>. اطّلع على <a href="/ar/services">خدمات تطوير البرمجيات والمواقع</a>.',
       relatedA: "تجارة إلكترونية بلغتين",
       relatedB: "موقع علامة في الخليج",
       metaTitle: "دراسة حالة VIA Holidays | موقع سياحي من Power Shift",
@@ -188,7 +188,7 @@ export const PAGE_EXTRAS = {
       liveLabel: "افتح معاينة Nourvive",
       previewNote: "يُعرض هذا المشروع كمعاينة، لا كأرقام إطلاق معلنة.",
       relatedHtml:
-        'يندرج هذا المشروع ضمن <a href="/services#ecommerce">تطوير التجارة الإلكترونية</a>. اطّلع على <a href="/services">خدمات تطوير البرمجيات والمواقع</a>.',
+        'يندرج هذا المشروع ضمن <a href="/ar/services#ecommerce">تطوير التجارة الإلكترونية</a>. اطّلع على <a href="/ar/services">خدمات تطوير البرمجيات والمواقع</a>.',
       relatedA: "تجارة جمال فاخرة",
       relatedB: "متجر أغذية",
       metaTitle: "دراسة حالة Nourvive | متجر جمال من Power Shift",
@@ -203,7 +203,7 @@ export const PAGE_EXTRAS = {
       results: "المتجر يعمل على corollaart.shop. لا ننشر أرقام مبيعات لهذا المشروع.",
       liveLabel: "افتح متجر Corolla",
       relatedHtml:
-        'يندرج هذا المشروع ضمن <a href="/services#ecommerce">تطوير التجارة الإلكترونية</a>. اطّلع على <a href="/services">خدمات تطوير البرمجيات والمواقع</a>.',
+        'يندرج هذا المشروع ضمن <a href="/ar/services#ecommerce">تطوير التجارة الإلكترونية</a>. اطّلع على <a href="/ar/services">خدمات تطوير البرمجيات والمواقع</a>.',
       relatedA: "تجارة جمال",
       relatedB: "موقع تجارة غذائية",
       metaTitle: "دراسة حالة Corolla | متجر أغذية من Power Shift",
@@ -218,7 +218,7 @@ export const PAGE_EXTRAS = {
       results: "الموقع يعمل على uruz-egypt.com. لا ننشر أرقام مبيعات لهذا المشروع.",
       liveLabel: "افتح موقع URUZ",
       relatedHtml:
-        'يندرج هذا المشروع ضمن <a href="/services#ecommerce">تطوير التجارة الإلكترونية</a>. اطّلع على <a href="/services">خدمات تطوير البرمجيات والمواقع</a>.',
+        'يندرج هذا المشروع ضمن <a href="/ar/services#ecommerce">تطوير التجارة الإلكترونية</a>. اطّلع على <a href="/ar/services">خدمات تطوير البرمجيات والمواقع</a>.',
       relatedA: "تجارة جمال",
       relatedB: "متجر علامة",
       metaTitle: "دراسة حالة URUZ | موقع جمال فاخر من Power Shift",
@@ -233,7 +233,7 @@ export const PAGE_EXTRAS = {
       results: "الموقع يعمل على lodiamo.com. لا ننشر أرقام زيارات أو عملاء محتملين لهذا المشروع.",
       liveLabel: "افتح موقع Lodiamo",
       relatedHtml:
-        'يندرج هذا المشروع ضمن <a href="/services#website">تطوير المواقع المخصصة</a>. اطّلع على <a href="/services">خدمات تطوير البرمجيات والمواقع</a>.',
+        'يندرج هذا المشروع ضمن <a href="/ar/services#website">تطوير المواقع المخصصة</a>. اطّلع على <a href="/ar/services">خدمات تطوير البرمجيات والمواقع</a>.',
       relatedA: "موقع علامة دولية",
       relatedB: "تجارة أغذية",
       metaTitle: "دراسة حالة Lodiamo | موقع مؤسسي من Power Shift",
@@ -249,7 +249,7 @@ export const PAGE_EXTRAS = {
       liveLabel: "افتح معاينة Availio",
       previewNote: "يُعرض هذا المشروع كمعاينة، لا كأرقام إطلاق معلنة.",
       relatedHtml:
-        'يندرج هذا المشروع ضمن <a href="/services#saas">تطوير منتجات SaaS</a>. اطّلع على <a href="/services">خدمات تطوير البرمجيات والمواقع</a>.',
+        'يندرج هذا المشروع ضمن <a href="/ar/services#saas">تطوير منتجات SaaS</a>. اطّلع على <a href="/ar/services">خدمات تطوير البرمجيات والمواقع</a>.',
       relatedA: "نظام تشغيل",
       relatedB: "موقع ضيافة",
       metaTitle: "دراسة حالة Availio | برمجيات عقارية من Power Shift",
@@ -265,7 +265,7 @@ export const PAGE_EXTRAS = {
       liveLabel: "افتح معاينة 7aseb",
       previewNote: "يُعرض هذا المشروع كمعاينة، لا كأرقام إطلاق معلنة.",
       relatedHtml:
-        'يندرج هذا المشروع ضمن <a href="/services#bms">أنظمة التشغيل المخصصة</a>. اطّلع على <a href="/services">خدمات تطوير البرمجيات والمواقع</a>.',
+        'يندرج هذا المشروع ضمن <a href="/ar/services#bms">أنظمة التشغيل المخصصة</a>. اطّلع على <a href="/ar/services">خدمات تطوير البرمجيات والمواقع</a>.',
       relatedA: "برمجيات تشغيل عقاري",
       relatedB: "موقع أعمال",
       metaTitle: "دراسة حالة 7aseb | نظام تشغيل من Power Shift",
@@ -363,13 +363,13 @@ export const PAGE_TEXT = {
     workMetaTitle: "أعمالنا | Power Shift استوديو برمجيات في القاهرة",
     workMetaDesc: "أعمال مختارة من Power Shift: سياحة وجمال وأغذية وعقارات وأنظمة تشغيل لشركات في مصر والخليج.",
     servicesKicker: "الخدمات",
-    servicesH1: "Power Shift — تطوير مواقع وبرمجيات مخصصة في القاهرة",
+    servicesH1: "تصميم مواقع ومتاجر وأنظمة للشركات في مصر",
     servicesLead:
       "POWER SHIFT استوديو برمجيات في القاهرة. نبني الواجهة العامة للشركة والنظام الذي يشغّلها — لفرق في مصر والخليج، دون ادعاء مكاتب لا نملكها.",
     servicesSeeWork: "شاهد المنتجات العاملة",
     servicesWebsiteExtra: "يشمل العمل عادة مواقع عربي/إنجليزي، وواجهات RTL، ومسار تحويل يصل إلى مكالمة أو واتساب — لا قالبًا عامًا.",
     servicesWebsiteRelated:
-      'أعمال ذات صلة: <a href="/work/via-holidays.html">موقع VIA Holidays السياحي</a> و<a href="/work/lodiamo.html">موقع Lodiamo المؤسسي</a>. من المدونة: <a href="/ar/blog/what-a-business-website-needs.html">ماذا يحتاج موقع الشركة فعلًا</a> و<a href="/ar/blog/how-much-does-a-website-cost-in-egypt.html">ما الذي يغيّر تكلفة الموقع في مصر</a>.',
+      'أعمال ذات صلة: <a href="/work/via-holidays.html">موقع VIA Holidays السياحي</a> و<a href="/work/lodiamo.html">موقع Lodiamo المؤسسي</a>. اعرف أكثر عن <a href="/ar/تصميم-مواقع-مصر">تصميم مواقع الشركات في مصر</a>، أو اقرأ <a href="/ar/blog/how-much-does-a-website-cost-in-egypt.html">ما الذي يغيّر تكلفة الموقع</a>.',
     servicesCommerceExtra: "للتجزئة والجملة ومتاجر العلامات التي تحتاج أكثر من صفحة تعريف.",
     servicesCommerceRelated:
       'أعمال ذات صلة: <a href="/work/nourvive.html">متجر Nourvive</a>، و<a href="/work/corolla.html">متجر Corolla</a>، و<a href="/work/uruz.html">تجارة URUZ الفاخرة</a>. من المدونة: <a href="/ar/blog/ecommerce-website-or-catalogue-egypt.html">متى تحتاج متجرًا ومتى يكفي كتالوج</a>.',
@@ -379,8 +379,8 @@ export const PAGE_TEXT = {
     servicesOpsRelated:
       'أعمال ذات صلة: <a href="/work/haseb.html">نظام 7aseb للتشغيل والمالية</a> و<a href="/work/availio.html">ضبط حجوزات Availio</a>. من المدونة: <a href="/ar/blog/website-or-custom-software.html">الموقع مقابل نظام التشغيل المخصص</a>.',
     servicesFinal: "إذا كنت تبحث عن شركة برمجيات في القاهرة، أو استوديو يبني منتجات بلغتين للخليج، ابدأ باستشارة عشرين دقيقة.",
-    servicesMetaTitle: "خدمات تطوير المواقع والبرمجيات في القاهرة | Power Shift",
-    servicesMetaDesc: "تبني Power Shift مواقع مخصصة ومتاجر إلكترونية ومنتجات SaaS وأنظمة تشغيل للشركات في مصر والخليج.",
+    servicesMetaTitle: "تصميم مواقع ومتاجر وأنظمة للشركات في مصر | باور شيفت",
+    servicesMetaDesc: "باور شيفت استوديو برمجيات في القاهرة: تصميم مواقع شركات، متاجر إلكترونية، منتجات SaaS، وأنظمة تشغيل — عربي وإنجليزي وRTL. تواصل معنا لتحديد النطاق.",
     contactH1: "تواصل معنا",
     contactLead:
       "قل لنا ما تحتاجه، ونحوّل الطلب إلى واتساب والتفاصيل مكتوبة. POWER SHIFT في القاهرة، مصر، وتبني للشركات في مصر والخليج.",

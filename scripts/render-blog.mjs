@@ -95,6 +95,10 @@ function shell({
   const htmlLang = lang === "ar" ? "ar" : "en";
   const blogLabel = lang === "ar" ? "المدونة" : "Blog";
   const skip = lang === "ar" ? "تخطَّ إلى المحتوى" : "Skip to content";
+  const homeHref = lang === "ar" ? "/ar" : "/";
+  const servicesHref = lang === "ar" ? "/ar/services" : "/services";
+  const approachHref = lang === "ar" ? "/ar#approach" : "/#approach";
+  const aboutHref = lang === "ar" ? "/ar/about" : "/#about";
 
   return `<!DOCTYPE html>
 <html lang="${htmlLang}" dir="${dir}">
@@ -153,10 +157,10 @@ ${schema}
         </a>
         <nav class="nav-desktop" aria-label="Primary" data-i18n-aria="a11y.primaryNav">
           <a href="/work" data-i18n="nav.work">Work</a>
-          <a href="/services" data-i18n="nav.services">Services</a>
+          <a href="${servicesHref}" data-i18n="nav.services">Services</a>
           <a href="${navBlogHref}" data-nav="blog" data-i18n="nav.blog">${blogLabel}</a>
-          <a href="/#approach" data-i18n="nav.approach">Approach</a>
-          <a href="/#about" data-i18n="nav.about">About</a>
+          <a href="${approachHref}" data-i18n="nav.approach">Approach</a>
+          <a href="${aboutHref}" data-i18n="nav.about">About</a>
           <a href="/contact" data-i18n="nav.contact">Contact</a>
         </nav>
         <div class="header-end">
@@ -178,10 +182,10 @@ ${schema}
       <div class="nav-mobile-head"><p class="nav-mobile-label" data-i18n="nav.menuLabel">Menu</p></div>
       <div class="nav-mobile-links">
         <a href="/work" data-i18n="nav.work">Work</a>
-        <a href="/services" data-i18n="nav.services">Services</a>
+        <a href="${servicesHref}" data-i18n="nav.services">Services</a>
         <a href="${navBlogHref}" data-nav="blog" data-i18n="nav.blog">${blogLabel}</a>
-        <a href="/#approach" data-i18n="nav.approach">Approach</a>
-        <a href="/#about" data-i18n="nav.about">About</a>
+        <a href="${approachHref}" data-i18n="nav.approach">Approach</a>
+        <a href="${aboutHref}" data-i18n="nav.about">About</a>
         <a href="/contact" data-i18n="nav.contact">Contact</a>
       </div>
       <div class="nav-mobile-foot">
@@ -210,7 +214,7 @@ ${main}
           <a href="/work" data-copy="ourWork">Our Work</a>
           <a href="/work/via-holidays.html" data-copy="viaCase">VIA Holidays case study</a>
           <a href="/work/nourvive.html" data-copy="nourviveCase">Nourvive e-commerce work</a>
-          <a href="/services" data-copy="servicesLink">Web & software services</a>
+          <a href="${servicesHref}" data-copy="servicesLink">Web & software services</a>
           <a href="${navBlogHref}" data-nav="blog" data-i18n="nav.blog">${blogLabel}</a>
           <a href="/contact" data-i18n="cta.start">Book a Scope Call</a>
         </div>
