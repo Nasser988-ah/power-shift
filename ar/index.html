@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <script src="/js/lang-boot.js?v=20260914c"></script>
+    <script src="/js/lang-boot.js?v=20260919b"></script>
     <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1639209490886117&ev=PageView&noscript=1" alt="" /></noscript>
     <title>شركة تصميم مواقع وتطوير أنظمة في مصر | باور شيفت القاهرة</title>
     <meta
@@ -46,9 +46,7 @@
     <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="preload" href="/assets/fonts/ibm-plex-sans-400.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/assets/fonts/ibm-plex-sans-arabic-500.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/assets/fonts/instrument-serif-400-italic.woff2" as="font" type="font/woff2" crossorigin />
     <link
       rel="preload"
       as="image"
@@ -58,13 +56,13 @@
       imagesizes="(max-width: 979px) 92vw, 42vw"
       fetchpriority="high"
     />
-    <link rel="stylesheet" href="/css/app.css?v=20260829g" />
+    <link rel="stylesheet" href="/css/app.css?v=20260919b" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@graph": [
           {
-            "@type": ["ProfessionalService", "Organization"],
+            "@type": "Organization",
             "@id": "https://www.powershift.space/#business",
             "name": "Power Shift",
             "alternateName": ["Power Shift", "PowerShift", "باور شيفت", "Power Shift Cairo"],
@@ -79,11 +77,6 @@
             "email": "info@powershift.space",
             "description": "باور شيفت استوديو برمجيات في القاهرة يبني مواقع مخصصة ومتاجر إلكترونية ومنتجات SaaS وأنظمة تشغيل للشركات في مصر والخليج.",
             "slogan": "نبرمج. نبتكر. نحوّل.",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Cairo",
-              "addressCountry": "EG"
-            },
             "areaServed": [
               { "@type": "City", "name": "Cairo" },
               { "@type": "Country", "name": "Egypt" },
@@ -94,7 +87,6 @@
               { "@type": "Country", "name": "Bahrain" },
               { "@type": "Country", "name": "Oman" }
             ],
-            "hasMap": "https://www.google.com/maps/place/power+shift/data=!4m2!3m1!1s0xcac1b10458c690d:0x8526e94bf69a7c8f",
             "serviceType": [
               "Web Development",
               "Custom Software Development",
@@ -190,10 +182,10 @@
               },
               {
                 "@type": "Question",
-                "name": "أين مقرّكم؟",
+                "name": "من أين تعملون؟",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "القاهرة، مصر. نبني لشركات محلية ولفرق في الخليج وأسواق دولية."
+                  "text": "نعمل عن بُعد من القاهرة، مصر، مع شركات محلية وفرق في الخليج وأسواق دولية. لا يوجد مكتب عام لاستقبال الزوار."
                 }
               },
               {
@@ -227,17 +219,17 @@
         <a class="brand" href="/ar" aria-label="POWER SHIFT">
           <img class="brand-logo" src="/logo/logo-header.webp" alt="POWER SHIFT" width="360" height="178" decoding="async" />
         </a>
-        <nav class="nav-desktop" aria-label="Primary" data-i18n-aria="a11y.primaryNav">
-          <a href="/work" data-i18n="nav.work">أعمالنا</a>
+        <nav class="nav-desktop" aria-label="التنقل الرئيسي" data-i18n-aria="a11y.primaryNav">
+          <a href="/ar/work" data-i18n="nav.work">أعمالنا</a>
           <a href="/ar/services" data-i18n="nav.services">خدماتنا</a>
           <a href="/ar/blog" data-nav="blog" data-i18n="nav.blog">المدونة</a>
           <a href="/ar#approach" data-i18n="nav.approach">طريقة العمل</a>
           <a href="/ar/about" data-i18n="nav.about">من نحن</a>
-          <a href="/contact" data-i18n="nav.contact">تواصل معنا</a>
+          <a href="/ar/contact" data-i18n="nav.contact">تواصل معنا</a>
         </nav>
         <div class="header-end">
           <div class="header-actions">
-            <div class="lang-switch" role="group" aria-label="Language" data-i18n-aria="a11y.language">
+            <div class="lang-switch" role="group" aria-label="اللغة" data-i18n-aria="a11y.language">
               <span class="lang-thumb" aria-hidden="true"></span>
               <a href="/" data-lang="en" hreflang="en"><span class="lang-flag lang-flag-en" aria-hidden="true"></span>EN</a>
               <a href="/ar" data-lang="ar" hreflang="ar" aria-current="true"><span class="lang-flag lang-flag-ar" aria-hidden="true"></span>عربي</a>
@@ -245,7 +237,7 @@
             <a class="btn btn-primary btn-header-cta" href="/contact" data-open-wizard data-ps-event="hero_cta" data-i18n="cta.startShort">
               تواصل معنا
             </a>
-            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu" data-i18n-aria="cta.menu">
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="فتح القائمة" data-i18n-aria="cta.menu">
               <span></span>
             </button>
           </div>
@@ -253,20 +245,20 @@
       </div>
     </header>
 
-    <nav class="nav-mobile" id="mobile-nav" aria-label="Mobile" data-i18n-aria="a11y.mobileNav" aria-hidden="true" inert>
+    <nav class="nav-mobile" id="mobile-nav" aria-label="قائمة الهاتف" data-i18n-aria="a11y.mobileNav" aria-hidden="true" inert>
       <div class="nav-mobile-head">
         <p class="nav-mobile-label" data-i18n="nav.menuLabel">القائمة</p>
       </div>
       <div class="nav-mobile-links">
-        <a href="/work" data-i18n="nav.work">أعمالنا</a>
+        <a href="/ar/work" data-i18n="nav.work">أعمالنا</a>
         <a href="/ar/services" data-i18n="nav.services">خدماتنا</a>
           <a href="/ar/blog" data-nav="blog" data-i18n="nav.blog">المدونة</a>
         <a href="/ar#approach" data-i18n="nav.approach">طريقة العمل</a>
         <a href="/ar/about" data-i18n="nav.about">من نحن</a>
-        <a href="/contact" data-i18n="nav.contact">تواصل معنا</a>
+        <a href="/ar/contact" data-i18n="nav.contact">تواصل معنا</a>
       </div>
       <div class="nav-mobile-foot">
-        <a class="btn btn-nav-wa" href="https://wa.me/201553766199" data-wa data-i18n="cta.whatsapp">WhatsApp</a>
+        <a class="btn btn-nav-wa" href="https://wa.me/201553766199" data-wa data-i18n="cta.whatsapp">واتساب</a>
         <a class="btn btn-primary btn-nav-mobile" href="/contact" data-open-wizard data-ps-event="hero_cta" data-i18n="cta.start">
           تواصل معنا
         </a>
@@ -289,7 +281,7 @@
             <a class="btn btn-primary" href="/contact" data-open-wizard data-ps-event="hero_cta" data-i18n="cta.start">
               تواصل معنا
             </a>
-            <a class="btn btn-ghost" href="/work" data-i18n="nav.work">أعمالنا</a>
+            <a class="btn btn-ghost" href="/ar/work" data-i18n="nav.work">أعمالنا</a>
           </div>
           <p class="hero-proof">
             <span data-i18n="hero.proof">أعمال حقيقية يمكنك فتحها الآن</span>
@@ -345,10 +337,10 @@
                 <span class="work-hint" data-i18n="work.browseHint">اسحب أو استخدم الأسهم للتنقل</span>
                 <div class="work-nav">
                   <span class="work-count" data-work-count aria-live="polite">01 / 07</span>
-                  <button class="work-arrow work-prev" type="button" data-work-prev aria-label="Previous project">
+                  <button class="work-arrow work-prev" type="button" data-work-prev aria-label="المشروع السابق">
                     <span aria-hidden="true"></span>
                   </button>
-                  <button class="work-arrow work-next" type="button" data-work-next aria-label="Next project">
+                  <button class="work-arrow work-next" type="button" data-work-next aria-label="المشروع التالي">
                     <span aria-hidden="true"></span>
                   </button>
                 </div>
@@ -356,22 +348,22 @@
             </div>
           </div>
         </div>
-        <div class="work-rail" data-work-grid role="list" aria-label="Projects">
-          <a class="work-card is-active" href="/work/via-holidays.html" role="listitem">VIA Holidays — Travel Booking Platform</a>
-          <a class="work-card" href="/work/nourvive.html" role="listitem">Nourvive — bilingual beauty store</a>
-          <a class="work-card" href="/work/corolla.html" role="listitem">Corolla — food e-commerce</a>
-          <a class="work-card" href="/work/uruz.html" role="listitem">URUZ — luxury beauty commerce</a>
-          <a class="work-card" href="/work/lodiamo.html" role="listitem">Lodiamo — UAE food trade website</a>
-          <a class="work-card" href="/work/availio.html" role="listitem">Availio — property operations software</a>
-          <a class="work-card" href="/work/haseb.html" role="listitem">7aseb — operations and finance system</a>
+        <div class="work-rail" data-work-grid role="list" aria-label="المشاريع">
+          <a class="work-card is-active" href="/work/via-holidays.html" role="listitem">VIA Holidays — منصة لحجوزات السفر</a>
+          <a class="work-card" href="/work/nourvive.html" role="listitem">Nourvive — متجر تجميل ثنائي اللغة</a>
+          <a class="work-card" href="/work/corolla.html" role="listitem">Corolla — متجر أغذية إلكتروني</a>
+          <a class="work-card" href="/work/uruz.html" role="listitem">URUZ — متجر تجميل فاخر</a>
+          <a class="work-card" href="/work/lodiamo.html" role="listitem">Lodiamo — موقع لتجارة الأغذية في الإمارات</a>
+          <a class="work-card" href="/work/availio.html" role="listitem">Availio — برنامج لتشغيل العقارات</a>
+          <a class="work-card" href="/work/haseb.html" role="listitem">7aseb — نظام للتشغيل والمالية</a>
         </div>
-        <nav class="wrap-wide work-pagination" data-work-dots aria-label="Project navigation"></nav>
+        <nav class="wrap-wide work-pagination" data-work-dots aria-label="التنقل بين المشاريع"></nav>
         <div class="wrap-wide work-detail">
           <div class="work-copy" data-work-copy>
-            <p class="cat">Travel & hospitality · Website</p>
+            <p class="cat">السفر والضيافة · موقع إلكتروني</p>
             <h3>VIA Holidays</h3>
-            <p>A Czech-and-English site for destinations, transfers, and VIP holidays, with a clear path to enquire.</p>
-            <a class="btn btn-primary" href="/work/via-holidays.html">Read the VIA Holidays case study</a>
+            <p>موقع بالتشيكية والإنجليزية للوجهات والانتقالات والعطلات الخاصة، مع مسار واضح للاستفسار.</p>
+            <a class="btn btn-primary" href="/work/via-holidays.html">اقرأ دراسة حالة VIA Holidays</a>
           </div>
         </div>
       </section>
@@ -406,7 +398,7 @@
             </article>
           </div>
           <p class="services-also" data-services-also>
-            Also when the work needs it: mobile apps, AI inside the product, payments and WhatsApp integrations, automation, and ongoing maintenance.
+            وعندما يحتاج المشروع: تطبيقات هاتف، وذكاء اصطناعي داخل المنتج، ومدفوعات وتكاملات واتساب، وأتمتة، وصيانة مستمرة.
           </p>
           <p><a class="btn btn-mint" href="/ar/services" data-i18n="services.pageCta">استكشف خدمات تطوير المواقع والبرمجيات</a></p>
           <p class="services-also">إذا كان هدفك موقع شركة أو متجرًا في مصر، اقرأ تفاصيل <a href="/ar/تصميم-مواقع-مصر">خدمة تصميم المواقع للشركات</a>.</p>
@@ -469,7 +461,7 @@
               </div>
               <div class="about-block">
                 <h3>أين نعمل</h3>
-                <p>مقرّنا في القاهرة، ونعمل مع عملاء في مصر والخليج والأسواق الدولية. العربي والإنجليزي جزء من المنتج، لا خطوة لاحقة.</p>
+                <p>نعمل عن بُعد من القاهرة مع عملاء في مصر والخليج والأسواق الدولية. العربي والإنجليزي جزء من المنتج، لا خطوة لاحقة.</p>
               </div>
               <div class="about-block">
                 <h3>لمن نبني</h3>
@@ -494,8 +486,8 @@
                 <p>نعم. الواجهة والنصوص وRTL تُصمَّم معًا. هذه طريقتنا المعتادة، لا خدمة إضافية.</p>
               </details>
               <details class="faq-item">
-                <summary>أين مقرّكم؟</summary>
-                <p>القاهرة، مصر. نبني لشركات محلية ولفرق في الخليج وأسواق دولية.</p>
+                <summary>من أين تعملون؟</summary>
+                <p>نعمل عن بُعد من القاهرة، مصر، مع شركات محلية وفرق في الخليج وأسواق دولية. لا يوجد مكتب عام لاستقبال الزوار.</p>
               </details>
               <details class="faq-item">
                 <summary>كيف تحددون التكلفة؟</summary>
@@ -516,12 +508,12 @@
             <p class="kicker" data-i18n="qualify.kicker">ابدأ</p>
             <h2 data-i18n="qualify.title">قل لنا ما تحتاجه، ونكمل على واتساب.</h2>
             <p data-i18n="qualify.lead">
-              Three short questions. Then WhatsApp opens with your brief already written.
+              ثلاثة أسئلة قصيرة، ثم يفتح واتساب وتفاصيل مشروعك مكتوبة.
             </p>
           </div>
           <div class="qualify-panel" id="qualify-inline">
-            <div class="progress" data-progress>Step 1 of 3</div>
-            <h3 data-q>What do you need?</h3>
+            <div class="progress" data-progress>الخطوة 1 من 3</div>
+            <h3 data-q>ماذا تحتاج؟</h3>
             <div class="choice-grid" data-choices></div>
             <div class="contact-fields" data-contact-fields hidden>
               <label>
@@ -574,7 +566,7 @@
             <a class="btn btn-mint" href="/contact" data-open-wizard data-ps-event="final_cta" data-i18n="cta.start">
               تواصل معنا
             </a>
-            <a class="btn btn-ghost-invert" href="https://wa.me/201553766199" data-wa data-ps-event="whatsapp_cta" data-ps-label="final" data-i18n="cta.whatsapp">WhatsApp</a>
+            <a class="btn btn-ghost-invert" href="https://wa.me/201553766199" data-wa data-ps-event="whatsapp_cta" data-ps-label="final" data-i18n="cta.whatsapp">واتساب</a>
           </div>
         </div>
       </section>
@@ -590,18 +582,18 @@
           <p class="footer-label" data-i18n="footer.contact">تواصل</p>
           <a href="mailto:info@powershift.space" data-email-link dir="ltr">info@powershift.space</a>
           <a href="tel:+201553766199" data-tel>+20 155 376 6199</a>
-          <a href="https://wa.me/201553766199" data-wa data-i18n="cta.whatsapp">WhatsApp</a>
+          <a href="https://wa.me/201553766199" data-wa data-i18n="cta.whatsapp">واتساب</a>
           <span data-i18n="footer.location">القاهرة، مصر</span>
         </div>
         <div class="footer-col">
           <p class="footer-label" data-i18n="nav.work">أعمالنا</p>
-          <a href="/work" data-copy="ourWork">أعمالنا</a>
+          <a href="/ar/work" data-copy="ourWork">أعمالنا</a>
           <a href="/work/via-holidays.html" data-copy="viaCase">دراسة حالة VIA Holidays</a>
           <a href="/work/nourvive.html" data-copy="nourviveCase">عمل Nourvive في التجارة الإلكترونية</a>
           <a href="/ar/services" data-copy="servicesLink">خدمات الويب والبرمجيات</a>
           <a href="/ar/about" data-i18n="nav.about">من نحن</a>
           <a href="/ar/blog" data-nav="blog" data-i18n="nav.blog">المدونة</a>
-          <a href="/contact" data-i18n="cta.start">تواصل معنا</a>
+          <a href="/ar/contact" data-i18n="cta.start">تواصل معنا</a>
         </div>
         <div class="footer-col">
           <p class="footer-label" data-i18n="footer.follow">Follow</p>
@@ -621,7 +613,7 @@
       <a class="btn btn-primary btn-sticky-start" href="/contact" data-open-wizard data-ps-event="hero_cta" data-i18n="cta.startShort">
         تواصل معنا
       </a>
-      <a class="btn btn-mint btn-sticky-wa" href="https://wa.me/201553766199" data-wa data-ps-event="whatsapp_cta" data-ps-label="sticky" data-i18n="cta.whatsapp">WhatsApp</a>
+      <a class="btn btn-mint btn-sticky-wa" href="https://wa.me/201553766199" data-wa data-ps-event="whatsapp_cta" data-ps-label="sticky" data-i18n="cta.whatsapp">واتساب</a>
     </div>
 
     <dialog class="dialog" id="project-dialog" aria-labelledby="wizard-title">
@@ -675,6 +667,6 @@
       </div>
     </dialog>
 
-    <script type="module" src="/js/main.js?v=20260831c"></script>
+    <script type="module" src="/js/main.js?v=20260919b"></script>
   </body>
 </html>

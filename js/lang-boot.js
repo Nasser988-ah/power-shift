@@ -10,8 +10,12 @@
       path === "/ar/" ||
       path === "/ar/index.html";
     var pathAr = /^\/ar(?:\/|$)/.test(path);
+    var pathAboutEn = /^\/about(?:\/|$)/.test(path);
+    var pathContactEn = /^\/contact(?:\/|$)/.test(path);
+    var pathServicesEn = /^\/services(?:\/|$)/.test(path);
+    var pathWorkEn = /^\/work(?:\/index\.html)?\/?$/.test(path);
     var pathBlogEn = /^\/blog(?:\/|$)/.test(path);
-    var urlLocked = home || pathAr || pathBlogEn;
+    var urlLocked = home || pathAr || pathAboutEn || pathContactEn || pathServicesEn || pathWorkEn || pathBlogEn;
     var bot = /Googlebot|Google-InspectionTool|bingbot|BingPreview|DuckDuckBot|Slurp|Yandex(Bot|RenderResourcesBot)|Baiduspider|facebookexternalhit|Twitterbot|LinkedInBot|WhatsApp|TelegramBot|Applebot|Bytespider|GPTBot|ClaudeBot|CCBot|GoogleOther/i.test(
       navigator.userAgent || ""
     );
@@ -29,6 +33,10 @@
     } catch (err) {}
     var zoneAr = /^(Africa\/(Cairo|Casablanca|Algiers|Tunis)|Asia\/(Riyadh|Dubai|Qatar|Kuwait|Bahrain|Muscat|Amman|Beirut|Baghdad))$/.test(tz);
     var prefersAr = langAr || zoneAr;
+    if (!bot && home && !pathAr && ((chosen && stored === "ar") || (!chosen && prefersAr))) {
+      location.replace("/ar");
+      return;
+    }
     if (!bot) {
       var fbq = window.fbq;
       if (!fbq) {
@@ -43,22 +51,45 @@
         fbq.version = "2.0";
         fbq.queue = [];
       }
-      if (!document.querySelector('script[src="' + PIXEL_SRC + '"]')) {
-        var pixel = document.createElement("script");
-        pixel.async = true;
-        pixel.src = PIXEL_SRC;
-        pixel.setAttribute("data-meta-pixel", PIXEL_ID);
-        document.head.appendChild(pixel);
-      }
       if (!window._psPixelBooted) {
         window._psPixelBooted = true;
         fbq("init", PIXEL_ID);
-        fbq("track", "PageView");
       }
-    }
-    if (!bot && home && !pathAr && ((chosen && stored === "ar") || (!chosen && prefersAr))) {
-      location.replace("/ar");
-      return;
+      if (!window._psPixelPageViewSent) {
+        window._psPixelPageViewSent = true;
+        var pageView = new Image(1, 1);
+        pageView.alt = "";
+        pageView.src =
+          "https://www.facebook.com/tr?id=" +
+          encodeURIComponent(PIXEL_ID) +
+          "&ev=PageView&dl=" +
+          encodeURIComponent(location.href) +
+          "&rl=" +
+          encodeURIComponent(document.referrer || "") +
+          "&noscript=0";
+      }
+      if (!window._psLoadMetaPixel) {
+        window._psLoadMetaPixel = function () {
+          if (document.querySelector('script[src="' + PIXEL_SRC + '"]')) return;
+          var pixel = document.createElement("script");
+          pixel.async = true;
+          pixel.src = PIXEL_SRC;
+          pixel.setAttribute("data-meta-pixel", PIXEL_ID);
+          document.head.appendChild(pixel);
+        };
+      }
+      if (!window._psPixelLoadScheduled) {
+        window._psPixelLoadScheduled = true;
+        var pixelLoadRequested = false;
+        var requestPixelLoad = function () {
+          if (pixelLoadRequested) return;
+          pixelLoadRequested = true;
+          window._psLoadMetaPixel();
+        };
+        ["pointerdown", "keydown", "touchstart"].forEach(function (eventName) {
+          window.addEventListener(eventName, requestPixelLoad, { once: true, passive: true });
+        });
+      }
     }
     var lang = urlLocked
       ? pathAr

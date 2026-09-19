@@ -1,6 +1,6 @@
 import { CONFIG } from "./config.js?v=20260831a";
-import { COPY } from "./content.js?v=20260902a";
-import { track } from "./analytics.js?v=20260829h";
+import { COPY } from "./content.js?v=20260919b";
+import { track } from "./analytics.js?v=20260919b";
 
 const KEY = CONFIG.langKey;
 const CHOSEN = "ps-lang-chosen";
@@ -22,6 +22,9 @@ export function isUrlLockedLang(pathname = window.location.pathname) {
     isHomePath(pathname) ||
     /^\/ar\//.test(pathname) ||
     /^\/about(?:\/|$)/.test(pathname) ||
+    /^\/contact(?:\/|$)/.test(pathname) ||
+    /^\/services(?:\/|$)/.test(pathname) ||
+    /^\/work(?:\/index\.html)?\/?$/.test(pathname) ||
     /^\/blog(?:\/|$)/.test(pathname)
   );
 }
@@ -80,7 +83,7 @@ export function lookup(path, lang = getLang()) {
 
 function setText(el, value) {
   if (!el || value == null) return;
-  el.textContent = value;
+  if (el.textContent.trim() !== value) el.textContent = value;
 }
 
 function prefersReducedMotion() {
@@ -155,24 +158,29 @@ function commitLang(lang, persist) {
 
   document.querySelectorAll("[data-i18n-html]").forEach((el) => {
     const value = lookup(el.getAttribute("data-i18n-html"), lang);
-    if (typeof value === "string") el.innerHTML = value;
+    if (typeof value === "string" && el.innerHTML !== value) el.innerHTML = value;
   });
 
   document.querySelectorAll("[data-i18n-list]").forEach((el) => {
     const value = lookup(el.getAttribute("data-i18n-list"), lang);
     if (Array.isArray(value)) {
-      el.innerHTML = value.map((item) => `<li>${item}</li>`).join("");
+      const html = value.map((item) => `<li>${item}</li>`).join("");
+      if (el.innerHTML !== html) el.innerHTML = html;
     }
   });
 
   document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
     const value = lookup(el.getAttribute("data-i18n-aria"), lang);
-    if (typeof value === "string") el.setAttribute("aria-label", value);
+    if (typeof value === "string" && el.getAttribute("aria-label") !== value) {
+      el.setAttribute("aria-label", value);
+    }
   });
 
   document.querySelectorAll("[data-i18n-ph]").forEach((el) => {
     const value = lookup(el.getAttribute("data-i18n-ph"), lang);
-    if (typeof value === "string") el.setAttribute("placeholder", value);
+    if (typeof value === "string" && el.getAttribute("placeholder") !== value) {
+      el.setAttribute("placeholder", value);
+    }
   });
 
   syncHomeLinks(lang);

@@ -806,10 +806,7 @@ body.is-nav-open::before {
 
 .hero-title .line > span {
   display: block;
-  animation: heroRise 1s var(--ease) both;
 }
-
-.hero-title .line:nth-child(2) > span { animation-delay: 120ms; }
 
 .hero-title .line-shift {
   font-family: var(--display);
@@ -919,20 +916,6 @@ body.is-nav-open::before {
   }
 }
 
-.hero-copy .kicker,
-.hero-h1,
-.hero-lead,
-.hero-actions,
-.hero-proof {
-  animation: fadeUp 0.9s var(--ease) both;
-}
-
-.hero-h1 { animation-delay: 80ms; }
-
-.hero-lead { animation-delay: 280ms; }
-.hero-actions { animation-delay: 400ms; }
-.hero-proof { animation-delay: 520ms; }
-
 @keyframes headerIn {
   from {
     opacity: 0;
@@ -942,22 +925,6 @@ body.is-nav-open::before {
     opacity: 1;
     transform: none;
   }
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@keyframes heroRise {
-  from { transform: translateY(110%); }
-  to { transform: none; }
 }
 
 .section {

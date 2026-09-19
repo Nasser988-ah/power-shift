@@ -57,6 +57,38 @@ const pages = [
     canonical: "https://www.powershift.space/ar/تصميم-مواقع-مصر",
     alternates: {},
   },
+  {
+    file: "work/index.html",
+    canonical: "https://www.powershift.space/work",
+    alternates: {
+      en: "https://www.powershift.space/work",
+      ar: "https://www.powershift.space/ar/work",
+    },
+  },
+  {
+    file: "ar/work/index.html",
+    canonical: "https://www.powershift.space/ar/work",
+    alternates: {
+      en: "https://www.powershift.space/work",
+      ar: "https://www.powershift.space/ar/work",
+    },
+  },
+  {
+    file: "contact/index.html",
+    canonical: "https://www.powershift.space/contact",
+    alternates: {
+      en: "https://www.powershift.space/contact",
+      ar: "https://www.powershift.space/ar/contact",
+    },
+  },
+  {
+    file: "ar/contact/index.html",
+    canonical: "https://www.powershift.space/ar/contact",
+    alternates: {
+      en: "https://www.powershift.space/contact",
+      ar: "https://www.powershift.space/ar/contact",
+    },
+  },
 ];
 
 const failures = [];

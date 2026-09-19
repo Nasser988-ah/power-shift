@@ -29,10 +29,19 @@ window.psTrack = track;
 
 export function bindTrackedClicks(root = document) {
   root.addEventListener("click", (e) => {
-    const el = e.target.closest("[data-ps-event]");
-    if (!el) return;
-    track(el.getAttribute("data-ps-event"), {
-      label: el.getAttribute("data-ps-label") || el.textContent.trim().slice(0, 80),
-    });
+    const explicit = e.target.closest("[data-ps-event]");
+    if (explicit) {
+      track(explicit.getAttribute("data-ps-event"), {
+        label: explicit.getAttribute("data-ps-label") || explicit.textContent.trim().slice(0, 80),
+      });
+    }
+
+    const whatsapp = e.target.closest("[data-wa]");
+    if (whatsapp && explicit?.getAttribute("data-ps-event") !== "whatsapp_cta") {
+      track("whatsapp_cta", {
+        kind: "direct",
+        label: whatsapp.getAttribute("data-ps-label") || whatsapp.textContent.trim().slice(0, 80),
+      });
+    }
   });
 }

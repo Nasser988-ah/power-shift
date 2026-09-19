@@ -92,20 +92,107 @@ function shell({
     lang === "ar"
       ? `    <link rel="preload" href="/assets/fonts/ibm-plex-sans-arabic-500.woff2" as="font" type="font/woff2" crossorigin />\n`
       : "";
+  const latinFonts =
+    lang === "ar"
+      ? ""
+      : `    <link rel="preload" href="/assets/fonts/ibm-plex-sans-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/ibm-plex-sans-500.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/instrument-serif-400-italic.woff2" as="font" type="font/woff2" crossorigin />
+`;
   const htmlLang = lang === "ar" ? "ar" : "en";
   const blogLabel = lang === "ar" ? "المدونة" : "Blog";
   const skip = lang === "ar" ? "تخطَّ إلى المحتوى" : "Skip to content";
   const homeHref = lang === "ar" ? "/ar" : "/";
+  const workHref = lang === "ar" ? "/ar/work" : "/work";
   const servicesHref = lang === "ar" ? "/ar/services" : "/services";
   const approachHref = lang === "ar" ? "/ar#approach" : "/#approach";
   const aboutHref = lang === "ar" ? "/ar/about" : "/#about";
+  const contactHref = lang === "ar" ? "/ar/contact" : "/contact";
+  const chrome =
+    lang === "ar"
+      ? {
+          primary: "التنقل الرئيسي",
+          work: "أعمالنا",
+          services: "خدماتنا",
+          approach: "طريقة العمل",
+          about: "من نحن",
+          contact: "تواصل معنا",
+          language: "اللغة",
+          bookShort: "تواصل معنا",
+          openMenu: "فتح القائمة",
+          mobile: "قائمة الهاتف",
+          menu: "القائمة",
+          whatsapp: "واتساب",
+          book: "ابدأ استشارة المشروع",
+          note: "استوديو برمجيات · القاهرة · مصر · الخليج · دولي",
+          location: "القاهرة، مصر",
+          ourWork: "كل أعمالنا",
+          viaCase: "دراسة حالة VIA Holidays",
+          nourviveCase: "متجر Nourvive الإلكتروني",
+          servicesLink: "خدمات المواقع والبرمجيات",
+          follow: "تابعنا",
+          instagram: "إنستغرام",
+          facebook: "فيسبوك",
+          linkedin: "لينكدإن",
+          rights: "جميع الحقوق محفوظة.",
+          privacy: "نستقبل تفاصيل المشروع على واتساب، ولا نبيع بياناتك.",
+          start: "ابدأ",
+          dialog: "ابدأ استشارة المشروع",
+          close: "إغلاق",
+          name: "الاسم",
+          email: "البريد الإلكتروني",
+          phone: "الهاتف (اختياري)",
+          company: "الشركة",
+          message: "ملاحظات",
+          back: "رجوع",
+          sendEmail: "إرسال بالبريد",
+          continue: "متابعة",
+        }
+      : {
+          primary: "Primary",
+          work: "Work",
+          services: "Services",
+          approach: "Approach",
+          about: "About",
+          contact: "Contact",
+          language: "Language",
+          bookShort: "Book a Call",
+          openMenu: "Open menu",
+          mobile: "Mobile",
+          menu: "Menu",
+          whatsapp: "WhatsApp",
+          book: "Book a Scope Call",
+          note: "Software studio · Cairo · Egypt · GCC · International",
+          location: "Cairo, Egypt",
+          ourWork: "Our Work",
+          viaCase: "VIA Holidays case study",
+          nourviveCase: "Nourvive e-commerce work",
+          servicesLink: "Web & software services",
+          follow: "Follow",
+          instagram: "Instagram",
+          facebook: "Facebook",
+          linkedin: "LinkedIn",
+          rights: "All rights reserved.",
+          privacy: "Briefs go to our WhatsApp. We do not sell your data.",
+          start: "Start",
+          dialog: "Book a Scope Call",
+          close: "Close",
+          name: "Name",
+          email: "Email",
+          phone: "Phone (optional)",
+          company: "Company",
+          message: "Note",
+          back: "Back",
+          sendEmail: "Send by email",
+          continue: "Continue",
+        };
 
   return `<!DOCTYPE html>
 <html lang="${htmlLang}" dir="${dir}">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <script src="/js/lang-boot.js?v=20260831c"></script>
+    <script src="/js/lang-boot.js?v=20260919b"></script>
     <title>${title}</title>
     <meta name="description" content="${description}" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -136,11 +223,9 @@ function shell({
     <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="preload" href="/assets/fonts/ibm-plex-sans-400.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/assets/fonts/ibm-plex-sans-500.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/assets/fonts/instrument-serif-400-italic.woff2" as="font" type="font/woff2" crossorigin />
+${latinFonts}
 ${arabicFont}
-    <link rel="stylesheet" href="/css/app.css?v=20260829g" />
+    <link rel="stylesheet" href="/css/app.css?v=20260919b" />
     <link rel="stylesheet" href="/css/pages.css?v=20260829c" />
     <link rel="stylesheet" href="/css/blog.css?v=20260831c" />
     <script type="application/ld+json">
@@ -155,42 +240,42 @@ ${schema}
         <a class="brand" href="${brandHref}" aria-label="POWER SHIFT">
           <img class="brand-logo" src="/logo/logo-header.webp" alt="POWER SHIFT" width="360" height="178" decoding="async" />
         </a>
-        <nav class="nav-desktop" aria-label="Primary" data-i18n-aria="a11y.primaryNav">
-          <a href="/work" data-i18n="nav.work">Work</a>
-          <a href="${servicesHref}" data-i18n="nav.services">Services</a>
+        <nav class="nav-desktop" aria-label="${chrome.primary}" data-i18n-aria="a11y.primaryNav">
+          <a href="${workHref}" data-i18n="nav.work">${chrome.work}</a>
+          <a href="${servicesHref}" data-i18n="nav.services">${chrome.services}</a>
           <a href="${navBlogHref}" data-nav="blog" data-i18n="nav.blog">${blogLabel}</a>
-          <a href="${approachHref}" data-i18n="nav.approach">Approach</a>
-          <a href="${aboutHref}" data-i18n="nav.about">About</a>
-          <a href="/contact" data-i18n="nav.contact">Contact</a>
+          <a href="${approachHref}" data-i18n="nav.approach">${chrome.approach}</a>
+          <a href="${aboutHref}" data-i18n="nav.about">${chrome.about}</a>
+          <a href="${contactHref}" data-i18n="nav.contact">${chrome.contact}</a>
         </nav>
         <div class="header-end">
           <div class="header-actions">
-            <div class="lang-switch" role="group" aria-label="Language" data-i18n-aria="a11y.language">
+            <div class="lang-switch" role="group" aria-label="${chrome.language}" data-i18n-aria="a11y.language">
               <span class="lang-thumb" aria-hidden="true"></span>
               <a href="${langEnHref}" data-lang="en" hreflang="en"${lang === "en" ? ' aria-current="true"' : ""}><span class="lang-flag lang-flag-en" aria-hidden="true"></span>EN</a>
               <a href="${langArHref}" data-lang="ar" hreflang="ar"${lang === "ar" ? ' aria-current="true"' : ""}><span class="lang-flag lang-flag-ar" aria-hidden="true"></span>عربي</a>
             </div>
-            <a class="btn btn-primary btn-header-cta" href="/contact" data-open-wizard data-ps-event="hero_cta" data-i18n="cta.startShort">Book a Call</a>
-            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu" data-i18n-aria="cta.menu">
+            <a class="btn btn-primary btn-header-cta" href="/contact" data-open-wizard data-ps-event="hero_cta" data-i18n="cta.startShort">${chrome.bookShort}</a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="${chrome.openMenu}" data-i18n-aria="cta.menu">
               <span></span>
             </button>
           </div>
         </div>
       </div>
     </header>
-    <nav class="nav-mobile" id="mobile-nav" aria-label="Mobile" data-i18n-aria="a11y.mobileNav" aria-hidden="true" inert>
-      <div class="nav-mobile-head"><p class="nav-mobile-label" data-i18n="nav.menuLabel">Menu</p></div>
+    <nav class="nav-mobile" id="mobile-nav" aria-label="${chrome.mobile}" data-i18n-aria="a11y.mobileNav" aria-hidden="true" inert>
+      <div class="nav-mobile-head"><p class="nav-mobile-label" data-i18n="nav.menuLabel">${chrome.menu}</p></div>
       <div class="nav-mobile-links">
-        <a href="/work" data-i18n="nav.work">Work</a>
-        <a href="${servicesHref}" data-i18n="nav.services">Services</a>
+        <a href="${workHref}" data-i18n="nav.work">${chrome.work}</a>
+        <a href="${servicesHref}" data-i18n="nav.services">${chrome.services}</a>
         <a href="${navBlogHref}" data-nav="blog" data-i18n="nav.blog">${blogLabel}</a>
-        <a href="${approachHref}" data-i18n="nav.approach">Approach</a>
-        <a href="${aboutHref}" data-i18n="nav.about">About</a>
-        <a href="/contact" data-i18n="nav.contact">Contact</a>
+        <a href="${approachHref}" data-i18n="nav.approach">${chrome.approach}</a>
+        <a href="${aboutHref}" data-i18n="nav.about">${chrome.about}</a>
+        <a href="${contactHref}" data-i18n="nav.contact">${chrome.contact}</a>
       </div>
       <div class="nav-mobile-foot">
-        <a class="btn btn-nav-wa" href="https://wa.me/201553766199" data-wa data-i18n="cta.whatsapp">WhatsApp</a>
-        <a class="btn btn-primary btn-nav-mobile" href="/contact" data-open-wizard data-i18n="cta.start">Book a Scope Call</a>
+        <a class="btn btn-nav-wa" href="https://wa.me/201553766199" data-wa data-i18n="cta.whatsapp">${chrome.whatsapp}</a>
+        <a class="btn btn-primary btn-nav-mobile" href="/contact" data-open-wizard data-i18n="cta.start">${chrome.book}</a>
       </div>
     </nav>
     <main id="main">
@@ -200,74 +285,74 @@ ${main}
       <div class="footer-grid wrap-wide">
         <div class="footer-brand">
           <img class="footer-logo" src="/logo/logo-header.webp" alt="POWER SHIFT" width="360" height="178" decoding="async" />
-          <p data-i18n="footer.note">Software studio · Cairo · Egypt · GCC · International</p>
+          <p data-i18n="footer.note">${chrome.note}</p>
         </div>
         <div class="footer-col">
-          <p class="footer-label" data-i18n="footer.contact">Contact</p>
+          <p class="footer-label" data-i18n="footer.contact">${chrome.contact}</p>
           <a href="mailto:info@powershift.space" data-email-link dir="ltr">info@powershift.space</a>
           <a href="tel:+201553766199" data-tel>+20 155 376 6199</a>
-          <a href="https://wa.me/201553766199" data-wa data-i18n="cta.whatsapp">WhatsApp</a>
-          <span data-i18n="footer.location">Cairo, Egypt</span>
+          <a href="https://wa.me/201553766199" data-wa data-i18n="cta.whatsapp">${chrome.whatsapp}</a>
+          <span data-i18n="footer.location">${chrome.location}</span>
         </div>
         <div class="footer-col">
-          <p class="footer-label" data-i18n="nav.work">Work</p>
-          <a href="/work" data-copy="ourWork">Our Work</a>
-          <a href="/work/via-holidays.html" data-copy="viaCase">VIA Holidays case study</a>
-          <a href="/work/nourvive.html" data-copy="nourviveCase">Nourvive e-commerce work</a>
-          <a href="${servicesHref}" data-copy="servicesLink">Web & software services</a>
+          <p class="footer-label" data-i18n="nav.work">${chrome.work}</p>
+          <a href="${workHref}" data-copy="ourWork">${chrome.ourWork}</a>
+          <a href="/work/via-holidays.html" data-copy="viaCase">${chrome.viaCase}</a>
+          <a href="/work/nourvive.html" data-copy="nourviveCase">${chrome.nourviveCase}</a>
+          <a href="${servicesHref}" data-copy="servicesLink">${chrome.servicesLink}</a>
           <a href="${navBlogHref}" data-nav="blog" data-i18n="nav.blog">${blogLabel}</a>
-          <a href="/contact" data-i18n="cta.start">Book a Scope Call</a>
+          <a href="${contactHref}" data-i18n="cta.start">${chrome.book}</a>
         </div>
         <div class="footer-col">
-          <p class="footer-label" data-i18n="footer.follow">Follow</p>
-          <a href="https://www.instagram.com/powershift.dev/" rel="me noopener" target="_blank" data-i18n="footer.instagram" aria-label="POWER SHIFT on Instagram">Instagram</a>
-          <a href="https://www.facebook.com/people/Power-Shift/61573374143956/" rel="me noopener" target="_blank" data-i18n="footer.facebook" aria-label="POWER SHIFT on Facebook">Facebook</a>
-          <a href="https://www.linkedin.com/in/nasser-ahmed-6384a824a" rel="me noopener" target="_blank" data-i18n="footer.linkedin" aria-label="Nasser Ahmed, POWER SHIFT founder, on LinkedIn">LinkedIn</a>
+          <p class="footer-label" data-i18n="footer.follow">${chrome.follow}</p>
+          <a href="https://www.instagram.com/powershift.dev/" rel="me noopener" target="_blank" data-i18n="footer.instagram" aria-label="POWER SHIFT on Instagram">${chrome.instagram}</a>
+          <a href="https://www.facebook.com/people/Power-Shift/61573374143956/" rel="me noopener" target="_blank" data-i18n="footer.facebook" aria-label="POWER SHIFT on Facebook">${chrome.facebook}</a>
+          <a href="https://www.linkedin.com/in/nasser-ahmed-6384a824a" rel="me noopener" target="_blank" data-i18n="footer.linkedin" aria-label="Nasser Ahmed, POWER SHIFT founder, on LinkedIn">${chrome.linkedin}</a>
         </div>
       </div>
       <div class="footer-base wrap-wide">
-        <span>POWER SHIFT · <span data-year>2026</span> · <span data-i18n="footer.rights">All rights reserved.</span></span>
-        <span data-i18n="footer.privacy">Briefs go to our WhatsApp. We do not sell your data.</span>
+        <span>POWER SHIFT · <span data-year>2026</span> · <span data-i18n="footer.rights">${chrome.rights}</span></span>
+        <span data-i18n="footer.privacy">${chrome.privacy}</span>
       </div>
     </footer>
     <div class="sticky-bar" data-sticky-bar>
-      <a class="btn btn-primary btn-sticky-start" href="/contact" data-open-wizard data-i18n="cta.startShort">Book a Call</a>
-      <a class="btn btn-mint btn-sticky-wa" href="https://wa.me/201553766199" data-wa data-i18n="cta.whatsapp">WhatsApp</a>
+      <a class="btn btn-primary btn-sticky-start" href="/contact" data-open-wizard data-i18n="cta.startShort">${chrome.bookShort}</a>
+      <a class="btn btn-mint btn-sticky-wa" href="https://wa.me/201553766199" data-wa data-i18n="cta.whatsapp">${chrome.whatsapp}</a>
     </div>
     <dialog class="dialog" id="project-dialog" aria-labelledby="wizard-title">
       <div class="dialog-inner">
         <div class="dialog-head">
           <div>
-            <p class="kicker" data-i18n="qualify.kicker">Start</p>
-            <h2 id="wizard-title" data-i18n="wizard.dialogLabel">Book a Scope Call</h2>
+            <p class="kicker" data-i18n="qualify.kicker">${chrome.start}</p>
+            <h2 id="wizard-title" data-i18n="wizard.dialogLabel">${chrome.dialog}</h2>
           </div>
-          <button class="icon-btn" type="button" data-close-wizard aria-label="Close" data-i18n-aria="cta.close">×</button>
+          <button class="icon-btn" type="button" data-close-wizard aria-label="${chrome.close}" data-i18n-aria="cta.close">×</button>
         </div>
         <div class="progress" data-progress></div>
         <h3 data-q></h3>
         <div class="choice-grid" data-choices></div>
         <div class="contact-fields" data-contact-fields hidden>
           <label>
-            <span data-label-name data-i18n="qualify.name">Name</span>
+            <span data-label-name data-i18n="qualify.name">${chrome.name}</span>
             <input type="text" name="name" autocomplete="name" data-field-name required />
             <span class="field-error" data-error-name hidden></span>
           </label>
           <label>
-            <span data-label-email data-i18n="qualify.email">Email</span>
+            <span data-label-email data-i18n="qualify.email">${chrome.email}</span>
             <input type="email" name="email" autocomplete="email" data-field-email required />
             <span class="field-error" data-error-email hidden></span>
           </label>
           <label>
-            <span data-label-phone data-i18n="qualify.phone">Phone (optional)</span>
+            <span data-label-phone data-i18n="qualify.phone">${chrome.phone}</span>
             <input type="tel" name="phone" autocomplete="tel" inputmode="tel" data-field-phone />
             <span class="field-error" data-error-phone hidden></span>
           </label>
           <label>
-            <span data-label-company data-i18n="qualify.company">Company</span>
+            <span data-label-company data-i18n="qualify.company">${chrome.company}</span>
             <input type="text" name="company" autocomplete="organization" data-field-company />
           </label>
           <label class="span-2">
-            <span data-label-note data-i18n="qualify.note">Note</span>
+            <span data-label-note data-i18n="qualify.note">${chrome.message}</span>
             <textarea name="note" rows="3" data-field-note></textarea>
           </label>
         </div>
@@ -276,15 +361,15 @@ ${main}
         <p class="price-note" data-privacy></p>
         <p class="form-status" data-form-status hidden></p>
         <div class="wizard-nav">
-          <button class="btn btn-ghost" type="button" data-back hidden>Back</button>
+          <button class="btn btn-ghost" type="button" data-back hidden>${chrome.back}</button>
           <div class="wizard-nav-end">
-            <button class="btn btn-ghost" type="button" data-email-send hidden>Send by email</button>
-            <button class="btn btn-primary" type="button" data-next>Continue</button>
+            <button class="btn btn-ghost" type="button" data-email-send hidden>${chrome.sendEmail}</button>
+            <button class="btn btn-primary" type="button" data-next>${chrome.continue}</button>
           </div>
         </div>
       </div>
     </dialog>
-    <script type="module" src="/js/main.js?v=20260831c"></script>
+    <script type="module" src="/js/main.js?v=20260919b"></script>
   </body>
 </html>
 `;

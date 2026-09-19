@@ -1,8 +1,8 @@
-import { t, getLang } from "./i18n.js?v=20260829h";
+import { t, getLang } from "./i18n.js?v=20260919b";
 import { PROJECTS } from "./content.js?v=20260831b";
 import { CONFIG } from "./config.js?v=20260831a";
 import { buildWhatsAppUrl } from "./whatsapp.js?v=20260829h";
-import { track } from "./analytics.js?v=20260829h";
+import { track } from "./analytics.js?v=20260919b";
 import { workPictureHTML } from "./media.js?v=20260829h";
 
 const STEPS = ["type", "goal", "timeline"];
@@ -92,9 +92,12 @@ export function initWizard() {
     state.submitting = true;
     state.notice = "";
     syncAll();
-    track("wizard_complete", payloadFrom(state));
-    await persistLead(state);
+    const payload = payloadFrom(state);
+    track("quote_flow_complete", payload);
+    const submission = await persistLead(state);
+    if (submission.ok) track("lead_submitted", payload);
     const url = buildWhatsAppUrl(getLang(), payloadFrom(state));
+    track("whatsapp_cta", { ...payload, kind: "wizard" });
     const popup = window.open(url, "_blank", "noopener");
     state.submitting = false;
     if (!popup) window.location.assign(url);

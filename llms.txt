@@ -11,8 +11,12 @@ POWER SHIFT designs, builds, and supports bilingual Arabic/English products. Wor
 - [About](https://www.powershift.space/about): Official company profile and founder information
 - [About (Arabic)](https://www.powershift.space/ar/about): Arabic official company profile
 - [Work](https://www.powershift.space/work): Live product case studies
+- [Work (Arabic)](https://www.powershift.space/ar/work): Arabic portfolio overview for published website, commerce, and software projects
 - [Services](https://www.powershift.space/services): Websites, e-commerce, SaaS, and operations systems
+- [Services (Arabic)](https://www.powershift.space/ar/services): Arabic overview of website, e-commerce, SaaS, and operations-system services
+- [Website Development in Egypt (Arabic)](https://www.powershift.space/ar/تصميم-مواقع-مصر): Commercial Arabic page for corporate websites, bilingual sites, stores, and landing pages
 - [Contact](https://www.powershift.space/contact): Book a 20-minute scope call
+- [Contact (Arabic)](https://www.powershift.space/ar/contact): Arabic contact options for discussing a website or software project
 - [Blog](https://www.powershift.space/blog): Practical notes on websites, search, leads, shops, and software
 - [Blog (Arabic)](https://www.powershift.space/ar/blog): Arabic-language notes for the same topics
 

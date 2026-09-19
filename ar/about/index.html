@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <script src="/js/lang-boot.js?v=20260831c"></script>
+    <script src="/js/lang-boot.js?v=20260919b"></script>
     <title>من نحن | باور شيفت (Power Shift) القاهرة</title>
     <meta name="description" content="باور شيفت استوديو برمجيات في القاهرة أسسه ناصر أحمد، ويبني المواقع والمتاجر ومنتجات SaaS وأنظمة التشغيل للشركات في مصر والخليج." />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -35,10 +35,8 @@
     <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="preload" href="/assets/fonts/ibm-plex-sans-400.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/assets/fonts/ibm-plex-sans-arabic-500.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/assets/fonts/instrument-serif-400-italic.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="/css/app.css?v=20260829g" />
+    <link rel="stylesheet" href="/css/app.css?v=20260919b" />
     <link rel="stylesheet" href="/css/pages.css?v=20260906a" />
     <script type="application/ld+json">
       {
@@ -56,7 +54,7 @@
             "mainEntity": { "@id": "https://www.powershift.space/#business" }
           },
           {
-            "@type": ["ProfessionalService", "Organization"],
+            "@type": "Organization",
             "@id": "https://www.powershift.space/#business",
             "name": "Power Shift",
             "alternateName": ["Power Shift", "PowerShift", "باور شيفت", "باور شيفت القاهرة"],
@@ -64,11 +62,6 @@
             "logo": "https://www.powershift.space/logo/logo.png",
             "telephone": "+201553766199",
             "email": "info@powershift.space",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "القاهرة",
-              "addressCountry": "EG"
-            },
             "areaServed": [
               { "@type": "Country", "name": "مصر" },
               { "@type": "AdministrativeArea", "name": "دول مجلس التعاون الخليجي" }
@@ -102,12 +95,12 @@
           <img class="brand-logo" src="/logo/logo-header.webp" alt="POWER SHIFT" width="360" height="178" decoding="async" />
         </a>
         <nav class="nav-desktop" aria-label="القائمة الرئيسية" data-i18n-aria="a11y.primaryNav">
-          <a href="/work" data-i18n="nav.work">أعمالنا</a>
+          <a href="/ar/work" data-i18n="nav.work">أعمالنا</a>
           <a href="/ar/services" data-i18n="nav.services">خدماتنا</a>
           <a href="/ar/blog" data-nav="blog" data-i18n="nav.blog">المدونة</a>
           <a href="/ar#approach" data-i18n="nav.approach">طريقة العمل</a>
           <a href="/ar/about" data-i18n="nav.about" aria-current="page">من نحن</a>
-          <a href="/contact" data-i18n="nav.contact">تواصل معنا</a>
+          <a href="/ar/contact" data-i18n="nav.contact">تواصل معنا</a>
         </nav>
         <div class="header-end">
           <div class="header-actions">
@@ -116,7 +109,7 @@
               <a href="/about" data-lang="en" hreflang="en"><span class="lang-flag lang-flag-en" aria-hidden="true"></span>EN</a>
               <a href="/ar/about" data-lang="ar" hreflang="ar" aria-current="true"><span class="lang-flag lang-flag-ar" aria-hidden="true"></span>عربي</a>
             </div>
-            <a class="btn btn-primary btn-header-cta" href="/contact" data-i18n="cta.startShort">تواصل معنا</a>
+            <a class="btn btn-primary btn-header-cta" href="/ar/contact" data-i18n="cta.startShort">تواصل معنا</a>
             <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="افتح القائمة" data-i18n-aria="cta.menu">
               <span></span>
             </button>
@@ -127,16 +120,16 @@
     <nav class="nav-mobile" id="mobile-nav" aria-label="قائمة الهاتف" data-i18n-aria="a11y.mobileNav" aria-hidden="true" inert>
       <div class="nav-mobile-head"><p class="nav-mobile-label" data-i18n="nav.menuLabel">القائمة</p></div>
       <div class="nav-mobile-links">
-        <a href="/work" data-i18n="nav.work">أعمالنا</a>
+        <a href="/ar/work" data-i18n="nav.work">أعمالنا</a>
         <a href="/ar/services" data-i18n="nav.services">خدماتنا</a>
         <a href="/ar/blog" data-nav="blog" data-i18n="nav.blog">المدونة</a>
         <a href="/ar#approach" data-i18n="nav.approach">طريقة العمل</a>
         <a href="/ar/about" data-i18n="nav.about" aria-current="page">من نحن</a>
-        <a href="/contact" data-i18n="nav.contact">تواصل معنا</a>
+        <a href="/ar/contact" data-i18n="nav.contact">تواصل معنا</a>
       </div>
       <div class="nav-mobile-foot">
         <a class="btn btn-nav-wa" href="https://wa.me/201553766199" data-wa data-i18n="cta.whatsapp">واتساب</a>
-        <a class="btn btn-primary btn-nav-mobile" href="/contact" data-i18n="cta.start">تواصل معنا</a>
+        <a class="btn btn-primary btn-nav-mobile" href="/ar/contact" data-i18n="cta.start">تواصل معنا</a>
       </div>
     </nav>
 
@@ -154,8 +147,8 @@
         <h1>من نحن — باور شيفت (Power Shift) القاهرة</h1>
         <p class="lead">هذا هو الموقع الرسمي لـ POWER SHIFT، استوديو برمجيات أسسه ناصر أحمد في القاهرة، مصر. نصمّم ونبني منتجات رقمية للشركات في مصر والخليج والأسواق الدولية.</p>
         <div class="page-hero-actions">
-          <a class="btn btn-primary" href="/contact">تواصل معنا</a>
-          <a class="btn btn-ghost" href="/work">شاهد أعمالنا</a>
+          <a class="btn btn-primary" href="/ar/contact">تواصل معنا</a>
+          <a class="btn btn-ghost" href="/ar/work">شاهد أعمالنا</a>
         </div>
       </header>
 
@@ -173,8 +166,8 @@
           </article>
           <article class="about-page-card">
             <p class="kicker">أين نعمل</p>
-            <h2>مقرّنا في القاهرة ونخدم مصر والخليج</h2>
-            <p>باور شيفت نشاط خدمي مقره القاهرة. نخدم العملاء في أنحاء مصر ودول الخليج والأسواق الدولية، من دون ادعاء وجود مكاتب عامة لا نديرها.</p>
+            <h2>نعمل عن بُعد من القاهرة ونخدم مصر والخليج</h2>
+            <p>باور شيفت استوديو برمجيات يعمل عن بُعد من القاهرة. نتعاون عبر الإنترنت مع عملاء في مصر ودول الخليج والأسواق الدولية، ولا ندير مكتبًا عامًا لاستقبال الزوار.</p>
           </article>
           <article class="about-page-card">
             <p class="kicker">المؤسس</p>
@@ -208,7 +201,7 @@
           <p class="kicker">الخطوة التالية</p>
           <h2>ابنِ مشروعك مع فريق باور شيفت</h2>
           <p>أخبرنا بما تحتاجه، وسنساعدك في تحديد الموقع أو المتجر أو النظام البرمجي المناسب.</p>
-          <a class="btn btn-primary" href="/contact">تواصل معنا</a>
+          <a class="btn btn-primary" href="/ar/contact">تواصل معنا</a>
         </div>
       </section>
     </main>
@@ -228,11 +221,11 @@
         </div>
         <div class="footer-col">
           <p class="footer-label">الشركة</p>
-          <a href="/work">أعمالنا</a>
+          <a href="/ar/work">أعمالنا</a>
           <a href="/ar/services">خدماتنا</a>
           <a href="/ar/about" aria-current="page">من نحن</a>
           <a href="/ar/blog">المدونة</a>
-          <a href="/contact">تواصل معنا</a>
+          <a href="/ar/contact">تواصل معنا</a>
         </div>
         <div class="footer-col">
           <p class="footer-label">الملفات الرسمية</p>
@@ -248,9 +241,9 @@
       </div>
     </footer>
     <div class="sticky-bar" data-sticky-bar>
-      <a class="btn btn-primary btn-sticky-start" href="/contact">تواصل معنا</a>
+      <a class="btn btn-primary btn-sticky-start" href="/ar/contact">تواصل معنا</a>
       <a class="btn btn-mint btn-sticky-wa" href="https://wa.me/201553766199" data-wa>واتساب</a>
     </div>
-    <script type="module" src="/js/main.js?v=20260831c"></script>
+    <script type="module" src="/js/main.js?v=20260919b"></script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-import { onTrack } from "./analytics.js?v=20260829h";
+import { onTrack } from "./analytics.js?v=20260919b";
 
 const PIXEL_ID = "1639209490886117";
 const META_SCRIPT = "https://connect.facebook.net/en_US/fbevents.js";
@@ -47,7 +47,7 @@ function bindSiteEvents() {
   onTrack(({ name, payload }) => {
     if (!pixelInitialized || !window.fbq) return;
     const parameters = safePayload(payload);
-    if (name === "wizard_complete") {
+    if (name === "lead_submitted") {
       window.fbq("track", "Lead", parameters);
       return;
     }
@@ -75,11 +75,26 @@ function loadMetaPixel() {
   bindSiteEvents();
 
   if (!document.querySelector(`script[src="${META_SCRIPT}"]`)) {
-    const script = document.createElement("script");
-    script.async = true;
-    script.src = META_SCRIPT;
-    script.dataset.metaPixel = PIXEL_ID;
-    document.head.appendChild(script);
+    if (typeof window._psLoadMetaPixel === "function") {
+      if (!window._psPixelLoadScheduled) {
+        window._psPixelLoadScheduled = true;
+        const schedule = () => window.setTimeout(window._psLoadMetaPixel, 2000);
+        if (document.readyState === "complete") schedule();
+        else window.addEventListener("load", schedule, { once: true });
+      }
+    } else {
+      const load = () => {
+        if (document.querySelector(`script[src="${META_SCRIPT}"]`)) return;
+        const script = document.createElement("script");
+        script.async = true;
+        script.src = META_SCRIPT;
+        script.dataset.metaPixel = PIXEL_ID;
+        document.head.appendChild(script);
+      };
+      const schedule = () => window.setTimeout(load, 2000);
+      if (document.readyState === "complete") schedule();
+      else window.addEventListener("load", schedule, { once: true });
+    }
   }
 }
 
