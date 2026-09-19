@@ -45,6 +45,11 @@
       "permanent": true
     },
     {
+      "source": "/ar/:path/index.html",
+      "destination": "/ar/:path",
+      "permanent": true
+    },
+    {
       "source": "/about/index.html",
       "destination": "/about",
       "permanent": true
@@ -67,11 +72,6 @@
     {
       "source": "/ar/services/index.html",
       "destination": "/ar/services",
-      "permanent": true
-    },
-    {
-      "source": "/ar/تصميم-مواقع-مصر/index.html",
-      "destination": "/ar/تصميم-مواقع-مصر",
       "permanent": true
     },
     {
