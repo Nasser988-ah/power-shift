@@ -15,7 +15,8 @@
     var pathServicesEn = /^\/services(?:\/|$)/.test(path);
     var pathWorkEn = /^\/work(?:\/index\.html)?\/?$/.test(path);
     var pathBlogEn = /^\/blog(?:\/|$)/.test(path);
-    var urlLocked = home || pathAr || pathAboutEn || pathContactEn || pathServicesEn || pathWorkEn || pathBlogEn;
+    var pathReviewsEn = /^\/reviews(?:\/|$)/.test(path);
+    var urlLocked = home || pathAr || pathAboutEn || pathContactEn || pathServicesEn || pathWorkEn || pathBlogEn || pathReviewsEn;
     var bot = /Googlebot|Google-InspectionTool|bingbot|BingPreview|DuckDuckBot|Slurp|Yandex(Bot|RenderResourcesBot)|Baiduspider|facebookexternalhit|Twitterbot|LinkedInBot|WhatsApp|TelegramBot|Applebot|Bytespider|GPTBot|ClaudeBot|CCBot|GoogleOther/i.test(
       navigator.userAgent || ""
     );

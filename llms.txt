@@ -6,10 +6,12 @@ POWER SHIFT designs, builds, and supports bilingual Arabic/English products. Wor
 
 ## Site
 
-- [Home](https://www.powershift.space/): Studio overview, selected work, services, process, and FAQ
+- [Home](https://www.powershift.space/): Studio overview, 5-star client reviews, selected work, services, process, and FAQ
 - [Home (Arabic)](https://www.powershift.space/ar): Arabic-language version of the studio site
 - [About](https://www.powershift.space/about): Official company profile and founder information
 - [About (Arabic)](https://www.powershift.space/ar/about): Arabic official company profile
+- [Reviews](https://www.powershift.space/reviews): Fifteen 5-star client reviews of Power Shift, plus a WhatsApp path to leave a review
+- [Reviews (Arabic)](https://www.powershift.space/ar/reviews): Arabic page for the same client reviews
 - [Work](https://www.powershift.space/work): Live product case studies
 - [Work (Arabic)](https://www.powershift.space/ar/work): Arabic portfolio overview for published website, commerce, and software projects
 - [Services](https://www.powershift.space/services): Websites, e-commerce, SaaS, and operations systems
@@ -33,6 +35,16 @@ POWER SHIFT designs, builds, and supports bilingual Arabic/English products. Wor
 - [Lodiamo](https://www.powershift.space/work/lodiamo.html): UAE food trade website
 - [Availio](https://www.powershift.space/work/availio.html): Property operations software
 - [7aseb](https://www.powershift.space/work/haseb.html): Operations and finance system
+
+## Reviews
+
+Client reviews published on the site are all 5 stars (15 reviews). The words are published as the clients sent them, in Arabic or English.
+
+Themes clients mention: clarifying the brief, communication during the build, a site that is not a generic template, a link they can send instead of explaining the business each time, remote work that stayed clear, and a control panel so they do not need a developer for every change.
+
+Reviewers: مروان الشاذلي, ياسين العتيبي, Nour El Din, بسنت عادل, راشد المنهالي, Mina Fawzy, حازم الديب, لولوة الهاجري, Salma Nabil, محمود صبري, مشعل الدوسري, Karim Samir, رنا فؤاد, عبدالرحمن الشمري, Maya Hassan.
+
+To leave a review, clients message Power Shift on WhatsApp.
 
 ## Contact
 

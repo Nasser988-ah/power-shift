@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <script src="/js/lang-boot.js?v=20260919b"></script>
+    <script src="/js/lang-boot.js?v=20260922c"></script>
     <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1639209490886117&ev=PageView&noscript=1" alt="" /></noscript>
     <title>Power Shift | Web & Software Development in Cairo</title>
     <meta
       name="description"
-      content="Power Shift is a Cairo software studio. We build custom websites, e-commerce stores, SaaS products, and operations systems for companies in Egypt and the GCC."
+      content="Power Shift is a Cairo software studio with 15 five-star client reviews. We build custom websites, e-commerce stores, SaaS products, and operations systems for Egypt and the GCC."
     />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="google-site-verification" content="qMBbYOdjfCKS5Z2U5iZM-7Y8-Fvz2dCLTCJ1Gc7iP_Y" />
@@ -28,7 +28,7 @@
     <meta property="og:title" content="Power Shift | Web & Software Development in Cairo" />
     <meta
       property="og:description"
-      content="Power Shift is a Cairo software studio. We build custom websites, e-commerce stores, SaaS products, and operations systems for companies in Egypt and the GCC."
+      content="Power Shift is a Cairo software studio with 15 five-star client reviews. We build custom websites, e-commerce stores, SaaS products, and operations systems for Egypt and the GCC."
     />
     <meta property="og:image" content="https://www.powershift.space/assets/og/og-cover.png" />
     <meta property="og:image:width" content="1200" />
@@ -38,7 +38,7 @@
     <meta name="twitter:title" content="Power Shift | Web & Software Development in Cairo" />
     <meta
       name="twitter:description"
-      content="Power Shift is a Cairo software studio. We build custom websites, e-commerce stores, SaaS products, and operations systems for companies in Egypt and the GCC."
+      content="Power Shift is a Cairo software studio with 15 five-star client reviews. We build custom websites, e-commerce stores, SaaS products, and operations systems for Egypt and the GCC."
     />
     <meta name="twitter:image" content="https://www.powershift.space/assets/og/og-cover.png" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -58,7 +58,7 @@
       imagesizes="(max-width: 979px) 92vw, 42vw"
       fetchpriority="high"
     />
-    <link rel="stylesheet" href="/css/app.css?v=20260922b" />
+    <link rel="stylesheet" href="/css/app.css?v=20260922d" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -131,6 +131,14 @@
               "contactType": "sales",
               "areaServed": ["EG", "SA", "AE", "QA", "KW", "BH", "OM"],
               "availableLanguage": ["English", "Arabic"]
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5",
+              "bestRating": "5",
+              "worstRating": "1",
+              "ratingCount": "15",
+              "reviewCount": "15"
             }
           },
           {
@@ -156,11 +164,19 @@
             "@id": "https://www.powershift.space/#webpage",
             "url": "https://www.powershift.space/",
             "name": "Power Shift | Web & Software Development in Cairo",
-            "description": "Power Shift is a Cairo software studio. We build custom websites, e-commerce stores, SaaS products, and operations systems for companies in Egypt and the GCC.",
+            "description": "Power Shift is a Cairo software studio with 15 five-star client reviews. We build custom websites, e-commerce stores, SaaS products, and operations systems for Egypt and the GCC.",
             "isPartOf": { "@id": "https://www.powershift.space/#website" },
             "about": { "@id": "https://www.powershift.space/#business" },
             "primaryImageOfPage": "https://www.powershift.space/assets/og/og-cover.png",
-            "inLanguage": "en"
+            "inLanguage": "en",
+            "significantLink": ["https://www.powershift.space/reviews", "https://www.powershift.space/work"],
+            "hasPart": {
+              "@type": "ItemList",
+              "@id": "https://www.powershift.space/#reviews",
+              "name": "Power Shift client reviews",
+              "numberOfItems": 15,
+              "url": "https://www.powershift.space/reviews"
+            }
           },
           {
             "@type": "FAQPage",
@@ -205,6 +221,14 @@
                   "@type": "Answer",
                   "text": "Updates, fixes, and the next version. You keep a named contact on our side."
                 }
+              },
+              {
+                "@type": "Question",
+                "name": "What do clients say about Power Shift?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Fifteen published client reviews on this site are 5 stars. Clients mention clear communication, a site that is not a generic template, and a process they could follow."
+                }
               }
             ]
           }
@@ -227,6 +251,7 @@
           <a href="/blog" data-nav="blog" data-i18n="nav.blog">Blog</a>
           <a href="/#approach" data-i18n="nav.approach">Approach</a>
           <a href="/about" data-i18n="nav.about">About</a>
+          <a href="/reviews" data-i18n="nav.reviews">Reviews</a>
           <a href="/contact" data-i18n="nav.contact">Contact</a>
         </nav>
         <div class="header-end">
@@ -257,6 +282,7 @@
           <a href="/blog" data-nav="blog" data-i18n="nav.blog">Blog</a>
         <a href="/#approach" data-i18n="nav.approach">Approach</a>
         <a href="/about" data-i18n="nav.about">About</a>
+        <a href="/reviews" data-i18n="nav.reviews">Reviews</a>
         <a href="/contact" data-i18n="nav.contact">Contact</a>
       </div>
       <div class="nav-mobile-foot">
@@ -288,6 +314,10 @@
           <p class="hero-proof">
             <span data-i18n="hero.proof">Live work you can open</span>
             <span data-i18n="hero.proof2">Arabic, English, and RTL included</span>
+            <a class="hero-rating" href="/reviews">
+              <span class="review-stars" aria-hidden="true">★★★★★</span>
+              <span data-i18n="reviews.heroProof">5.0 from 15 client reviews</span>
+            </a>
           </p>
         </div>
         <div class="hero-visual">
@@ -323,6 +353,93 @@
       <section class="marquee-strip" aria-hidden="true">
         <div class="marquee-track" data-clients>
           <span>VIA Holidays</span><span>Nourvive</span><span>Corolla</span><span>URUZ</span><span>Lodiamo</span><span>Availio</span><span>7aseb</span>
+        </div>
+      </section>
+
+      <section class="section section-reviews" id="reviews" aria-labelledby="reviews-title">
+        <div class="wrap reviews-intro reveal">
+          <div class="reviews-copy">
+            <p class="kicker" data-i18n="reviews.kicker">Reviews</p>
+            <h2 id="reviews-title" data-i18n="reviews.title">What clients say</h2>
+            <div class="review-actions">
+              <a class="btn btn-primary" href="/reviews" data-i18n="reviews.readAll">Read all reviews</a>
+              <a class="btn btn-ghost" href="https://wa.me/201553766199" data-wa-review data-ps-event="whatsapp_cta" data-ps-label="leave-review" data-i18n="cta.leaveReview">Leave a review</a>
+            </div>
+          </div>
+          <aside class="reviews-plaque" aria-label="5.0 from 15 client reviews" data-i18n-aria="reviews.heroProof">
+            <strong class="review-score-value">5.0</strong>
+            <div class="review-stars" aria-hidden="true">★★★★★</div>
+            <p data-i18n="reviews.scoreNote">Average from 15 client reviews</p>
+          </aside>
+        </div>
+        <p class="review-swipe-hint wrap" data-i18n="reviews.browseHint">Swipe to read more</p>
+        <div class="review-rail" data-review-featured role="list" aria-label="Selected client reviews" data-i18n-aria="reviews.featuredAria">
+          <article class="review-card" lang="en" dir="ltr" data-review-id="nour" role="listitem">
+            <div class="review-card-top">
+              <span class="review-avatar" aria-hidden="true">N</span>
+              <div class="review-stars" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></div>
+            </div>
+            <blockquote>
+              <p>I honestly did not know exactly what I wanted at first.</p>
+              <p>The team helped me organize my ideas and understand what my website actually needed.</p>
+              <p>I am happy with how the project turned out.</p>
+            </blockquote>
+            <footer><cite>Nour El Din</cite></footer>
+          </article>
+          <article class="review-card" lang="ar" dir="rtl" data-review-id="marwan" role="listitem">
+            <div class="review-card-top">
+              <span class="review-avatar" aria-hidden="true">م</span>
+              <div class="review-stars" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></div>
+            </div>
+            <blockquote>
+              <p>بص يا جماعة أنا مش من الناس اللي بتحب تكتب ريفيوز كتير بس حبيت أقول تجربتي مع Power Shift كانت كويسة جدا كنت محتاج موقع للشركة ومكنتش عارف أبدأ منين واتناقشنا في التفاصيل لحد ما وصلنا للشكل المناسب</p>
+            </blockquote>
+            <footer><cite>مروان الشاذلي</cite></footer>
+          </article>
+          <article class="review-card" lang="en" dir="ltr" data-review-id="mina" role="listitem">
+            <div class="review-card-top">
+              <span class="review-avatar" aria-hidden="true">M</span>
+              <div class="review-stars" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></div>
+            </div>
+            <blockquote>
+              <p>What I liked most was that the website did not feel like a generic template.</p>
+              <p>We discussed what would suit my business and worked around those requirements.</p>
+              <p>The experience was straightforward and professional.</p>
+            </blockquote>
+            <footer><cite>Mina Fawzy</cite></footer>
+          </article>
+          <article class="review-card" lang="ar" dir="rtl" data-review-id="rashid" role="listitem">
+            <div class="review-card-top">
+              <span class="review-avatar" aria-hidden="true">ر</span>
+              <div class="review-stars" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></div>
+            </div>
+            <blockquote>
+              <p>يعطيكم العافية على الشغل والتعاون</p>
+              <p>كان عندنا بعض التفاصيل المهمة في المشروع وتمت مناقشتها بشكل واضح قبل التنفيذ وهذا الشيء فرق معنا</p>
+            </blockquote>
+            <footer><cite>راشد المنهالي</cite></footer>
+          </article>
+          <article class="review-card" lang="en" dir="ltr" data-review-id="salma" role="listitem">
+            <div class="review-card-top">
+              <span class="review-avatar" aria-hidden="true">S</span>
+              <div class="review-stars" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></div>
+            </div>
+            <blockquote>
+              <p>I am not very technical so I really appreciated having things explained in a simple way.</p>
+              <p>The team listened to my ideas and helped me figure out what made sense for my website.</p>
+            </blockquote>
+            <footer><cite>Salma Nabil</cite></footer>
+          </article>
+          <article class="review-card" lang="ar" dir="rtl" data-review-id="hazem" role="listitem">
+            <div class="review-card-top">
+              <span class="review-avatar" aria-hidden="true">ح</span>
+              <div class="review-stars" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></div>
+            </div>
+            <blockquote>
+              <p>أنا كنت عايز حاجة أقدر أبعت لينكها للعميل بدل ما أفضل كل مرة أشرحله إحنا بنقدم إيه والحمد لله الموقع بقى جامع المعلومات اللي محتاجينها في مكان واحد</p>
+            </blockquote>
+            <footer><cite>حازم الديب</cite></footer>
+          </article>
         </div>
       </section>
 
@@ -502,6 +619,10 @@
                 <summary>What happens after launch?</summary>
                 <p>Updates, fixes, and the next version. You keep a named contact on our side.</p>
               </details>
+              <details class="faq-item">
+                <summary>What do clients say about Power Shift?</summary>
+                <p>Fifteen published client reviews on this site are 5 stars. Clients mention clear communication, a site that is not a generic template, and a process they could follow.</p>
+              </details>
             </div>
           </aside>
         </div>
@@ -597,6 +718,7 @@
           <a href="/work/nourvive.html" data-copy="nourviveCase">Nourvive e-commerce work</a>
           <a href="/services" data-copy="servicesLink">Web & software services</a>
           <a href="/about" data-i18n="nav.about">About</a>
+          <a href="/reviews" data-i18n="nav.reviews">Reviews</a>
           <a href="/blog" data-nav="blog" data-i18n="nav.blog">Blog</a>
           <a href="/contact" data-i18n="cta.start">Book a Scope Call</a>
         </div>
@@ -672,6 +794,6 @@
       </div>
     </dialog>
 
-    <script type="module" src="/js/main.js?v=20260922b"></script>
+    <script type="module" src="/js/main.js?v=20260922c"></script>
   </body>
 </html>

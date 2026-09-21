@@ -360,3 +360,44 @@ html[dir="rtl"] .error-page {
 html[dir="rtl"] .footer-base {
   text-align: start;
 }
+
+.reviews-page-grid {
+  display: grid;
+  gap: 0.9rem;
+  padding-block: 0 3rem;
+}
+
+@media (min-width: 760px) {
+  .reviews-page-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1100px) {
+  .reviews-page-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.reviews-page-grid .review-card {
+  height: 100%;
+}
+
+.reviews-page-grid .review-card blockquote {
+  padding-top: 0.35rem;
+}
+
+.reviews-leave {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.reviews-leave p {
+  max-width: 36rem;
+}
+
+.reviews-leave-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}

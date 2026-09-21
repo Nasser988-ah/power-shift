@@ -1,5 +1,5 @@
 import { CONFIG, mailtoUrl } from "./config.js?v=20260831a";
-import { COPY } from "./content.js?v=20260922a";
+import { COPY } from "./content.js?v=20260922c";
 
 function idMap(items) {
   return Object.fromEntries((items || []).map((item) => [item.id, item.label]));
@@ -67,6 +67,14 @@ export function buildWhatsAppUrl(lang, payload = {}) {
 
 export function simpleWhatsAppUrl(lang) {
   const text = lang === "ar" ? COPY.ar.waPrefill : COPY.en.waPrefill;
+  return `${CONFIG.whatsappUrl}?text=${encodeURIComponent(text)}`;
+}
+
+export function reviewWhatsAppUrl(lang) {
+  const text =
+    lang === "ar"
+      ? "مرحبًا فريق POWER SHIFT، أرغب في كتابة تقييم عن تجربتي معكم."
+      : "Hi POWER SHIFT, I would like to leave a review of my experience with you.";
   return `${CONFIG.whatsappUrl}?text=${encodeURIComponent(text)}`;
 }
 
