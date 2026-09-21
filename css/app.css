@@ -1317,7 +1317,7 @@ a[href^="mailto:"],
 
 .section-work {
   padding-inline: 0;
-  overflow: hidden;
+  overflow-x: clip;
 }
 
 .section-work .wrap-wide {
@@ -1400,13 +1400,16 @@ a[href^="mailto:"],
   display: flex;
   gap: 1rem;
   overflow-x: auto;
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
   scroll-padding-inline: var(--page-gutter);
   padding-inline: var(--page-gutter);
   padding-block: 0.25rem 0.5rem;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
-  touch-action: pan-x;
+  touch-action: pan-x pan-y;
+  overscroll-behavior-x: contain;
+  cursor: grab;
 }
 
 .work-rail::-webkit-scrollbar { display: none; }
@@ -1420,21 +1423,35 @@ a[href^="mailto:"],
 .work-card {
   flex: 0 0 min(86vw, 820px);
   scroll-snap-align: start;
+  scroll-snap-stop: always;
   border: 1px solid var(--line);
   padding: 0;
   background: var(--white);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  cursor: pointer;
+  cursor: inherit;
   text-align: start;
   color: var(--navy);
   display: grid;
   text-decoration: none;
+  user-select: none;
+  -webkit-user-drag: none;
   transition: border-color var(--dur-fast), transform 500ms var(--ease);
 }
 
-.work-card:hover {
-  transform: translateY(-4px);
+@media (hover: hover) and (pointer: fine) {
+  .work-card:hover {
+    transform: translateY(-4px);
+  }
+}
+
+.work-rail.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+}
+
+.work-rail.is-dragging .work-card {
+  pointer-events: none;
 }
 
 .work-chrome {
@@ -1470,6 +1487,8 @@ a[href^="mailto:"],
   aspect-ratio: 16 / 10;
   object-fit: contain;
   object-position: top center;
+  pointer-events: none;
+  -webkit-user-drag: none;
 }
 
 .work-card-meta {
@@ -1500,6 +1519,7 @@ a[href^="mailto:"],
 .work-pagination {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.4rem;
   padding-top: 1rem;
 }
@@ -1546,8 +1566,22 @@ html[dir="rtl"] .work-next span { transform: rotate(-135deg); }
   }
 
   .work-arrow {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .work-pagination {
+    gap: 0.1rem;
+  }
+
+  .work-dot {
+    width: 7px;
+    height: 7px;
+    padding: 8px 5px;
+  }
+
+  .work-dot.is-active {
+    width: 1.35rem;
   }
 }
 

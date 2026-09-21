@@ -1,5 +1,5 @@
 import { CONFIG } from "./config.js?v=20260831a";
-import { COPY } from "./content.js?v=20260919b";
+import { COPY } from "./content.js?v=20260922a";
 import { track } from "./analytics.js?v=20260919b";
 
 const KEY = CONFIG.langKey;

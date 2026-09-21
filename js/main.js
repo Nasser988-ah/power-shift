@@ -1,12 +1,12 @@
 import { bindTrackedClicks, track } from "./analytics.js?v=20260919b";
-import { initI18n, getLang, t } from "./i18n.js?v=20260919b";
-import { initPageI18n } from "./page-i18n.js?v=20260831c";
+import { initI18n, getLang, t } from "./i18n.js?v=20260922a";
+import { initPageI18n } from "./page-i18n.js?v=20260922a";
 import { initNav } from "./nav.js?v=20260829h";
-import { initWizard, renderWork } from "./wizard.js?v=20260919b";
-import { initMotion } from "./motion.js?v=20260829h";
+import { initWizard, renderWork } from "./wizard.js?v=20260922b";
+import { initMotion } from "./motion.js?v=20260922a";
 import { simpleWhatsAppUrl, similarWorkUrl } from "./whatsapp.js?v=20260829h";
 import { CONFIG } from "./config.js?v=20260831a";
-import { PROJECTS } from "./content.js?v=20260831c";
+import { PROJECTS } from "./content.js?v=20260922a";
 import { initBlog } from "./blog.js?v=20260831c";
 import { initMetaPixel } from "./meta-pixel.js?v=20260919b";
 

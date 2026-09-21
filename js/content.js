@@ -10,6 +10,50 @@ export const PROJECTS = [
     related: ["lodiamo", "nourvive"],
   },
   {
+    id: "heba",
+    slug: "heba",
+    path: "/work/heba.html",
+    url: "https://drhebaezz.vercel.app/",
+    image: "/assets/work/heba.jpg",
+    service: "website",
+    tags: ["healthcare", "clinic", "web"],
+    related: ["radwan", "via"],
+    preview: true,
+  },
+  {
+    id: "radwan",
+    slug: "radwan",
+    path: "/work/radwan.html",
+    url: "https://radwanezzelarab.vercel.app/",
+    image: "/assets/work/radwan.jpg",
+    service: "website",
+    tags: ["legal", "web"],
+    related: ["heba", "via"],
+    preview: true,
+  },
+  {
+    id: "medlab",
+    slug: "medlab",
+    path: "/work/medlab.html",
+    url: "https://medlab-market.vercel.app/",
+    image: "/assets/work/medlab.jpg",
+    service: "ecommerce",
+    tags: ["medical", "commerce"],
+    related: ["adam", "nourvive"],
+    preview: true,
+  },
+  {
+    id: "adam",
+    slug: "adam",
+    path: "/work/adam.html",
+    url: "https://adam-trending.vercel.app/",
+    image: "/assets/work/adam.jpg",
+    service: "ecommerce",
+    tags: ["retail", "commerce"],
+    related: ["medlab", "nourvive"],
+    preview: true,
+  },
+  {
     id: "nourvive",
     slug: "nourvive",
     path: "/work/nourvive.html",
@@ -173,7 +217,7 @@ export const COPY = {
     work: {
       kicker: "Work",
       title: "Our Work",
-      lead: "Travel, beauty, food, property, and operations — these are running, not mockups.",
+      lead: "Clinics, legal, medical supply, retail, travel, and operations — live products and previews from the same studio.",
       browseHint: "Drag, swipe, or use the arrows",
       previous: "Previous project",
       next: "Next project",
@@ -193,6 +237,38 @@ export const COPY = {
             "A travel operator needed one place for Czech travellers booking Egypt, Jordan, and Türkiye — tours, transfers, and enquiries.",
           solution:
             "A Czech-and-English site for destinations, transfers, and VIP holidays, with a clear path to enquire.",
+        },
+        heba: {
+          name: "Dr. Heba Ezz El-Arab",
+          category: "Healthcare · Clinic website",
+          challenge:
+            "A geriatric consultant needed a bilingual clinic site patients and families could use to understand the practice and book by WhatsApp — not a directory listing.",
+          solution:
+            "An English and Arabic site for the practice, clinics in New Cairo and Mohandessin, and a WhatsApp booking path.",
+        },
+        radwan: {
+          name: "Radwan Ezz El-Arab",
+          category: "Legal · Law office website",
+          challenge:
+            "A Cairo lawyer needed a clear Arabic site for practice areas and anonymized case examples — not a template with a phone number.",
+          solution:
+            "An Arabic law-office site covering civil, commercial, company, criminal and cyber, family, and State Council work, with WhatsApp booking.",
+        },
+        medlab: {
+          name: "MedLab Market",
+          category: "Medical supply · Commerce",
+          challenge:
+            "A medical and laboratory supplier needed an Arabic catalogue by sector — hospitals, labs, scientific, personal care, chemicals — plus a cart that turns into a quote.",
+          solution:
+            "An Arabic commerce preview with sector browsing, product cards, cart, and a quote request path.",
+        },
+        adam: {
+          name: "Adam Trending",
+          category: "Kids apparel · Commerce",
+          challenge:
+            "A kids tracksuit brand needed an Arabic shop for boys and girls collections, with cart orders sent on WhatsApp rather than a generic contact form.",
+          solution:
+            "An Arabic storefront for boys and girls tracksuits, collection browsing, cart, and WhatsApp checkout.",
         },
         nourvive: {
           name: "Nourvive",
@@ -303,9 +379,11 @@ export const COPY = {
       lead: "Not a wish list — these map to work you can open above.",
       items: [
         { title: "Tourism & hospitality", note: "VIA Holidays" },
+        { title: "Healthcare & clinics", note: "Dr. Heba Ezz El-Arab" },
+        { title: "Legal services", note: "Radwan Ezz El-Arab" },
         { title: "Beauty & wellness", note: "URUZ, Nourvive" },
         { title: "Luxury brands", note: "URUZ" },
-        { title: "E-commerce & retail", note: "Corolla, Nourvive" },
+        { title: "E-commerce & retail", note: "MedLab Market, Adam Trending, Corolla, Nourvive" },
         { title: "Food & beverage", note: "Corolla, Lodiamo" },
         { title: "Property operations", note: "Availio" },
         { title: "Business operations", note: "7aseb" },
@@ -538,7 +616,7 @@ export const COPY = {
     work: {
       kicker: "أعمالنا",
       title: "أعمالنا",
-      lead: "سياحة، وجمال، وأغذية، وعقارات، وتشغيل — كلها مشاريع قيد التشغيل، لا نماذج عرض.",
+      lead: "عيادات، وقانون، ومستلزمات طبية، وتجزئة، وسياحة، وتشغيل — منتجات حقيقية ومعاينات من الاستوديو نفسه.",
       browseHint: "اسحب أو استخدم الأسهم للتنقل",
       previous: "المشروع السابق",
       next: "المشروع التالي",
@@ -558,6 +636,38 @@ export const COPY = {
             "شركة سياحة تحتاج منصة واحدة تخدم المسافرين التشيكيين إلى مصر والأردن وتركيا، وتجمع الجولات والانتقالات والاستفسارات.",
           solution:
             "موقع بالتشيكية والإنجليزية يعرض الوجهات والانتقالات وبرامج VIP، بمسار واضح لطلب الاستفسار.",
+        },
+        heba: {
+          name: "د. هبة عز العرب",
+          category: "الرعاية الصحية · موقع عيادة",
+          challenge:
+            "استشارية طب مسنين تحتاج موقع عيادة بلغتين يشرح العيادة للعائلات ويسمح بالحجز عبر واتساب — لا صفحة دليل.",
+          solution:
+            "موقع بالعربي والإنجليزي للعيادة، وعيادتي القاهرة الجديدة والمهندسين، ومسار حجز عبر واتساب.",
+        },
+        radwan: {
+          name: "رضوان عز العرب",
+          category: "القانون · موقع مكتب محاماة",
+          challenge:
+            "محامٍ في القاهرة يحتاج موقعًا عربيًا واضحًا لمجالات العمل ونماذج قضايا مجهولة الهوية — لا قالبًا برقم هاتف.",
+          solution:
+            "موقع مكتب محاماة بالعربي يغطي المدني والتجاري والشركات والجنائي والسيبراني والأسرة ومجلس الدولة، مع حجز عبر واتساب.",
+        },
+        medlab: {
+          name: "MedLab Market",
+          category: "المستلزمات الطبية · تجارة إلكترونية",
+          challenge:
+            "مورّد للمستلزمات الطبية والمخبرية يحتاج كتالوجًا عربيًا حسب القطاع — مستشفيات ومختبرات وعلمي وعناية شخصية وكيماويات — وسلة تتحول إلى طلب عرض سعر.",
+          solution:
+            "معاينة تجارة عربية بتصفح حسب القطاع، وبطاقات منتجات، وسلة، ومسار طلب عرض سعر.",
+        },
+        adam: {
+          name: "Adam Trending",
+          category: "ملابس أطفال · تجارة إلكترونية",
+          challenge:
+            "علامة ترنجات أطفال تحتاج متجرًا عربيًا لمجموعات الأولاد والبنات، وطلبات السلة تصل واتساب بدل نموذج تواصل عام.",
+          solution:
+            "واجهة متجر عربية لترنجات الأولاد والبنات، وتصفح المجموعات، وسلة، وإتمام الطلب عبر واتساب.",
         },
         nourvive: {
           name: "Nourvive",
@@ -668,9 +778,11 @@ export const COPY = {
       lead: "ليست قائمة رغبات — كل قطاع يقابله عمل يمكنك فتحه بالأعلى.",
       items: [
         { title: "السياحة والضيافة", note: "VIA Holidays" },
+        { title: "الرعاية الصحية والعيادات", note: "د. هبة عز العرب" },
+        { title: "الخدمات القانونية", note: "رضوان عز العرب" },
         { title: "الجمال والعناية", note: "URUZ، Nourvive" },
         { title: "العلامات الفاخرة", note: "URUZ" },
-        { title: "التجارة الإلكترونية والتجزئة", note: "Corolla، Nourvive" },
+        { title: "التجارة الإلكترونية والتجزئة", note: "MedLab Market، Adam Trending، Corolla، Nourvive" },
         { title: "الأغذية والمشروبات", note: "Corolla، Lodiamo" },
         { title: "تشغيل العقارات", note: "Availio" },
         { title: "إدارة الأعمال", note: "7aseb" },

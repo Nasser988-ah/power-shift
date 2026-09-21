@@ -1,5 +1,5 @@
-import { t, getLang } from "./i18n.js?v=20260919b";
-import { PROJECTS } from "./content.js?v=20260831b";
+import { t, getLang } from "./i18n.js?v=20260922a";
+import { PROJECTS } from "./content.js?v=20260922a";
 import { CONFIG } from "./config.js?v=20260831a";
 import { buildWhatsAppUrl } from "./whatsapp.js?v=20260829h";
 import { track } from "./analytics.js?v=20260919b";
@@ -308,19 +308,52 @@ export function renderWork() {
     paintCopy();
   };
 
+  const isRtl = () => getComputedStyle(grid).direction === "rtl";
+
+  const railPadding = () => {
+    const styles = getComputedStyle(grid);
+    return parseFloat(styles.scrollPaddingInlineStart || styles.paddingInlineStart) || 0;
+  };
+
+  const scrollToCard = (card, behavior = "smooth") => {
+    if (!card) return;
+    const railBox = grid.getBoundingClientRect();
+    const cardBox = card.getBoundingClientRect();
+    const pad = railPadding();
+    const delta = isRtl()
+      ? cardBox.right - (railBox.right - pad)
+      : cardBox.left - (railBox.left + pad);
+    grid.scrollBy({ left: delta, behavior });
+  };
+
+  const nearestIndex = () => {
+    const railBox = grid.getBoundingClientRect();
+    const pad = railPadding();
+    const origin = isRtl() ? railBox.right - pad : railBox.left + pad;
+    let nearest = active;
+    let nearestDistance = Infinity;
+    grid.querySelectorAll(".work-card").forEach((card, i) => {
+      const box = card.getBoundingClientRect();
+      const edge = isRtl() ? box.right : box.left;
+      const distance = Math.abs(edge - origin);
+      if (distance < nearestDistance) {
+        nearest = i;
+        nearestDistance = distance;
+      }
+    });
+    return nearest;
+  };
+
   const goTo = (index, behavior = "smooth") => {
     active = (index + PROJECTS.length) % PROJECTS.length;
     syncSelection();
-    grid.querySelector(`.work-card[data-i="${active}"]`)?.scrollIntoView({
-      inline: "center",
-      block: "nearest",
-      behavior,
-    });
+    scrollToCard(grid.querySelector(`.work-card[data-i="${active}"]`), behavior);
   };
 
   const paintRail = () => {
     const copy = t();
     grid.setAttribute("aria-label", copy.a11y.projects);
+    grid.setAttribute("tabindex", "0");
     grid.innerHTML = PROJECTS.map((p, i) => {
       const name = copy.work.items[p.id].name;
       const selected = i === active;
@@ -369,6 +402,67 @@ export function renderWork() {
   prevButton?.addEventListener("click", () => goTo(active - 1));
   nextButton?.addEventListener("click", () => goTo(active + 1));
 
+  let drag = null;
+  let ignoreClick = false;
+
+  grid.addEventListener("pointerdown", (event) => {
+    if (event.pointerType !== "mouse" || event.button !== 0) return;
+    drag = {
+      id: event.pointerId,
+      x: event.clientX,
+      startScroll: grid.scrollLeft,
+      moved: false,
+    };
+  });
+
+  grid.addEventListener("pointermove", (event) => {
+    if (!drag || event.pointerId !== drag.id) return;
+    const dx = event.clientX - drag.x;
+    if (!drag.moved && Math.abs(dx) < 6) return;
+    if (!drag.moved) {
+      drag.moved = true;
+      grid.classList.add("is-dragging");
+      try {
+        grid.setPointerCapture(event.pointerId);
+      } catch {
+        /* capture is optional */
+      }
+    }
+    grid.scrollLeft = drag.startScroll + (isRtl() ? dx : -dx);
+  });
+
+  const endDrag = (event) => {
+    if (!drag || event.pointerId !== drag.id) return;
+    if (drag.moved) {
+      ignoreClick = true;
+      goTo(nearestIndex());
+    }
+    grid.classList.remove("is-dragging");
+    drag = null;
+  };
+
+  grid.addEventListener("pointerup", endDrag);
+  grid.addEventListener("pointercancel", endDrag);
+
+  let touchOrigin = null;
+  grid.addEventListener("touchstart", (event) => {
+    const point = event.changedTouches[0];
+    touchOrigin = { x: point.clientX, y: point.clientY, scroll: grid.scrollLeft };
+  }, { passive: true });
+
+  grid.addEventListener("touchend", () => {
+    if (!touchOrigin) return;
+    if (Math.abs(grid.scrollLeft - touchOrigin.scroll) > 12) ignoreClick = true;
+    touchOrigin = null;
+  }, { passive: true });
+
+  grid.addEventListener("click", (event) => {
+    if (!ignoreClick) return;
+    event.preventDefault();
+    event.stopPropagation();
+    ignoreClick = false;
+  }, true);
+
   grid.addEventListener("keydown", (event) => {
     const rtl = document.documentElement.dir === "rtl";
     if (event.key === "ArrowRight") {
@@ -389,22 +483,12 @@ export function renderWork() {
   grid.addEventListener("scroll", () => {
     window.clearTimeout(scrollTimer);
     scrollTimer = window.setTimeout(() => {
-      const railCenter = grid.getBoundingClientRect().left + grid.clientWidth / 2;
-      let nearest = active;
-      let nearestDistance = Infinity;
-      grid.querySelectorAll(".work-card").forEach((card, i) => {
-        const rect = card.getBoundingClientRect();
-        const distance = Math.abs(rect.left + rect.width / 2 - railCenter);
-        if (distance < nearestDistance) {
-          nearest = i;
-          nearestDistance = distance;
-        }
-      });
+      const nearest = nearestIndex();
       if (nearest !== active) {
         active = nearest;
         syncSelection();
       }
-    }, 100);
+    }, 80);
   }, { passive: true });
 
   document.addEventListener("ps:lang", paint);

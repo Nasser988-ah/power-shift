@@ -27,6 +27,119 @@ export const PAGE_EXTRAS = {
         "A direct enquiry path instead of a generic contact dump.",
       ],
     },
+    heba: {
+      h1: "Dr. Heba Ezz El-Arab — Bilingual Clinic Website",
+      overview:
+        "A geriatric consultant needed a bilingual clinic site patients and families could use to understand the practice and book by WhatsApp — not a directory listing.",
+      stack:
+        "A custom bilingual clinic website with practice pages and a WhatsApp booking path. We do not publish a vendor stack for this project.",
+      results: "A preview site is published for review. We do not invent appointment or traffic results.",
+      liveLabel: "Open the Dr. Heba Ezz preview",
+      previewNote: "This project is shown as a preview, not a claim of public launch metrics.",
+      relatedHtml:
+        'This project sits with our <a href="/services#website">custom website development</a> work. See all <a href="/services">software and web development services</a>.',
+      relatedA: "Law office website",
+      relatedB: "Travel website",
+      metaTitle: "Dr. Heba Ezz El-Arab Case Study | Clinic Website by Power Shift",
+      metaDesc:
+        "How Power Shift built a bilingual geriatric clinic website for Dr. Heba Mohamed Ezz El-Arab — practice pages, Cairo clinics, and WhatsApp booking.",
+      goals: [
+        "Give patients and families a clear bilingual clinic site.",
+        "Show the practice and the New Cairo and Mohandessin clinics.",
+        "Make WhatsApp the booking path, not a buried contact form.",
+      ],
+      features: [
+        "English and Arabic clinic presence.",
+        "Practice and clinic information for New Cairo and Mohandessin.",
+        "WhatsApp booking path.",
+        "Copy written for older adults and the families beside them.",
+      ],
+    },
+    radwan: {
+      h1: "Radwan Ezz El-Arab — Arabic Law Office Website",
+      overview:
+        "A Cairo lawyer needed a clear Arabic site for practice areas and anonymized case examples — not a template with a phone number.",
+      stack:
+        "A custom Arabic law-office website with practice-area pages and a WhatsApp booking path. We do not publish a vendor stack for this project.",
+      results: "A preview site is published for review. We do not invent case or enquiry results.",
+      liveLabel: "Open the Radwan Ezz El-Arab preview",
+      previewNote: "This project is shown as a preview, not a claim of public launch metrics.",
+      relatedHtml:
+        'This project sits with our <a href="/services#website">custom website development</a> work. See all <a href="/services">software and web development services</a>.',
+      relatedA: "Clinic website",
+      relatedB: "Travel website",
+      metaTitle: "Radwan Ezz El-Arab Case Study | Law Office Website by Power Shift",
+      metaDesc:
+        "How Power Shift built an Arabic law-office website for Radwan Ezz El-Arab — practice areas, anonymized case examples, and WhatsApp booking.",
+      goals: [
+        "Present the practice areas in clear Arabic.",
+        "Show anonymized case examples without exposing clients.",
+        "Give visitors a WhatsApp path to book a consultation.",
+      ],
+      features: [
+        "Arabic law-office presence.",
+        "Civil, commercial, company, criminal and cyber, family, and State Council work.",
+        "Anonymized case examples.",
+        "WhatsApp booking path.",
+      ],
+    },
+    medlab: {
+      h1: "MedLab Market — Medical & Laboratory Catalogue",
+      overview:
+        "A medical and laboratory supplier needed an Arabic catalogue by sector — hospitals, labs, scientific, personal care, chemicals — plus a cart that turns into a quote.",
+      stack:
+        "A custom Arabic commerce storefront with sector catalogue, cart, and quote request. We do not publish a vendor stack for this project.",
+      results:
+        "A preview storefront is published for review. Login and contact fields in the preview are interface-only. We do not invent sales or quote results.",
+      liveLabel: "Open the MedLab Market preview",
+      previewNote: "This project is shown as a preview, not a claim of public launch metrics.",
+      relatedHtml:
+        'This project sits with our <a href="/services#ecommerce">e-commerce development</a> work. See all <a href="/services">software and web development services</a>.',
+      relatedA: "Kids apparel shop",
+      relatedB: "Beauty commerce",
+      metaTitle: "MedLab Market Case Study | Medical Catalogue by Power Shift",
+      metaDesc:
+        "How Power Shift built an Arabic medical and laboratory catalogue for MedLab Market — sector browsing, cart, and a quote request path.",
+      goals: [
+        "Let buyers browse by sector instead of a flat product dump.",
+        "Keep a cart that can become a quote request.",
+        "Ship a reviewable Arabic storefront before a live account system.",
+      ],
+      features: [
+        "Sector browsing for hospitals, labs, scientific, personal care, and chemicals.",
+        "Product cards and cart.",
+        "Quote request path.",
+        "Arabic storefront published as a review preview.",
+      ],
+    },
+    adam: {
+      h1: "Adam Trending — Kids Tracksuit Shop",
+      overview:
+        "A kids tracksuit brand needed an Arabic shop for boys and girls collections, with cart orders sent on WhatsApp rather than a generic contact form.",
+      stack:
+        "A custom Arabic commerce storefront with collections, cart, and WhatsApp checkout. We do not publish a vendor stack for this project.",
+      results: "A preview shop is published for review. We do not invent sales or conversion results.",
+      liveLabel: "Open the Adam Trending preview",
+      previewNote: "This project is shown as a preview, not a claim of public launch metrics.",
+      relatedHtml:
+        'This project sits with our <a href="/services#ecommerce">e-commerce development</a> work. See all <a href="/services">software and web development services</a>.',
+      relatedA: "Medical catalogue",
+      relatedB: "Beauty commerce",
+      metaTitle: "Adam Trending Case Study | Kids Apparel Shop by Power Shift",
+      metaDesc:
+        "How Power Shift built an Arabic kids tracksuit shop for Adam Trending — boys and girls collections, cart, and WhatsApp checkout.",
+      goals: [
+        "Show boys and girls collections as two clear paths.",
+        "Let shoppers add pieces to a cart.",
+        "Send the order on WhatsApp instead of a generic form.",
+      ],
+      features: [
+        "Boys and girls tracksuit collections.",
+        "Product browsing and cart.",
+        "WhatsApp checkout.",
+        "Arabic storefront.",
+      ],
+    },
     nourvive: {
       h1: "Nourvive — Bilingual Beauty Store",
       overview: "A Cairo beauty brand needed a bilingual shop for skincare, hair care, and mesotherapy — a real catalogue, not a brochure.",
@@ -180,6 +293,109 @@ export const PAGE_EXTRAS = {
         "مسار استفسار مباشر.",
       ],
     },
+    heba: {
+      h1: "د. هبة عز العرب — موقع عيادة بلغتين",
+      overview:
+        "استشارية طب مسنين احتاجت موقع عيادة بلغتين يشرح العيادة للعائلات ويسمح بالحجز عبر واتساب — لا صفحة دليل.",
+      stack: "موقع عيادة مخصص بلغتين مع صفحات العيادة ومسار حجز عبر واتساب. لا ننشر حزمة تقنية لهذا المشروع.",
+      results: "نُشرت معاينة للموقع للمراجعة. لا نختلق أرقام حجوزات أو زيارات.",
+      liveLabel: "افتح معاينة د. هبة عز العرب",
+      previewNote: "يُعرض هذا المشروع كمعاينة، لا كأرقام إطلاق معلنة.",
+      relatedHtml:
+        'يندرج هذا المشروع ضمن <a href="/ar/services#website">تطوير المواقع المخصصة</a>. اطّلع على <a href="/ar/services">خدمات تطوير البرمجيات والمواقع</a>.',
+      relatedA: "موقع مكتب محاماة",
+      relatedB: "موقع سفر",
+      metaTitle: "دراسة حالة د. هبة عز العرب | موقع عيادة من Power Shift",
+      metaDesc:
+        "كيف بنت Power Shift موقع عيادة بلغتين للدكتورة هبة محمد عز العرب — صفحات العيادة وعيادات القاهرة ومسار حجز عبر واتساب.",
+      goals: [
+        "موقع عيادة واضح بالعربي والإنجليزي للمرضى والعائلات.",
+        "عرض العيادة وعيادتي القاهرة الجديدة والمهندسين.",
+        "جعل واتساب مسار الحجز، لا نموذج تواصل مدفون.",
+      ],
+      features: [
+        "حضور للعيادة بالعربي والإنجليزي.",
+        "معلومات العيادة في القاهرة الجديدة والمهندسين.",
+        "مسار حجز عبر واتساب.",
+        "نصوص تناسب كبار السن والعائلات.",
+      ],
+    },
+    radwan: {
+      h1: "رضوان عز العرب — موقع مكتب محاماة بالعربي",
+      overview: "محامٍ في القاهرة احتاج موقعًا عربيًا واضحًا لمجالات العمل ونماذج قضايا مجهولة الهوية — لا قالبًا برقم هاتف.",
+      stack: "موقع مكتب محاماة مخصص بالعربي مع صفحات مجالات العمل ومسار حجز عبر واتساب. لا ننشر حزمة تقنية لهذا المشروع.",
+      results: "نُشرت معاينة للموقع للمراجعة. لا نختلق أرقام قضايا أو استفسارات.",
+      liveLabel: "افتح معاينة رضوان عز العرب",
+      previewNote: "يُعرض هذا المشروع كمعاينة، لا كأرقام إطلاق معلنة.",
+      relatedHtml:
+        'يندرج هذا المشروع ضمن <a href="/ar/services#website">تطوير المواقع المخصصة</a>. اطّلع على <a href="/ar/services">خدمات تطوير البرمجيات والمواقع</a>.',
+      relatedA: "موقع عيادة",
+      relatedB: "موقع سفر",
+      metaTitle: "دراسة حالة رضوان عز العرب | موقع مكتب محاماة من Power Shift",
+      metaDesc:
+        "كيف بنت Power Shift موقع مكتب محاماة بالعربي لرضوان عز العرب — مجالات العمل ونماذج قضايا مجهولة الهوية وحجز عبر واتساب.",
+      goals: [
+        "عرض مجالات العمل بلغة عربية واضحة.",
+        "إظهار نماذج قضايا دون كشف بيانات الموكلين.",
+        "مسار واتساب لحجز الاستشارة.",
+      ],
+      features: [
+        "حضور مكتب محاماة بالعربي.",
+        "المدني والتجاري والشركات والجنائي والسيبراني والأسرة ومجلس الدولة.",
+        "نماذج قضايا مجهولة الهوية.",
+        "مسار حجز عبر واتساب.",
+      ],
+    },
+    medlab: {
+      h1: "MedLab Market — كتالوج طبي ومخبري",
+      overview:
+        "مورّد للمستلزمات الطبية والمخبرية احتاج كتالوجًا عربيًا حسب القطاع — مستشفيات ومختبرات وعلمي وعناية شخصية وكيماويات — وسلة تتحول إلى طلب عرض سعر.",
+      stack: "واجهة تجارة عربية مخصصة بكتالوج حسب القطاع وسلة وطلب عرض سعر. لا ننشر حزمة تقنية لهذا المشروع.",
+      results:
+        "نُشرت معاينة للمتجر للمراجعة. حقول الدخول والتواصل في المعاينة واجهة فقط. لا نختلق أرقام مبيعات أو عروض سعر.",
+      liveLabel: "افتح معاينة MedLab Market",
+      previewNote: "يُعرض هذا المشروع كمعاينة، لا كأرقام إطلاق معلنة.",
+      relatedHtml:
+        'يندرج هذا المشروع ضمن <a href="/ar/services#ecommerce">تطوير التجارة الإلكترونية</a>. اطّلع على <a href="/ar/services">خدمات تطوير البرمجيات والمواقع</a>.',
+      relatedA: "متجر ملابس أطفال",
+      relatedB: "تجارة جمال",
+      metaTitle: "دراسة حالة MedLab Market | كتالوج طبي من Power Shift",
+      metaDesc:
+        "كيف بنت Power Shift كتالوجًا عربيًا للمستلزمات الطبية والمخبرية لـ MedLab Market — تصفح حسب القطاع وسلة وطلب عرض سعر.",
+      goals: [
+        "تصفح حسب القطاع بدل قائمة منتجات مسطحة.",
+        "سلة يمكن تحويلها إلى طلب عرض سعر.",
+        "واجهة عربية قابلة للمراجعة قبل نظام حسابات حي.",
+      ],
+      features: [
+        "تصفح قطاعات المستشفيات والمختبرات والعلمي والعناية الشخصية والكيماويات.",
+        "بطاقات منتجات وسلة.",
+        "مسار طلب عرض سعر.",
+        "واجهة عربية منشورة كمعاينة للمراجعة.",
+      ],
+    },
+    adam: {
+      h1: "Adam Trending — متجر ترنجات أطفال",
+      overview:
+        "علامة ترنجات أطفال احتاجت متجرًا عربيًا لمجموعات الأولاد والبنات، وطلبات السلة تصل واتساب بدل نموذج تواصل عام.",
+      stack: "واجهة تجارة عربية مخصصة بالمجموعات والسلة وإتمام الطلب عبر واتساب. لا ننشر حزمة تقنية لهذا المشروع.",
+      results: "نُشرت معاينة للمتجر للمراجعة. لا نختلق أرقام مبيعات أو تحويل.",
+      liveLabel: "افتح معاينة Adam Trending",
+      previewNote: "يُعرض هذا المشروع كمعاينة، لا كأرقام إطلاق معلنة.",
+      relatedHtml:
+        'يندرج هذا المشروع ضمن <a href="/ar/services#ecommerce">تطوير التجارة الإلكترونية</a>. اطّلع على <a href="/ar/services">خدمات تطوير البرمجيات والمواقع</a>.',
+      relatedA: "كتالوج طبي",
+      relatedB: "تجارة جمال",
+      metaTitle: "دراسة حالة Adam Trending | متجر ملابس أطفال من Power Shift",
+      metaDesc:
+        "كيف بنت Power Shift متجر ترنجات أطفال بالعربي لـ Adam Trending — مجموعات أولاد وبنات وسلة وإتمام الطلب عبر واتساب.",
+      goals: [
+        "مساران واضحان لمجموعات الأولاد والبنات.",
+        "إضافة القطع إلى سلة.",
+        "إرسال الطلب عبر واتساب بدل نموذج عام.",
+      ],
+      features: ["مجموعات ترنجات أولاد وبنات.", "تصفح منتجات وسلة.", "إتمام الطلب عبر واتساب.", "واجهة متجر عربية."],
+    },
     nourvive: {
       h1: "Nourvive — متجر جمال بلغتين",
       overview: "علامة جمال في القاهرة احتاجت متجرًا بلغتين للعناية بالبشرة والشعر والميزوثيرابي — كتالوج حقيقي لا صفحة تعريف.",
@@ -297,10 +513,10 @@ export const PAGE_TEXT = {
     ctaBody: "If you need a serious site, shop, or operations system, book a 20-minute scope call. We will tell you what should be built — and what should wait.",
     workKicker: "Portfolio",
     workH1: "Power Shift Work — Live Products from Cairo",
-    workLead: "Travel, beauty, food, property, and operations — live products and previews from the same studio in Cairo.",
+    workLead: "Clinics, legal, medical supply, retail, travel, and operations — live products and previews from the same studio in Cairo.",
     workServicesCta: "Explore our e-commerce development work",
     workMetaTitle: "Our Work | Power Shift Software Studio in Cairo",
-    workMetaDesc: "Selected Power Shift work: travel, beauty, food, property, and operations products built for companies in Egypt and the GCC.",
+    workMetaDesc: "Selected Power Shift work: clinic and legal websites, medical and retail shops, travel, and operations products built for companies in Egypt and the GCC.",
     servicesKicker: "Services",
     servicesH1: "Power Shift — Web Development & Custom Software in Cairo",
     servicesLead:
@@ -308,10 +524,10 @@ export const PAGE_TEXT = {
     servicesSeeWork: "See live products",
     servicesWebsiteExtra:
       "Typical work includes bilingual Arabic/English sites, RTL interfaces, and a conversion path that leads to a call or WhatsApp — not a generic template.",
-    servicesWebsiteRelated: 'Related work: <a href="/work/via-holidays.html">VIA Holidays travel website</a> and <a href="/work/lodiamo.html">Lodiamo corporate site</a>. From the blog: <a href="/blog/what-a-business-website-needs.html">what a business website actually needs</a> and <a href="/blog/how-much-does-a-website-cost-in-egypt.html">what changes website cost in Egypt</a>.',
+    servicesWebsiteRelated: 'Related work: <a href="/work/heba.html">Dr. Heba Ezz clinic website</a>, <a href="/work/radwan.html">Radwan Ezz El-Arab law office</a>, <a href="/work/via-holidays.html">VIA Holidays travel website</a>, and <a href="/work/lodiamo.html">Lodiamo corporate site</a>. From the blog: <a href="/blog/what-a-business-website-needs.html">what a business website actually needs</a> and <a href="/blog/how-much-does-a-website-cost-in-egypt.html">what changes website cost in Egypt</a>.',
     servicesCommerceExtra: "Built for retail, wholesale, and brand stores that need more than a brochure.",
     servicesCommerceRelated:
-      'Related work: <a href="/work/nourvive.html">Nourvive beauty store</a>, <a href="/work/corolla.html">Corolla food shop</a>, and <a href="/work/uruz.html">URUZ luxury beauty commerce</a>. From the blog: <a href="/blog/ecommerce-website-or-catalogue-egypt.html">when you need a shop versus a catalogue</a>.',
+      'Related work: <a href="/work/medlab.html">MedLab Market catalogue</a>, <a href="/work/adam.html">Adam Trending kids shop</a>, <a href="/work/nourvive.html">Nourvive beauty store</a>, <a href="/work/corolla.html">Corolla food shop</a>, and <a href="/work/uruz.html">URUZ luxury beauty commerce</a>. From the blog: <a href="/blog/ecommerce-website-or-catalogue-egypt.html">when you need a shop versus a catalogue</a>.',
     servicesSaasExtra: "We will say when a SaaS product is the right shape, and when a simpler site or operations tool should come first.",
     servicesSaasRelated:
       'Related work: <a href="/work/availio.html">Availio property operations software</a>. From the blog: <a href="/blog/website-or-custom-software.html">when a website is not enough and you need software</a>.',
@@ -358,10 +574,10 @@ export const PAGE_TEXT = {
     ctaBody: "إذا احتجت موقعًا أو متجرًا أو نظام تشغيل جادًا، تواصل معنا. نحدد ما يستحق البناء وما يمكن أن ينتظر.",
     workKicker: "الأعمال",
     workH1: "أعمال Power Shift — منتجات حقيقية من القاهرة",
-    workLead: "سياحة، وجمال، وأغذية، وعقارات، وتشغيل — منتجات حقيقية ومعاينات من الاستوديو نفسه في القاهرة.",
+    workLead: "عيادات، وقانون، ومستلزمات طبية، وتجزئة، وسياحة، وتشغيل — منتجات حقيقية ومعاينات من الاستوديو نفسه في القاهرة.",
     workServicesCta: "استكشف أعمال التجارة الإلكترونية",
     workMetaTitle: "أعمالنا | Power Shift استوديو برمجيات في القاهرة",
-    workMetaDesc: "أعمال مختارة من Power Shift: سياحة وجمال وأغذية وعقارات وأنظمة تشغيل لشركات في مصر والخليج.",
+    workMetaDesc: "أعمال مختارة من Power Shift: مواقع عيادات ومكاتب محاماة، ومتاجر طبية وتجزئة، وسياحة، وأنظمة تشغيل لشركات في مصر والخليج.",
     servicesKicker: "الخدمات",
     servicesH1: "تصميم مواقع ومتاجر وأنظمة للشركات في مصر",
     servicesLead:
@@ -369,10 +585,10 @@ export const PAGE_TEXT = {
     servicesSeeWork: "شاهد المنتجات العاملة",
     servicesWebsiteExtra: "يشمل العمل عادة مواقع عربي/إنجليزي، وواجهات RTL، ومسار تحويل يصل إلى مكالمة أو واتساب — لا قالبًا عامًا.",
     servicesWebsiteRelated:
-      'أعمال ذات صلة: <a href="/work/via-holidays.html">موقع VIA Holidays السياحي</a> و<a href="/work/lodiamo.html">موقع Lodiamo المؤسسي</a>. اعرف أكثر عن <a href="/ar/تصميم-مواقع-مصر">تصميم مواقع الشركات في مصر</a>، أو اقرأ <a href="/ar/blog/how-much-does-a-website-cost-in-egypt.html">ما الذي يغيّر تكلفة الموقع</a>.',
+      'أعمال ذات صلة: <a href="/work/heba.html">موقع عيادة د. هبة عز العرب</a>، و<a href="/work/radwan.html">موقع مكتب رضوان عز العرب</a>، و<a href="/work/via-holidays.html">موقع VIA Holidays السياحي</a>، و<a href="/work/lodiamo.html">موقع Lodiamo المؤسسي</a>. اعرف أكثر عن <a href="/ar/تصميم-مواقع-مصر">تصميم مواقع الشركات في مصر</a>، أو اقرأ <a href="/ar/blog/how-much-does-a-website-cost-in-egypt.html">ما الذي يغيّر تكلفة الموقع</a>.',
     servicesCommerceExtra: "للتجزئة والجملة ومتاجر العلامات التي تحتاج أكثر من صفحة تعريف.",
     servicesCommerceRelated:
-      'أعمال ذات صلة: <a href="/work/nourvive.html">متجر Nourvive</a>، و<a href="/work/corolla.html">متجر Corolla</a>، و<a href="/work/uruz.html">تجارة URUZ الفاخرة</a>. من المدونة: <a href="/ar/blog/ecommerce-website-or-catalogue-egypt.html">متى تحتاج متجرًا ومتى يكفي كتالوج</a>.',
+      'أعمال ذات صلة: <a href="/work/medlab.html">كتالوج MedLab Market</a>، و<a href="/work/adam.html">متجر Adam Trending</a>، و<a href="/work/nourvive.html">متجر Nourvive</a>، و<a href="/work/corolla.html">متجر Corolla</a>، و<a href="/work/uruz.html">تجارة URUZ الفاخرة</a>. من المدونة: <a href="/ar/blog/ecommerce-website-or-catalogue-egypt.html">متى تحتاج متجرًا ومتى يكفي كتالوج</a>.',
     servicesSaasExtra: "نوضح متى يكون منتج SaaS الشكل الصحيح، ومتى يكفي موقع أو أداة تشغيل أبسط.",
     servicesSaasRelated: 'أعمال ذات صلة: <a href="/work/availio.html">برمجيات Availio لتشغيل العقارات</a>. من المدونة: <a href="/ar/blog/website-or-custom-software.html">متى لا يكفي الموقع وتحتاج برنامجًا</a>.',
     servicesOpsExtra: "تحل محل الدفاتر وملفات Excel والمحادثات المتفرقة عندما يتجاوز التشغيل ذلك.",
