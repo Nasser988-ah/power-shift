@@ -90,6 +90,11 @@
       "permanent": true
     },
     {
+      "source": "/web-design-egypt/index.html",
+      "destination": "/web-design-egypt",
+      "permanent": true
+    },
+    {
       "source": "/blog/index.html",
       "destination": "/blog",
       "permanent": true

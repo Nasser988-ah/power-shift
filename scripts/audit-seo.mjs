@@ -55,7 +55,44 @@ const pages = [
   {
     file: "ar/تصميم-مواقع-مصر/index.html",
     canonical: "https://www.powershift.space/ar/تصميم-مواقع-مصر",
+    alternates: {
+      en: "https://www.powershift.space/web-design-egypt",
+      ar: "https://www.powershift.space/ar/تصميم-مواقع-مصر",
+    },
+  },
+  {
+    file: "web-design-egypt/index.html",
+    canonical: "https://www.powershift.space/web-design-egypt",
+    alternates: {
+      en: "https://www.powershift.space/web-design-egypt",
+      ar: "https://www.powershift.space/ar/تصميم-مواقع-مصر",
+    },
+  },
+  {
+    file: "ar/تصميم-متجر-الكتروني/index.html",
+    canonical: "https://www.powershift.space/ar/تصميم-متجر-الكتروني",
     alternates: {},
+  },
+  {
+    file: "ar/تصميم-مواقع-الخليج/index.html",
+    canonical: "https://www.powershift.space/ar/تصميم-مواقع-الخليج",
+    alternates: {},
+  },
+  {
+    file: "reviews/index.html",
+    canonical: "https://www.powershift.space/reviews",
+    alternates: {
+      en: "https://www.powershift.space/reviews",
+      ar: "https://www.powershift.space/ar/reviews",
+    },
+  },
+  {
+    file: "ar/reviews/index.html",
+    canonical: "https://www.powershift.space/ar/reviews",
+    alternates: {
+      en: "https://www.powershift.space/reviews",
+      ar: "https://www.powershift.space/ar/reviews",
+    },
   },
   {
     file: "work/index.html",

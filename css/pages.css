@@ -68,6 +68,29 @@
   max-width: 100%;
 }
 
+.landing-proof {
+  margin: 1rem 0 0;
+  font-size: var(--fs-sm);
+}
+
+.landing-proof a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.landing-proof a:hover {
+  color: var(--navy);
+  text-decoration: underline;
+}
+
+.landing-proof span {
+  color: #d4a82f;
+  letter-spacing: 0.08em;
+}
+
 @media (max-width: 640px) {
   .page-hero-actions .btn {
     width: 100%;

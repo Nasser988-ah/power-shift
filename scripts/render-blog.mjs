@@ -106,8 +106,18 @@ function shell({
   const workHref = lang === "ar" ? "/ar/work" : "/work";
   const servicesHref = lang === "ar" ? "/ar/services" : "/services";
   const approachHref = lang === "ar" ? "/ar#approach" : "/#approach";
-  const aboutHref = lang === "ar" ? "/ar/about" : "/#about";
+  const aboutHref = lang === "ar" ? "/ar/about" : "/about";
+  const reviewsHref = lang === "ar" ? "/ar/reviews" : "/reviews";
   const contactHref = lang === "ar" ? "/ar/contact" : "/contact";
+  const landingLinks =
+    lang === "ar"
+      ? [
+          ["/ar/تصميم-مواقع-مصر", "تصميم مواقع في مصر"],
+          ["/ar/تصميم-متجر-الكتروني", "تصميم متجر إلكتروني"],
+          ["/ar/تصميم-مواقع-الخليج", "تصميم مواقع في الخليج"],
+        ]
+      : [["/web-design-egypt", "Web design in Egypt"]];
+  const landingHtml = landingLinks.map(([href, label]) => `<a href="${href}">${label}</a>`).join("\n          ");
   const chrome =
     lang === "ar"
       ? {
@@ -116,6 +126,7 @@ function shell({
           services: "خدماتنا",
           approach: "طريقة العمل",
           about: "من نحن",
+          reviews: "آراء العملاء",
           contact: "تواصل معنا",
           language: "اللغة",
           bookShort: "تواصل معنا",
@@ -154,6 +165,7 @@ function shell({
           services: "Services",
           approach: "Approach",
           about: "About",
+          reviews: "Reviews",
           contact: "Contact",
           language: "Language",
           bookShort: "Book a Call",
@@ -192,7 +204,7 @@ function shell({
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <script src="/js/lang-boot.js?v=20260919b"></script>
+    <script src="/js/lang-boot.js?v=20260928a"></script>
     <title>${title}</title>
     <meta name="description" content="${description}" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -225,8 +237,8 @@ function shell({
     <link rel="manifest" href="/site.webmanifest" />
 ${latinFonts}
 ${arabicFont}
-    <link rel="stylesheet" href="/css/app.css?v=20260919b" />
-    <link rel="stylesheet" href="/css/pages.css?v=20260829c" />
+    <link rel="stylesheet" href="/css/app.css?v=20260922d" />
+    <link rel="stylesheet" href="/css/pages.css?v=20260928a" />
     <link rel="stylesheet" href="/css/blog.css?v=20260831c" />
     <script type="application/ld+json">
 ${schema}
@@ -246,6 +258,7 @@ ${schema}
           <a href="${navBlogHref}" data-nav="blog" data-i18n="nav.blog">${blogLabel}</a>
           <a href="${approachHref}" data-i18n="nav.approach">${chrome.approach}</a>
           <a href="${aboutHref}" data-i18n="nav.about">${chrome.about}</a>
+          <a href="${reviewsHref}" data-i18n="nav.reviews">${chrome.reviews}</a>
           <a href="${contactHref}" data-i18n="nav.contact">${chrome.contact}</a>
         </nav>
         <div class="header-end">
@@ -255,7 +268,7 @@ ${schema}
               <a href="${langEnHref}" data-lang="en" hreflang="en"${lang === "en" ? ' aria-current="true"' : ""}><span class="lang-flag lang-flag-en" aria-hidden="true"></span>EN</a>
               <a href="${langArHref}" data-lang="ar" hreflang="ar"${lang === "ar" ? ' aria-current="true"' : ""}><span class="lang-flag lang-flag-ar" aria-hidden="true"></span>عربي</a>
             </div>
-            <a class="btn btn-primary btn-header-cta" href="/contact" data-open-wizard data-ps-event="hero_cta" data-i18n="cta.startShort">${chrome.bookShort}</a>
+            <a class="btn btn-primary btn-header-cta" href="${contactHref}" data-open-wizard data-ps-event="hero_cta" data-i18n="cta.startShort">${chrome.bookShort}</a>
             <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="${chrome.openMenu}" data-i18n-aria="cta.menu">
               <span></span>
             </button>
@@ -271,11 +284,12 @@ ${schema}
         <a href="${navBlogHref}" data-nav="blog" data-i18n="nav.blog">${blogLabel}</a>
         <a href="${approachHref}" data-i18n="nav.approach">${chrome.approach}</a>
         <a href="${aboutHref}" data-i18n="nav.about">${chrome.about}</a>
+        <a href="${reviewsHref}" data-i18n="nav.reviews">${chrome.reviews}</a>
         <a href="${contactHref}" data-i18n="nav.contact">${chrome.contact}</a>
       </div>
       <div class="nav-mobile-foot">
         <a class="btn btn-nav-wa" href="https://wa.me/201553766199" data-wa data-i18n="cta.whatsapp">${chrome.whatsapp}</a>
-        <a class="btn btn-primary btn-nav-mobile" href="/contact" data-open-wizard data-i18n="cta.start">${chrome.book}</a>
+        <a class="btn btn-primary btn-nav-mobile" href="${contactHref}" data-open-wizard data-i18n="cta.start">${chrome.book}</a>
       </div>
     </nav>
     <main id="main">
@@ -300,6 +314,8 @@ ${main}
           <a href="/work/via-holidays.html" data-copy="viaCase">${chrome.viaCase}</a>
           <a href="/work/nourvive.html" data-copy="nourviveCase">${chrome.nourviveCase}</a>
           <a href="${servicesHref}" data-copy="servicesLink">${chrome.servicesLink}</a>
+          ${landingHtml}
+          <a href="${reviewsHref}" data-i18n="nav.reviews">${chrome.reviews}</a>
           <a href="${navBlogHref}" data-nav="blog" data-i18n="nav.blog">${blogLabel}</a>
           <a href="${contactHref}" data-i18n="cta.start">${chrome.book}</a>
         </div>
@@ -316,7 +332,7 @@ ${main}
       </div>
     </footer>
     <div class="sticky-bar" data-sticky-bar>
-      <a class="btn btn-primary btn-sticky-start" href="/contact" data-open-wizard data-i18n="cta.startShort">${chrome.bookShort}</a>
+      <a class="btn btn-primary btn-sticky-start" href="${contactHref}" data-open-wizard data-i18n="cta.startShort">${chrome.bookShort}</a>
       <a class="btn btn-mint btn-sticky-wa" href="https://wa.me/201553766199" data-wa data-i18n="cta.whatsapp">${chrome.whatsapp}</a>
     </div>
     <dialog class="dialog" id="project-dialog" aria-labelledby="wizard-title">
@@ -369,7 +385,7 @@ ${main}
         </div>
       </div>
     </dialog>
-    <script type="module" src="/js/main.js?v=20260919b"></script>
+    <script type="module" src="/js/main.js?v=20260922c"></script>
   </body>
 </html>
 `;
@@ -515,7 +531,7 @@ function indexPage(lang) {
           <p class="kicker">${ui.ctaKicker}</p>
           <h2>${ui.ctaTitle}</h2>
           <p>${ui.ctaBody}</p>
-          <a class="btn btn-mint" href="/contact" data-open-wizard data-i18n="cta.start">${ui.ctaButton}</a>
+          <a class="btn btn-mint" href="${lang === "ar" ? "/ar/contact" : "/contact"}" data-open-wizard data-i18n="cta.start">${ui.ctaButton}</a>
         </div>
       </section>`;
 
@@ -638,7 +654,7 @@ ${body}
           <p class="kicker">${ui.ctaKicker}</p>
           <h2>${loc.ctaTitle || ui.ctaTitle}</h2>
           <p>${loc.ctaBody || ui.ctaBody}</p>
-          <a class="btn btn-mint" href="/contact" data-open-wizard${article.wizard ? ` data-wizard-type="${article.wizard}"` : ""} data-i18n="cta.start">${ui.ctaButton}</a>
+          <a class="btn btn-mint" href="${lang === "ar" ? "/ar/contact" : "/contact"}" data-open-wizard${article.wizard ? ` data-wizard-type="${article.wizard}"` : ""} data-i18n="cta.start">${ui.ctaButton}</a>
         </div>
       </section>`;
 
@@ -670,7 +686,7 @@ function patchSitemap() {
     const loc = `${ORIGIN}${blogIndexPath(lang)}`;
     entries.push(`  <url>
     <loc>${loc}</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="${ORIGIN}/blog" />

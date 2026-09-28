@@ -26,7 +26,8 @@ export function isUrlLockedLang(pathname = window.location.pathname) {
     /^\/services(?:\/|$)/.test(pathname) ||
     /^\/work(?:\/index\.html)?\/?$/.test(pathname) ||
     /^\/blog(?:\/|$)/.test(pathname) ||
-    /^\/reviews(?:\/|$)/.test(pathname)
+    /^\/reviews(?:\/|$)/.test(pathname) ||
+    /^\/web-design-egypt(?:\/|$)/.test(pathname)
   );
 }
 
