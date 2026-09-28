@@ -373,7 +373,7 @@ en_html = f'''<!DOCTYPE html>
     <link rel="preload" href="/assets/fonts/ibm-plex-sans-400.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/assets/fonts/ibm-plex-sans-500.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/assets/fonts/instrument-serif-400-italic.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="/css/app.css?v=20260922c" />
+    <link rel="stylesheet" href="/css/app.css?v=20260928a" />
     <link rel="stylesheet" href="/css/pages.css?v=20260922c" />
     <script type="application/ld+json">
 {en_json}
@@ -555,7 +555,7 @@ ar_html = f'''<!DOCTYPE html>
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="preload" href="/assets/fonts/ibm-plex-sans-arabic-500.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="/css/app.css?v=20260922c" />
+    <link rel="stylesheet" href="/css/app.css?v=20260928a" />
     <link rel="stylesheet" href="/css/pages.css?v=20260922c" />
     <script type="application/ld+json">
 {ar_json}

@@ -237,7 +237,7 @@ function shell({
     <link rel="manifest" href="/site.webmanifest" />
 ${latinFonts}
 ${arabicFont}
-    <link rel="stylesheet" href="/css/app.css?v=20260922d" />
+    <link rel="stylesheet" href="/css/app.css?v=20260928a" />
     <link rel="stylesheet" href="/css/pages.css?v=20260928a" />
     <link rel="stylesheet" href="/css/blog.css?v=20260831c" />
     <script type="application/ld+json">

@@ -6,7 +6,7 @@ import { REVIEWS, REVIEW_STATS } from "../js/reviews.js";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const ORIGIN = "https://www.powershift.space";
 const OG = `${ORIGIN}/assets/og/og-cover.png`;
-const V = { boot: "20260928a", app: "20260922d", pages: "20260928a", main: "20260922c" };
+const V = { boot: "20260928a", app: "20260928a", pages: "20260928a", main: "20260922c" };
 
 const PATHS = {
   egyptAr: "/ar/تصميم-مواقع-مصر",
