@@ -95,6 +95,36 @@
       "permanent": true
     },
     {
+      "source": "/website-design-egypt",
+      "destination": "/web-design-egypt",
+      "permanent": true
+    },
+    {
+      "source": "/website-design-egypt/:path*",
+      "destination": "/web-design-egypt",
+      "permanent": true
+    },
+    {
+      "source": "/web-development-egypt/index.html",
+      "destination": "/web-development-egypt",
+      "permanent": true
+    },
+    {
+      "source": "/website-development-cairo/index.html",
+      "destination": "/website-development-cairo",
+      "permanent": true
+    },
+    {
+      "source": "/ecommerce-website-development/index.html",
+      "destination": "/ecommerce-website-development",
+      "permanent": true
+    },
+    {
+      "source": "/custom-software-development/index.html",
+      "destination": "/custom-software-development",
+      "permanent": true
+    },
+    {
       "source": "/blog/index.html",
       "destination": "/blog",
       "permanent": true

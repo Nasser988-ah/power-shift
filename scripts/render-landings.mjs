@@ -2,17 +2,26 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { REVIEWS, REVIEW_STATS } from "../js/reviews.js";
+import { commercialPages } from "./commercial-landings.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const ORIGIN = "https://www.powershift.space";
 const OG = `${ORIGIN}/assets/og/og-cover.png`;
-const V = { boot: "20260928a", app: "20260928a", pages: "20260928a", main: "20260922c" };
+const V = { boot: "20261002a", app: "20261002a", pages: "20261002a", main: "20261002a" };
 
 const PATHS = {
   egyptAr: "/ar/تصميم-مواقع-مصر",
   egyptEn: "/web-design-egypt",
   shopAr: "/ar/تصميم-متجر-الكتروني",
+  shopEn: "/ecommerce-website-development",
   gccAr: "/ar/تصميم-مواقع-الخليج",
+  devEn: "/web-development-egypt",
+  devAr: "/ar/شركة-برمجة-مواقع",
+  cairoEn: "/website-development-cairo",
+  cairoAr: "/ar/تصميم-مواقع-القاهرة",
+  companyAr: "/ar/تصميم-موقع-شركة",
+  softwareEn: "/custom-software-development",
+  softwareAr: "/ar/برمجة-أنظمة-مخصصة",
 };
 
 const CHROME = {
@@ -39,8 +48,8 @@ const CHROME = {
       about: "من نحن",
       reviews: "آراء العملاء",
       contact: "تواصل معنا",
-      whatsapp: "واتساب",
-      start: "ابدأ استشارة المشروع",
+      whatsapp: "راسلنا واتساب",
+      start: "احصل على نموذج موقع مجاني",
       note: "استوديو برمجيات · القاهرة · مصر · الخليج · الأسواق الدولية",
       contactLabel: "تواصل",
       location: "القاهرة، مصر",
@@ -63,11 +72,13 @@ const CHROME = {
     },
     explore: [
       ["/ar/تصميم-مواقع-مصر", "تصميم مواقع في مصر"],
+      ["/ar/شركة-برمجة-مواقع", "شركة برمجة مواقع"],
+      ["/ar/تصميم-موقع-شركة", "تصميم موقع شركة"],
+      ["/ar/تصميم-مواقع-القاهرة", "تصميم مواقع في القاهرة"],
       ["/ar/تصميم-متجر-الكتروني", "تصميم متجر إلكتروني"],
+      ["/ar/برمجة-أنظمة-مخصصة", "برمجة أنظمة مخصصة"],
       ["/ar/تصميم-مواقع-الخليج", "تصميم مواقع في الخليج"],
-      ["/ar/services", "كل الخدمات"],
       ["/ar/reviews", "آراء العملاء"],
-      ["/ar/blog", "المدونة"],
     ],
   },
   en: {
@@ -93,8 +104,8 @@ const CHROME = {
       about: "About",
       reviews: "Reviews",
       contact: "Contact",
-      whatsapp: "WhatsApp",
-      start: "Book a Scope Call",
+      whatsapp: "WhatsApp Us",
+      start: "Get a Free Website Prototype",
       note: "Software studio · Cairo · Egypt · GCC · International",
       contactLabel: "Contact",
       location: "Cairo, Egypt",
@@ -116,11 +127,12 @@ const CHROME = {
       stars: "5 out of 5 stars",
     },
     explore: [
-      ["/web-design-egypt", "Web design in Egypt"],
-      ["/services", "All services"],
-      ["/work", "Our work"],
+      ["/web-development-egypt", "Web development in Egypt"],
+      ["/web-design-egypt", "Website design in Egypt"],
+      ["/website-development-cairo", "Website development in Cairo"],
+      ["/ecommerce-website-development", "Ecommerce websites"],
+      ["/custom-software-development", "Custom software"],
       ["/reviews", "Client reviews"],
-      ["/blog", "Blog"],
     ],
   },
 };
@@ -136,6 +148,7 @@ const WORK = {
   corolla: { img: "corolla", href: "/work/corolla.html", name: "Corolla" },
   uruz: { img: "uruz", href: "/work/uruz.html", name: "URUZ" },
   haseb: { img: "haseb", href: "/work/haseb.html", name: "7aseb" },
+  availio: { img: "availio", href: "/work/availio.html", name: "Availio" },
 };
 
 function esc(value) {
@@ -330,7 +343,9 @@ function page(p) {
         description: p.service.description,
         serviceType: p.service.type,
         provider: { "@id": `${ORIGIN}/#business` },
-        areaServed: p.service.areaServed.map((name) => ({ "@type": "Country", name })),
+        areaServed: p.service.areaServed.map((name) =>
+          name === "Cairo" ? { "@type": "City", name: "Cairo" } : { "@type": "Country", name }
+        ),
         availableLanguage: ["ar", "en"],
         inLanguage: p.lang,
       },
@@ -402,6 +417,7 @@ function page(p) {
     <meta property="og:site_name" content="POWER SHIFT" />
     <meta property="og:url" content="${canonical}" />
     <meta property="og:locale" content="${p.lang === "ar" ? "ar_EG" : "en_US"}" />
+    <meta property="og:locale:alternate" content="${p.lang === "ar" ? "en_US" : "ar_EG"}" />
     <meta property="og:title" content="${esc(p.title)}" />
     <meta property="og:description" content="${esc(p.description)}" />
     <meta property="og:image" content="${OG}" />
@@ -442,7 +458,7 @@ ${jsonLd(schema)}
               <a href="${langEn}" data-lang="en" hreflang="en"${p.lang === "en" ? ' aria-current="true"' : ""}><span class="lang-flag lang-flag-en" aria-hidden="true"></span>EN</a>
               <a href="${langAr}" data-lang="ar" hreflang="ar"${p.lang === "ar" ? ' aria-current="true"' : ""}><span class="lang-flag lang-flag-ar" aria-hidden="true"></span>عربي</a>
             </div>
-            <a class="btn btn-primary btn-header-cta" href="${c.contact}" data-open-wizard data-wizard-type="${p.wizard}" data-i18n="cta.startShort">${t.contact}</a>
+            <a class="btn btn-primary btn-header-cta" href="${c.contact}" data-open-wizard data-wizard-type="${p.wizard}" data-ps-event="prototype_cta" data-ps-label="${p.id}-header">${esc(p.ctaShort || p.cta)}</a>
             <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="${t.openMenu}" data-i18n-aria="cta.menu"><span></span></button>
           </div>
         </div>
@@ -455,7 +471,7 @@ ${jsonLd(schema)}
       </div>
       <div class="nav-mobile-foot">
         <a class="btn btn-nav-wa" href="https://wa.me/201553766199" data-wa data-i18n="cta.whatsapp">${t.whatsapp}</a>
-        <a class="btn btn-primary btn-nav-mobile" href="${c.contact}" data-open-wizard data-wizard-type="${p.wizard}" data-i18n="cta.start">${t.start}</a>
+        <a class="btn btn-primary btn-nav-mobile" href="${c.contact}" data-open-wizard data-wizard-type="${p.wizard}" data-ps-event="prototype_cta" data-ps-label="${p.id}-menu">${esc(p.ctaShort || t.start)}</a>
       </div>
     </nav>
 
@@ -474,11 +490,13 @@ ${jsonLd(schema)}
         <h1>${esc(p.h1)}</h1>
         <p class="lead">${p.lead}</p>
         <div class="page-hero-actions">
-          <a class="btn btn-primary" href="${c.contact}" data-open-wizard data-wizard-type="${p.wizard}" data-ps-event="hero_cta" data-ps-label="${p.id}">${esc(p.cta)}</a>
+          <a class="btn btn-primary" href="${c.contact}" data-open-wizard data-wizard-type="${p.wizard}" data-ps-event="prototype_cta" data-ps-label="${p.id}">${esc(p.cta)}</a>
           <a class="btn btn-ghost" href="https://wa.me/201553766199" data-wa data-ps-event="whatsapp_cta" data-ps-label="${p.id}">${esc(p.waCta)}</a>
         </div>
         <p class="landing-proof"><a href="${c.reviews}"><span aria-hidden="true">★★★★★</span> ${esc(p.proof)}</a></p>
       </header>
+
+${p.offer ? offerSection(p) : ""}
 
 ${p.sections.join("\n\n")}
 
@@ -490,7 +508,7 @@ ${faqSection(p.faqKicker, p.faqTitle, p.faq)}
           <h2>${esc(p.final.title)}</h2>
           <p>${p.final.body}</p>
           <div class="final-actions">
-            <a class="btn btn-mint" href="${c.contact}" data-open-wizard data-wizard-type="${p.wizard}" data-ps-event="final_cta" data-ps-label="${p.id}">${esc(p.final.cta)}</a>
+            <a class="btn btn-mint" href="${c.contact}" data-open-wizard data-wizard-type="${p.wizard}" data-ps-event="prototype_cta" data-ps-label="${p.id}-final">${esc(p.final.cta)}</a>
             <a class="btn btn-ghost-invert" href="https://wa.me/201553766199" data-wa data-ps-event="whatsapp_cta" data-ps-label="${p.id}-final">${t.whatsapp}</a>
           </div>
         </div>
@@ -506,7 +524,7 @@ ${faqSection(p.faqKicker, p.faqTitle, p.faq)}
         <div class="footer-col">
           <p class="footer-label">${t.contactLabel}</p>
           <a href="mailto:info@powershift.space" data-email-link dir="ltr">info@powershift.space</a>
-          <a href="tel:+201553766199" data-tel dir="ltr">+20 155 376 6199</a>
+          <a href="tel:+201553766199" data-tel data-ps-event="phone_cta" dir="ltr">+20 155 376 6199</a>
           <a href="https://wa.me/201553766199" data-wa>${t.whatsapp}</a>
           <span>${t.location}</span>
         </div>
@@ -527,7 +545,7 @@ ${faqSection(p.faqKicker, p.faqTitle, p.faq)}
       </div>
     </footer>
     <div class="sticky-bar" data-sticky-bar>
-      <a class="btn btn-primary btn-sticky-start" href="${c.contact}" data-open-wizard data-wizard-type="${p.wizard}" data-i18n="cta.startShort">${t.contact}</a>
+      <a class="btn btn-primary btn-sticky-start" href="${c.contact}" data-open-wizard data-wizard-type="${p.wizard}" data-ps-event="prototype_cta" data-ps-label="${p.id}-sticky">${esc(p.ctaShort || p.cta)}</a>
       <a class="btn btn-mint btn-sticky-wa" href="https://wa.me/201553766199" data-wa data-i18n="cta.whatsapp">${t.whatsapp}</a>
     </div>
 ${dialog(t)}
@@ -559,6 +577,32 @@ function processSteps(items) {
         `            <article class="process-step"><span class="n">${String(i + 1).padStart(2, "0")}</span><h3>${esc(title)}</h3><p>${body}</p></article>`
     )
     .join("\n");
+}
+
+function includeSection({ kicker, title, intro, items }) {
+  return section({
+    kicker,
+    title,
+    intro,
+    extraClass: "about-page",
+    body: cards(items),
+  });
+}
+
+function offerSection(p) {
+  const o = p.offer;
+  const c = CHROME[p.lang];
+  return `      <section class="section offer-band" id="prototype">
+        <div class="wrap offer-band-inner">
+          <p class="kicker">${esc(o.kicker)}</p>
+          <h2>${esc(o.title)}</h2>
+          <p>${o.body}</p>
+          <div class="page-hero-actions">
+            <a class="btn btn-primary" href="${c.contact}" data-open-wizard data-wizard-type="${p.wizard}" data-ps-event="prototype_cta" data-ps-label="${p.id}-offer">${esc(o.cta)}</a>
+            <a class="btn btn-ghost" href="https://wa.me/201553766199" data-wa data-ps-event="whatsapp_cta" data-ps-label="${p.id}-offer">${esc(p.waCta)}</a>
+          </div>
+        </div>
+      </section>`;
 }
 
 function section({ kicker, title, intro, body, dark = false, extraClass = "" }) {
@@ -599,14 +643,21 @@ const pages = [
     kicker: "تصميم وتطوير مواقع في مصر",
     h1: "تصميم مواقع في مصر للشركات — بنطاق واضح قبل السعر",
     lead: "نصمم ونبرمج مواقع الشركات والعيادات ومكاتب المحاماة والمتاجر الإلكترونية من القاهرة. الهدف ليس صفحة جميلة فقط، بل موقع يفهمه العميل من الموبايل ويقوده إلى مكالمة أو رسالة واتساب أو طلب.",
-    cta: "ناقش موقعك",
-    waCta: "راسلنا على واتساب",
+    cta: "احصل على نموذج موقع مجاني",
+    ctaShort: "نموذج مجاني",
+    waCta: "راسلنا واتساب",
     proof: "5.0 من 15 مراجعة عملاء — اقرأها",
     service: {
       name: "تصميم وتطوير مواقع الشركات في مصر",
       description: "تصميم وبرمجة مواقع الشركات والعيادات والمتاجر الإلكترونية بالعربي والإنجليزي من باور شيفت في القاهرة.",
       type: "Website design and development",
       areaServed: ["Egypt"],
+    },
+    offer: {
+      kicker: "نموذج مجاني",
+      title: "عندك نشاط ومفيش موقع احترافي؟",
+      body: "ابعت لنا إيه اللي بتبيعه ومين عميلك. نجهّز نموذج أولي لموقعك عشان تشوف شكل النشاط أونلاين، وبعدين نقول لك إيه يدخل النسخة الأولى وإيه يتأجل. النموذج اتجاه بصري أول، مش موقع نهائي.",
+      cta: "احصل على نموذج موقع مجاني",
     },
     sections: [
       section({
@@ -620,6 +671,19 @@ const pages = [
           ["مكاتب المحاماة والممارسات المهنية", 'لعرض مجالات العمل بلغة يفهمها العميل ومسار تواصل مباشر — مثل <a href="/work/radwan.html">موقع مكتب رضوان عز العرب</a>.'],
           ["المتاجر والعلامات والموردون", 'لكتالوج أو متجر أو طلب جملة. التفاصيل في صفحة <a href="/ar/تصميم-متجر-الكتروني">تصميم متجر إلكتروني في مصر</a>.'],
         ]),
+      }),
+      includeSection({
+        kicker: "ماذا يشمل العمل؟",
+        title: "ما يدخل عرض موقع الشركة",
+        intro: "السعر يتبع النطاق المكتوب. البنود التالية جزء من مشاريع المواقع والمتاجر ما لم يُستثنَ بند في الاتفاق.",
+        items: [
+          ["نموذج أولي مجاني", "عيّنة بصرية أولى لشكل النشاط أونلاين، قبل الالتزام بنسخة كاملة."],
+          ["نطاق مكتوب قبل السعر", "الصفحات واللغات والوظائف وما يُؤجَّل، في ملف توافق عليه."],
+          ["الدومين والاستضافة للسنة الأولى", "ضمن عرض الموقع أو المتجر، والحسابات باسم شركتك لا باسمنا."],
+          ["ملكية الموقع لك", "الملفات وحسابات الإدارة تُسلَّم لك. نحن لا نحتجز الموقع بعد التسليم."],
+          ["موبايل أولًا ومسار واتساب", "صفحات تُقرأ من الهاتف، وزر واضح لمكالمة أو واتساب أو طلب."],
+          ["عربي وإنجليزي عند الحاجة", "واجهة RTL تُبنى مع المحتوى، لا ترجمة تُلصق في الآخر."],
+        ],
       }),
       section({
         kicker: "ماذا نبني؟",
@@ -703,7 +767,7 @@ ${readingCards([
       ["كم يستغرق تنفيذ الموقع؟", 'تتحدد المدة بعد معرفة حجم الموقع وجاهزية المحتوى واللغات والوظائف، ونكتبها في النطاق قبل البدء. أكثر ما يؤخر المواقع هو تأخر النصوص والصور — راجع <a href="/ar/blog/how-long-does-it-take-to-build-a-website.html">مدة تصميم الموقع</a>.'],
       ["هل تنفذون الموقع بالعربي والإنجليزي؟", "نعم، عندما يكون ذلك ضمن النطاق. تُبنى الواجهة والنصوص وRTL معًا بدل إضافة العربية في النهاية."],
       ["هل تعملون مع عملاء خارج القاهرة؟", 'نعم. نعمل من القاهرة مع عملاء في محافظات مصر وفي الخليج عن بُعد، عبر واتساب ومكالمات وروابط مراجعة. لعملاء السعودية والإمارات راجع <a href="/ar/تصميم-مواقع-الخليج">تصميم مواقع للشركات في الخليج</a>.'],
-      ["ماذا عن الدومين والاستضافة؟", 'نحدد داخل النطاق من يملك الدومين والاستضافة ومن يديرهما. ننصح أن يكون الدومين باسم شركتك وحسابك — راجع <a href="/ar/blog/domain-and-hosting-for-business-website.html">الدومين والاستضافة</a>.'],
+      ["ماذا عن الدومين والاستضافة؟", 'في مشاريع المواقع والمتاجر تدخل السنة الأولى من الدومين والاستضافة ضمن العرض، والحسابات باسم شركتك. نحدد التفاصيل في النطاق — راجع <a href="/ar/blog/domain-and-hosting-for-business-website.html">الدومين والاستضافة</a>.'],
       ["هل أستطيع تعديل المحتوى بعد الإطلاق؟", "يعتمد ذلك على طريقة بناء المشروع وما تحتاج إلى تحديثه. نحدد الصفحات أو البيانات القابلة للإدارة ضمن النطاق."],
       ["هل يظهر الموقع في جوجل؟", 'نبني صفحات قابلة للفهرسة بعناوين ووصف وهيكل صحيح، ولا نبيع ضمانات ترتيب. اقرأ <a href="/ar/blog/why-isnt-my-website-showing-on-google.html">لماذا لا يظهر موقعي على جوجل</a>.'],
       ["هل يوجد دعم وصيانة؟", "نعم. الصيانة والتحديثات والنسخة التالية تُناقش ضمن الاتفاق، ولا ينتهي العمل برسالة تسليم فقط."],
@@ -711,8 +775,8 @@ ${readingCards([
     final: {
       kicker: "الخطوة التالية",
       title: "أرسل ما تبيعه وما الذي تريد من الموقع أن يفعله",
-      body: "سنساعدك في تحديد هل تحتاج موقع شركة أو متجرًا أو صفحة هبوط، وما الذي يجب أن يدخل النسخة الأولى.",
-      cta: "ابدأ تحديد النطاق",
+      body: "نجهّز نموذجًا أوليًا، ثم نحدد هل تحتاج موقع شركة أو متجرًا أو صفحة هبوط، وما الذي يجب أن يدخل النسخة الأولى.",
+      cta: "احصل على نموذج موقع مجاني",
     },
   },
   {
@@ -730,14 +794,21 @@ ${readingCards([
     kicker: "Web design & development in Egypt",
     h1: "Web design in Egypt for companies that need enquiries, not just a homepage",
     lead: "Power Shift designs and builds websites for companies, clinics, law offices and shops from Cairo. The job is a site a customer understands on their phone — and a clear path to a call, a WhatsApp message, or an order.",
-    cta: "Discuss your website",
-    waCta: "Message us on WhatsApp",
+    cta: "Get a Free Website Prototype",
+    ctaShort: "Free Prototype",
+    waCta: "WhatsApp Us",
     proof: "5.0 from 15 client reviews — read them",
     service: {
       name: "Website design and development in Egypt",
       description: "Custom websites, bilingual Arabic/English sites and e-commerce storefronts for businesses in Egypt, built by Power Shift in Cairo.",
       type: "Website design and development",
       areaServed: ["Egypt"],
+    },
+    offer: {
+      kicker: "Free prototype",
+      title: "Have a business but no professional website?",
+      body: "Send what you sell and who the customer is. We prepare an initial website prototype so you can see how the business could look online, then we say what belongs in version one. It is a first visual sample — not a finished site.",
+      cta: "Get a Free Website Prototype",
     },
     sections: [
       section({
@@ -751,6 +822,19 @@ ${readingCards([
           ["Law offices and professional practices", 'Practice areas in plain language and a direct contact path — like the <a href="/work/radwan.html">Radwan Ezz El-Arab law office site</a>.'],
           ["Shops, brands and suppliers", 'A catalogue, a cart, or a wholesale enquiry path — see <a href="/work/medlab.html">MedLab Market</a> and <a href="/work/corolla.html">Corolla</a>.'],
         ]),
+      }),
+      includeSection({
+        kicker: "What is included",
+        title: "What a website project covers",
+        intro: "Price follows the written scope. These items are part of website and shop quotes unless a line is excluded in writing.",
+        items: [
+          ["Free first prototype", "A visual sample of how the business could look online, before you commit to a full build."],
+          ["Written scope before price", "Pages, languages, features, and what can wait — in one document you approve."],
+          ["First-year domain and hosting", "Included in the website or shop quote, with accounts in your company name."],
+          ["You own the website", "Files and admin access are handed over. We do not hold the site after delivery."],
+          ["Mobile-first, WhatsApp path", "Pages that read on a phone, with a clear call, WhatsApp, or order action."],
+          ["Arabic and English when needed", "RTL and bilingual copy built together, not pasted on at the end."],
+        ],
       }),
       section({
         kicker: "What we build",
@@ -823,15 +907,15 @@ ${readingCards([
       ["How long does a website take?", 'Timing depends on size, content readiness, languages and features, and is written into the scope before work starts. Late copy and photos are the most common delay — see <a href="/blog/how-long-does-it-take-to-build-a-website.html">website timelines</a>.'],
       ["Do you build Arabic and English websites?", "Yes, when it is part of the scope. Interface, copy and RTL are built together rather than bolted on at the end."],
       ["Do you work with clients outside Cairo?", "Yes. We work from Cairo with clients across Egypt and remotely with clients in the GCC, over WhatsApp, calls and preview links."],
-      ["Who owns the domain and hosting?", 'We agree it in the scope. We recommend the domain sits in your company account — see <a href="/blog/domain-and-hosting-for-business-website.html">domain and hosting explained</a>.'],
+      ["Who owns the domain and hosting?", 'On website and shop projects, the first year of domain and hosting is included in the quote, with accounts in your company name. Details are written into the scope — see <a href="/blog/domain-and-hosting-for-business-website.html">domain and hosting explained</a>.'],
       ["Will the website show on Google?", 'We build indexable pages with proper titles, descriptions and structure. We do not sell ranking guarantees. Read <a href="/blog/why-isnt-my-website-showing-on-google.html">why a site may not show on Google</a>.'],
       ["Is there support after launch?", "Yes. Maintenance, updates and the next version are part of the agreement, not an afterthought."],
     ],
     final: {
       kicker: "Next step",
       title: "Tell us what you sell and what the site should do",
-      body: "We will tell you whether you need a company site, a shop or a landing page — and what belongs in version one.",
-      cta: "Start the scope",
+      body: "We prepare a first prototype, then tell you whether you need a company site, a shop or a landing page — and what belongs in version one.",
+      cta: "Get a Free Website Prototype",
     },
   },
   {
@@ -839,7 +923,8 @@ ${readingCards([
     file: "ar/تصميم-متجر-الكتروني/index.html",
     path: PATHS.shopAr,
     lang: "ar",
-    langSwitch: { en: "/services#ecommerce", ar: PATHS.shopAr },
+    alternates: { en: PATHS.shopEn, ar: PATHS.shopAr },
+    langSwitch: { en: PATHS.shopEn, ar: PATHS.shopAr },
     wizard: "ecommerce",
     title: "تصميم متجر إلكتروني في مصر | متاجر عربي وإنجليزي — باور شيفت",
     description:
@@ -848,14 +933,21 @@ ${readingCards([
     kicker: "تصميم متاجر إلكترونية في مصر",
     h1: "تصميم متجر إلكتروني في مصر يناسب طريقة بيعك",
     lead: "بعض النشاطات تحتاج متجرًا بسلة ودفع، وبعضها يحتاج كتالوجًا وطلبًا عبر واتساب أو طلب جملة. نبدأ بتحديد أيهما يناسبك، ثم نبني واجهة عربية أو بلغتين يتصفحها عميلك من الموبايل بسهولة.",
-    cta: "ناقش متجرك",
-    waCta: "راسلنا على واتساب",
+    cta: "احصل على نموذج متجر مجاني",
+    ctaShort: "نموذج مجاني",
+    waCta: "راسلنا واتساب",
     proof: "5.0 من 15 مراجعة عملاء — اقرأها",
     service: {
       name: "تصميم وتطوير المتاجر الإلكترونية في مصر",
       description: "تصميم وبرمجة متاجر وكتالوجات إلكترونية بالعربي والإنجليزي لعلامات التجزئة والجملة في مصر من باور شيفت في القاهرة.",
       type: "E-commerce website development",
       areaServed: ["Egypt"],
+    },
+    offer: {
+      kicker: "نموذج مجاني",
+      title: "بتبيع أونلاين من واتساب أو إنستجرام؟",
+      body: "ابعت نوع المنتجات وطريقة الطلب الحالية. نجهّز نموذج أولي لشكل المتجر على الموبايل، ونحدد هل تحتاج سلة ودفع ولا كتالوج وطلب مباشر.",
+      cta: "احصل على نموذج متجر مجاني",
     },
     sections: [
       section({
@@ -952,14 +1044,21 @@ ${processSteps([
     kicker: "تصميم مواقع لشركات الخليج",
     h1: "تصميم مواقع للشركات في السعودية والإمارات والخليج — من القاهرة عن بُعد",
     lead: "نحن استوديو في القاهرة، وليس لدينا مكتب في الخليج. نعمل مع شركات في السعودية والإمارات ودول الخليج عن بُعد: نطاق مكتوب، مكالمات ورسائل واتساب، وروابط مراجعة تفتحها من موبايلك في أي وقت.",
-    cta: "ناقش موقع شركتك",
-    waCta: "راسلنا على واتساب",
+    cta: "احصل على نموذج موقع مجاني",
+    ctaShort: "نموذج مجاني",
+    waCta: "راسلنا واتساب",
     proof: "5.0 من 15 مراجعة عملاء — اقرأها",
     service: {
       name: "تصميم وتطوير مواقع الشركات في الخليج عن بُعد",
       description: "تصميم وبرمجة مواقع الشركات والمتاجر بالعربية والإنجليزية لعملاء في السعودية والإمارات ودول الخليج، تنفذها باور شيفت من القاهرة عن بُعد.",
       type: "Website design and development",
       areaServed: ["Saudi Arabia", "United Arab Emirates", "Kuwait", "Qatar", "Bahrain", "Oman"],
+    },
+    offer: {
+      kicker: "نموذج مجاني",
+      title: "شركتك في الخليج ومحتاجة موقع تملكه؟",
+      body: "نشتغل من القاهرة عن بُعد: نموذج أولي تراجعونه من الموبايل، ثم نطاق مكتوب قبل أي التزام. الحسابات باسم شركتك.",
+      cta: "احصل على نموذج موقع مجاني",
     },
     sections: [
       section({
@@ -1035,9 +1134,25 @@ ${processSteps(AR_PROCESS)}
   },
 ];
 
-for (const p of pages) {
+const allPages = [
+  ...pages,
+  ...commercialPages({
+    PATHS,
+    section,
+    cards,
+    serviceRows,
+    processSteps,
+    workCards,
+    readingCards,
+    reviewsSection,
+    includeSection,
+    AR_PROCESS,
+  }),
+];
+
+for (const p of allPages) {
   const file = join(root, p.file);
   mkdirSync(dirname(file), { recursive: true });
   writeFileSync(file, page(p), "utf8");
 }
-console.log(`Wrote ${pages.length} landing pages`);
+console.log(`Wrote ${allPages.length} landing pages`);

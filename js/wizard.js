@@ -1,5 +1,5 @@
-import { t, getLang } from "./i18n.js?v=20260922a";
-import { PROJECTS } from "./content.js?v=20260922a";
+import { t, getLang } from "./i18n.js?v=20261002a";
+import { PROJECTS } from "./content.js?v=20261002a";
 import { CONFIG } from "./config.js?v=20260831a";
 import { buildWhatsAppUrl } from "./whatsapp.js?v=20260829h";
 import { track } from "./analytics.js?v=20260919b";
@@ -11,6 +11,7 @@ const TYPE_ALIAS = {
   saas: "system",
   mobile: "system",
   bms: "system",
+  landing: "website",
   ai: "system",
   custom: "system",
 };

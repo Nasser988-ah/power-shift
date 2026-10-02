@@ -524,13 +524,13 @@ export const PAGE_TEXT = {
     servicesSeeWork: "See live products",
     servicesWebsiteExtra:
       "Typical work includes bilingual Arabic/English sites, RTL interfaces, and a conversion path that leads to a call or WhatsApp — not a generic template.",
-    servicesWebsiteRelated: 'Related work: <a href="/work/heba.html">Dr. Heba Ezz clinic website</a>, <a href="/work/radwan.html">Radwan Ezz El-Arab law office</a>, <a href="/work/via-holidays.html">VIA Holidays travel website</a>, and <a href="/work/lodiamo.html">Lodiamo corporate site</a>. More on <a href="/web-design-egypt">web design in Egypt</a>. From the blog: <a href="/blog/what-a-business-website-needs.html">what a business website actually needs</a> and <a href="/blog/how-much-does-a-website-cost-in-egypt.html">what changes website cost in Egypt</a>.',
+    servicesWebsiteRelated: 'Related work: <a href="/work/heba.html">Dr. Heba Ezz clinic website</a>, <a href="/work/radwan.html">Radwan Ezz El-Arab law office</a>, <a href="/work/via-holidays.html">VIA Holidays travel website</a>, and <a href="/work/lodiamo.html">Lodiamo corporate site</a>. More on <a href="/web-development-egypt">web development in Egypt</a> and <a href="/web-design-egypt">website design in Egypt</a>. From the blog: <a href="/blog/what-a-business-website-needs.html">what a business website actually needs</a>.',
     servicesCommerceExtra: "Built for retail, wholesale, and brand stores that need more than a brochure.",
     servicesCommerceRelated:
-      'Related work: <a href="/work/medlab.html">MedLab Market catalogue</a>, <a href="/work/adam.html">Adam Trending kids shop</a>, <a href="/work/nourvive.html">Nourvive beauty store</a>, <a href="/work/corolla.html">Corolla food shop</a>, and <a href="/work/uruz.html">URUZ luxury beauty commerce</a>. From the blog: <a href="/blog/ecommerce-website-or-catalogue-egypt.html">when you need a shop versus a catalogue</a>.',
+      'Related work: <a href="/work/medlab.html">MedLab Market catalogue</a>, <a href="/work/adam.html">Adam Trending kids shop</a>, <a href="/work/nourvive.html">Nourvive beauty store</a>, <a href="/work/corolla.html">Corolla food shop</a>, and <a href="/work/uruz.html">URUZ luxury beauty commerce</a>. Details: <a href="/ecommerce-website-development">ecommerce website development</a>. From the blog: <a href="/blog/ecommerce-website-or-catalogue-egypt.html">when you need a shop versus a catalogue</a>.',
     servicesSaasExtra: "We will say when a SaaS product is the right shape, and when a simpler site or operations tool should come first.",
     servicesSaasRelated:
-      'Related work: <a href="/work/availio.html">Availio property operations software</a>. From the blog: <a href="/blog/website-or-custom-software.html">when a website is not enough and you need software</a>.',
+      'Related work: <a href="/work/availio.html">Availio property operations software</a>. More on <a href="/custom-software-development">custom software development</a>. From the blog: <a href="/blog/website-or-custom-software.html">when a website is not enough and you need software</a>.',
     servicesOpsExtra: "These replace notebooks, spreadsheets, and scattered chats when the operation has outgrown them.",
     servicesOpsRelated:
       'Related work: <a href="/work/haseb.html">7aseb operations and finance system</a> and <a href="/work/availio.html">Availio booking control</a>. From the blog: <a href="/blog/website-or-custom-software.html">website versus a custom operations system</a>.',
@@ -538,12 +538,12 @@ export const PAGE_TEXT = {
       "If you are searching for a software development company in Cairo, or a studio that can ship bilingual products for the GCC, start with a 20-minute scope call.",
     servicesMetaTitle: "Power Shift | Web Development & Custom Software in Cairo",
     servicesMetaDesc: "Power Shift builds custom websites, e-commerce platforms, SaaS products, and operations systems for companies in Egypt and the GCC.",
-    contactH1: "Book a Scope Call",
+    contactH1: "Get a Free Website Prototype",
     contactLead:
-      "Tell us what you need. We will take it to WhatsApp with the brief already written. POWER SHIFT is based in Cairo, Egypt, and builds for companies in Egypt and the GCC.",
-    contactMetaTitle: "Contact Power Shift | Get a Website Quote on WhatsApp — Cairo",
+      "Tell us what you sell and who the customer is. We prepare a first visual sample of how the business could look online, then take the brief to WhatsApp. POWER SHIFT is based in Cairo and builds for Egypt and the GCC.",
+    contactMetaTitle: "Contact Power Shift | Free Website Prototype — Cairo",
     contactMetaDesc:
-      "Send your website, shop or software brief on WhatsApp or email. We reply with scope questions before any price. Cairo studio for Egypt and the GCC — 15 five-star reviews.",
+      "Request a free website prototype on WhatsApp or email. We reply with scope questions before any price. Cairo studio for Egypt and the GCC — 15 five-star reviews.",
     errorCode: "404",
     errorH1: "This page is unavailable.",
     errorLead: "The URL may have moved, or it may never have existed. The studio, the work, and the scope call are still here.",
@@ -585,23 +585,23 @@ export const PAGE_TEXT = {
     servicesSeeWork: "شاهد المنتجات العاملة",
     servicesWebsiteExtra: "يشمل العمل عادة مواقع عربي/إنجليزي، وواجهات RTL، ومسار تحويل يصل إلى مكالمة أو واتساب — لا قالبًا عامًا.",
     servicesWebsiteRelated:
-      'أعمال ذات صلة: <a href="/work/heba.html">موقع عيادة د. هبة عز العرب</a>، و<a href="/work/radwan.html">موقع مكتب رضوان عز العرب</a>، و<a href="/work/via-holidays.html">موقع VIA Holidays السياحي</a>، و<a href="/work/lodiamo.html">موقع Lodiamo المؤسسي</a>. اعرف أكثر عن <a href="/ar/تصميم-مواقع-مصر">تصميم مواقع الشركات في مصر</a>، أو اقرأ <a href="/ar/blog/how-much-does-a-website-cost-in-egypt.html">ما الذي يغيّر تكلفة الموقع</a>.',
+      'أعمال ذات صلة: <a href="/work/heba.html">موقع عيادة د. هبة عز العرب</a>، و<a href="/work/radwan.html">موقع مكتب رضوان عز العرب</a>، و<a href="/work/via-holidays.html">موقع VIA Holidays السياحي</a>، و<a href="/work/lodiamo.html">موقع Lodiamo المؤسسي</a>. اعرف أكثر عن <a href="/ar/شركة-برمجة-مواقع">شركة برمجة مواقع</a> و<a href="/ar/تصميم-موقع-شركة">تصميم موقع شركة</a>.',
     servicesCommerceExtra: "للتجزئة والجملة ومتاجر العلامات التي تحتاج أكثر من صفحة تعريف.",
     servicesCommerceRelated:
       'أعمال ذات صلة: <a href="/work/medlab.html">كتالوج MedLab Market</a>، و<a href="/work/adam.html">متجر Adam Trending</a>، و<a href="/work/nourvive.html">متجر Nourvive</a>، و<a href="/work/corolla.html">متجر Corolla</a>، و<a href="/work/uruz.html">تجارة URUZ الفاخرة</a>. من المدونة: <a href="/ar/blog/ecommerce-website-or-catalogue-egypt.html">متى تحتاج متجرًا ومتى يكفي كتالوج</a>. التفاصيل في <a href="/ar/تصميم-متجر-الكتروني">تصميم متجر إلكتروني في مصر</a>.',
     servicesSaasExtra: "نوضح متى يكون منتج SaaS الشكل الصحيح، ومتى يكفي موقع أو أداة تشغيل أبسط.",
-    servicesSaasRelated: 'أعمال ذات صلة: <a href="/work/availio.html">برمجيات Availio لتشغيل العقارات</a>. من المدونة: <a href="/ar/blog/website-or-custom-software.html">متى لا يكفي الموقع وتحتاج برنامجًا</a>.',
+    servicesSaasRelated: 'أعمال ذات صلة: <a href="/work/availio.html">برمجيات Availio لتشغيل العقارات</a>. التفاصيل في <a href="/ar/برمجة-أنظمة-مخصصة">برمجة أنظمة مخصصة</a>. من المدونة: <a href="/ar/blog/website-or-custom-software.html">متى لا يكفي الموقع وتحتاج برنامجًا</a>.',
     servicesOpsExtra: "تحل محل الدفاتر وملفات Excel والمحادثات المتفرقة عندما يتجاوز التشغيل ذلك.",
     servicesOpsRelated:
       'أعمال ذات صلة: <a href="/work/haseb.html">نظام 7aseb للتشغيل والمالية</a> و<a href="/work/availio.html">ضبط حجوزات Availio</a>. من المدونة: <a href="/ar/blog/website-or-custom-software.html">الموقع مقابل نظام التشغيل المخصص</a>.',
     servicesFinal: "إذا كنت تبحث عن شركة برمجيات في القاهرة، أو استوديو يبني منتجات بلغتين للخليج، ابدأ باستشارة عشرين دقيقة.",
     servicesMetaTitle: "خدمات باور شيفت | مواقع شركات ومتاجر إلكترونية وأنظمة برمجية",
     servicesMetaDesc: "كل خدمات باور شيفت من القاهرة: موقع شركة، متجر إلكتروني، منتج SaaS، أو نظام تشغيل للفواتير والمخزون — عربي وإنجليزي وRTL. اعرف ما يناسب نشاطك قبل السعر.",
-    contactH1: "تواصل معنا",
+    contactH1: "احصل على نموذج موقع مجاني",
     contactLead:
-      "قل لنا ما تحتاجه، ونحوّل الطلب إلى واتساب والتفاصيل مكتوبة. POWER SHIFT في القاهرة، مصر، وتبني للشركات في مصر والخليج.",
-    contactMetaTitle: "تواصل مع باور شيفت | اطلب عرض سعر موقع على واتساب",
-    contactMetaDesc: "أرسل تفاصيل موقعك أو متجرك أو نظامك على واتساب أو البريد، ونرد بأسئلة النطاق قبل أي سعر. استوديو في القاهرة لمصر والخليج — 15 تقييم 5 نجوم.",
+      "قول لنا بتبيع إيه ومين عميلك. نجهّز عيّنة بصرية أولى لشكل النشاط أونلاين، ونحوّل الطلب لواتساب. POWER SHIFT في القاهرة، وتبني للشركات في مصر والخليج.",
+    contactMetaTitle: "تواصل مع باور شيفت | نموذج موقع مجاني على واتساب",
+    contactMetaDesc: "اطلب نموذج موقع مجاني على واتساب أو البريد. نرد بأسئلة النطاق قبل أي سعر. استوديو في القاهرة لمصر والخليج — 15 تقييم 5 نجوم.",
     errorCode: "404",
     errorH1: "هذه الصفحة غير متاحة.",
     errorLead: "ربما نُقل الرابط، أو لم يكن موجودًا. الاستوديو والأعمال والاستشارة ما زالت هنا.",

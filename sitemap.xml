@@ -5,7 +5,7 @@
 >
   <url>
     <loc>https://www.powershift.space/</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/" />
@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://www.powershift.space/ar</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/" />
@@ -161,7 +161,7 @@
   </url>
   <url>
     <loc>https://www.powershift.space/ar/تصميم-مواقع-مصر</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/web-design-egypt" />
@@ -170,7 +170,7 @@
   </url>
   <url>
     <loc>https://www.powershift.space/web-design-egypt</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/web-design-egypt" />
@@ -178,20 +178,92 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/web-design-egypt" />
   </url>
   <url>
-    <loc>https://www.powershift.space/ar/تصميم-متجر-الكتروني</loc>
-    <lastmod>2026-09-28</lastmod>
+    <loc>https://www.powershift.space/web-development-egypt</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/web-development-egypt" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/شركة-برمجة-مواقع" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/web-development-egypt" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/ar/شركة-برمجة-مواقع</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/web-development-egypt" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/شركة-برمجة-مواقع" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/web-development-egypt" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/website-development-cairo</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/website-development-cairo" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/تصميم-مواقع-القاهرة" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/website-development-cairo" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/ar/تصميم-مواقع-القاهرة</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/website-development-cairo" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/تصميم-مواقع-القاهرة" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/website-development-cairo" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/ar/تصميم-موقع-شركة</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.powershift.space/ecommerce-website-development</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/ecommerce-website-development" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/تصميم-متجر-الكتروني" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/ecommerce-website-development" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/custom-software-development</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/custom-software-development" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/برمجة-أنظمة-مخصصة" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/custom-software-development" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/ar/برمجة-أنظمة-مخصصة</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/custom-software-development" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/برمجة-أنظمة-مخصصة" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/custom-software-development" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/ar/تصميم-متجر-الكتروني</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/ecommerce-website-development" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/تصميم-متجر-الكتروني" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/ecommerce-website-development" />
   </url>
   <url>
     <loc>https://www.powershift.space/ar/تصميم-مواقع-الخليج</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.powershift.space/contact</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/contact" />
@@ -200,7 +272,7 @@
   </url>
   <url>
     <loc>https://www.powershift.space/ar/contact</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/contact" />

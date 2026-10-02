@@ -1,4 +1,4 @@
-import { onTrack } from "./analytics.js?v=20260919b";
+import { onTrack } from "./analytics.js?v=20261002a";
 
 const PIXEL_ID = "1639209490886117";
 const META_SCRIPT = "https://connect.facebook.net/en_US/fbevents.js";
@@ -51,8 +51,12 @@ function bindSiteEvents() {
       window.fbq("track", "Lead", parameters);
       return;
     }
-    if (name === "whatsapp_cta") {
+    if (name === "whatsapp_cta" || name === "phone_cta") {
       window.fbq("track", "Contact", parameters);
+      return;
+    }
+    if (name === "prototype_cta") {
+      window.fbq("trackCustom", "prototype_cta", parameters);
       return;
     }
     window.fbq("trackCustom", name, parameters);

@@ -424,3 +424,28 @@ html[dir="rtl"] .footer-base {
   flex-wrap: wrap;
   gap: 0.65rem;
 }
+
+.offer-band {
+  padding-block: clamp(1.6rem, 3.5vw, 2.6rem);
+  background: color-mix(in srgb, var(--mint-soft) 55%, var(--paper));
+  border-block: 1px solid var(--line);
+}
+
+.offer-band-inner {
+  display: grid;
+  gap: 0.7rem;
+  max-width: 40rem;
+}
+
+.offer-band h2 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(1.55rem, 3vw, 2.2rem);
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.offer-band p {
+  color: var(--ink-soft);
+  margin: 0;
+}

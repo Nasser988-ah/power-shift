@@ -1,14 +1,14 @@
-import { bindTrackedClicks, track } from "./analytics.js?v=20260919b";
-import { initI18n, getLang, t } from "./i18n.js?v=20260922c";
-import { initPageI18n } from "./page-i18n.js?v=20260922a";
+import { bindTrackedClicks, track } from "./analytics.js?v=20261002a";
+import { initI18n, getLang, t } from "./i18n.js?v=20261002a";
+import { initPageI18n } from "./page-i18n.js?v=20261002a";
 import { initNav } from "./nav.js?v=20260829h";
-import { initWizard, renderWork } from "./wizard.js?v=20260922b";
+import { initWizard, renderWork } from "./wizard.js?v=20261002a";
 import { initMotion } from "./motion.js?v=20260922a";
 import { simpleWhatsAppUrl, similarWorkUrl, reviewWhatsAppUrl } from "./whatsapp.js?v=20260922c";
 import { CONFIG } from "./config.js?v=20260831a";
-import { PROJECTS } from "./content.js?v=20260922c";
+import { PROJECTS } from "./content.js?v=20261002a";
 import { initBlog } from "./blog.js?v=20260831c";
-import { initMetaPixel } from "./meta-pixel.js?v=20260919b";
+import { initMetaPixel } from "./meta-pixel.js?v=20261002a";
 
 function wireWhatsApp() {
   const apply = () => {
@@ -73,7 +73,8 @@ function renderStaticLists() {
             <h3 class="svc-title">${item.title}</h3>
             <p class="svc-body">${item.body}</p>
             <div class="svc-actions">
-              <button class="btn btn-ghost-invert btn-svc" type="button" data-open-wizard data-wizard-type="${item.id}" data-ps-event="service_select" data-ps-label="${item.title}">${copy.cta.start}</button>
+              ${item.href ? `<p class="svc-page-link"><a href="${item.href}">${copy.services.openPage}</a></p>` : ""}
+              <button class="btn btn-ghost-invert btn-svc" type="button" data-open-wizard data-wizard-type="${item.id}" data-ps-event="prototype_cta" data-ps-label="${item.title}">${copy.cta.start}</button>
             </div>
           </article>`
         )

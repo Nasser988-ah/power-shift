@@ -1,5 +1,5 @@
 import { CONFIG } from "./config.js?v=20260831a";
-import { COPY } from "./content.js?v=20260922c";
+import { COPY } from "./content.js?v=20261002a";
 import { track } from "./analytics.js?v=20260919b";
 
 const KEY = CONFIG.langKey;
@@ -27,7 +27,9 @@ export function isUrlLockedLang(pathname = window.location.pathname) {
     /^\/work(?:\/index\.html)?\/?$/.test(pathname) ||
     /^\/blog(?:\/|$)/.test(pathname) ||
     /^\/reviews(?:\/|$)/.test(pathname) ||
-    /^\/web-design-egypt(?:\/|$)/.test(pathname)
+    /^\/(web-design-egypt|web-development-egypt|website-design-egypt|website-development-cairo|ecommerce-website-development|custom-software-development)(?:\/|$)/.test(
+      pathname
+    )
   );
 }
 

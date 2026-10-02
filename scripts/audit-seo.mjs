@@ -69,9 +69,73 @@ const pages = [
     },
   },
   {
+    file: "web-development-egypt/index.html",
+    canonical: "https://www.powershift.space/web-development-egypt",
+    alternates: {
+      en: "https://www.powershift.space/web-development-egypt",
+      ar: "https://www.powershift.space/ar/شركة-برمجة-مواقع",
+    },
+  },
+  {
+    file: "ar/شركة-برمجة-مواقع/index.html",
+    canonical: "https://www.powershift.space/ar/شركة-برمجة-مواقع",
+    alternates: {
+      en: "https://www.powershift.space/web-development-egypt",
+      ar: "https://www.powershift.space/ar/شركة-برمجة-مواقع",
+    },
+  },
+  {
+    file: "website-development-cairo/index.html",
+    canonical: "https://www.powershift.space/website-development-cairo",
+    alternates: {
+      en: "https://www.powershift.space/website-development-cairo",
+      ar: "https://www.powershift.space/ar/تصميم-مواقع-القاهرة",
+    },
+  },
+  {
+    file: "ar/تصميم-مواقع-القاهرة/index.html",
+    canonical: "https://www.powershift.space/ar/تصميم-مواقع-القاهرة",
+    alternates: {
+      en: "https://www.powershift.space/website-development-cairo",
+      ar: "https://www.powershift.space/ar/تصميم-مواقع-القاهرة",
+    },
+  },
+  {
+    file: "ar/تصميم-موقع-شركة/index.html",
+    canonical: "https://www.powershift.space/ar/تصميم-موقع-شركة",
+    alternates: {},
+  },
+  {
+    file: "ecommerce-website-development/index.html",
+    canonical: "https://www.powershift.space/ecommerce-website-development",
+    alternates: {
+      en: "https://www.powershift.space/ecommerce-website-development",
+      ar: "https://www.powershift.space/ar/تصميم-متجر-الكتروني",
+    },
+  },
+  {
+    file: "custom-software-development/index.html",
+    canonical: "https://www.powershift.space/custom-software-development",
+    alternates: {
+      en: "https://www.powershift.space/custom-software-development",
+      ar: "https://www.powershift.space/ar/برمجة-أنظمة-مخصصة",
+    },
+  },
+  {
+    file: "ar/برمجة-أنظمة-مخصصة/index.html",
+    canonical: "https://www.powershift.space/ar/برمجة-أنظمة-مخصصة",
+    alternates: {
+      en: "https://www.powershift.space/custom-software-development",
+      ar: "https://www.powershift.space/ar/برمجة-أنظمة-مخصصة",
+    },
+  },
+  {
     file: "ar/تصميم-متجر-الكتروني/index.html",
     canonical: "https://www.powershift.space/ar/تصميم-متجر-الكتروني",
-    alternates: {},
+    alternates: {
+      en: "https://www.powershift.space/ecommerce-website-development",
+      ar: "https://www.powershift.space/ar/تصميم-متجر-الكتروني",
+    },
   },
   {
     file: "ar/تصميم-مواقع-الخليج/index.html",

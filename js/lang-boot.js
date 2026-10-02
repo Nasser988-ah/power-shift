@@ -16,7 +16,10 @@
     var pathWorkEn = /^\/work(?:\/index\.html)?\/?$/.test(path);
     var pathBlogEn = /^\/blog(?:\/|$)/.test(path);
     var pathReviewsEn = /^\/reviews(?:\/|$)/.test(path);
-    var pathLandingEn = /^\/web-design-egypt(?:\/|$)/.test(path);
+    var pathLandingEn =
+      /^\/(web-design-egypt|web-development-egypt|website-design-egypt|website-development-cairo|ecommerce-website-development|custom-software-development)(?:\/|$)/.test(
+        path
+      );
     var urlLocked = home || pathAr || pathAboutEn || pathContactEn || pathServicesEn || pathWorkEn || pathBlogEn || pathReviewsEn || pathLandingEn;
     var bot = /Googlebot|Google-InspectionTool|bingbot|BingPreview|DuckDuckBot|Slurp|Yandex(Bot|RenderResourcesBot)|Baiduspider|facebookexternalhit|Twitterbot|LinkedInBot|WhatsApp|TelegramBot|Applebot|Bytespider|GPTBot|ClaudeBot|CCBot|GoogleOther/i.test(
       navigator.userAgent || ""

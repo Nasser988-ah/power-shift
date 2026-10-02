@@ -17,10 +17,18 @@ POWER SHIFT designs, builds, and supports bilingual Arabic/English products. Wor
 - [Services](https://www.powershift.space/services): Websites, e-commerce, SaaS, and operations systems
 - [Services (Arabic)](https://www.powershift.space/ar/services): Arabic overview of website, e-commerce, SaaS, and operations-system services
 - [Web Design in Egypt](https://www.powershift.space/web-design-egypt): Website design and development for companies, clinics, law offices, and shops in Egypt
+- [Web Development Company in Egypt](https://www.powershift.space/web-development-egypt): Web development for business websites, landing pages, and shops, with a free first prototype
+- [Website Development in Cairo](https://www.powershift.space/website-development-cairo): Cairo-based studio page for local website development (remote-first, no walk-in office)
+- [Ecommerce Website Development](https://www.powershift.space/ecommerce-website-development): Shops, catalogues, WhatsApp orders, and wholesale enquiry paths
+- [Custom Software Development](https://www.powershift.space/custom-software-development): Operations software when a public website is not enough
 - [Website Design in Egypt (Arabic)](https://www.powershift.space/ar/تصميم-مواقع-مصر): Arabic page for company, clinic, law-office, and shop websites in Egypt
+- [Web Development Company (Arabic)](https://www.powershift.space/ar/شركة-برمجة-مواقع): Arabic page for owners searching a programming/development company
+- [Company Website Design (Arabic)](https://www.powershift.space/ar/تصميم-موقع-شركة): Arabic page for designing a company website
+- [Website Design in Cairo (Arabic)](https://www.powershift.space/ar/تصميم-مواقع-القاهرة): Arabic Cairo-local page (studio in Cairo, no walk-in office)
 - [E-commerce Store Design in Egypt (Arabic)](https://www.powershift.space/ar/تصميم-متجر-الكتروني): Arabic page for online stores, catalogues, WhatsApp ordering, and wholesale enquiry paths
+- [Custom Software (Arabic)](https://www.powershift.space/ar/برمجة-أنظمة-مخصصة): Arabic page for operations systems when a website is not enough
 - [Website Design for GCC Companies (Arabic)](https://www.powershift.space/ar/تصميم-مواقع-الخليج): Arabic page for companies in Saudi Arabia, the UAE, and the GCC, served remotely from Cairo (no GCC office)
-- [Contact](https://www.powershift.space/contact): Book a 20-minute scope call
+- [Contact](https://www.powershift.space/contact): Request a free website prototype / WhatsApp brief
 - [Contact (Arabic)](https://www.powershift.space/ar/contact): Arabic contact options for discussing a website or software project
 - [Blog](https://www.powershift.space/blog): Practical notes on websites, search, leads, shops, and software
 - [Blog (Arabic)](https://www.powershift.space/ar/blog): Arabic-language notes for the same topics

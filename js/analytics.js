@@ -43,5 +43,12 @@ export function bindTrackedClicks(root = document) {
         label: whatsapp.getAttribute("data-ps-label") || whatsapp.textContent.trim().slice(0, 80),
       });
     }
+
+    const tel = e.target.closest("a[href^='tel:']");
+    if (tel && explicit?.getAttribute("data-ps-event") !== "phone_cta") {
+      track("phone_cta", {
+        label: tel.getAttribute("data-ps-label") || tel.textContent.trim().slice(0, 80),
+      });
+    }
   });
 }
