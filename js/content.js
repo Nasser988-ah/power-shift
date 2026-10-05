@@ -13,12 +13,21 @@ export const PROJECTS = [
     id: "heba",
     slug: "heba",
     path: "/work/heba.html",
-    url: "https://drhebaezz.vercel.app/",
+    url: "https://www.drhebaezz.com/",
     image: "/assets/work/heba.jpg",
     service: "website",
     tags: ["healthcare", "clinic", "web"],
-    related: ["radwan", "via"],
-    preview: true,
+    related: ["abdallah", "radwan"],
+  },
+  {
+    id: "abdallah",
+    slug: "abdallah",
+    path: "/work/abdallah.html",
+    url: "https://www.dr-abdallah-cardio-center.com/",
+    image: "/assets/work/abdallah.jpg",
+    service: "website",
+    tags: ["healthcare", "clinic", "web"],
+    related: ["heba", "radwan"],
   },
   {
     id: "radwan",
@@ -61,8 +70,18 @@ export const PROJECTS = [
     image: "/assets/work/nourvive.jpg",
     service: "ecommerce",
     tags: ["beauty", "commerce"],
-    related: ["uruz", "corolla"],
+    related: ["loofah", "uruz"],
     preview: true,
+  },
+  {
+    id: "loofah",
+    slug: "loofah",
+    path: "/work/loofah.html",
+    url: "https://loofahqueen.com/",
+    image: "/assets/work/loofah.jpg",
+    service: "ecommerce",
+    tags: ["beauty", "commerce"],
+    related: ["nourvive", "uruz"],
   },
   {
     id: "corolla",
@@ -237,89 +256,105 @@ export const COPY = {
           name: "VIA Holidays",
           category: "Travel & hospitality · Website",
           challenge:
-            "A travel operator needed one place for Czech travellers booking Egypt, Jordan, and Türkiye — tours, transfers, and enquiries.",
+            "Travellers searching for Egypt, Jordan, or Türkiye were not landing on one fast page they could trust and enquire from.",
           solution:
-            "A Czech-and-English site for destinations, transfers, and VIP holidays, with a clear path to enquire.",
+            "A page for each destination, built to be found, opening fast on a phone, with the enquiry on that same visit.",
         },
         heba: {
           name: "Dr. Heba Ezz El-Arab",
           category: "Healthcare · Clinic website",
           challenge:
-            "A geriatric consultant needed a bilingual clinic site patients and families could use to understand the practice and book by WhatsApp — not a directory listing.",
+            "Families looking for a geriatric doctor in Cairo were finding a directory listing, not a clinic page they could open and book from.",
           solution:
-            "An English and Arabic site for the practice, clinics in New Cairo and Mohandessin, and a WhatsApp booking path.",
+            "Clinic and location pages written to be found, fast on a phone, with WhatsApp booking before the family leaves.",
+        },
+        abdallah: {
+          name: "Dr. Abdullah Ahmed Abdullah",
+          category: "Healthcare · Cardiology clinic",
+          challenge:
+            "Someone in 10th of Ramadan looking for a heart clinic needed the exam and a way to book, on a phone, without waiting on the page.",
+          solution:
+            "A page for each exam, so it can be found, opens quickly, and books by phone or WhatsApp in the same visit.",
         },
         radwan: {
           name: "Radwan Ezz El-Arab",
           category: "Legal · Law office website",
           challenge:
-            "A Cairo lawyer needed a clear Arabic site for practice areas and anonymized case examples — not a template with a phone number.",
+            "A person searching for a specific kind of lawyer in Cairo will not call a one-page template that feels like a brochure.",
           solution:
-            "An Arabic law-office site covering civil, commercial, company, criminal and cyber, family, and State Council work, with WhatsApp booking.",
+            "A page for each practice area, fast in Arabic on a phone, with WhatsApp when they are ready to book.",
         },
         medlab: {
           name: "MedLab Market",
           category: "Medical supply · Commerce",
           challenge:
-            "A medical and laboratory supplier needed an Arabic catalogue by sector — hospitals, labs, scientific, personal care, chemicals — plus a cart that turns into a quote.",
+            "A hospital buyer looking for one product line should not dig through a heavy catalogue or send a blank contact form.",
           solution:
-            "An Arabic commerce preview with sector browsing, product cards, cart, and a quote request path.",
+            "Sector pages a buyer can find, a catalogue that stays quick to browse, and a cart that becomes a quote.",
         },
         adam: {
           name: "Adam Trending",
           category: "Kids apparel · Commerce",
           challenge:
-            "A kids tracksuit brand needed an Arabic shop for boys and girls collections, with cart orders sent on WhatsApp rather than a generic contact form.",
+            "A parent on a phone should see the boys or girls collection and send the order, not wait on a slow shop.",
           solution:
-            "An Arabic storefront for boys and girls tracksuits, collection browsing, cart, and WhatsApp checkout.",
+            "Collection pages that can be found, a light storefront, and the order sent on WhatsApp.",
         },
         nourvive: {
           name: "Nourvive",
           category: "Beauty · Commerce",
           challenge:
-            "A Cairo beauty brand needed a bilingual shop for skincare, hair care, and mesotherapy — a real catalogue, not a brochure.",
+            "Someone looking for a specific skincare or hair product should land on that product, on a shop that opens immediately.",
           solution:
-            "A storefront with categories, product pages, cart, and English / Arabic switching.",
+            "Product pages that can be found in Arabic and English, on a shop that opens fast, with a cart that does not stall.",
+        },
+        loofah: {
+          name: "Queen Loofah",
+          category: "Natural bath · Commerce",
+          challenge:
+            "A buyer searching for natural Egyptian loofah should land on the product and order, or ask about export, without a slow brand page.",
+          solution:
+            "Product pages built to be found, a shop that opens fast on a phone, and checkout plus a real export path.",
         },
         corolla: {
           name: "Corolla",
           category: "Food · Commerce · Retail",
           challenge:
-            "An Egyptian dried-fruit brand needed to sell to households and take wholesale enquiries without looking generic.",
+            "A household buyer and a wholesale buyer are two different searches. Both need a fast shop, not another generic food template.",
           solution:
-            "A brand shop for the collection, the farm story, and a bulk-order path.",
+            "Product pages a household buyer can find, a shop that stays quick, and a separate path for wholesale.",
         },
         uruz: {
           name: "URUZ",
           category: "Luxury beauty · Commerce",
           challenge:
-            "A natural-beauty house needed a brand world — collections, rituals, ingredients — not only a product grid.",
+            "A luxury brand still has to be found, and it still has to open fast. A heavy site that stalls loses the sale.",
           solution:
-            "A high-end beauty site with editorial structure, collections, and a shop at uruz-egypt.com.",
+            "Collection pages search can understand, a site that stays quick on a phone, and the shop inside that structure.",
         },
         lodiamo: {
           name: "Lodiamo",
           category: "Food trade · Brand site",
           challenge:
-            "A UAE import/export food company needed a bilingual presence for premium agricultural products.",
+            "A buyer searching for a product line should reach the catalogue and send an enquiry, not wait on a slow brochure.",
           solution:
-            "A corporate site for the catalogue and a direct commercial contact path, live at lodiamo.com.",
+            "Catalogue pages a Gulf buyer can find in Arabic or English, fast enough for a commercial enquiry in the same visit.",
         },
         availio: {
           name: "Availio",
           category: "Property · Custom software",
           challenge:
-            "Short-term rental operators were running units in chats and spreadsheets — overlaps and pricing were easy to miss.",
+            "Operators were missing double bookings because the day ran in chats and spreadsheets. The screen they check all day has to be fast.",
           solution:
-            "A booking-control product: occupancy calendar, units, pricing, guest links, and reporting.",
+            "The occupancy screen opens fast enough to catch an overlap, with units, pricing, and guest links in one place.",
         },
         haseb: {
           name: "7aseb",
           category: "Operations · Finance · SaaS",
           challenge:
-            "Small businesses needed invoicing, stock, customers, and payment follow-up in one place — Arabic and English.",
+            "An owner who opens invoices several times a day cannot wait on a slow system, or lose the layout when they switch language.",
           solution:
-            "An operations system for invoices, inventory, CRM, treasury, and WhatsApp sharing, with full RTL.",
+            "Invoices, stock, and collections open fast on the phone they already use, in Arabic or English.",
         },
       },
     },
@@ -676,89 +711,105 @@ export const COPY = {
           name: "VIA Holidays",
           category: "السياحة والضيافة · موقع",
           challenge:
-            "شركة سياحة تحتاج منصة واحدة تخدم المسافرين التشيكيين إلى مصر والأردن وتركيا، وتجمع الجولات والانتقالات والاستفسارات.",
+            "من يبحث عن رحلة إلى مصر أو الأردن أو تركيا كان يقع على صفحات متفرقة، لا على صفحة واحدة يثق بها ويرسل منها استفساره.",
           solution:
-            "موقع بالتشيكية والإنجليزية يعرض الوجهات والانتقالات وبرامج VIP، بمسار واضح لطلب الاستفسار.",
+            "لكل وجهة صفحتها. تفتح على الموبايل، والاستفسار يُرسل من الصفحة نفسها.",
         },
         heba: {
           name: "د. هبة عز العرب",
           category: "الرعاية الصحية · موقع عيادة",
           challenge:
-            "استشارية طب مسنين تحتاج موقع عيادة بلغتين يشرح العيادة للعائلات ويسمح بالحجز عبر واتساب — لا صفحة دليل.",
+            "عائلة تبحث عن طبيبة مسنين في القاهرة كانت تصل إلى بطاقة في دليل، لا إلى صفحة عيادة تفتحها وتحجز منها.",
           solution:
-            "موقع بالعربي والإنجليزي للعيادة، وعيادتي القاهرة الجديدة والمهندسين، ومسار حجز عبر واتساب.",
+            "صفحة للعيادة ولكل فرع في القاهرة. تفتح على الموبايل فورًا، والحجز على واتساب من الشاشة الأولى.",
+        },
+        abdallah: {
+          name: "د. عبدالله أحمد عبدالله",
+          category: "الرعاية الصحية · مركز قلب",
+          challenge:
+            "مريض في العاشر من رمضان يريد أن يعرف الفحص المتاح ويحجز، لا أن ينتظر صفحة لا تفتح على موبايله.",
+          solution:
+            "لكل فحص صفحته. المريض يفتحها على موبايله ويحجز اتصالًا أو على واتساب.",
         },
         radwan: {
           name: "رضوان عز العرب",
           category: "القانون · موقع مكتب محاماة",
           challenge:
-            "محامٍ في القاهرة يحتاج موقعًا عربيًا واضحًا لمجالات العمل ونماذج قضايا مجهولة الهوية — لا قالبًا برقم هاتف.",
+            "من يبحث عن محامٍ في مسألة بعينها لن يتصل بمكتب صفحته واحدة تشبه النشرة.",
           solution:
-            "موقع مكتب محاماة بالعربي يغطي المدني والتجاري والشركات والجنائي والسيبراني والأسرة ومجلس الدولة، مع حجز عبر واتساب.",
+            "لكل مجال قانوني صفحته بالعربية. تفتح على الموبايل، وحجز الاستشارة على واتساب.",
         },
         medlab: {
           name: "MedLab Market",
           category: "المستلزمات الطبية · تجارة إلكترونية",
           challenge:
-            "مورّد للمستلزمات الطبية والمخبرية يحتاج كتالوجًا عربيًا حسب القطاع — مستشفيات ومختبرات وعلمي وعناية شخصية وكيماويات — وسلة تتحول إلى طلب عرض سعر.",
+            "مسؤول المشتريات يبحث عن خط واحد من المستلزمات. كتالوج ثقيل، أو نموذج فارغ، يضيّع الطلب.",
           solution:
-            "معاينة تجارة عربية بتصفح حسب القطاع، وبطاقات منتجات، وسلة، ومسار طلب عرض سعر.",
+            "لكل قطاع صفحته. يتصفح الكتالوج على موبايله، والسلة تصبح طلب عرض سعر.",
         },
         adam: {
           name: "Adam Trending",
           category: "ملابس أطفال · تجارة إلكترونية",
           challenge:
-            "علامة ترنجات أطفال تحتاج متجرًا عربيًا لمجموعات الأولاد والبنات، وطلبات السلة تصل واتساب بدل نموذج تواصل عام.",
+            "ولي الأمر على الموبايل يريد أن يرى ترنجات الأولاد أو البنات ويرسل الطلب، لا أن ينتظر المتجر حتى يفتح.",
           solution:
-            "واجهة متجر عربية لترنجات الأولاد والبنات، وتصفح المجموعات، وسلة، وإتمام الطلب عبر واتساب.",
+            "صفحة للأولاد وصفحة للبنات. يختار المقاس على موبايله، والطلب يصل على واتساب.",
         },
         nourvive: {
           name: "Nourvive",
           category: "الجمال · تجارة إلكترونية",
           challenge:
-            "علامة جمال في القاهرة تحتاج متجرًا بلغتين للعناية بالبشرة والشعر والميزوثيرابي — كتالوج كامل لا صفحة تعريف.",
+            "من يبحث عن منتج بعينه للبشرة أو الشعر يصل إلى واجهة عامة، لا إلى صفحة هذا المنتج.",
           solution:
-            "متجر بأقسام وصفحات منتجات وسلة شراء، وتبديل فوري بين العربي والإنجليزي.",
+            "صفحة لكل منتج، بالعربي أو الإنجليزي. تفتح على الموبايل، والسلة لا تقف في منتصف الطريق.",
+        },
+        loofah: {
+          name: "Queen Loofah",
+          category: "عناية طبيعية · تجارة إلكترونية",
+          challenge:
+            "من يبحث عن ليفة مصرية طبيعية يريد المنتج والطلب، أو سؤال التصدير، لا صفحة علامة تتأخر في الفتح.",
+          solution:
+            "صفحة لكل منتج، والشراء يتم من السلة على الموبايل. ومن يريد التصدير يجد صفحة واضحة له.",
         },
         corolla: {
           name: "Corolla",
           category: "الأغذية · تجارة إلكترونية · تجزئة",
           challenge:
-            "علامة مصرية للفواكه المجففة تريد البيع للمستهلك واستقبال طلبات الجملة، من خلال متجر يعكس هويتها ولا يبدو كقالب جاهز.",
+            "بيت يشتري للمنزل، وتاجر يشتري بالجملة. البحثان مختلفان، وكلاهما يحتاج متجرًا يفتح، لا قالب أغذية جاهزًا.",
           solution:
-            "متجر يعرض المجموعة وقصة المنتج، ومسار مستقل لطلبات الجملة.",
+            "الأسرة تجد المنتج على متجر خفيف. الجملة لها مسارها، بعيدًا عن سلة البيت.",
         },
         uruz: {
           name: "URUZ",
           category: "جمال فاخر · تجارة إلكترونية",
           challenge:
-            "دار عناية طبيعية تحتاج عالمًا كاملًا للعلامة: المجموعات والطقوس والمكوّنات — لا شبكة منتجات فقط.",
+            "الفخامة لا تعذر البطء. من يبحث عن المجموعة ثم تنتظر الصفحة، يذهب إلى غيرها.",
           solution:
-            "تجربة رقمية فاخرة تجمع المحتوى التحريري والمجموعات والمتجر على uruz-egypt.com.",
+            "لكل مجموعة صفحتها. الموقع فاخر ويبقى خفيفًا على الموبايل، والمتجر حيث يقف المشتري.",
         },
         lodiamo: {
           name: "Lodiamo",
           category: "تجارة غذائية · موقع مؤسسي",
           challenge:
-            "شركة إماراتية للاستيراد والتصدير الغذائي تحتاج حضورًا بلغتين لمنتجات زراعية فاخرة.",
+            "مشتري في الخليج يبحث عن خط منتجات. إن تأخر الكتالوج، ضاع الاستفسار.",
           solution:
-            "موقع مؤسسي يعرض الكتالوج ويفتح مسار تواصل تجاري مباشر على lodiamo.com.",
+            "المشتري في الخليج يصل إلى خط المنتجات بالعربي أو الإنجليزي، ويرسل استفساره قبل أن يغلق الصفحة.",
         },
         availio: {
           name: "Availio",
           category: "عقارات · برمجيات مخصصة",
           challenge:
-            "مشغّلو الإيجار قصير المدة يديرون وحداتهم بالمحادثات وملفات Excel، فيتكرر تداخل الحجوزات ويصعب ضبط التسعير.",
+            "مدير الإيجار كان يفوّت تداخل الحجوزات لأن اليوم يجري على واتساب وفي Excel. الشاشة التي يفتحها طوال النهار لا تحتمل التأخير.",
           solution:
-            "منتج لضبط الحجوزات: تقويم إشغال، ووحدات، وتسعير، وروابط للضيوف، وتقارير.",
+            "شاشة الإشغال تفتح بسرعة تكفي لرؤية الحجز المزدوج قبل تأكيده. الوحدة والسعر ورابط الضيف في الشاشة نفسها.",
         },
         haseb: {
           name: "7aseb",
           category: "تشغيل · مالية · SaaS",
           challenge:
-            "شركات صغيرة تحتاج الفواتير والمخزون والعملاء ومتابعة التحصيل في مكان واحد، بالعربي والإنجليزي.",
+            "صاحب العمل يفتح الفواتير عدة مرات في اليوم. نظام بطيء، أو شاشة تختل حين يبدّل اللغة، يوقف العمل.",
           solution:
-            "نظام يدير الفواتير والمخزون وCRM والخزينة والمشاركة عبر واتساب، بدعم RTL كامل.",
+            "الفاتورة والمخزون والتحصيل تفتح على الموبايل الذي يحمله، بالعربي أو الإنجليزي، دون انتظار.",
         },
       },
     },

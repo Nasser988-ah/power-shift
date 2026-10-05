@@ -122,10 +122,10 @@ ${serviceRows([
           intro: "We do not publish traffic or sales numbers a client has not approved.",
           body: `          <div class="related-grid">
 ${workCards("en", [
-  ["heba", "Dr. Heba Ezz El-Arab clinic website", "Bilingual clinic site with Cairo clinic pages and WhatsApp booking."],
+  ["heba", "Dr. Heba Ezz El-Arab clinic website", "Clinic pages families can find, fast on a phone, with WhatsApp booking."],
   ["radwan", "Radwan Ezz El-Arab law office website", "Arabic law-office site with practice areas and WhatsApp booking."],
   ["via", "VIA Holidays travel website", "Travel site with destination pages and a clear enquiry path."],
-  ["lodiamo", "Lodiamo corporate website", "Bilingual corporate site for a UAE food import/export company."],
+  ["lodiamo", "Lodiamo corporate website", "Catalogue pages a Gulf buyer can find, fast enough for a commercial enquiry."],
   ["medlab", "MedLab Market catalogue", "Arabic medical catalogue with cart and a quote request path."],
   ["adam", "Adam Trending kids shop", "Arabic shop with cart orders sent on WhatsApp."],
 ])}
@@ -234,12 +234,12 @@ ${serviceRows([
           intro: "لا ننشر أرقام زيارات أو مبيعات لم يصرّح بها العميل.",
           body: `          <div class="related-grid">
 ${workCards("ar", [
-  ["heba", "موقع عيادة د. هبة عز العرب", "موقع عيادة بلغتين مع حجز واتساب."],
+  ["heba", "موقع عيادة د. هبة عز العرب", "صفحة للعيادة ولكل فرع. تفتح على الموبايل، والحجز على واتساب من الشاشة الأولى."],
   ["radwan", "موقع مكتب رضوان عز العرب", "موقع محاماة بالعربي ومجالات عمل ومسار واتساب."],
   ["via", "موقع VIA Holidays", "موقع سفر بصفحات وجهات ومسار استفسار."],
   ["medlab", "كتالوج MedLab Market", "كتالوج طبي عربي وسلة وطلب عرض سعر."],
   ["adam", "متجر Adam Trending", "متجر عربي والطلب يكتمل على واتساب."],
-  ["lodiamo", "موقع Lodiamo", "موقع شركة أغذية في الإمارات بلغتين."],
+  ["lodiamo", "موقع Lodiamo", "يصل إلى خط المنتجات بالعربي أو الإنجليزي، ويرسل استفساره قبل أن يغلق الصفحة."],
 ])}
           </div>`,
         }),
@@ -345,7 +345,7 @@ ${serviceRows([
 ${workCards("en", [
   ["heba", "Dr. Heba Ezz El-Arab clinic website", "Geriatric clinic site with New Cairo and Mohandessin pages."],
   ["radwan", "Radwan Ezz El-Arab law office", "Arabic Cairo law-office site with WhatsApp booking."],
-  ["nourvive", "Nourvive beauty storefront", "Bilingual Cairo beauty shop with cart."],
+  ["nourvive", "Nourvive beauty storefront", "A beauty shop buyers can find, that opens fast, with a cart."],
   ["corolla", "Corolla food shop", "Egyptian brand shop for homes and wholesale orders."],
 ])}
           </div>`,
@@ -444,7 +444,7 @@ ${serviceRows([
 ${workCards("ar", [
   ["heba", "موقع عيادة د. هبة عز العرب", "موقع عيادة بصفحات التجمع والمهندسين."],
   ["radwan", "موقع مكتب رضوان عز العرب", "موقع محاماة في القاهرة وحجز واتساب."],
-  ["nourvive", "متجر Nourvive", "متجر جمال في القاهرة بلغتين."],
+  ["nourvive", "متجر Nourvive", "صفحة لكل منتج، بالعربي أو الإنجليزي، والسلة لا تقف."],
   ["corolla", "متجر Corolla", "متجر علامة مصرية للأفراد والجملة."],
 ])}
           </div>`,
@@ -542,9 +542,9 @@ ${serviceRows([
           title: "مواقع شركات وممارسات مهنية",
           body: `          <div class="related-grid">
 ${workCards("ar", [
-  ["lodiamo", "موقع Lodiamo", "موقع شركة تجارة أغذية بلغتين."],
+  ["lodiamo", "موقع Lodiamo", "يصل إلى خط المنتجات ويرسل استفساره قبل أن يغلق الصفحة."],
   ["via", "موقع VIA Holidays", "موقع شركة سياحة بصفحات وجهات."],
-  ["heba", "موقع عيادة د. هبة", "موقع ممارسة طبية بلغتين."],
+  ["heba", "موقع عيادة د. هبة", "صفحة للعيادة تفتح على الموبايل، والحجز على واتساب."],
   ["radwan", "موقع مكتب رضوان عز العرب", "موقع مكتب محاماة بالعربي."],
 ])}
           </div>`,
@@ -642,7 +642,7 @@ ${processSteps(AR_PROCESS)}
           body: `          <div class="related-grid">
 ${workCards("en", [
   ["adam", "Adam Trending kids shop", "Arabic kids shop with cart and WhatsApp checkout."],
-  ["nourvive", "Nourvive beauty storefront", "Bilingual Cairo beauty shop with product pages and cart."],
+  ["nourvive", "Nourvive beauty storefront", "Product pages shoppers can find, a shop that opens fast, and a cart that moves."],
   ["medlab", "MedLab Market catalogue", "Medical catalogue with cart and quote request."],
   ["corolla", "Corolla food shop", "Retail plus wholesale enquiry."],
   ["uruz", "URUZ luxury beauty", "Editorial brand site with collections and commerce."],

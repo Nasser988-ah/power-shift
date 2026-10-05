@@ -706,7 +706,7 @@ ${serviceRows([
         intro: "لا ننشر نتائج أو أرقامًا لم يصرّح بها العميل. كل رابط يشرح نطاق المشروع وحالته المنشورة.",
         body: `          <div class="related-grid">
 ${workCards("ar", [
-  ["heba", "موقع عيادة د. هبة عز العرب", "موقع عيادة بلغتين لطب المسنين، مع أماكن العيادات في القاهرة وحجز عبر واتساب."],
+  ["heba", "موقع عيادة د. هبة عز العرب", "صفحة للعيادة ولكل فرع. تفتح على الموبايل، والحجز على واتساب من الشاشة الأولى."],
   ["radwan", "موقع مكتب رضوان عز العرب للمحاماة", "موقع مكتب محاماة بالعربي لمجالات العمل ونماذج قضايا مجهّلة وحجز عبر واتساب."],
   ["medlab", "متجر MedLab Market للمستلزمات الطبية", "كتالوج عربي للمستلزمات الطبية والمعملية مع سلة ومسار طلب عرض سعر."],
   ["nourvive", "متجر Nourvive للجمال", "واجهة متجر جمال في القاهرة بكتالوج عربي وإنجليزي ومسار سلة."],
@@ -857,11 +857,11 @@ ${serviceRows([
         intro: "We do not publish results or numbers a client has not approved. Each link explains the scope and what is live.",
         body: `          <div class="related-grid">
 ${workCards("en", [
-  ["heba", "Dr. Heba Ezz El-Arab clinic website", "Bilingual geriatric clinic site with Cairo clinic pages and WhatsApp booking."],
+  ["heba", "Dr. Heba Ezz El-Arab clinic website", "Clinic pages families can find, fast on a phone, with WhatsApp booking."],
   ["radwan", "Radwan Ezz El-Arab law office website", "Arabic law-office site with practice areas, anonymized case examples and WhatsApp booking."],
   ["medlab", "MedLab Market medical catalogue", "Arabic medical and laboratory catalogue with cart and a quote request path."],
-  ["nourvive", "Nourvive beauty storefront", "Bilingual Cairo beauty storefront with categories, product pages and cart."],
-  ["lodiamo", "Lodiamo corporate website", "Bilingual corporate site for a UAE food import/export company."],
+  ["nourvive", "Nourvive beauty storefront", "Product pages shoppers can find, a shop that opens fast, and a cart that moves."],
+  ["lodiamo", "Lodiamo corporate website", "Catalogue pages a Gulf buyer can find, fast enough for a commercial enquiry."],
   ["via", "VIA Holidays travel website", "Travel site with destination pages for Egypt, Jordan and Türkiye and a clear enquiry path."],
 ])}
           </div>`,
@@ -1093,9 +1093,9 @@ ${serviceRows([
         intro: "لا ننشر نتائج لم يصرّح بها العميل. هذه مشاريع حقيقية يمكنك فتحها.",
         body: `          <div class="related-grid">
 ${workCards("ar", [
-  ["lodiamo", "موقع Lodiamo المؤسسي في الإمارات", "موقع مؤسسي بلغتين لشركة استيراد وتصدير أغذية في الإمارات، مع كتالوج ومسار تواصل تجاري."],
+  ["lodiamo", "موقع Lodiamo المؤسسي في الإمارات", "يصل إلى خط المنتجات بالعربي أو الإنجليزي، ويرسل استفساره قبل أن يغلق الصفحة."],
   ["via", "موقع VIA Holidays للسفر", "موقع سفر بالتشيكية والإنجليزية لمسافرين من التشيك إلى مصر والأردن وتركيا."],
-  ["nourvive", "متجر Nourvive للجمال", "واجهة متجر بلغتين بأقسام وصفحات منتجات وسلة."],
+  ["nourvive", "متجر Nourvive للجمال", "صفحة لكل منتج، بالعربي أو الإنجليزي، والسلة لا تقف."],
   ["haseb", "نظام 7aseb للتشغيل", "نظام عربي وإنجليزي للفواتير والمخزون والعملاء والخزينة مع مشاركة عبر واتساب."],
 ])}
           </div>`,

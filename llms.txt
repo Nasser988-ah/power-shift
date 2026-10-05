@@ -45,7 +45,9 @@ POWER SHIFT designs, builds, and supports bilingual Arabic/English products. Wor
 ## Selected work
 
 - [VIA Holidays](https://www.powershift.space/work/via-holidays.html): Travel website for Egypt, Jordan, and Türkiye
-- [Dr. Heba Ezz El-Arab](https://www.powershift.space/work/heba.html): Bilingual geriatric clinic website
+- [Dr. Heba Ezz El-Arab](https://www.powershift.space/work/heba.html): Bilingual geriatric clinic website, live at drhebaezz.com
+- [Dr. Abdullah Ahmed Abdullah](https://www.powershift.space/work/abdallah.html): Bilingual cardiology clinic website in 10th of Ramadan
+- [Queen Loofah](https://www.powershift.space/work/loofah.html): Bilingual natural bath shop
 - [Radwan Ezz El-Arab](https://www.powershift.space/work/radwan.html): Arabic law office website
 - [MedLab Market](https://www.powershift.space/work/medlab.html): Arabic medical and laboratory catalogue
 - [Adam Trending](https://www.powershift.space/work/adam.html): Arabic kids tracksuit shop
