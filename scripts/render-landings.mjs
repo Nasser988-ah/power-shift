@@ -7,7 +7,7 @@ import { commercialPages } from "./commercial-landings.mjs";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const ORIGIN = "https://www.powershift.space";
 const OG = `${ORIGIN}/assets/og/og-cover.png`;
-const V = { boot: "20261002a", app: "20261002a", pages: "20261002a", main: "20261002a" };
+const V = { boot: "20261002a", app: "20261002a", pages: "20261002a", main: "20261013a" };
 
 const PATHS = {
   egyptAr: "/ar/تصميم-مواقع-مصر",
@@ -20,6 +20,10 @@ const PATHS = {
   cairoEn: "/website-development-cairo",
   cairoAr: "/ar/تصميم-مواقع-القاهرة",
   companyAr: "/ar/تصميم-موقع-شركة",
+  clinicAr: "/ar/تصميم-موقع-للعيادات-والأطباء",
+  lawAr: "/ar/تصميم-موقع-لمكتب-محاماة",
+  accountingAr: "/ar/تصميم-موقع-لمكتب-محاسبة",
+  realestateAr: "/ar/تصميم-موقع-لشركة-عقارات",
   softwareEn: "/custom-software-development",
   softwareAr: "/ar/برمجة-أنظمة-مخصصة",
 };
@@ -74,6 +78,10 @@ const CHROME = {
       ["/ar/تصميم-مواقع-مصر", "تصميم مواقع في مصر"],
       ["/ar/شركة-برمجة-مواقع", "شركة برمجة مواقع"],
       ["/ar/تصميم-موقع-شركة", "تصميم موقع شركة"],
+      ["/ar/تصميم-موقع-للعيادات-والأطباء", "مواقع العيادات"],
+      ["/ar/تصميم-موقع-لمكتب-محاماة", "مواقع المحاماة"],
+      ["/ar/تصميم-موقع-لمكتب-محاسبة", "مواقع المحاسبة"],
+      ["/ar/تصميم-موقع-لشركة-عقارات", "مواقع العقارات"],
       ["/ar/تصميم-مواقع-القاهرة", "تصميم مواقع في القاهرة"],
       ["/ar/تصميم-متجر-الكتروني", "تصميم متجر إلكتروني"],
       ["/ar/برمجة-أنظمة-مخصصة", "برمجة أنظمة مخصصة"],
@@ -149,6 +157,7 @@ const WORK = {
   uruz: { img: "uruz", href: "/work/uruz.html", name: "URUZ" },
   haseb: { img: "haseb", href: "/work/haseb.html", name: "7aseb" },
   availio: { img: "availio", href: "/work/availio.html", name: "Availio" },
+  abdallah: { img: "abdallah", href: "/work/abdallah.html", name: { ar: "د. عبدالله أحمد عبدالله", en: "Dr. Abdullah Ahmed Abdullah" } },
 };
 
 function esc(value) {
@@ -491,7 +500,11 @@ ${jsonLd(schema)}
         <p class="lead">${p.lead}</p>
         <div class="page-hero-actions">
           <a class="btn btn-primary" href="${c.contact}" data-open-wizard data-wizard-type="${p.wizard}" data-ps-event="prototype_cta" data-ps-label="${p.id}">${esc(p.cta)}</a>
-          <a class="btn btn-ghost" href="https://wa.me/201553766199" data-wa data-ps-event="whatsapp_cta" data-ps-label="${p.id}">${esc(p.waCta)}</a>
+          ${
+            p.secondary
+              ? `<a class="btn btn-ghost" href="${p.secondary.href}" data-ps-event="work_cta" data-ps-label="${p.id}">${esc(p.secondary.label)}</a>`
+              : `<a class="btn btn-ghost" href="https://wa.me/201553766199" data-wa data-ps-event="whatsapp_cta" data-ps-label="${p.id}">${esc(p.waCta)}</a>`
+          }
         </div>
         <p class="landing-proof"><a href="${c.reviews}"><span aria-hidden="true">★★★★★</span> ${esc(p.proof)}</a></p>
       </header>
@@ -605,9 +618,10 @@ function offerSection(p) {
       </section>`;
 }
 
-function section({ kicker, title, intro, body, dark = false, extraClass = "" }) {
+function section({ kicker, title, intro, body, dark = false, extraClass = "", id = "" }) {
   const cls = ["section", dark ? "section-dark" : "", extraClass].filter(Boolean).join(" ");
-  return `      <section class="${cls}">
+  const idAttr = id ? ` id="${id}"` : "";
+  return `      <section class="${cls}"${idAttr}>
         <div class="wrap">
           <div class="section-head">
             <p class="kicker">${esc(kicker)}</p>
@@ -698,7 +712,7 @@ ${serviceRows([
   ["موقع عربي وإنجليزي", "محتوى وواجهة وRTL تُبنى معًا من البداية، لا ترجمة تُضاف في النهاية."],
 ])}
           </div>
-          <p class="services-also">لمنتجات SaaS وأنظمة الفواتير والمخزون، راجع <a href="/ar/services">كل خدمات باور شيفت</a>.</p>`,
+          <p class="services-also">موقع الشركة تحديدًا: <a href="${PATHS.companyAr}">تصميم موقع تعريفي للشركات</a>. حسب النشاط: <a href="${PATHS.clinicAr}">العيادات</a>، <a href="${PATHS.lawAr}">مكاتب المحاماة</a>، <a href="${PATHS.accountingAr}">مكاتب المحاسبة</a>، <a href="${PATHS.realestateAr}">شركات العقارات</a>. لأنظمة الفواتير والمخزون، راجع <a href="/ar/services">كل خدمات باور شيفت</a>.</p>`,
       }),
       section({
         kicker: "أعمال يمكن فتحها",

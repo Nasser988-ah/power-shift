@@ -106,6 +106,26 @@ const pages = [
     alternates: {},
   },
   {
+    file: "ar/تصميم-موقع-للعيادات-والأطباء/index.html",
+    canonical: "https://www.powershift.space/ar/تصميم-موقع-للعيادات-والأطباء",
+    alternates: {},
+  },
+  {
+    file: "ar/تصميم-موقع-لمكتب-محاماة/index.html",
+    canonical: "https://www.powershift.space/ar/تصميم-موقع-لمكتب-محاماة",
+    alternates: {},
+  },
+  {
+    file: "ar/تصميم-موقع-لمكتب-محاسبة/index.html",
+    canonical: "https://www.powershift.space/ar/تصميم-موقع-لمكتب-محاسبة",
+    alternates: {},
+  },
+  {
+    file: "ar/تصميم-موقع-لشركة-عقارات/index.html",
+    canonical: "https://www.powershift.space/ar/تصميم-موقع-لشركة-عقارات",
+    alternates: {},
+  },
+  {
     file: "ecommerce-website-development/index.html",
     canonical: "https://www.powershift.space/ecommerce-website-development",
     alternates: {

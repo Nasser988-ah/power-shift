@@ -41,6 +41,7 @@ export function bindTrackedClicks(root = document) {
       track("whatsapp_cta", {
         kind: "direct",
         label: whatsapp.getAttribute("data-ps-label") || whatsapp.textContent.trim().slice(0, 80),
+        landing: document.body?.dataset?.landing || undefined,
       });
     }
 

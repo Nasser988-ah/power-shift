@@ -1,14 +1,14 @@
-import { bindTrackedClicks, track } from "./analytics.js?v=20261002a";
+import { bindTrackedClicks, track } from "./analytics.js?v=20261013a";
 import { initI18n, getLang, t } from "./i18n.js?v=20261002a";
-import { initPageI18n } from "./page-i18n.js?v=20261002a";
+import { initPageI18n } from "./page-i18n.js?v=20261013a";
 import { initNav } from "./nav.js?v=20260829h";
-import { initWizard, renderWork } from "./wizard.js?v=20261002a";
+import { initWizard, renderWork } from "./wizard.js?v=20261013a";
 import { initMotion } from "./motion.js?v=20260922a";
 import { simpleWhatsAppUrl, similarWorkUrl, reviewWhatsAppUrl } from "./whatsapp.js?v=20260922c";
 import { CONFIG } from "./config.js?v=20260831a";
 import { PROJECTS } from "./content.js?v=20261002a";
 import { initBlog } from "./blog.js?v=20260831c";
-import { initMetaPixel } from "./meta-pixel.js?v=20261002a";
+import { initMetaPixel } from "./meta-pixel.js?v=20261013a";
 
 function wireWhatsApp() {
   const apply = () => {

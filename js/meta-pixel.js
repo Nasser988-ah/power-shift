@@ -1,4 +1,4 @@
-import { onTrack } from "./analytics.js?v=20261002a";
+import { onTrack } from "./analytics.js?v=20261013a";
 
 const PIXEL_ID = "1639209490886117";
 const META_SCRIPT = "https://connect.facebook.net/en_US/fbevents.js";
@@ -27,7 +27,7 @@ function createFbq() {
 }
 
 function safePayload(payload = {}) {
-  const allowed = ["type", "goal", "timeline", "kind", "from", "label", "lang"];
+  const allowed = ["type", "goal", "timeline", "kind", "from", "label", "lang", "landing"];
   return allowed.reduce(
     (result, key) => {
       const value = payload[key];
@@ -47,8 +47,13 @@ function bindSiteEvents() {
   onTrack(({ name, payload }) => {
     if (!pixelInitialized || !window.fbq) return;
     const parameters = safePayload(payload);
-    if (name === "lead_submitted") {
+    if (name === "generate_lead") {
       window.fbq("track", "Lead", parameters);
+      return;
+    }
+    if (name === "lead_submitted") return;
+    if (name === "prototype_request_start") {
+      window.fbq("trackCustom", "prototype_request_start", parameters);
       return;
     }
     if (name === "whatsapp_cta" || name === "phone_cta") {

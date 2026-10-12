@@ -2,7 +2,7 @@ import { t, getLang } from "./i18n.js?v=20261002a";
 import { PROJECTS } from "./content.js?v=20261002a";
 import { CONFIG } from "./config.js?v=20260831a";
 import { buildWhatsAppUrl } from "./whatsapp.js?v=20260829h";
-import { track } from "./analytics.js?v=20260919b";
+import { track } from "./analytics.js?v=20261013a";
 import { workPictureHTML } from "./media.js?v=20260829h";
 
 const STEPS = ["type", "goal", "timeline"];
@@ -39,6 +39,18 @@ function payloadFrom(state) {
     phone: state.phone.trim(),
     company: state.company.trim(),
     note: state.note.trim(),
+  };
+}
+
+function trackPayload(state, extra = {}) {
+  const landing = document.body?.dataset?.landing || "";
+  return {
+    type: state.type || undefined,
+    goal: state.goal || undefined,
+    timeline: state.timeline || undefined,
+    lang: getLang(),
+    landing: landing || undefined,
+    ...extra,
   };
 }
 
@@ -93,12 +105,14 @@ export function initWizard() {
     state.submitting = true;
     state.notice = "";
     syncAll();
-    const payload = payloadFrom(state);
+    const brief = payloadFrom(state);
+    const payload = trackPayload(state, { kind: "wizard" });
     track("quote_flow_complete", payload);
     const submission = await persistLead(state);
     if (submission.ok) track("lead_submitted", payload);
-    const url = buildWhatsAppUrl(getLang(), payloadFrom(state));
-    track("whatsapp_cta", { ...payload, kind: "wizard" });
+    const url = buildWhatsAppUrl(getLang(), brief);
+    track("generate_lead", payload);
+    track("whatsapp_cta", payload);
     const popup = window.open(url, "_blank", "noopener");
     state.submitting = false;
     if (!popup) window.location.assign(url);
@@ -120,7 +134,8 @@ export function initWizard() {
   };
 
   const openWizard = (from = "start", presetType = "") => {
-    track("wizard_start", { from, type: presetType || undefined });
+    track("wizard_start", { from, type: presetType || undefined, landing: document.body?.dataset?.landing || undefined });
+    track("prototype_request_start", { from, type: presetType || undefined, landing: document.body?.dataset?.landing || undefined });
     state.notice = "";
     if (presetType) {
       state.type = normalizeType(presetType);

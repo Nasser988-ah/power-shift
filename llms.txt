@@ -23,7 +23,11 @@ POWER SHIFT designs, builds, and supports bilingual Arabic/English products. Wor
 - [Custom Software Development](https://www.powershift.space/custom-software-development): Operations software when a public website is not enough
 - [Website Design in Egypt (Arabic)](https://www.powershift.space/ar/تصميم-مواقع-مصر): Arabic page for company, clinic, law-office, and shop websites in Egypt
 - [Web Development Company (Arabic)](https://www.powershift.space/ar/شركة-برمجة-مواقع): Arabic page for owners searching a programming/development company
-- [Company Website Design (Arabic)](https://www.powershift.space/ar/تصميم-موقع-شركة): Arabic page for designing a company website
+- [Company Website Design (Arabic)](https://www.powershift.space/ar/تصميم-موقع-شركة): Arabic page for a company profile website
+- [Clinic Websites (Arabic)](https://www.powershift.space/ar/تصميم-موقع-للعيادات-والأطباء): Arabic page for clinic and doctor websites
+- [Law Office Websites (Arabic)](https://www.powershift.space/ar/تصميم-موقع-لمكتب-محاماة): Arabic page for law-office websites
+- [Accounting Office Websites (Arabic)](https://www.powershift.space/ar/تصميم-موقع-لمكتب-محاسبة): Arabic page for accounting-office websites. No published accounting client is claimed.
+- [Real Estate Company Websites (Arabic)](https://www.powershift.space/ar/تصميم-موقع-لشركة-عقارات): Arabic page for real-estate company profiles. A listing platform is a separate scope. Availio is operations software, not this page.
 - [Website Design in Cairo (Arabic)](https://www.powershift.space/ar/تصميم-مواقع-القاهرة): Arabic Cairo-local page (studio in Cairo, no walk-in office)
 - [E-commerce Store Design in Egypt (Arabic)](https://www.powershift.space/ar/تصميم-متجر-الكتروني): Arabic page for online stores, catalogues, WhatsApp ordering, and wholesale enquiry paths
 - [Custom Software (Arabic)](https://www.powershift.space/ar/برمجة-أنظمة-مخصصة): Arabic page for operations systems when a website is not enough
