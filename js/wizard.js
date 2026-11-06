@@ -133,7 +133,24 @@ export function initWizard() {
     syncAll();
   };
 
+  const rememberPrompt = () => {
+    try {
+      sessionStorage.setItem("ps-scope-prompt", "1");
+    } catch {
+      /* private browsing */
+    }
+  };
+
+  const promptSeen = () => {
+    try {
+      return sessionStorage.getItem("ps-scope-prompt") === "1";
+    } catch {
+      return false;
+    }
+  };
+
   const openWizard = (from = "start", presetType = "") => {
+    rememberPrompt();
     track("wizard_start", { from, type: presetType || undefined, landing: document.body?.dataset?.landing || undefined });
     track("prototype_request_start", { from, type: presetType || undefined, landing: document.body?.dataset?.landing || undefined });
     state.notice = "";
@@ -162,6 +179,7 @@ export function initWizard() {
       timeline: copy.qualify.times,
     };
 
+    dialog.dataset.step = String(state.step + 1);
     root.querySelector("[data-q]").textContent = qMap[key];
     root.querySelector("[data-progress]").textContent = `${copy.qualify.stepOf} ${state.step + 1} ${copy.qualify.of} ${STEPS.length}`;
 
@@ -254,6 +272,12 @@ export function initWizard() {
 
   document.addEventListener("ps:lang", syncAll);
   render(inline);
+
+  window.setTimeout(() => {
+    if (promptSeen() || dialog.open) return;
+    if (document.activeElement?.closest("#qualify-inline")) return;
+    openWizard("timed");
+  }, 5000);
 }
 
 function escapeHtml(value) {

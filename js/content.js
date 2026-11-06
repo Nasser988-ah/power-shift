@@ -141,9 +141,9 @@ export const COPY = {
   en: {
     dir: "ltr",
     htmlLang: "en",
-    metaTitle: "Power Shift | Web & Software Development Company",
+    metaTitle: "Company Websites in Egypt | Power Shift Cairo",
     metaDesc:
-      "Power Shift is a web and software development company in Cairo. We build business websites, ecommerce, landing pages and custom software for owners in Egypt and the GCC. Get a free website prototype.",
+      "Power Shift builds company websites for businesses in Egypt and the GCC: clinics, professional offices, and firms. Book a project consultation from Cairo.",
     skip: "Skip to content",
     a11y: {
       primaryNav: "Primary",
@@ -165,8 +165,8 @@ export const COPY = {
       menuLabel: "Menu",
     },
     cta: {
-      start: "Get a Free Website Prototype",
-      startShort: "Free Prototype",
+      start: "Book a project consultation",
+      startShort: "Consultation",
       whatsapp: "WhatsApp Us",
       leaveReview: "Leave a review",
       discuss: "Discuss this kind of work",
@@ -183,10 +183,10 @@ export const COPY = {
     lang: { en: "EN", ar: "عربي", switchTo: "العربية" },
     hero: {
       kicker: "Web & software studio · Cairo · Egypt & GCC",
-      seoH1: "Power Shift — Web & Software Development Company",
+      seoH1: "Company websites in Egypt, built by Power Shift",
       h1a: "We build websites and software",
       h1b: "for businesses that need both to work.",
-      lead: "Company websites, ecommerce, landing pages, and custom software — built from Cairo for owners in Egypt and the GCC.",
+      lead: "A company website the customer can open, understand, and enquire from. Built in Cairo for Egypt and the GCC.",
       proof: "Live work you can open",
       proof2: "Arabic, English, and RTL included",
       shotName: "VIA Holidays",
@@ -491,7 +491,7 @@ export const COPY = {
       items: [
         {
           q: "How do we start?",
-          a: "Request a free website prototype. Three short questions, then WhatsApp with your brief already written. We use that as a 20-minute conversation — not a pitch deck.",
+          a: "Book a project consultation. Three short questions, then WhatsApp with your brief already written. We use the call to decide what to build — not to send a pitch deck.",
         },
         {
           q: "Do you work in Arabic and English?",
@@ -567,18 +567,18 @@ export const COPY = {
     },
     final: {
       kicker: "Next",
-      title: "Have a business but no professional website?",
-      body: "Get a free initial website prototype and see how the business could look online. Then we say what version one should include — and what can wait.",
+      title: "Ready to decide what the website should do?",
+      body: "Book a project consultation. We say what version one should include — and what can wait.",
     },
     offer: {
-      kicker: "Free prototype",
-      title: "Have a business but no professional website?",
-      body: "Send what you sell and who the customer is. We prepare a first visual sample — not a finished site — then a written scope.",
+      kicker: "Consultation",
+      title: "Twenty minutes to scope the website",
+      body: "Send what you sell and who the customer is. We write the scope on the call. It is not a finished design, and it is not a price before we understand the work.",
     },
     wizard: {
-      dialogLabel: "Get a free website prototype",
+      dialogLabel: "Book a project consultation",
     },
-    waPrefill: "Hi POWER SHIFT, I would like a free website prototype for my business.",
+    waPrefill: "Hi POWER SHIFT, I would like to book a project consultation for my company.",
     footer: {
       rights: "All rights reserved.",
       note: "Software studio · Cairo · Egypt · GCC · International",
@@ -596,9 +596,9 @@ export const COPY = {
   ar: {
     dir: "rtl",
     htmlLang: "ar",
-    metaTitle: "باور شيفت | شركة تطوير مواقع وبرمجيات في مصر",
+    metaTitle: "تصميم موقع شركة في مصر | باور شيفت القاهرة",
     metaDesc:
-      "باور شيفت شركة تطوير مواقع وبرمجيات في القاهرة. مواقع شركات ومتاجر وصفحات هبوط وأنظمة — عربي وإنجليزي. احصل على نموذج موقع مجاني. 15 تقييم 5 نجوم.",
+      "باور شيفت تبني مواقع الشركات في مصر والخليج: عيادات، مكاتب، وشركات. ابدأ خطوتك بثقة، نحن معك.. من القاهرة.",
     skip: "انتقل إلى المحتوى",
     a11y: {
       primaryNav: "القائمة الرئيسية",
@@ -620,8 +620,8 @@ export const COPY = {
       menuLabel: "القائمة",
     },
     cta: {
-      start: "احصل على نموذج موقع مجاني",
-      startShort: "نموذج مجاني",
+      start: "ابدأ خطوتك بثقة، نحن معك.",
+      startShort: "ابدأ خطوتك بثقة، نحن معك.",
       whatsapp: "راسلنا واتساب",
       leaveReview: "اكتب تقييمك",
       discuss: "ناقش مشروعًا مشابهًا",
@@ -638,10 +638,10 @@ export const COPY = {
     lang: { en: "EN", ar: "عربي", switchTo: "English" },
     hero: {
       kicker: "استوديو مواقع وبرمجيات · القاهرة · مصر والخليج",
-      seoH1: "باور شيفت — شركة تطوير مواقع وبرمجيات",
+      seoH1: "تصميم موقع شركة في مصر — باور شيفت",
       h1a: "نبني مواقع وأنظمة",
       h1b: "لأصحاب الشركات الذين يحتاجون إلى العمل عبر الإنترنت.",
-      lead: "موقع شركة، متجر إلكتروني، صفحة هبوط، أو برنامج لفريقك — من القاهرة لمصر والخليج.",
+      lead: "موقع شركة يفهمه العميل من الموبايل، ويرسل منه الاستفسار. نبنيه من القاهرة لمصر والخليج.",
       proof: "أعمال حقيقية يمكنك فتحها الآن",
       proof2: "عربي وإنجليزي بدعم RTL كامل",
       shotName: "VIA Holidays",
@@ -946,7 +946,7 @@ export const COPY = {
       items: [
         {
           q: "كيف نبدأ؟",
-          a: "اطلب نموذج موقع مجاني. تجيب عن ثلاثة أسئلة سريعة، ثم يفتح واتساب وتفاصيل مشروعك مكتوبة. نراجعها معك في مكالمة قصيرة لتحديد المطلوب.",
+          a: "ابدأ خطوتك بثقة، نحن معك.. تجيب عن ثلاثة أسئلة، ثم يفتح واتساب وتفاصيل المشروع مكتوبة. الاستشارة لعشرين دقيقة، نحدد فيها ما يُبنى.",
         },
         {
           q: "هل تعملون بالعربي والإنجليزي؟",
@@ -1022,13 +1022,13 @@ export const COPY = {
     },
     final: {
       kicker: "الخطوة التالية",
-      title: "عندك نشاط ومفيش موقع احترافي؟",
-      body: "احصل على نموذج أولي لموقعك وشوف شكل النشاط أونلاين. وبعدين نحدد إيه يدخل النسخة الأولى وإيه يتأجل.",
+      title: "جاهز لتحديد ما يفعله الموقع؟",
+      body: "احجز استشارة لعشرين دقيقة. نحدد ما يدخل النسخة الأولى، وما يمكن أن ينتظر.",
     },
     offer: {
-      kicker: "نموذج مجاني",
-      title: "عندك نشاط ومفيش موقع احترافي؟",
-      body: "ابعت إيه اللي بتبيعه ومين عميلك. نجهّز عيّنة بصرية أولى — مش موقع نهائي — وبعدين نطاق مكتوب.",
+      kicker: "استشارة",
+      title: "عشرون دقيقة لتحديد موقع الشركة",
+      body: "أرسل ماذا تبيع ومن عميلك. نكتب النطاق في المكالمة. ليست تصميمًا نهائيًا، وليس سعرًا قبل أن نفهم العمل.",
     },
     footer: {
       rights: "جميع الحقوق محفوظة.",
@@ -1044,8 +1044,8 @@ export const COPY = {
       privacy: "تصل تفاصيل مشروعك إلى واتساب. لا نبيع بياناتك.",
     },
     wizard: {
-      dialogLabel: "احصل على نموذج موقع مجاني",
+      dialogLabel: "ابدأ خطوتك بثقة، نحن معك.",
     },
-    waPrefill: "مرحبًا فريق POWER SHIFT، أرغب في نموذج موقع مجاني لنشاطي.",
+    waPrefill: "مرحبًا فريق POWER SHIFT، أرغب في حجز استشارة لمشروعي.",
   },
 };

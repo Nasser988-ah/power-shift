@@ -7,7 +7,7 @@ import { commercialPages } from "./commercial-landings.mjs";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const ORIGIN = "https://www.powershift.space";
 const OG = `${ORIGIN}/assets/og/og-cover.png`;
-const V = { boot: "20261002a", app: "20261002a", pages: "20261002a", main: "20261013a" };
+const V = { boot: "20261002a", app: "20261106e", pages: "20261002a", main: "20261106d" };
 
 const PATHS = {
   egyptAr: "/ar/تصميم-مواقع-مصر",
@@ -53,7 +53,7 @@ const CHROME = {
       reviews: "آراء العملاء",
       contact: "تواصل معنا",
       whatsapp: "راسلنا واتساب",
-      start: "احصل على نموذج موقع مجاني",
+      start: "ابدأ خطوتك بثقة، نحن معك.",
       note: "استوديو برمجيات · القاهرة · مصر · الخليج · الأسواق الدولية",
       contactLabel: "تواصل",
       location: "القاهرة، مصر",
@@ -113,7 +113,7 @@ const CHROME = {
       reviews: "Reviews",
       contact: "Contact",
       whatsapp: "WhatsApp Us",
-      start: "Get a Free Website Prototype",
+      start: "Book a project consultation",
       note: "Software studio · Cairo · Egypt · GCC · International",
       contactLabel: "Contact",
       location: "Cairo, Egypt",
@@ -657,8 +657,8 @@ const pages = [
     kicker: "تصميم وتطوير مواقع في مصر",
     h1: "تصميم مواقع في مصر للشركات — بنطاق واضح قبل السعر",
     lead: "نصمم ونبرمج مواقع الشركات والعيادات ومكاتب المحاماة والمتاجر الإلكترونية من القاهرة. الهدف ليس صفحة جميلة فقط، بل موقع يفهمه العميل من الموبايل ويقوده إلى مكالمة أو رسالة واتساب أو طلب.",
-    cta: "احصل على نموذج موقع مجاني",
-    ctaShort: "نموذج مجاني",
+    cta: "ابدأ خطوتك بثقة، نحن معك.",
+    ctaShort: "ابدأ خطوتك بثقة، نحن معك.",
     waCta: "راسلنا واتساب",
     proof: "5.0 من 15 مراجعة عملاء — اقرأها",
     service: {
@@ -668,10 +668,10 @@ const pages = [
       areaServed: ["Egypt"],
     },
     offer: {
-      kicker: "نموذج مجاني",
-      title: "عندك نشاط ومفيش موقع احترافي؟",
-      body: "ابعت لنا إيه اللي بتبيعه ومين عميلك. نجهّز نموذج أولي لموقعك عشان تشوف شكل النشاط أونلاين، وبعدين نقول لك إيه يدخل النسخة الأولى وإيه يتأجل. النموذج اتجاه بصري أول، مش موقع نهائي.",
-      cta: "احصل على نموذج موقع مجاني",
+      kicker: "استشارة",
+      title: "عشرون دقيقة لتحديد ما يفعله الموقع",
+      body: "أخبرنا ماذا تبيع ومن عميلك. ثلاثة أسئلة، ثم واتساب وفيه وصف المشروع. المكالمة تحدد الصفحات واللغة وما يُؤجَّل.",
+      cta: "ابدأ خطوتك بثقة، نحن معك.",
     },
     sections: [
       section({
@@ -691,7 +691,7 @@ const pages = [
         title: "ما يدخل عرض موقع الشركة",
         intro: "السعر يتبع النطاق المكتوب. البنود التالية جزء من مشاريع المواقع والمتاجر ما لم يُستثنَ بند في الاتفاق.",
         items: [
-          ["نموذج أولي مجاني", "عيّنة بصرية أولى لشكل النشاط أونلاين، قبل الالتزام بنسخة كاملة."],
+          ["استشارة للمشروع", "نحدد الصفحات واللغة وما يُؤجَّل، قبل أي سعر."],
           ["نطاق مكتوب قبل السعر", "الصفحات واللغات والوظائف وما يُؤجَّل، في ملف توافق عليه."],
           ["الدومين والاستضافة للسنة الأولى", "ضمن عرض الموقع أو المتجر، والحسابات باسم شركتك لا باسمنا."],
           ["ملكية الموقع لك", "الملفات وحسابات الإدارة تُسلَّم لك. نحن لا نحتجز الموقع بعد التسليم."],
@@ -789,8 +789,8 @@ ${readingCards([
     final: {
       kicker: "الخطوة التالية",
       title: "أرسل ما تبيعه وما الذي تريد من الموقع أن يفعله",
-      body: "نجهّز نموذجًا أوليًا، ثم نحدد هل تحتاج موقع شركة أو متجرًا أو صفحة هبوط، وما الذي يجب أن يدخل النسخة الأولى.",
-      cta: "احصل على نموذج موقع مجاني",
+      body: "نحجز مكالمة قصيرة، ثم نحدد هل تحتاج موقع شركة أو متجرًا أو صفحة هبوط، وما الذي يدخل النسخة الأولى.",
+      cta: "ابدأ خطوتك بثقة، نحن معك.",
     },
   },
   {
@@ -808,8 +808,8 @@ ${readingCards([
     kicker: "Web design & development in Egypt",
     h1: "Web design in Egypt for companies that need enquiries, not just a homepage",
     lead: "Power Shift designs and builds websites for companies, clinics, law offices and shops from Cairo. The job is a site a customer understands on their phone — and a clear path to a call, a WhatsApp message, or an order.",
-    cta: "Get a Free Website Prototype",
-    ctaShort: "Free Prototype",
+    cta: "Book a project consultation",
+    ctaShort: "Consultation",
     waCta: "WhatsApp Us",
     proof: "5.0 from 15 client reviews — read them",
     service: {
@@ -819,10 +819,10 @@ ${readingCards([
       areaServed: ["Egypt"],
     },
     offer: {
-      kicker: "Free prototype",
-      title: "Have a business but no professional website?",
-      body: "Send what you sell and who the customer is. We prepare an initial website prototype so you can see how the business could look online, then we say what belongs in version one. It is a first visual sample — not a finished site.",
-      cta: "Get a Free Website Prototype",
+      kicker: "Consultation",
+      title: "Twenty minutes to decide what the site should do",
+      body: "Tell us what you sell and who the customer is. Three short questions, then WhatsApp with the brief written. The call decides the pages, the language, and what can wait.",
+      cta: "Book a project consultation",
     },
     sections: [
       section({
@@ -842,7 +842,7 @@ ${readingCards([
         title: "What a website project covers",
         intro: "Price follows the written scope. These items are part of website and shop quotes unless a line is excluded in writing.",
         items: [
-          ["Free first prototype", "A visual sample of how the business could look online, before you commit to a full build."],
+          ["A project consultation", "We decide the pages, the language, and what can wait before any price."],
           ["Written scope before price", "Pages, languages, features, and what can wait — in one document you approve."],
           ["First-year domain and hosting", "Included in the website or shop quote, with accounts in your company name."],
           ["You own the website", "Files and admin access are handed over. We do not hold the site after delivery."],
@@ -928,8 +928,8 @@ ${readingCards([
     final: {
       kicker: "Next step",
       title: "Tell us what you sell and what the site should do",
-      body: "We prepare a first prototype, then tell you whether you need a company site, a shop or a landing page — and what belongs in version one.",
-      cta: "Get a Free Website Prototype",
+      body: "We book a short consultation, then tell you whether you need a company site, a shop or a landing page — and what belongs in version one.",
+      cta: "Book a project consultation",
     },
   },
   {
@@ -947,8 +947,8 @@ ${readingCards([
     kicker: "تصميم متاجر إلكترونية في مصر",
     h1: "تصميم متجر إلكتروني في مصر يناسب طريقة بيعك",
     lead: "بعض النشاطات تحتاج متجرًا بسلة ودفع، وبعضها يحتاج كتالوجًا وطلبًا عبر واتساب أو طلب جملة. نبدأ بتحديد أيهما يناسبك، ثم نبني واجهة عربية أو بلغتين يتصفحها عميلك من الموبايل بسهولة.",
-    cta: "احصل على نموذج متجر مجاني",
-    ctaShort: "نموذج مجاني",
+    cta: "ابدأ خطوتك بثقة، نحن معك.",
+    ctaShort: "ابدأ خطوتك بثقة، نحن معك.",
     waCta: "راسلنا واتساب",
     proof: "5.0 من 15 مراجعة عملاء — اقرأها",
     service: {
@@ -958,10 +958,10 @@ ${readingCards([
       areaServed: ["Egypt"],
     },
     offer: {
-      kicker: "نموذج مجاني",
+      kicker: "استشارة",
       title: "بتبيع أونلاين من واتساب أو إنستجرام؟",
-      body: "ابعت نوع المنتجات وطريقة الطلب الحالية. نجهّز نموذج أولي لشكل المتجر على الموبايل، ونحدد هل تحتاج سلة ودفع ولا كتالوج وطلب مباشر.",
-      cta: "احصل على نموذج متجر مجاني",
+      body: "أرسل نوع المنتجات وطريقة الطلب الحالية. في المكالمة نحدد هل تحتاج سلة ودفعًا أو كتالوجًا وطلبًا مباشرًا.",
+      cta: "ابدأ خطوتك بثقة، نحن معك.",
     },
     sections: [
       section({
@@ -1058,8 +1058,8 @@ ${processSteps([
     kicker: "تصميم مواقع لشركات الخليج",
     h1: "تصميم مواقع للشركات في السعودية والإمارات والخليج — من القاهرة عن بُعد",
     lead: "نحن استوديو في القاهرة، وليس لدينا مكتب في الخليج. نعمل مع شركات في السعودية والإمارات ودول الخليج عن بُعد: نطاق مكتوب، مكالمات ورسائل واتساب، وروابط مراجعة تفتحها من موبايلك في أي وقت.",
-    cta: "احصل على نموذج موقع مجاني",
-    ctaShort: "نموذج مجاني",
+    cta: "ابدأ خطوتك بثقة، نحن معك.",
+    ctaShort: "ابدأ خطوتك بثقة، نحن معك.",
     waCta: "راسلنا واتساب",
     proof: "5.0 من 15 مراجعة عملاء — اقرأها",
     service: {
@@ -1069,10 +1069,10 @@ ${processSteps([
       areaServed: ["Saudi Arabia", "United Arab Emirates", "Kuwait", "Qatar", "Bahrain", "Oman"],
     },
     offer: {
-      kicker: "نموذج مجاني",
+      kicker: "استشارة",
       title: "شركتك في الخليج ومحتاجة موقع تملكه؟",
-      body: "نشتغل من القاهرة عن بُعد: نموذج أولي تراجعونه من الموبايل، ثم نطاق مكتوب قبل أي التزام. الحسابات باسم شركتك.",
-      cta: "احصل على نموذج موقع مجاني",
+      body: "نشتغل من القاهرة عن بُعد: مكالمة لتحديد الصفحات، ثم نطاق مكتوب قبل أي التزام. الحسابات باسم شركتك.",
+      cta: "ابدأ خطوتك بثقة، نحن معك.",
     },
     sections: [
       section({

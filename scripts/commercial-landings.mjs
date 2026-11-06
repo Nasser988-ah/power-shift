@@ -22,17 +22,17 @@ export function commercialPages({
   ];
 
   const websiteOfferEn = {
-    kicker: "Free prototype",
-    title: "Have a business but no professional website?",
-    body: "Send what you sell and who the customer is. We prepare an initial website prototype so you can see how the business could look online, then we say what belongs in version one. It is a first visual sample — not a finished site.",
-    cta: "Get a Free Website Prototype",
+    kicker: "Consultation",
+    title: "Twenty minutes to decide what the site should do",
+    body: "Tell us what you sell and who the customer is. Three short questions, then WhatsApp with the brief written. The call decides the pages, the language, and what can wait. It is not a finished design.",
+    cta: "Book a project consultation",
   };
 
   const websiteOfferAr = {
-    kicker: "نموذج مجاني",
-    title: "عندك نشاط ومفيش موقع احترافي؟",
-    body: "ابعت لنا إيه اللي بتبيعه ومين عميلك. نجهّز نموذج أولي لموقعك عشان تشوف شكل النشاط أونلاين، وبعدين نقول لك إيه يدخل النسخة الأولى. النموذج اتجاه بصري أول، مش موقع نهائي.",
-    cta: "احصل على نموذج موقع مجاني",
+    kicker: "استشارة",
+    title: "عشرون دقيقة لتحديد ما يفعله الموقع",
+    body: "أخبرنا ماذا تبيع ومن عميلك. ثلاثة أسئلة، ثم واتساب وفيه وصف المشروع. المكالمة تحدد الصفحات واللغة وما يُؤجَّل. ليست تصميمًا نهائيًا.",
+    cta: "ابدأ خطوتك بثقة، نحن معك.",
   };
 
   const websiteIncludeEn = includeSection({
@@ -40,7 +40,7 @@ export function commercialPages({
     title: "What a website project covers",
     intro: "Price follows the written scope. These items are part of website and shop quotes unless a line is excluded in writing.",
     items: [
-      ["Free first prototype", "A visual sample of how the business could look online, before you commit to a full build."],
+      ["A project consultation", "We decide the pages, the language, and what can wait before any price."],
       ["Written scope before price", "Pages, languages, features, and what can wait — in one document you approve."],
       ["First-year domain and hosting", "Included in the website or shop quote, with accounts in your company name."],
       ["You own the website", "Files and admin access are handed over. We do not hold the site after delivery."],
@@ -54,7 +54,7 @@ export function commercialPages({
     title: "ما يدخل عرض الموقع",
     intro: "السعر يتبع النطاق المكتوب. البنود التالية جزء من مشاريع المواقع والمتاجر ما لم يُستثنَ بند في الاتفاق.",
     items: [
-      ["نموذج أولي مجاني", "عيّنة بصرية أولى لشكل النشاط أونلاين، قبل الالتزام بنسخة كاملة."],
+      ["استشارة للمشروع", "نحدد الصفحات واللغة وما يُؤجَّل، قبل أي سعر."],
       ["نطاق مكتوب قبل السعر", "الصفحات واللغات والوظائف وما يُؤجَّل، في ملف توافق عليه."],
       ["الدومين والاستضافة للسنة الأولى", "ضمن عرض الموقع أو المتجر، والحسابات باسم شركتك لا باسمنا."],
       ["ملكية الموقع لك", "الملفات وحسابات الإدارة تُسلَّم لك. نحن لا نحتجز الموقع بعد التسليم."],
@@ -79,8 +79,8 @@ export function commercialPages({
       kicker: "Web development company in Egypt",
       h1: "Web development company in Egypt — we build the site your customer can actually use",
       lead: "Power Shift is a Cairo studio that develops websites and shops for companies in Egypt and the GCC. Design is part of the job. The job itself is a live site on the phone, with a path to a call, WhatsApp, or an order.",
-      cta: "Get a Free Website Prototype",
-      ctaShort: "Free Prototype",
+      cta: "Book a project consultation",
+      ctaShort: "Consultation",
       waCta: "WhatsApp Us",
       proof: "5.0 from 15 client reviews — read them",
       service: {
@@ -172,8 +172,8 @@ ${readingCards([
       final: {
         kicker: "Next step",
         title: "Tell us what the business does",
-        body: "We send a first prototype direction, then a written scope for version one.",
-        cta: "Get a Free Website Prototype",
+        body: "We book a short consultation, then write what belongs in version one.",
+        cta: "Book a project consultation",
       },
     },
     {
@@ -191,8 +191,8 @@ ${readingCards([
       kicker: "شركة برمجة مواقع في مصر",
       h1: "شركة برمجة مواقع في مصر — نبرمج موقع تقدر تبعته لعميلك",
       lead: "باور شيفت استوديو في القاهرة بيبرمّج مواقع الشركات والمتاجر. التصميم جزء من الشغل. الشغل نفسه موقع يفتح من الموبايل، وله خطوة واضحة: مكالمة أو واتساب أو طلب.",
-      cta: "احصل على نموذج موقع مجاني",
-      ctaShort: "نموذج مجاني",
+      cta: "ابدأ خطوتك بثقة، نحن معك.",
+      ctaShort: "ابدأ خطوتك بثقة، نحن معك.",
       waCta: "راسلنا واتساب",
       proof: "5.0 من 15 مراجعة عملاء — اقرأها",
       service: {
@@ -283,8 +283,8 @@ ${readingCards([
       final: {
         kicker: "الخطوة التالية",
         title: "قول لنا النشاط بيعمل إيه",
-        body: "نجهّز اتجاه النموذج الأولي، وبعدين نطاق مكتوب للنسخة الأولى.",
-        cta: "احصل على نموذج موقع مجاني",
+        body: "نحدد اتجاه النسخة الأولى، وبعدين نطاق مكتوب.",
+        cta: "ابدأ خطوتك بثقة، نحن معك.",
       },
     },
     {
@@ -302,8 +302,8 @@ ${readingCards([
       kicker: "Website development company in Cairo",
       h1: "Website development in Cairo for businesses that want a studio they can actually reach",
       lead: "Power Shift is based in Cairo. We do not run a walk-in office. Work happens on WhatsApp, calls, and preview links you open on your phone — for clients in Cairo, the rest of Egypt, and the GCC.",
-      cta: "Get a Free Website Prototype",
-      ctaShort: "Free Prototype",
+      cta: "Book a project consultation",
+      ctaShort: "Consultation",
       waCta: "WhatsApp Us",
       proof: "5.0 from 15 client reviews — read them",
       service: {
@@ -382,8 +382,8 @@ ${readingCards([
       final: {
         kicker: "Next step",
         title: "Message from Cairo working hours",
-        body: "Send the business name and what the site should do. We reply with prototype questions on WhatsApp.",
-        cta: "Get a Free Website Prototype",
+        body: "أرسل اسم النشاط وما الذي يجب أن يفعله الموقع. نرد على واتساب بأسئلة النطاق.",
+        cta: "Book a project consultation",
       },
     },
     {
@@ -401,8 +401,8 @@ ${readingCards([
       kicker: "شركة تصميم مواقع في القاهرة",
       h1: "شركة تصميم مواقع في القاهرة — استوديو محلي تقدر توصله على واتساب",
       lead: "باور شيفت في القاهرة. مفيش مكتب استقبال للزيارات. الشغل بيحصل على واتساب ومكالمات وروابط معاينة بتفتحها من موبايلك — لعملاء القاهرة وباقي مصر والخليج.",
-      cta: "احصل على نموذج موقع مجاني",
-      ctaShort: "نموذج مجاني",
+      cta: "ابدأ خطوتك بثقة، نحن معك.",
+      ctaShort: "ابدأ خطوتك بثقة، نحن معك.",
       waCta: "راسلنا واتساب",
       proof: "5.0 من 15 مراجعة عملاء — اقرأها",
       service: {
@@ -481,8 +481,8 @@ ${readingCards([
       final: {
         kicker: "الخطوة التالية",
         title: "ابعت من هنا — نفس توقيت القاهرة",
-        body: "اسم النشاط وإيه المفروض الموقع يعمله. نرد بأسئلة النموذج على واتساب.",
-        cta: "احصل على نموذج موقع مجاني",
+        body: "اسم النشاط وإيه المفروض الموقع يعمله. نرد بأسئلة النطاق على واتساب.",
+        cta: "ابدأ خطوتك بثقة، نحن معك.",
       },
     },
     {
@@ -494,13 +494,13 @@ ${readingCards([
       wizard: "website",
       title: "تصميم موقع شركة في مصر | موقع تعريفي من باور شيفت",
       description:
-        "موقع تعريفي لشركتك في مصر: الخدمات، الأعمال السابقة، وواتساب أو اتصال في رابط واحد. نموذج مبدئي مجاني، والموقع باسم شركتك. من القاهرة.",
+        "تصميم موقع شركة في مصر: الخدمات، الأعمال، وواتساب أو اتصال في رابط واحد. استشارة للمشروع، والموقع باسم شركتك. من القاهرة.",
       crumb: "تصميم موقع شركة",
       kicker: "موقع تعريفي للشركات",
       h1: "موقع تعريفي يشرح شركتك، ويعطي العميل رابطًا يثق به ويتواصل منه",
       lead: "العميل الجاد يطلب رابطًا، لا شرحًا طويلًا على واتساب. نبني موقع الشركة على نشاطك: ماذا تقدّم، لمن، وأين يتواصل. الموقع مخصص، وليس قالبًا نغيّر عليه الاسم.",
-      cta: "اطلب نموذج موقع مبدئي مجاني",
-      ctaShort: "نموذج مبدئي",
+      cta: "ابدأ خطوتك بثقة، نحن معك.",
+      ctaShort: "ابدأ خطوتك بثقة، نحن معك.",
       waCta: "راسلنا واتساب",
       secondary: { href: "#examples", label: "شاهد نماذج أعمالنا" },
       proof: "5.0 من 15 مراجعة عملاء — اقرأها",
@@ -511,10 +511,10 @@ ${readingCards([
         areaServed: ["Egypt"],
       },
       offer: {
-        kicker: "نموذج مبدئي",
+        kicker: "استشارة",
         title: "عندك شركة وتحتاج رابطًا ترسله للعميل؟",
-        body: "أرسل نشاطك ومن عميلك. نجهّز نموذجًا مبدئيًا يوضّح شكل الموقع، ثم نكتب ما يدخل النسخة الأولى. النموذج عيّنة بصرية، وليس موقعًا كاملًا.",
-        cta: "اطلب نموذج موقع مبدئي مجاني",
+        body: "أرسل نشاطك ومن عميلك. نحدد في المكالمة الصفحات التي تدخل النسخة الأولى. ليست تصميمًا نهائيًا قبل الاتفاق.",
+        cta: "ابدأ خطوتك بثقة، نحن معك.",
       },
       sections: [
         section({
@@ -616,7 +616,7 @@ ${readingCards([
         }),
       ],
       faqKicker: "أسئلة شائعة",
-      faqTitle: "قبل أن تطلب نموذج موقع الشركة",
+      faqTitle: "قبل استشارة موقع الشركة",
       faq: [
         ["كم تكلفة موقع شركة في مصر؟", 'لا يوجد سعر واحد. التكلفة تتبع عدد الصفحات واللغات ومن يكتب المحتوى وما يُضاف بعد الإطلاق. نحددها بعد النطاق. اقرأ <a href="/ar/blog/how-much-does-a-website-cost-in-egypt.html">ما الذي يغيّر تكلفة الموقع</a>.'],
         ["ماذا يشمل موقع الشركة؟", "حسب الاتفاق: رئيسية، من نحن، خدمات، أعمال إن وُجدت، وتواصل بواتساب أو هاتف. العربي والإنجليزي، والدومين والاستضافة للسنة الأولى، عندما تُكتب في العرض."],
@@ -625,15 +625,15 @@ ${readingCards([
         ["هل الاستضافة داخلة؟", "في مشاريع المواقع والمتاجر، السنة الأولى من الدومين والاستضافة ضمن العرض، والحساب باسم شركتك لا باسمنا."],
         ["هل يدعم الموقع العربي والإنجليزي؟", "نعم عندما يحتاج جمهورك اللغتين. تُبنيان معًا، والعربية بواجهة من اليمين، لا بزر ترجمة فوق موقع إنجليزي."],
         ["هل يمكن تعديل الموقع لاحقًا؟", "نعم. النسخة الأولى لا تقفل الباب. الصفحات والتعديلات اللاحقة تُتفق عليها، ولا نعد بتعديل مفتوح بلا نطاق."],
-        ["كيف يعمل النموذج المبدئي المجاني؟", "ترسل نشاطك ومن عميلك. نجهّز عيّنة بصرية أولى لشكل الموقع. ليست موقعًا كاملًا، ولا التزامًا بالبناء قبل أن توافق على النطاق."],
+        ["كيف تعمل مكالمة النطاق؟", "ترسل نشاطك ومن عميلك. نحدد الصفحات واللغة وما يُؤجَّل. ليست تصميمًا نهائيًا، ولا التزامًا بالبناء قبل أن توافق على النطاق."],
         ["ماذا تحتاج باور شيفت قبل البدء؟", "اسم النشاط، ماذا يقدّم، من العميل، وهل يوجد موقع اليوم، وما أهم صفحة يجب أن يفهمها الزائر. النصوص والصور يمكن أن تأتي على دفعات."],
         ["هل هذا متجر؟", `لا. الموقع التعريفي يشرح الشركة. المتجر يبيع من سلة. إذا كان البيع أونلاين هو الأصل، انظر <a href="${PATHS.shopAr}">تصميم متجر إلكتروني</a>.`],
       ],
       final: {
         kicker: "الخطوة التالية",
         title: "أخبرنا ماذا تفعل الشركة",
-        body: "نجهّز نموذجًا مبدئيًا، ثم نكتب صفحات النسخة الأولى. النموذج ليس الموقع النهائي.",
-        cta: "اطلب نموذج موقع مبدئي مجاني",
+        body: "نحدد في المكالمة صفحات النسخة الأولى. ليست تصميمًا نهائيًا.",
+        cta: "ابدأ خطوتك بثقة، نحن معك.",
       },
     },
     {
@@ -651,8 +651,8 @@ ${readingCards([
       kicker: "Ecommerce website development in Egypt",
       h1: "Ecommerce website development in Egypt that matches how you already sell",
       lead: "Some businesses need a cart and payment. Others need a catalogue and a WhatsApp or wholesale request. We decide that first, then build a storefront a customer can use on their phone.",
-      cta: "Get a Free Website Prototype",
-      ctaShort: "Free Prototype",
+      cta: "Book a project consultation",
+      ctaShort: "Consultation",
       waCta: "WhatsApp Us",
       proof: "5.0 from 15 client reviews — read them",
       service: {
@@ -662,10 +662,10 @@ ${readingCards([
         areaServed: ["Egypt"],
       },
       offer: {
-        kicker: "Free prototype",
+        kicker: "Consultation",
         title: "Selling from Instagram or WhatsApp today?",
-        body: "Send the product type and how people order now. We prepare a first storefront prototype for mobile, then say whether you need checkout or a catalogue with a direct request.",
-        cta: "Get a Free Website Prototype",
+        body: "Send the product type and how people order now. On the consultation we decide whether you need checkout or a catalogue with a direct request.",
+        cta: "Book a project consultation",
       },
       sections: [
         section({
@@ -685,7 +685,7 @@ ${readingCards([
           title: "What an ecommerce project covers",
           intro: "Price follows catalogue size, order path, languages, and who enters products. First-year domain and hosting are included in the shop quote, in your name.",
           items: [
-            ["Free storefront prototype", "A first look at categories and product pages on a phone."],
+            ["A consultation before the build", "We agree categories, the order path, and what can wait."],
             ["Categories and product pages", "A structure a customer can actually browse on mobile."],
             ["The order path you need", "WhatsApp order, payment, or quote request — not a stack you will not use."],
             ["You own the shop", "Domain, hosting and storefront access in your company accounts."],
@@ -736,8 +736,8 @@ ${readingCards([
       final: {
         kicker: "Next step",
         title: "Tell us what you sell and how people order today",
-        body: "We will say whether you need a shop or a catalogue, then prepare a first prototype.",
-        cta: "Get a Free Website Prototype",
+        body: "We will say whether you need a shop or a catalogue, then write the scope.",
+        cta: "Book a project consultation",
       },
     },
     {

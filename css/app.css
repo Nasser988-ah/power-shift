@@ -1126,14 +1126,17 @@ a[href^="mailto:"],
   font-weight: 600;
   letter-spacing: 0;
   box-shadow: none;
+  white-space: normal;
+  line-height: 1.35;
+  text-align: center;
 }
 
 .sticky-bar .btn-sticky-start.btn-primary,
 .sticky-bar .btn-sticky-start.btn-primary:hover {
-  flex: 0.92;
-  background: var(--white);
-  color: var(--navy);
-  border: 1px solid var(--line-strong);
+  flex: 1.45;
+  background: var(--mint);
+  color: var(--navy-deep);
+  border: 1px solid color-mix(in srgb, var(--mint-deep) 55%, var(--mint));
 }
 
 .sticky-bar .btn-sticky-start.btn-primary:hover {
@@ -1142,10 +1145,10 @@ a[href^="mailto:"],
 
 .sticky-bar .btn-sticky-wa.btn-mint,
 .sticky-bar .btn-sticky-wa.btn-mint:hover {
-  flex: 1.2;
-  background: var(--mint);
-  color: var(--navy-deep);
-  border: 1px solid color-mix(in srgb, var(--mint-deep) 55%, var(--mint));
+  flex: 0.8;
+  background: var(--white);
+  color: var(--navy);
+  border: 1px solid var(--line-strong);
 }
 
 .sticky-bar .btn-sticky-wa.btn-mint:hover {
@@ -1191,6 +1194,21 @@ a[href^="mailto:"],
 .sticky-bar .btn-sticky-start:active,
 .sticky-bar .btn-sticky-wa:active {
   transform: none;
+}
+
+@media (max-width: 899px) {
+  .hero-actions,
+  .final-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn,
+  .final-actions .btn {
+    width: 100%;
+    justify-content: center;
+    min-height: 3rem;
+  }
 }
 
 @media (min-width: 900px) {
@@ -1965,6 +1983,139 @@ html[dir="rtl"] .work-next span { transform: rotate(-135deg); }
   color: var(--muted);
 }
 
+#project-dialog .dialog-inner {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem 1.15rem 1rem;
+}
+
+#project-dialog .dialog-head {
+  margin-bottom: 0.75rem;
+}
+
+#project-dialog .dialog-head h2 {
+  font-size: clamp(1.28rem, 4.6vw, 1.6rem);
+  line-height: 1.3;
+  max-width: 14em;
+}
+
+#project-dialog .progress {
+  display: block;
+  position: relative;
+  margin: 0 0 0.85rem;
+  padding-bottom: 0.7rem;
+  letter-spacing: 0.04em;
+  background-image: linear-gradient(var(--line), var(--line));
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+#project-dialog .progress::after {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  bottom: 0;
+  height: 2px;
+  width: 8%;
+  border-radius: 99px;
+  background: var(--mint);
+  transition: width 480ms var(--ease);
+}
+
+#project-dialog[data-step="1"] .progress::after { width: 33%; }
+#project-dialog[data-step="2"] .progress::after { width: 66%; }
+#project-dialog[data-step="3"] .progress::after { width: 100%; }
+
+#project-dialog h3[data-q] {
+  margin-bottom: 1.35rem;
+  font-size: clamp(1.15rem, 4.2vw, 1.4rem);
+  line-height: 1.35;
+  letter-spacing: -0.03em;
+  animation: promptQuestion 420ms var(--ease) 640ms both;
+}
+
+#project-dialog .choice-grid {
+  display: grid;
+  gap: 0.4rem;
+}
+
+#project-dialog .choice {
+  width: 100%;
+  border-radius: 12px;
+  padding: 0.72rem 0.9rem;
+  min-height: 48px;
+  background: var(--white);
+  animation: promptChoice 420ms var(--ease) both;
+}
+
+#project-dialog .choice:nth-child(1) { animation-delay: 720ms; }
+#project-dialog .choice:nth-child(2) { animation-delay: 770ms; }
+#project-dialog .choice:nth-child(3) { animation-delay: 820ms; }
+#project-dialog .choice:nth-child(4) { animation-delay: 870ms; }
+#project-dialog .choice:nth-child(5) { animation-delay: 920ms; }
+
+#project-dialog .choice[aria-pressed="true"] {
+  background: color-mix(in srgb, var(--mint) 22%, white);
+  color: var(--navy);
+  border-color: var(--mint);
+}
+
+#project-dialog .wizard-nav {
+  position: sticky;
+  bottom: 0;
+  margin-top: 0.75rem;
+  padding-top: 0.7rem;
+  background: linear-gradient(to top, var(--paper) 70%, transparent);
+}
+
+@media (max-width: 720px) {
+  #project-dialog .wizard-nav {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  #project-dialog .wizard-nav-end,
+  #project-dialog .wizard-nav .btn {
+    width: 100%;
+    margin-inline: 0;
+  }
+}
+
+#project-dialog .price-note:empty {
+  display: none;
+}
+
+@keyframes promptQuestion {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes promptChoice {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (max-height: 740px) {
+  #project-dialog .choice {
+    min-height: 44px;
+    padding-block: 0.55rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dialog,
+  .dialog::backdrop,
+  .dialog-inner,
+  #project-dialog::before,
+  #project-dialog h3[data-q],
+  #project-dialog .choice,
+  #project-dialog .progress::after {
+    transition: none;
+    animation: none;
+  }
+}
+
 .price-note {
   font-size: var(--fs-sm);
   color: var(--muted);
@@ -2016,22 +2167,96 @@ html[dir="rtl"] .work-next span { transform: rotate(-135deg); }
 }
 
 .dialog {
-  border: 0;
+  position: fixed;
+  inset: 0;
+  height: fit-content;
+  max-height: calc(100dvh - 1.25rem);
+  margin: auto;
+  border: 1px solid var(--line);
   padding: 0;
-  width: min(640px, calc(100% - 1.25rem));
+  width: min(520px, calc(100% - 1.25rem));
+  overflow: hidden;
   background: var(--paper);
   color: var(--ink);
-  border-radius: var(--radius-md);
+  border-radius: 18px;
+  box-shadow: 0 24px 60px rgba(18, 36, 60, 0.16);
+  opacity: 0;
+  transition:
+    opacity 420ms var(--ease),
+    overlay 420ms var(--ease) allow-discrete,
+    display 420ms allow-discrete;
+}
+
+.dialog[open] {
+  opacity: 1;
 }
 
 .dialog::backdrop {
-  background: rgba(11, 23, 38, 0.55);
+  background: rgba(11, 23, 38, 0);
+  transition:
+    background 480ms var(--ease),
+    overlay 480ms var(--ease) allow-discrete,
+    display 480ms allow-discrete;
+}
+
+.dialog[open]::backdrop {
+  background: rgba(11, 23, 38, 0.5);
 }
 
 .dialog-inner {
-  padding: 1.35rem 1.35rem 1.5rem;
-  max-height: min(86vh, 760px);
+  padding: 1.35rem 1.35rem 1.15rem;
+  max-height: calc(100dvh - 1.25rem);
   overflow: auto;
+  transform: translateY(14px);
+  opacity: 0;
+}
+
+.dialog[open] .dialog-inner {
+  transform: none;
+  opacity: 1;
+  transition: transform 640ms var(--ease) 460ms, opacity 520ms var(--ease) 420ms;
+}
+
+#project-dialog::before {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  top: 46%;
+  inset-inline: 14%;
+  height: 2px;
+  border-radius: 99px;
+  background: var(--mint);
+  transform: scaleX(0);
+  pointer-events: none;
+}
+
+#project-dialog[open]::before {
+  animation: promptSweep 780ms var(--ease) 180ms forwards;
+}
+
+@keyframes promptSweep {
+  0% { transform: scaleX(0); opacity: 1; }
+  62% { transform: scaleX(1); opacity: 1; }
+  100% { transform: scaleX(1); opacity: 0; }
+}
+
+@starting-style {
+  .dialog[open] {
+    opacity: 0;
+  }
+
+  .dialog[open]::backdrop {
+    background: rgba(11, 23, 38, 0);
+  }
+
+  .dialog[open] .dialog-inner {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
+body:has(.dialog[open]) .sticky-bar {
+  visibility: hidden;
 }
 
 .dialog-head {

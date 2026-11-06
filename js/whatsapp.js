@@ -83,7 +83,7 @@ export function similarWorkUrl(lang, projectName) {
   const text =
     lang === "ar"
       ? `مرحبًا فريق POWER SHIFT، اطّلعت على مشروع ${name} وأرغب في مناقشة عمل مشابه. أرجو تحديد موعد لمكالمة قصيرة.`
-      : `Hi POWER SHIFT, I saw the ${name} project and I would like to discuss similar work. Please book a 20-minute scope call.`;
+      : `Hi POWER SHIFT, I saw the ${name} project and I would like to discuss similar work. Please book a project consultation.`;
   return `${CONFIG.whatsappUrl}?text=${encodeURIComponent(text)}`;
 }
 

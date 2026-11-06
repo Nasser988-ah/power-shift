@@ -34,7 +34,7 @@ export const UI = {
     ctaKicker: "Next",
     ctaTitle: "If the next step is a build",
     ctaBody:
-      "A 20-minute scope call is enough to say whether you need a site, a shop, or an operations tool — and what can wait.",
+      "A project consultation is enough to say whether you need a site, a shop, or an operations tool — and what can wait.",
     ctaButton: "Book a Scope Call",
   },
   ar: {
@@ -124,7 +124,7 @@ export const ARTICLES = [
         ["h2", "Facebook is not the price comparison"],
         ["p", "A page is cheaper than a site. It is also rented space with weaker search presence and no page you own. If most enquiries already come from WhatsApp, a site still has a job: to look like a company when someone checks you on Google. That is a different article: <a href=\"/blog/facebook-or-website-for-business-egypt.html\">Facebook or a website for a business in Egypt</a>."],
         ["h2", "What to do this week"],
-        ["p", "Write the four-point brief. Decide whether you need a brochure, a shop, or software. Then book a scope call. We will tell you if the job is a <a href=\"/web-design-egypt\">custom website</a> — or if you should wait."],
+        ["p", "Write the four-point brief. Decide whether you need a brochure, a shop, or software. Then book a consultation. We will tell you if the job is a <a href=\"/web-design-egypt\">custom website</a> — or if you should wait."],
       ],
     },
     ar: {
@@ -917,7 +917,7 @@ export const ARTICLES = [
         ["p", "Who changes a price in month four? If the answer is “you will need us for every comma,” price that in. If the answer is “you cannot,” do not launch."],
         ["h2", "Ignore theatre"],
         ["p", "Guaranteed first-page rankings, fake reviews, and 48-hour full e-commerce are theatre. Search takes time even when the site is indexable — <a href=\"/blog/why-isnt-my-website-showing-on-google.html\">indexing is the first bar</a>."],
-        ["p", "When you have a brief, <a href=\"/contact\">book a scope call</a>. We will tell you if the fit is a <a href=\"/web-design-egypt\">website</a>, a <a href=\"/services#ecommerce\">shop</a>, or a system — including when you should not hire us."],
+        ["p", "When you have a brief, <a href=\"/contact\">book a consultation</a>. We will tell you if the fit is a <a href=\"/web-design-egypt\">website</a>, a <a href=\"/services#ecommerce\">shop</a>, or a system — including when you should not hire us."],
       ],
     },
     ar: {
