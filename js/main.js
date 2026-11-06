@@ -1,5 +1,5 @@
 import { bindTrackedClicks, track } from "./analytics.js?v=20261013a";
-import { initI18n, getLang, t } from "./i18n.js?v=20261106f";
+import { initI18n, getLang, t } from "./i18n.js?v=20261106h";
 import { initPageI18n } from "./page-i18n.js?v=20261013a";
 import { initNav } from "./nav.js?v=20260829h";
 import { initWizard, renderWork } from "./wizard.js?v=20261106d";

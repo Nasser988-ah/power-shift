@@ -141,9 +141,9 @@ export const COPY = {
   en: {
     dir: "ltr",
     htmlLang: "en",
-    metaTitle: "Company Websites in Egypt | Power Shift Cairo",
+    metaTitle: "Power Shift | Software Studio in Cairo",
     metaDesc:
-      "Power Shift builds company websites for businesses in Egypt and the GCC: clinics, professional offices, and firms. Book a project consultation from Cairo.",
+      "Power Shift is a Cairo studio for company websites, shops, and operations software in Egypt and the GCC. Book a project consultation.",
     skip: "Skip to content",
     a11y: {
       primaryNav: "Primary",
@@ -183,7 +183,7 @@ export const COPY = {
     lang: { en: "EN", ar: "عربي", switchTo: "العربية" },
     hero: {
       kicker: "Web & software studio · Cairo · Egypt & GCC",
-      seoH1: "Company websites in Egypt, built by Power Shift",
+      seoH1: "Power Shift — a software studio in Cairo",
       h1a: "We build websites and software",
       h1b: "for businesses that need both to work.",
       lead: "A company website the customer can open, understand, and enquire from. Built in Cairo for Egypt and the GCC.",
@@ -398,7 +398,7 @@ export const COPY = {
       lead: "Pick the problem. We will tell you what should be built — and what should not.",
       specialist: "Talk through the right fit",
       pageCta: "Explore our web development and software services",
-      also: "SaaS products and operations systems sit under custom software. Mobile apps are built when the product needs them — not as a separate brochure offer.",
+      also: "SaaS products and operations systems sit under custom software.",
       openPage: "Open this page",
       items: [
         {
@@ -428,13 +428,6 @@ export const COPY = {
           href: "/custom-software-development",
           title: "Custom Software",
           body: "Bookings, invoices, inventory, and the screens staff use every day — when a website is not enough.",
-        },
-        {
-          n: "05",
-          id: "mobile",
-          href: "/custom-software-development",
-          title: "Mobile Apps",
-          body: "Built when the product needs an app. Not our main search offer — we will say if a site should come first.",
         },
       ],
     },
@@ -596,9 +589,9 @@ export const COPY = {
   ar: {
     dir: "rtl",
     htmlLang: "ar",
-    metaTitle: "تصميم موقع شركة في مصر | باور شيفت القاهرة",
+    metaTitle: "باور شيفت | استوديو مواقع وبرمجيات في القاهرة",
     metaDesc:
-      "باور شيفت تبني مواقع الشركات في مصر والخليج: عيادات، مكاتب، وشركات. ابدأ خطوتك بثقة، نحن معك.. من القاهرة.",
+      "باور شيفت استوديو في القاهرة لمواقع الشركات والمتاجر وأنظمة التشغيل في مصر والخليج. تصميم موقع الشركة له صفحته، والاستشارة من هنا.",
     skip: "انتقل إلى المحتوى",
     a11y: {
       primaryNav: "القائمة الرئيسية",
@@ -638,7 +631,7 @@ export const COPY = {
     lang: { en: "EN", ar: "عربي", switchTo: "English" },
     hero: {
       kicker: "استوديو مواقع وبرمجيات · القاهرة · مصر والخليج",
-      seoH1: "تصميم موقع شركة في مصر — باور شيفت",
+      seoH1: "باور شيفت — استوديو مواقع وبرمجيات في القاهرة",
       h1a: "نبني مواقع وأنظمة",
       h1b: "لأصحاب الشركات الذين يحتاجون إلى العمل عبر الإنترنت.",
       lead: "موقع شركة يفهمه العميل من الموبايل، ويرسل منه الاستفسار. نبنيه من القاهرة لمصر والخليج.",
@@ -853,13 +846,13 @@ export const COPY = {
       lead: "حدّد المشكلة، ونقول لك ما يستحق البناء وما لا يستحقه الآن.",
       specialist: "اعرف ما يناسب مشروعك",
       pageCta: "استكشف خدمات تطوير المواقع والبرمجيات",
-      also: "منتجات SaaS وأنظمة التشغيل ضمن البرمجيات المخصصة. تطبيقات الموبايل بتتعمل لما المنتج يحتاجها — مش عرض بحث أساسي.",
+      also: "منتجات SaaS وأنظمة التشغيل ضمن البرمجيات المخصصة.",
       openPage: "افتح الصفحة",
       items: [
         {
           n: "01",
           id: "website",
-          href: "/ar/شركة-برمجة-مواقع",
+          href: "/ar/تصميم-موقع-شركة",
           title: "مواقع الشركات",
           body: "موقع يوضح النشاط ويقود لواتساب أو مكالمة — مش قالب جاهز.",
         },
@@ -883,13 +876,6 @@ export const COPY = {
           href: "/ar/برمجة-أنظمة-مخصصة",
           title: "أنظمة مخصصة",
           body: "حجوزات وفواتير ومخزون والشاشات اللي الفريق بيفتحها كل يوم — لما الموقع مش كفاية.",
-        },
-        {
-          n: "05",
-          id: "mobile",
-          href: "/ar/برمجة-أنظمة-مخصصة",
-          title: "تطبيقات الموبايل",
-          body: "بتتعمل لما المنتج يحتاج تطبيق. مش عرضنا الأساسي في البحث — وهنقول لك لو الموقع لازم ييجي الأول.",
         },
       ],
     },
