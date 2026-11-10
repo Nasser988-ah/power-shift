@@ -7,7 +7,7 @@ import { commercialPages } from "./commercial-landings.mjs";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const ORIGIN = "https://www.powershift.space";
 const OG = `${ORIGIN}/assets/og/og-cover.png`;
-const V = { boot: "20261002a", app: "20261106e", pages: "20261002a", main: "20261106d" };
+const V = { boot: "20261002a", app: "20261110a", pages: "20261002a", main: "20261110a" };
 
 const PATHS = {
   egyptAr: "/ar/تصميم-مواقع-مصر",

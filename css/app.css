@@ -2509,6 +2509,14 @@ html[dir="rtl"] .hero-proof {
   text-align: start;
 }
 
+@media (max-width: 899px) {
+  html[dir="rtl"] .hero-actions,
+  html[dir="rtl"] .final-actions {
+    align-self: stretch;
+    width: 100%;
+  }
+}
+
 html[dir="rtl"] .hero-triad--visual li {
   letter-spacing: 0;
   text-transform: none;

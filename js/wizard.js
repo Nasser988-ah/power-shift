@@ -1,8 +1,8 @@
-import { t, getLang } from "./i18n.js?v=20261002a";
+import { t, getLang } from "./i18n.js?v=20261110a";
 import { PROJECTS } from "./content.js?v=20261002a";
 import { CONFIG } from "./config.js?v=20260831a";
 import { buildWhatsAppUrl } from "./whatsapp.js?v=20260829h";
-import { track } from "./analytics.js?v=20261013a";
+import { track } from "./analytics.js?v=20261110a";
 import { workPictureHTML } from "./media.js?v=20260829h";
 
 const STEPS = ["type", "goal", "timeline"];
@@ -112,7 +112,6 @@ export function initWizard() {
     if (submission.ok) track("lead_submitted", payload);
     const url = buildWhatsAppUrl(getLang(), brief);
     track("generate_lead", payload);
-    track("whatsapp_cta", payload);
     const popup = window.open(url, "_blank", "noopener");
     state.submitting = false;
     if (!popup) window.location.assign(url);
@@ -123,7 +122,9 @@ export function initWizard() {
     const key = currentKey();
     state[key] = id;
     state.notice = "";
-    if (key === "type") track("service_select", { type: id });
+    const landing = document.body?.dataset?.landing || undefined;
+    if (key === "type") track("service_select", { type: id, landing });
+    else track("wizard_step", { step: key, label: id, landing });
     if (lastStep()) {
       syncAll();
       sendWhatsApp();
@@ -152,7 +153,6 @@ export function initWizard() {
   const openWizard = (from = "start", presetType = "") => {
     rememberPrompt();
     track("wizard_start", { from, type: presetType || undefined, landing: document.body?.dataset?.landing || undefined });
-    track("prototype_request_start", { from, type: presetType || undefined, landing: document.body?.dataset?.landing || undefined });
     state.notice = "";
     if (presetType) {
       state.type = normalizeType(presetType);
@@ -273,11 +273,31 @@ export function initWizard() {
   document.addEventListener("ps:lang", syncAll);
   render(inline);
 
-  window.setTimeout(() => {
-    if (promptSeen() || dialog.open) return;
-    if (document.activeElement?.closest("#qualify-inline")) return;
-    openWizard("timed");
-  }, 5000);
+  const armPrompt = () => {
+    let timer = 0;
+    const stop = () => {
+      window.clearTimeout(timer);
+      window.removeEventListener("scroll", onScroll);
+    };
+    const tryOpen = (from) => {
+      if (promptSeen() || dialog.open) {
+        stop();
+        return;
+      }
+      if (document.activeElement?.closest("#qualify-inline")) return;
+      stop();
+      openWizard(from);
+    };
+    const onScroll = () => {
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      if (scrollable <= 80) return;
+      if (window.scrollY / scrollable >= 0.5) tryOpen("scroll");
+    };
+    timer = window.setTimeout(() => tryOpen("delay"), 30000);
+    window.addEventListener("scroll", onScroll, { passive: true });
+  };
+
+  armPrompt();
 }
 
 function escapeHtml(value) {

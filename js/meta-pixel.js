@@ -1,4 +1,4 @@
-import { onTrack } from "./analytics.js?v=20261013a";
+import { onTrack } from "./analytics.js?v=20261110a";
 
 const PIXEL_ID = "1639209490886117";
 const META_SCRIPT = "https://connect.facebook.net/en_US/fbevents.js";
@@ -27,7 +27,7 @@ function createFbq() {
 }
 
 function safePayload(payload = {}) {
-  const allowed = ["type", "goal", "timeline", "kind", "from", "label", "lang", "landing"];
+  const allowed = ["type", "goal", "timeline", "kind", "from", "label", "lang", "landing", "step"];
   return allowed.reduce(
     (result, key) => {
       const value = payload[key];

@@ -247,7 +247,7 @@ export const COPY = {
       challenge: "The brief",
       solution: "What shipped",
       after: "Close to what you need?",
-      afterCta: "Book a Scope Call",
+      afterCta: "Book a project consultation",
       caseStudy: "Read the case study",
       previewNote: "Preview",
       liveNote: "Live",

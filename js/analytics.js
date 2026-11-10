@@ -30,9 +30,10 @@ window.psTrack = track;
 export function bindTrackedClicks(root = document) {
   root.addEventListener("click", (e) => {
     const explicit = e.target.closest("[data-ps-event]");
-    if (explicit) {
+    if (explicit && !explicit.hasAttribute("data-open-wizard")) {
       track(explicit.getAttribute("data-ps-event"), {
         label: explicit.getAttribute("data-ps-label") || explicit.textContent.trim().slice(0, 80),
+        landing: document.body?.dataset?.landing || undefined,
       });
     }
 
