@@ -430,7 +430,7 @@ export const PAGE_EXTRAS = {
       liveLabel: "افتح معاينة MedLab Market",
       previewNote: "يُعرض هذا المشروع كمعاينة، لا كأرقام إطلاق معلنة.",
       relatedHtml:
-        'يندرج هذا المشروع ضمن <a href="/ar/services#ecommerce">تطوير التجارة الإلكترونية</a>. اطّلع على <a href="/ar/services">خدمات تطوير البرمجيات والمواقع</a>.',
+        'هذا كتالوج طبي، والسلة تطلب عرض سعر. التفاصيل في <a href="/ar/تصميم-متجر-الكتروني">تصميم متجر إلكتروني</a>. اطّلع على <a href="/ar/services">خدمات تطوير البرمجيات والمواقع</a>.',
       relatedA: "متجر ملابس أطفال",
       relatedB: "تجارة جمال",
       metaTitle: "دراسة حالة MedLab Market | كتالوج طبي من Power Shift",
@@ -455,7 +455,7 @@ export const PAGE_EXTRAS = {
       liveLabel: "افتح معاينة Adam Trending",
       previewNote: "يُعرض هذا المشروع كمعاينة، لا كأرقام إطلاق معلنة.",
       relatedHtml:
-        'يندرج هذا المشروع ضمن <a href="/ar/services#ecommerce">تطوير التجارة الإلكترونية</a>. اطّلع على <a href="/ar/services">خدمات تطوير البرمجيات والمواقع</a>.',
+        'هذا المشروع متجر. التفاصيل في <a href="/ar/تصميم-متجر-الكتروني">تصميم متجر إلكتروني</a>. اطّلع على <a href="/ar/services">خدمات تطوير البرمجيات والمواقع</a>.',
       relatedA: "كتالوج طبي",
       relatedB: "تجارة جمال",
       metaTitle: "دراسة حالة Adam Trending | متجر ملابس أطفال من Power Shift",
@@ -480,7 +480,7 @@ export const PAGE_EXTRAS = {
       liveLabel: "افتح معاينة Nourvive",
       previewNote: "يُعرض هذا المشروع كمعاينة، لا كأرقام إطلاق معلنة.",
       relatedHtml:
-        'يندرج هذا المشروع ضمن <a href="/ar/services#ecommerce">تطوير التجارة الإلكترونية</a>. اطّلع على <a href="/ar/services">خدمات تطوير البرمجيات والمواقع</a>.',
+        'هذا المشروع متجر. التفاصيل في <a href="/ar/تصميم-متجر-الكتروني">تصميم متجر إلكتروني</a>. اطّلع على <a href="/ar/services">خدمات تطوير البرمجيات والمواقع</a>.',
       relatedA: "تجارة جمال فاخرة",
       relatedB: "متجر أغذية",
       metaTitle: "دراسة حالة Nourvive | متجر جمال من Power Shift",
@@ -504,7 +504,7 @@ export const PAGE_EXTRAS = {
       results: "المتجر يعمل على loofahqueen.com. لا ننشر أرقام مبيعات لهذا المشروع.",
       liveLabel: "افتح متجر Queen Loofah",
       relatedHtml:
-        'يندرج هذا المشروع ضمن <a href="/ar/services#ecommerce">تطوير التجارة الإلكترونية</a>. اطّلع على <a href="/ar/services">خدمات تطوير البرمجيات والمواقع</a>.',
+        'هذا المشروع متجر. التفاصيل في <a href="/ar/تصميم-متجر-الكتروني">تصميم متجر إلكتروني</a>. اطّلع على <a href="/ar/services">خدمات تطوير البرمجيات والمواقع</a>.',
       relatedA: "تجارة جمال",
       relatedB: "جمال فاخر",
       metaTitle: "دراسة حالة Queen Loofah | متجر عناية من Power Shift",
@@ -528,7 +528,7 @@ export const PAGE_EXTRAS = {
       results: "المتجر يعمل على corollaart.shop. لا ننشر أرقام مبيعات لهذا المشروع.",
       liveLabel: "افتح متجر Corolla",
       relatedHtml:
-        'يندرج هذا المشروع ضمن <a href="/ar/services#ecommerce">تطوير التجارة الإلكترونية</a>. اطّلع على <a href="/ar/services">خدمات تطوير البرمجيات والمواقع</a>.',
+        'هذا المشروع متجر. التفاصيل في <a href="/ar/تصميم-متجر-الكتروني">تصميم متجر إلكتروني</a>. اطّلع على <a href="/ar/services">خدمات تطوير البرمجيات والمواقع</a>.',
       relatedA: "تجارة جمال",
       relatedB: "موقع تجارة غذائية",
       metaTitle: "دراسة حالة Corolla | متجر أغذية من Power Shift",
@@ -543,7 +543,7 @@ export const PAGE_EXTRAS = {
       results: "الموقع يعمل على uruz-egypt.com. لا ننشر أرقام مبيعات لهذا المشروع.",
       liveLabel: "افتح موقع URUZ",
       relatedHtml:
-        'يندرج هذا المشروع ضمن <a href="/ar/services#ecommerce">تطوير التجارة الإلكترونية</a>. اطّلع على <a href="/ar/services">خدمات تطوير البرمجيات والمواقع</a>.',
+        'هذا المشروع متجر. التفاصيل في <a href="/ar/تصميم-متجر-الكتروني">تصميم متجر إلكتروني</a>. اطّلع على <a href="/ar/services">خدمات تطوير البرمجيات والمواقع</a>.',
       relatedA: "تجارة جمال",
       relatedB: "متجر علامة",
       metaTitle: "دراسة حالة URUZ | موقع جمال فاخر من Power Shift",
@@ -558,7 +558,7 @@ export const PAGE_EXTRAS = {
       results: "الموقع يعمل على lodiamo.com. لا ننشر أرقام زيارات أو عملاء محتملين لهذا المشروع.",
       liveLabel: "افتح موقع Lodiamo",
       relatedHtml:
-        'يندرج هذا المشروع ضمن <a href="/ar/services#website">تطوير المواقع المخصصة</a>. اطّلع على <a href="/ar/services">خدمات تطوير البرمجيات والمواقع</a>.',
+        'هذا موقع شركة في الإمارات، لا متجر بسلة. لموقع شركة مشابه: <a href="/ar/تصميم-موقع-شركة">تصميم موقع شركة</a>. وللعمل مع شركات الخليج: <a href="/ar/تصميم-مواقع-الخليج">تصميم مواقع في الخليج</a>.',
       relatedA: "موقع علامة دولية",
       relatedB: "تجارة أغذية",
       metaTitle: "دراسة حالة Lodiamo | موقع مؤسسي من Power Shift",
@@ -574,7 +574,7 @@ export const PAGE_EXTRAS = {
       liveLabel: "افتح معاينة Availio",
       previewNote: "يُعرض هذا المشروع كمعاينة، لا كأرقام إطلاق معلنة.",
       relatedHtml:
-        'يندرج هذا المشروع ضمن <a href="/ar/services#saas">تطوير منتجات SaaS</a>. اطّلع على <a href="/ar/services">خدمات تطوير البرمجيات والمواقع</a>.',
+        'هذا برنامج تشغيل للعقارات، وليس موقعًا يعرّف بشركة عقارية. لبرنامج مشابه: <a href="/ar/برمجة-أنظمة-مخصصة">برمجة أنظمة مخصصة</a>. إذا كان المطلوب موقعًا للشركة: <a href="/ar/تصميم-موقع-لشركة-عقارات">تصميم موقع عقاري</a>.',
       relatedA: "نظام تشغيل",
       relatedB: "موقع ضيافة",
       metaTitle: "دراسة حالة Availio | برمجيات عقارية من Power Shift",
@@ -585,12 +585,12 @@ export const PAGE_EXTRAS = {
     haseb: {
       h1: "7aseb — نظام للفواتير والتشغيل",
       overview: "الفاتورة والمخزون والتحصيل تفتح على الموبايل الذي يحمله، بالعربي أو الإنجليزي، دون انتظار.",
-      stack: "شاشات خفيفة لما يفتحه صاحب العمل عدة مرات في اليوم، بالعربي والإنجليزي. ظهور الموقع في البحث ليس عمل هذا النظام. لا ننشر اسم التقنية ولا رقم سرعة لهذا المشروع.",
+      stack: "شاشات خفيفة عندما يفتحها صاحب العمل عدة مرات في اليوم، بالعربية والإنجليزية. ظهور الموقع في البحث ليس عمل هذا النظام. لا ننشر اسم التقنية ولا رقم سرعة لهذا المشروع.",
       results: "نُشرت معاينة للنظام للمراجعة. لا نختلق أرقام استخدام أو مالية.",
       liveLabel: "افتح معاينة 7aseb",
       previewNote: "يُعرض هذا المشروع كمعاينة، لا كأرقام إطلاق معلنة.",
       relatedHtml:
-        'يندرج هذا المشروع ضمن <a href="/ar/services#bms">أنظمة التشغيل المخصصة</a>. اطّلع على <a href="/ar/services">خدمات تطوير البرمجيات والمواقع</a>.',
+        'يندرج هذا المشروع ضمن <a href="/ar/برمجة-أنظمة-مخصصة">برمجة أنظمة مخصصة</a>. اطّلع على <a href="/ar/services">خدمات تطوير البرمجيات والمواقع</a>.',
       relatedA: "برمجيات تشغيل عقاري",
       relatedB: "موقع أعمال",
       metaTitle: "دراسة حالة 7aseb | نظام تشغيل من Power Shift",
@@ -652,7 +652,7 @@ export const PAGE_TEXT = {
       "Tell us what you sell and who the customer is. We prepare a first visual sample of how the business could look online, then take the brief to WhatsApp. POWER SHIFT is based in Cairo and builds for Egypt and the GCC.",
     contactMetaTitle: "Contact Power Shift | Book a Scope Call — Cairo",
     contactMetaDesc:
-      "Book a project consultation on WhatsApp or email. We reply with scope questions before any price. Cairo studio for Egypt and the GCC — 15 five-star reviews.",
+      "Book a project consultation on WhatsApp or email. We reply with scope questions before any price. Cairo studio for Egypt and the GCC — 101 Google reviews.",
     errorCode: "404",
     errorH1: "This page is unavailable.",
     errorLead: "The URL may have moved, or it may never have existed. The studio, the work, and the consultation are still here.",
@@ -710,7 +710,7 @@ export const PAGE_TEXT = {
     contactLead:
       "قول لنا بتبيع إيه ومين عميلك. نجهّز عيّنة بصرية أولى لشكل النشاط أونلاين، ونحوّل الطلب لواتساب. POWER SHIFT في القاهرة، وتبني للشركات في مصر والخليج.",
     contactMetaTitle: "تواصل مع باور شيفت | استشارة للمشروع",
-    contactMetaDesc: "ابدأ خطوتك بثقة، نحن معك. على واتساب أو البريد. نرد قبل أي سعر. استوديو في القاهرة لمصر والخليج — 15 تقييم 5 نجوم.",
+    contactMetaDesc: "ابدأ خطوتك بثقة، نحن معك. على واتساب أو البريد. نرد قبل أي سعر. استوديو في القاهرة لمصر والخليج — 101 مراجعة على جوجل بتقييم 5.",
     errorCode: "404",
     errorH1: "هذه الصفحة غير متاحة.",
     errorLead: "ربما نُقل الرابط، أو لم يكن موجودًا. الاستوديو والأعمال والاستشارة ما زالت هنا.",

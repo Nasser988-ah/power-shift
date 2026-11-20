@@ -11,9 +11,82 @@ function hostOf(url) {
   }
 }
 
+const PAGE_SHIFT = "ps-page-shift";
+
+function samePageHash(url) {
+  return url.pathname === window.location.pathname && url.hash && url.hash !== window.location.hash;
+}
+
+function internalPageLink(anchor, event) {
+  if (!anchor || event.defaultPrevented || event.button !== 0) return false;
+  if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return false;
+  if (anchor.target === "_blank" || anchor.hasAttribute("download")) return false;
+  if (anchor.closest(".lang-switch") || anchor.hasAttribute("data-open-wizard")) return false;
+  if (anchor.hasAttribute("data-wa") || anchor.hasAttribute("data-wa-review")) return false;
+  const href = anchor.getAttribute("href") || "";
+  if (!href || href.startsWith("#") || href.startsWith("mailto:") || href.startsWith("tel:")) return false;
+  let url;
+  try {
+    url = new URL(href, window.location.href);
+  } catch {
+    return false;
+  }
+  if (url.origin !== window.location.origin) return false;
+  if (samePageHash(url)) return false;
+  if (url.pathname === window.location.pathname && url.search === window.location.search) return false;
+  return true;
+}
+
+function mountPageLoad() {
+  let veil = document.querySelector(".ps-load");
+  if (!veil) {
+    veil = document.createElement("div");
+    veil.className = "ps-load";
+    veil.setAttribute("aria-hidden", "true");
+    veil.innerHTML =
+      '<div class="ps-load-mark"><img src="/logo/logo-header.webp" alt="" width="360" height="178" decoding="async"><span class="ps-load-spin"></span></div>';
+    document.body.appendChild(veil);
+  }
+  return veil;
+}
+
+function playPageEnter(reduce) {
+  let arriving = false;
+  try {
+    arriving = sessionStorage.getItem(PAGE_SHIFT) === "1";
+    sessionStorage.removeItem(PAGE_SHIFT);
+  } catch {
+    /* ignore */
+  }
+  if (!arriving || reduce) return;
+  const veil = mountPageLoad();
+  veil.classList.add("is-on");
+  window.setTimeout(() => veil.classList.remove("is-on"), 220);
+  window.setTimeout(() => veil.remove(), 460);
+}
+
+function bindPageLeave(reduce) {
+  document.addEventListener("click", (event) => {
+    const anchor = event.target.closest("a[href]");
+    if (!internalPageLink(anchor, event)) return;
+    if (reduce) return;
+    event.preventDefault();
+    const veil = mountPageLoad();
+    window.requestAnimationFrame(() => veil.classList.add("is-on"));
+    try {
+      sessionStorage.setItem(PAGE_SHIFT, "1");
+    } catch {
+      /* ignore */
+    }
+    window.setTimeout(() => window.location.assign(anchor.href), 340);
+  });
+}
+
 export function initMotion() {
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (reduce) document.documentElement.classList.add("reduce-motion");
+  playPageEnter(reduce);
+  bindPageLeave(reduce);
 
   const io = new IntersectionObserver(
     (entries) => {

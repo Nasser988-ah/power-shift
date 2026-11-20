@@ -1,19 +1,26 @@
 import { bindTrackedClicks, track } from "./analytics.js?v=20261110a";
-import { initI18n, getLang, t } from "./i18n.js?v=20261110a";
-import { initPageI18n } from "./page-i18n.js?v=20261013a";
-import { initNav } from "./nav.js?v=20260829h";
-import { initWizard, renderWork } from "./wizard.js?v=20261110a";
-import { initMotion } from "./motion.js?v=20260922a";
-import { simpleWhatsAppUrl, similarWorkUrl, reviewWhatsAppUrl } from "./whatsapp.js?v=20260922c";
+import { initI18n, getLang, t } from "./i18n.js?v=20261121h";
+import { initPageI18n } from "./page-i18n.js?v=20261120b";
+import { initNav } from "./nav.js?v=20261121g";
+import { initWizard, renderWork } from "./wizard.js?v=20261121b";
+import { initMotion } from "./motion.js?v=20261121i";
+import { pageWhatsAppUrl, similarWorkUrl, reviewWhatsAppUrl } from "./whatsapp.js?v=20261121a";
 import { CONFIG } from "./config.js?v=20260831a";
 import { PROJECTS } from "./content.js?v=20261002a";
 import { initBlog } from "./blog.js?v=20260831c";
-import { initMetaPixel } from "./meta-pixel.js?v=20261110a";
+import { initMetaPixel } from "./meta-pixel.js?v=20261121a";
 
 function wireWhatsApp() {
   const apply = () => {
     const lang = getLang();
-    const url = simpleWhatsAppUrl(lang);
+    const project =
+      document.body?.dataset?.page === "case"
+        ? (document.querySelector("h1")?.textContent || "").split("—")[0].trim()
+        : "";
+    const url = pageWhatsAppUrl(lang, {
+      landing: document.body?.dataset?.landing || "",
+      project,
+    });
     document.querySelectorAll("[data-wa]").forEach((a) => {
       a.setAttribute("href", url);
       a.setAttribute("rel", "noopener");

@@ -129,12 +129,12 @@ function shell({
           reviews: "آراء العملاء",
           contact: "تواصل معنا",
           language: "اللغة",
-          bookShort: "تواصل معنا",
+          bookShort: "احجز استشارة",
           openMenu: "فتح القائمة",
           mobile: "قائمة الهاتف",
           menu: "القائمة",
           whatsapp: "واتساب",
-          book: "ابدأ استشارة المشروع",
+          book: "احجز استشارة للمشروع",
           note: "استوديو برمجيات · القاهرة · مصر · الخليج · دولي",
           location: "القاهرة، مصر",
           ourWork: "كل أعمالنا",
@@ -148,7 +148,7 @@ function shell({
           rights: "جميع الحقوق محفوظة.",
           privacy: "نستقبل تفاصيل المشروع على واتساب، ولا نبيع بياناتك.",
           start: "ابدأ",
-          dialog: "ابدأ استشارة المشروع",
+          dialog: "ابدأ خطوتك بثقة، نحن معك.",
           close: "إغلاق",
           name: "الاسم",
           email: "البريد الإلكتروني",
@@ -168,12 +168,12 @@ function shell({
           reviews: "Reviews",
           contact: "Contact",
           language: "Language",
-          bookShort: "Book a Call",
+          bookShort: "Consultation",
           openMenu: "Open menu",
           mobile: "Mobile",
           menu: "Menu",
           whatsapp: "WhatsApp",
-          book: "Book a Scope Call",
+          book: "Book a project consultation",
           note: "Software studio · Cairo · Egypt · GCC · International",
           location: "Cairo, Egypt",
           ourWork: "Our Work",
@@ -187,7 +187,7 @@ function shell({
           rights: "All rights reserved.",
           privacy: "Briefs go to our WhatsApp. We do not sell your data.",
           start: "Start",
-          dialog: "Book a Scope Call",
+          dialog: "Book a project consultation",
           close: "Close",
           name: "Name",
           email: "Email",
@@ -237,7 +237,7 @@ function shell({
     <link rel="manifest" href="/site.webmanifest" />
 ${latinFonts}
 ${arabicFont}
-    <link rel="stylesheet" href="/css/app.css?v=20260928a" />
+    <link rel="stylesheet" href="/css/app.css?v=20261121i" />
     <link rel="stylesheet" href="/css/pages.css?v=20260928a" />
     <link rel="stylesheet" href="/css/blog.css?v=20260831c" />
     <script type="application/ld+json">
@@ -385,7 +385,7 @@ ${main}
         </div>
       </div>
     </dialog>
-    <script type="module" src="/js/main.js?v=20260922c"></script>
+    <script type="module" src="/js/main.js?v=20261121i"></script>
   </body>
 </html>
 `;
@@ -686,7 +686,7 @@ function patchSitemap() {
     const loc = `${ORIGIN}${blogIndexPath(lang)}`;
     entries.push(`  <url>
     <loc>${loc}</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="${ORIGIN}/blog" />

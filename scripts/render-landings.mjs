@@ -53,7 +53,7 @@ const CHROME = {
       reviews: "آراء العملاء",
       contact: "تواصل معنا",
       whatsapp: "راسلنا واتساب",
-      start: "ابدأ خطوتك بثقة، نحن معك.",
+      start: "احجز استشارة للمشروع",
       note: "استوديو برمجيات · القاهرة · مصر · الخليج · الأسواق الدولية",
       contactLabel: "تواصل",
       location: "القاهرة، مصر",
@@ -236,7 +236,7 @@ function reviewsSection(lang, ids, { kicker, title, note, readAll, leave }) {
           <aside class="reviews-plaque" aria-label="${esc(note)}">
             <strong class="review-score-value">${score}</strong>
             <div class="review-stars" aria-hidden="true">★★★★★</div>
-            <p>${esc(note)}</p>
+            <a class="btn btn-mint google-reviews-btn" href="https://www.google.com/maps?cid=9594612568628558991" target="_blank" rel="noopener">${esc(note)}</a>
           </aside>
         </div>
         <div class="wrap">
@@ -652,15 +652,15 @@ const pages = [
     wizard: "website",
     title: "تصميم مواقع في مصر للشركات والعيادات والمتاجر | باور شيفت",
     description:
-      "شركة تصميم مواقع في القاهرة: موقع شركة أو عيادة أو متجر إلكتروني بالعربي والإنجليزي، مسار واتساب واضح، ونطاق مكتوب قبل السعر. أمثلة حية و15 تقييم 5 نجوم.",
+      "شركة تصميم مواقع في القاهرة: موقع شركة أو عيادة أو متجر إلكتروني بالعربي والإنجليزي، مسار واتساب واضح، ونطاق مكتوب قبل السعر. أمثلة حية و101 مراجعة على جوجل بتقييم 5.",
     crumb: "تصميم مواقع في مصر",
     kicker: "تصميم وتطوير مواقع في مصر",
     h1: "تصميم مواقع في مصر للشركات — بنطاق واضح قبل السعر",
     lead: "نصمم ونبرمج مواقع الشركات والعيادات ومكاتب المحاماة والمتاجر الإلكترونية من القاهرة. الهدف ليس صفحة جميلة فقط، بل موقع يفهمه العميل من الموبايل ويقوده إلى مكالمة أو رسالة واتساب أو طلب.",
-    cta: "ابدأ خطوتك بثقة، نحن معك.",
-    ctaShort: "ابدأ خطوتك بثقة، نحن معك.",
+    cta: "احجز استشارة للمشروع",
+    ctaShort: "احجز استشارة للمشروع",
     waCta: "راسلنا واتساب",
-    proof: "5.0 من 15 مراجعة عملاء — اقرأها",
+    proof: "5.0 من 101 مراجعة على جوجل",
     service: {
       name: "تصميم وتطوير مواقع الشركات في مصر",
       description: "تصميم وبرمجة مواقع الشركات والعيادات والمتاجر الإلكترونية بالعربي والإنجليزي من باور شيفت في القاهرة.",
@@ -671,7 +671,7 @@ const pages = [
       kicker: "استشارة",
       title: "عشرون دقيقة لتحديد ما يفعله الموقع",
       body: "أخبرنا ماذا تبيع ومن عميلك. ثلاثة أسئلة، ثم واتساب وفيه وصف المشروع. المكالمة تحدد الصفحات واللغة وما يُؤجَّل.",
-      cta: "ابدأ خطوتك بثقة، نحن معك.",
+      cta: "احجز استشارة للمشروع",
     },
     sections: [
       section({
@@ -732,7 +732,7 @@ ${workCards("ar", [
       reviewsSection("ar", ["marwan", "hazem", "basant", "mahmoud"], {
         kicker: "آراء العملاء",
         title: "ماذا يقول أصحاب المواقع",
-        note: "المتوسط من 15 مراجعة عملاء",
+        note: "المتوسط من 101 مراجعة على جوجل",
         readAll: "اقرأ كل المراجعات",
         leave: "اكتب تقييمك",
       }),
@@ -790,7 +790,7 @@ ${readingCards([
       kicker: "الخطوة التالية",
       title: "أرسل ما تبيعه وما الذي تريد من الموقع أن يفعله",
       body: "نحجز مكالمة قصيرة، ثم نحدد هل تحتاج موقع شركة أو متجرًا أو صفحة هبوط، وما الذي يدخل النسخة الأولى.",
-      cta: "ابدأ خطوتك بثقة، نحن معك.",
+      cta: "احجز استشارة للمشروع",
     },
   },
   {
@@ -803,7 +803,7 @@ ${readingCards([
     wizard: "website",
     title: "Web Design Company in Egypt | Business Websites by Power Shift Cairo",
     description:
-      "Website design and development in Cairo for companies, clinics, law offices and shops in Egypt. Arabic and English, WhatsApp-first enquiries, a written scope before price. 15 five-star reviews.",
+      "Website design and development in Cairo for companies, clinics, law offices and shops in Egypt. Arabic and English, WhatsApp-first enquiries, a written scope before price. 101 Google reviews.",
     crumb: "Web design in Egypt",
     kicker: "Web design & development in Egypt",
     h1: "Web design in Egypt for companies that need enquiries, not just a homepage",
@@ -811,7 +811,7 @@ ${readingCards([
     cta: "Book a project consultation",
     ctaShort: "Consultation",
     waCta: "WhatsApp Us",
-    proof: "5.0 from 15 client reviews — read them",
+    proof: "5.0 from 101 Google reviews",
     service: {
       name: "Website design and development in Egypt",
       description: "Custom websites, bilingual Arabic/English sites and e-commerce storefronts for businesses in Egypt, built by Power Shift in Cairo.",
@@ -883,7 +883,7 @@ ${workCards("en", [
       reviewsSection("en", ["nour", "mina", "salma", "maya"], {
         kicker: "Client reviews",
         title: "What website clients say",
-        note: "Average from 15 client reviews",
+        note: "Average of 101 Google reviews",
         readAll: "Read all reviews",
         leave: "Leave a review",
       }),
@@ -947,10 +947,10 @@ ${readingCards([
     kicker: "تصميم متاجر إلكترونية في مصر",
     h1: "تصميم متجر إلكتروني في مصر يناسب طريقة بيعك",
     lead: "بعض النشاطات تحتاج متجرًا بسلة ودفع، وبعضها يحتاج كتالوجًا وطلبًا عبر واتساب أو طلب جملة. نبدأ بتحديد أيهما يناسبك، ثم نبني واجهة عربية أو بلغتين يتصفحها عميلك من الموبايل بسهولة.",
-    cta: "ابدأ خطوتك بثقة، نحن معك.",
-    ctaShort: "ابدأ خطوتك بثقة، نحن معك.",
+    cta: "احجز استشارة للمشروع",
+    ctaShort: "احجز استشارة للمشروع",
     waCta: "راسلنا واتساب",
-    proof: "5.0 من 15 مراجعة عملاء — اقرأها",
+    proof: "5.0 من 101 مراجعة على جوجل",
     service: {
       name: "تصميم وتطوير المتاجر الإلكترونية في مصر",
       description: "تصميم وبرمجة متاجر وكتالوجات إلكترونية بالعربي والإنجليزي لعلامات التجزئة والجملة في مصر من باور شيفت في القاهرة.",
@@ -961,7 +961,7 @@ ${readingCards([
       kicker: "استشارة",
       title: "بتبيع أونلاين من واتساب أو إنستجرام؟",
       body: "أرسل نوع المنتجات وطريقة الطلب الحالية. في المكالمة نحدد هل تحتاج سلة ودفعًا أو كتالوجًا وطلبًا مباشرًا.",
-      cta: "ابدأ خطوتك بثقة، نحن معك.",
+      cta: "احجز استشارة للمشروع",
     },
     sections: [
       section({
@@ -1008,7 +1008,7 @@ ${workCards("ar", [
       reviewsSection("ar", ["rana", "mahmoud", "yassin"], {
         kicker: "آراء العملاء",
         title: "ماذا يقول العملاء",
-        note: "المتوسط من 15 مراجعة عملاء",
+        note: "المتوسط من 101 مراجعة على جوجل",
         readAll: "اقرأ كل المراجعات",
         leave: "اكتب تقييمك",
       }),
@@ -1058,10 +1058,10 @@ ${processSteps([
     kicker: "تصميم مواقع لشركات الخليج",
     h1: "تصميم مواقع للشركات في السعودية والإمارات والخليج — من القاهرة عن بُعد",
     lead: "نحن استوديو في القاهرة، وليس لدينا مكتب في الخليج. نعمل مع شركات في السعودية والإمارات ودول الخليج عن بُعد: نطاق مكتوب، مكالمات ورسائل واتساب، وروابط مراجعة تفتحها من موبايلك في أي وقت.",
-    cta: "ابدأ خطوتك بثقة، نحن معك.",
-    ctaShort: "ابدأ خطوتك بثقة، نحن معك.",
+    cta: "احجز استشارة للمشروع",
+    ctaShort: "احجز استشارة للمشروع",
     waCta: "راسلنا واتساب",
-    proof: "5.0 من 15 مراجعة عملاء — اقرأها",
+    proof: "5.0 من 101 مراجعة على جوجل",
     service: {
       name: "تصميم وتطوير مواقع الشركات في الخليج عن بُعد",
       description: "تصميم وبرمجة مواقع الشركات والمتاجر بالعربية والإنجليزية لعملاء في السعودية والإمارات ودول الخليج، تنفذها باور شيفت من القاهرة عن بُعد.",
@@ -1070,9 +1070,9 @@ ${processSteps([
     },
     offer: {
       kicker: "استشارة",
-      title: "شركتك في الخليج ومحتاجة موقع تملكه؟",
-      body: "نشتغل من القاهرة عن بُعد: مكالمة لتحديد الصفحات، ثم نطاق مكتوب قبل أي التزام. الحسابات باسم شركتك.",
-      cta: "ابدأ خطوتك بثقة، نحن معك.",
+      title: "هل تحتاج شركتك في الخليج إلى موقع تملكه؟",
+      body: "نعمل من القاهرة عن بُعد: مكالمة لتحديد الصفحات، ثم نطاق مكتوب قبل أي التزام. الحسابات باسم شركتك.",
+      cta: "احجز استشارة للمشروع",
     },
     sections: [
       section({
@@ -1117,7 +1117,7 @@ ${workCards("ar", [
       reviewsSection("ar", ["lulwa", "rashid", "abdulrahman", "meshaal"], {
         kicker: "آراء العملاء",
         title: "ماذا يقول العملاء",
-        note: "المتوسط من 15 مراجعة عملاء",
+        note: "المتوسط من 101 مراجعة على جوجل",
         readAll: "اقرأ كل المراجعات",
         leave: "اكتب تقييمك",
       }),

@@ -645,7 +645,7 @@ ar_html = f'''<!DOCTYPE html>
       <section class="section section-dark">
         <div class="wrap reviews-leave">
           <p class="kicker">اكتب تقييمك</p>
-          <h2>اشتغلت مع باور شيفت؟ ابعت التقييم على واتساب.</h2>
+          <h2>هل عملت مع باور شيفت؟ أرسل تقييمك على واتساب.</h2>
           <p>نضيف تقييمات العملاء إلى هذه الصفحة بعد التأكد أنها من مشروع حقيقي. الزر يفتح واتساب برسالة قصيرة جاهزة.</p>
           <div class="reviews-leave-actions">
             <a class="btn btn-mint" href="https://wa.me/201553766199" data-wa-review data-ps-event="whatsapp_cta" data-ps-label="leave-review-footer">اكتب تقييمك</a>

@@ -1,5 +1,5 @@
 import { CONFIG } from "./config.js?v=20260831a";
-import { COPY } from "./content.js?v=20261110a";
+import { COPY } from "./content.js?v=20261121c";
 import { track } from "./analytics.js?v=20261110a";
 
 const KEY = CONFIG.langKey;
@@ -233,9 +233,24 @@ export function initI18n() {
         dest !== window.location.pathname;
 
       if (shouldNavigate) {
+        event.preventDefault();
+        if (next === getLang()) return;
         localStorage.setItem(KEY, next);
         localStorage.setItem(CHOSEN, "1");
         track("lang_switch", { lang: next });
+        const sw = btn.closest(".lang-switch");
+        const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (!sw || reduce || sw.classList.contains("is-sliding")) {
+          window.location.assign(href);
+          return;
+        }
+        sw.classList.add("is-sliding", next === "ar" ? "is-to-ar" : "is-to-en");
+        sw.querySelectorAll("[data-lang]").forEach((el) => {
+          if (el.dataset.lang === next) el.setAttribute("aria-current", "true");
+          else el.removeAttribute("aria-current");
+        });
+        try { sessionStorage.setItem("ps-page-shift", "1"); } catch { /* ignore */ }
+        window.setTimeout(() => window.location.assign(href), 740);
         return;
       }
 

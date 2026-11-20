@@ -68,6 +68,20 @@ function bindSiteEvents() {
   });
 }
 
+function trackContentView() {
+  const page = document.body?.dataset?.page;
+  if (page !== "landing" && page !== "case") return;
+  if (window._psViewContentSent || !window.fbq) return;
+  window._psViewContentSent = true;
+  const name = document.body.dataset.landing || document.body.dataset.project || page;
+  window.fbq("track", "ViewContent", {
+    content_name: String(name).slice(0, 80),
+    content_category: page,
+    page_path: window.location.pathname,
+    language: language(),
+  });
+}
+
 function loadMetaPixel() {
   if (pixelInitialized) return;
   const alreadyBooted = Boolean(window.fbq && window._psPixelBooted);
@@ -82,6 +96,7 @@ function loadMetaPixel() {
   }
   pixelInitialized = true;
   bindSiteEvents();
+  trackContentView();
 
   if (!document.querySelector(`script[src="${META_SCRIPT}"]`)) {
     if (typeof window._psLoadMetaPixel === "function") {

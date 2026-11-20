@@ -318,7 +318,7 @@
 <!-- blog:start -->
   <url>
     <loc>https://www.powershift.space/blog</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog" />
@@ -327,7 +327,7 @@
   </url>
   <url>
     <loc>https://www.powershift.space/ar/blog</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog" />
@@ -603,6 +603,96 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/clinic-website-egypt.html" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/clinic-website-egypt.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/clinic-website-egypt.html" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/blog/whatsapp-on-a-business-website.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/whatsapp-on-a-business-website.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/whatsapp-on-a-business-website.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/whatsapp-on-a-business-website.html" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/ar/blog/whatsapp-on-a-business-website.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/whatsapp-on-a-business-website.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/whatsapp-on-a-business-website.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/whatsapp-on-a-business-website.html" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/blog/law-firm-website-egypt.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/law-firm-website-egypt.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/law-firm-website-egypt.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/law-firm-website-egypt.html" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/ar/blog/law-firm-website-egypt.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/law-firm-website-egypt.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/law-firm-website-egypt.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/law-firm-website-egypt.html" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/blog/real-estate-company-website.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/real-estate-company-website.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/real-estate-company-website.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/real-estate-company-website.html" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/ar/blog/real-estate-company-website.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/real-estate-company-website.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/real-estate-company-website.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/real-estate-company-website.html" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/blog/accounting-firm-website-egypt.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/accounting-firm-website-egypt.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/accounting-firm-website-egypt.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/accounting-firm-website-egypt.html" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/ar/blog/accounting-firm-website-egypt.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/accounting-firm-website-egypt.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/accounting-firm-website-egypt.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/accounting-firm-website-egypt.html" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/blog/homepage-that-explains-your-company.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/homepage-that-explains-your-company.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/homepage-that-explains-your-company.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/homepage-that-explains-your-company.html" />
+  </url>
+  <url>
+    <loc>https://www.powershift.space/ar/blog/homepage-that-explains-your-company.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.powershift.space/blog/homepage-that-explains-your-company.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.powershift.space/ar/blog/homepage-that-explains-your-company.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.powershift.space/blog/homepage-that-explains-your-company.html" />
   </url>
   <!-- blog:end -->
 </urlset>

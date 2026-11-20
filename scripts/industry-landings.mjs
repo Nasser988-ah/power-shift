@@ -1,5 +1,5 @@
-const CTA = "ابدأ خطوتك بثقة، نحن معك.";
-const PROOF = "5.0 من 15 مراجعة عملاء — اقرأها";
+const CTA = "احجز استشارة للمشروع";
+const PROOF = "5.0 من 101 مراجعة على جوجل";
 
 function base(PATHS, id, file, path, meta) {
   return {
@@ -94,7 +94,7 @@ ${workCards("ar", [
         reviewsSection("ar", ["marwan", "hazem"], {
           kicker: "آراء العملاء",
           title: "ماذا يقول العملاء عن التنفيذ",
-          note: "المتوسط من 15 مراجعة عملاء",
+          note: "المتوسط من 101 مراجعة على جوجل",
           readAll: "اقرأ كل المراجعات",
           leave: "اكتب تقييمك",
         }),
@@ -183,7 +183,7 @@ ${workCards("ar", [
         reviewsSection("ar", ["hazem", "basant"], {
           kicker: "آراء العملاء",
           title: "ماذا يقول العملاء عن التنفيذ",
-          note: "المتوسط من 15 مراجعة عملاء",
+          note: "المتوسط من 101 مراجعة على جوجل",
           readAll: "اقرأ كل المراجعات",
           leave: "اكتب تقييمك",
         }),
@@ -275,7 +275,7 @@ ${readingCards([
         reviewsSection("ar", ["marwan", "basant"], {
           kicker: "آراء العملاء",
           title: "ماذا يقول العملاء عن التنفيذ",
-          note: "المتوسط من 15 مراجعة عملاء",
+          note: "المتوسط من 101 مراجعة على جوجل",
           readAll: "اقرأ كل المراجعات",
           leave: "اكتب تقييمك",
         }),
@@ -366,7 +366,7 @@ ${readingCards([
         reviewsSection("ar", ["hazem", "marwan"], {
           kicker: "آراء العملاء",
           title: "ماذا يقول العملاء عن التنفيذ",
-          note: "المتوسط من 15 مراجعة عملاء",
+          note: "المتوسط من 101 مراجعة على جوجل",
           readAll: "اقرأ كل المراجعات",
           leave: "اكتب تقييمك",
         }),

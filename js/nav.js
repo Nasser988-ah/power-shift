@@ -63,4 +63,20 @@ export function initNav() {
     { threshold: 1 }
   );
   headerWatch.observe(sentinel);
+
+  let lastY = window.scrollY;
+  let frame = 0;
+  window.addEventListener("scroll", () => {
+    if (frame) return;
+    frame = window.requestAnimationFrame(() => {
+      const y = window.scrollY;
+      const delta = y - lastY;
+      const menuOpen = document.body.classList.contains("is-nav-open");
+      if (menuOpen || y < 24) header.classList.remove("is-header-away");
+      else if (delta > 8) header.classList.add("is-header-away");
+      else if (delta < -8) header.classList.remove("is-header-away");
+      lastY = y;
+      frame = 0;
+    });
+  }, { passive: true });
 }
