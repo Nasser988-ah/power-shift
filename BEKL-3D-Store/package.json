@@ -1,0 +1,18 @@
+{
+  "name": "bekl-3d-store",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "BEKL — independent 3D modern Egyptian fashion boutique",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5201",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 5202"
+  },
+  "dependencies": {
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "vite": "^6.0.3"
+  }
+}
