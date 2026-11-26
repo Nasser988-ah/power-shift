@@ -70,32 +70,6 @@ input {
 .mall-nav.is-prev { left: 12px; }
 .mall-nav.is-next { right: 12px; }
 
-@media (max-width: 799px) {
-  .mall-world {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .mall-world .mall-canvas {
-    height: min(92vw, 56dvh);
-    flex: none;
-  }
-
-  .mall-world .mall-nav {
-    top: calc(min(92vw, 56dvh) / 2);
-    transform: translateY(-50%);
-  }
-
-  .mall-world .mall-focus {
-    position: relative;
-    left: auto;
-    bottom: auto;
-    width: calc(100% - 28px);
-    margin: 14px auto 20px;
-    transform: none;
-  }
-}
-
 .mall-focus {
   position: absolute;
   z-index: 3;
@@ -173,6 +147,73 @@ input {
   text-align: center;
   text-transform: none;
   opacity: 1;
+}
+
+@media (max-width: 799px) {
+  .mall-page {
+    height: 100dvh;
+    overflow: hidden;
+    background: #d5e2da;
+  }
+
+  .mall-page > header {
+    position: absolute;
+    inset-inline: 0;
+    top: 0;
+    border: 0;
+    background: linear-gradient(180deg, rgba(247, 248, 247, 0.94) 0%, rgba(247, 248, 247, 0.72) 62%, rgba(247, 248, 247, 0) 100%);
+  }
+
+  .mall-page > main {
+    position: absolute;
+    inset: 0;
+    min-height: 0;
+  }
+
+  .mall-world .mall-canvas {
+    height: 100%;
+  }
+
+  .mall-world .mall-nav {
+    top: 46%;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    background: rgba(247, 248, 247, 0.88);
+    box-shadow: 0 10px 24px rgba(23, 43, 67, 0.12);
+  }
+
+  .mall-world .mall-focus {
+    left: 14px;
+    right: 14px;
+    bottom: calc(14px + env(safe-area-inset-bottom));
+    width: auto;
+    transform: none;
+    grid-template-columns: 1fr;
+    row-gap: 2px;
+    border-radius: 18px;
+    padding: 16px 16px 14px;
+    background: rgba(247, 248, 247, 0.94);
+    backdrop-filter: blur(18px);
+  }
+
+  .mall-world .mall-focus strong {
+    font-size: 34px;
+  }
+
+  .mall-world .mall-focus button {
+    grid-column: 1;
+    grid-row: auto;
+    width: 100%;
+    height: 48px;
+    margin-top: 12px;
+    border-radius: 12px;
+  }
+
+  .mall-world .mall-focus .mall-note {
+    margin-top: 8px;
+    font-size: 12px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
