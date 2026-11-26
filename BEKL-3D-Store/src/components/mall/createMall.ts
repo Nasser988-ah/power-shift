@@ -179,13 +179,16 @@ export function mountMall(root: HTMLElement, options: MountOptions): MallApi {
   }
 
   function frameCamera() {
-    const width = root.clientWidth || 1
-    const height = root.clientHeight || 1
+    const width = Math.max(renderer.domElement.clientWidth || root.clientWidth || 1, 1)
     phone = width < 800
+    let height = renderer.domElement.clientHeight
+    if (height < 2) {
+      height = phone ? Math.min(width * 0.7, window.innerHeight * 0.52) : root.clientHeight || 1
+    }
     camera.aspect = width / height
-    camera.fov = phone ? 38 : 30
-    camera.position.set(0, phone ? 2.7 : 3.15, phone ? 14 : 15.5)
-    camera.lookAt(0, phone ? 2.55 : 2.3, 0)
+    camera.fov = 30
+    camera.position.set(0, phone ? 3.05 : 3.15, phone ? 18 : 15.5)
+    camera.lookAt(0, phone ? 1.95 : 2.3, 0)
     camera.updateProjectionMatrix()
     renderer.setSize(width, height, false)
   }

@@ -31,5 +31,5 @@ export function MallWorld({ query }: { query: string }) {
     api.current?.setQuery(query)
   }, [query])
 
-  return <div ref={root} className="mall-world relative h-full min-h-[calc(100dvh-4.25rem)] w-full" />
+  return <div ref={root} className="mall-world relative w-full lg:h-full lg:min-h-[calc(100dvh-4.25rem)]" />
 }

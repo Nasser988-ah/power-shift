@@ -70,6 +70,32 @@ input {
 .mall-nav.is-prev { left: 12px; }
 .mall-nav.is-next { right: 12px; }
 
+@media (max-width: 799px) {
+  .mall-world {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mall-world .mall-canvas {
+    height: min(92vw, 56dvh);
+    flex: none;
+  }
+
+  .mall-world .mall-nav {
+    top: calc(min(92vw, 56dvh) / 2);
+    transform: translateY(-50%);
+  }
+
+  .mall-world .mall-focus {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    width: calc(100% - 28px);
+    margin: 14px auto 20px;
+    transform: none;
+  }
+}
+
 .mall-focus {
   position: absolute;
   z-index: 3;

@@ -37,7 +37,7 @@ export function MallPage() {
         <BagButton />
       </header>
 
-      <main id="content" className="relative min-h-[calc(100dvh-4.25rem)] flex-1">
+      <main id="content" className="relative flex-1 lg:min-h-0">
         <div className="absolute inset-0">
           <MallWorld query={query} />
         </div>
