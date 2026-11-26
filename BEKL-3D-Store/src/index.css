@@ -157,6 +157,24 @@ input {
   color: #f7f8f7;
 }
 
+.mall-focus button.is-soon {
+  border-color: transparent;
+  background: #c0392b;
+  color: #fff;
+}
+
+.mall-focus .mall-note {
+  grid-column: 1 / -1;
+  margin: 8px 0 0;
+  color: #c0392b;
+  font-size: 13px;
+  letter-spacing: 0;
+  line-height: 1.35;
+  text-align: center;
+  text-transform: none;
+  opacity: 1;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

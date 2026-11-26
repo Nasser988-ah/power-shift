@@ -171,7 +171,10 @@ export function mountMall(root: HTMLElement, options: MountOptions): MallApi {
   const cardMeta = document.createElement("span")
   const cardGo = document.createElement("button")
   cardGo.type = "button"
-  card.append(cardKicker, cardName, cardMeta, cardGo)
+  const cardNote = document.createElement("p")
+  cardNote.className = "mall-note"
+  cardNote.textContent = "you can only test BEKL store"
+  card.append(cardKicker, cardName, cardMeta, cardGo, cardNote)
   root.appendChild(card)
 
   function render() {
@@ -209,8 +212,11 @@ export function mountMall(root: HTMLElement, options: MountOptions): MallApi {
     cardKicker.textContent = `${focus + 1} of ${shops.length}`
     cardName.textContent = shop.house.name
     cardMeta.textContent = shop.house.category
-    cardGo.textContent = shop.house.active ? "Enter the house" : "Opening soon"
-    cardGo.classList.toggle("is-open", shop.house.active)
+    const open = shop.house.active
+    cardGo.textContent = open ? "Enter the house" : "Opening soon"
+    cardGo.classList.toggle("is-open", open)
+    cardGo.classList.toggle("is-soon", !open)
+    cardNote.hidden = open
   }
 
   function glide() {
