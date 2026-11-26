@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", sans-serif;
+  --font-display: "Cormorant Garamond", serif;
+  --color-navy: #172b43;
+  --color-mint: #75b59a;
+  --color-paper: #f7f8f7;
+  --color-ivory: #f6f1e8;
+  --color-ink: #3a2e28;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: var(--color-paper);
+  color: var(--color-navy);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+}
+
+button,
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mall-world canvas,
+.mall-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+.mall-loading {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  background: rgba(213, 226, 218, 0.72);
+  color: #172b43;
+  font-family: Manrope, sans-serif;
+}
+
+.mall-nav {
+  position: absolute;
+  top: 46%;
+  z-index: 3;
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(247, 248, 247, 0.94);
+  color: #172b43;
+  font-size: 32px;
+  line-height: 1;
+  box-shadow: 0 8px 20px rgba(23, 43, 67, 0.16);
+  cursor: pointer;
+}
+
+.mall-nav.is-prev { left: 12px; }
+.mall-nav.is-next { right: 12px; }
+
+.mall-focus {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  bottom: 14px;
+  display: grid;
+  width: min(92vw, 34rem);
+  grid-template-columns: 1fr auto;
+  column-gap: 12px;
+  transform: translateX(-50%);
+  align-items: center;
+  border-radius: 2px;
+  background: rgba(247, 248, 247, 0.95);
+  padding: 10px 12px 12px;
+  box-shadow: 0 12px 30px rgba(23, 43, 67, 0.16);
+}
+
+.mall-focus p {
+  grid-column: 1;
+  margin: 0;
+  color: #172b43;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.mall-focus strong {
+  grid-column: 1;
+  color: #172b43;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.mall-focus span {
+  grid-column: 1;
+  color: #172b43;
+  font-size: 13px;
+  opacity: 0.75;
+}
+
+.mall-focus button {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+  height: 46px;
+  border: 1px solid rgba(23, 43, 67, 0.18);
+  background: transparent;
+  padding: 0 16px;
+  color: #172b43;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.mall-focus button.is-open {
+  border-color: transparent;
+  background: #172b43;
+  color: #f7f8f7;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

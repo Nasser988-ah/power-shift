@@ -2,128 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <title>3D Demo</title>
-    <meta name="description" content="3D Demo is a private showroom. It is not part of the Power Shift website." />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="3D Demo is a private showroom. It is not part of the Power Shift website."
+    />
     <meta name="robots" content="noindex, nofollow" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/src/styles.css" />
+    <meta name="theme-color" content="#172B43" />
+    <link rel="icon" href="%BASE_URL%favicon.svg" type="image/svg+xml" />
+    <title>3D Demo</title>
   </head>
   <body>
-    <div id="app">
-      <canvas id="view" aria-label="BEKL boutique, three-dimensional view"></canvas>
-
-      <header class="topbar">
-        <div class="brand-mark">BEKL</div>
-        <div class="topbar-actions">
-          <button type="button" id="catalogButton" class="catalog-button" aria-label="Browse all products">
-            All Products
-          </button>
-          <button type="button" id="cartButton" class="cart-button" aria-label="Open shopping cart, 0 items">
-            <span>Bag</span>
-            <span id="cartBadge" class="badge">0</span>
-          </button>
-        </div>
-      </header>
-
-      <p id="hint" class="hint">Drag to look · WASD to walk · Tap a product</p>
-
-      <div id="walkControls" class="walk-controls" hidden>
-        <div class="stick-wrap left">
-          <div id="joystickBase" class="joystick-base" aria-label="Move joystick">
-            <div id="joystickKnob" class="joystick-knob"></div>
-          </div>
-          <span class="move-label">MOVE</span>
-        </div>
-        <div class="stick-wrap right">
-          <div id="lookBase" class="joystick-base look" aria-label="Look joystick">
-            <div id="lookKnob" class="joystick-knob"></div>
-          </div>
-          <span class="move-label">LOOK</span>
-        </div>
-      </div>
-
-      <section id="gate" class="gate is-open">
-        <div class="gate-inner">
-          <p class="gate-kicker">Modern Egyptian fashion</p>
-          <h1>BEKL</h1>
-          <div class="gate-rule" aria-hidden="true"></div>
-          <p class="gate-lead">Twenty men's pieces in one calm showroom — walk the aisle, open All Products, or tap a piece.</p>
-          <button type="button" id="enterButton" class="enter" disabled>Enter the showroom</button>
-          <ul id="gateNames" class="gate-names"></ul>
-        </div>
-        <div id="loader" class="loader">
-          <p id="loaderLabel">Preparing the atelier</p>
-          <div class="loader-track"><div id="loaderFill" class="loader-fill"></div></div>
-          <p id="loaderError" class="loader-error" hidden></p>
-        </div>
-      </section>
-
-      <aside id="catalogPanel" class="catalog" aria-hidden="true">
-        <div class="catalog-head">
-          <div class="catalog-head-copy">
-            <p class="catalog-kicker">BEKL</p>
-            <h2>All Products</h2>
-            <p class="catalog-note">Choose a piece to view it in the showroom.</p>
-          </div>
-          <button type="button" id="catalogClose" class="close dark" aria-label="Close product list">×</button>
-        </div>
-        <div id="catalogGrid" class="catalog-grid" role="list"></div>
-      </aside>
-
-      <aside id="productSheet" class="sheet" aria-hidden="true">
-        <button type="button" id="productClose" class="close" aria-label="Close product">×</button>
-        <div id="productPortrait" class="sheet-portrait">
-          <img id="productImage" alt="" />
-          <p id="productImageStatus" class="image-status" hidden>Loading…</p>
-        </div>
-        <div id="sheetBody" class="sheet-body">
-          <p id="productEyebrow" class="eyebrow"></p>
-          <h2 id="productTitle"></h2>
-          <p id="productDesc"></p>
-          <p id="productPrice" class="price"></p>
-          <div id="productMeta" class="meta"></div>
-          <button type="button" id="addButton">Add to bag</button>
-        </div>
-      </aside>
-
-      <div id="scrim" class="scrim" hidden></div>
-
-      <aside id="cartDrawer" class="drawer" aria-hidden="true">
-        <div class="drawer-head">
-          <h2 id="cartTitle">Your selection</h2>
-          <button type="button" id="cartClose" class="close dark" aria-label="Close cart">×</button>
-        </div>
-        <div id="cartItems" class="cart-items"></div>
-        <div class="drawer-foot">
-          <p>Subtotal <strong id="cartSubtotal">EGP 0</strong></p>
-          <button type="button" id="checkoutButton" disabled>Checkout</button>
-        </div>
-      </aside>
-
-      <section id="checkout" class="checkout" hidden>
-        <form id="checkoutForm" class="checkout-card">
-          <h2 id="checkoutTitle">Checkout</h2>
-          <p class="fine">Demonstration only. Nothing is charged and no order is sent.</p>
-          <div id="checkoutLines"></div>
-          <p>Total <strong id="checkoutTotal">EGP 0</strong></p>
-          <div class="row">
-            <button type="button" id="checkoutCancel" class="ghost">Back</button>
-            <button type="submit" id="checkoutConfirm">Confirm demo order</button>
-          </div>
-        </form>
-        <div id="checkoutThanks" class="checkout-card" hidden>
-          <h2>Thank you</h2>
-          <p>Your demonstration request is complete. Nothing was charged.</p>
-          <button type="button" id="checkoutDone">Return to the boutique</button>
-        </div>
-      </section>
-
-      <div id="toast" class="toast" hidden></div>
-    </div>
-    <script type="module" src="/src/main.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

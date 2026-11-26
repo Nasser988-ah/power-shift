@@ -1,5 +1,11 @@
 {
   "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/3d-demo/:path*",
+      "destination": "/3d-demo/index.html"
+    }
+  ],
   "redirects": [
     {
       "source": "/",

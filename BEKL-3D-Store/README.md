@@ -1,34 +1,30 @@
-# BEKL 3D Store
+# Power Shift Mall
 
-Independent immersive 3D fashion boutique for **BEKL** — modern Egyptian fashion.
+An aerial shopping-court prototype. Fifteen houses sit around a central plaza. BEKL, the clothing house, is the only one you can enter.
 
 ## Run
 
 ```bash
-cd BEKL-3D-Store
 npm install
 npm run dev
 ```
 
-Open [http://127.0.0.1:5201/](http://127.0.0.1:5201/)
+Open the local Vite URL. The mall is `/`. BEKL is `/bekl`.
 
-## Features
+## Edit the court and the collection
 
-- 20 perimeter displays in one walkable cream/brown showroom
-- 4 real products + clearly labeled demo placeholders (not for sale)
-- All Products grid with camera transitions to each piece
-- Progressive WebP scene thumbs; detail images load with the product panel
-- WASD / drag look / mobile joysticks, cart, demo-only checkout
+- Houses: `src/data/houses.ts`
+- BEKL products and prices: `src/data/products.ts`
+- Product photographs: `public/products/`
 
-## Edit catalogue & layout
+The bag, favorites, and guest name stay in `localStorage` on this device. There is no backend.
 
-All products, placeholders, categories, and pedestal positions live in:
+## Why the mall is drawn, not a live 3D scene
 
-`src/data/products.js`
+The court is an isometric architectural model in SVG. Brand names are real text, so they stay sharp on a phone, and the first screen does not download a 3D engine or a desktop-sized render. Product pictures are flat photographs with the studio field removed. They are not 3D models and they do not rotate.
 
-## Assets
+Blender was not used for these assets. The installed Blender is 4.3.2, and the official Blender Lab MCP needs 5.1 or newer. The community Blender connection also needs the app to be open.
 
-```
-public/images/mens/cutouts/scene/   # lightweight WebP for the room
-public/images/mens/cutouts/detail/  # higher-res WebP for panels
-```
+## Images
+
+`scripts/key_products.py` turns the green studio photographs into transparent WebP at 960 and 520 pixels on the long edge.
